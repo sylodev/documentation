@@ -1,4 +1,2 @@
 # Atlas Documentation
 
-
-
