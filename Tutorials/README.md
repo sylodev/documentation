@@ -1,3 +1,5 @@
+# Tutorials
+
 New to using Atlas? Great! This guide will be your best friend!
 
 ## What is Atlas?
