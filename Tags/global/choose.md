@@ -17,7 +17,9 @@ description: Returns a random argument.
 ```text
 a
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 Cats are {choose;good;bad} mkay
@@ -28,7 +30,9 @@ Cats are {choose;good;bad} mkay
 ```text
 Cats are bad mkay
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 Doggos are {choose;good;good} mkay

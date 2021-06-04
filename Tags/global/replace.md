@@ -17,7 +17,9 @@ description: Replaces <search> in <string> with <replacement>, now with extra re
 ```text
 puppies are the best
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {replace;Kittens are the best;kittens;puppies}
@@ -32,7 +34,9 @@ puppies are the best
 Note the capitalized "Kittens". {replace} is case-insensitive.
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {replace;The quick brown fox jumped over the lazy fox;([A-z]+);($1)}

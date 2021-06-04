@@ -17,7 +17,9 @@ description: Finds <search> in <target>, now with extra regexp flavour. <group> 
 ```text
 test
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {find;This does not include the forbidden word;test}
@@ -28,7 +30,9 @@ test
 ```text
 
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {find;The date is 07-08-2018;([0-9]{1,2})(?:/|-)([0-9]{1,2})(?:/|-)([0-9]{2,4});3}

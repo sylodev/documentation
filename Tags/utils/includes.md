@@ -17,7 +17,9 @@ description: Returns true or false if [string] includes [query].
 ```text
 true
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.includes;AN UPPERCASE STRING;uppercase}

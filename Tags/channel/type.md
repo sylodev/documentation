@@ -17,7 +17,9 @@ description: Gets the type of the channel.
 ```text
 text
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {channel.type;vc-1}

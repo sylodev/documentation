@@ -17,7 +17,9 @@ description: Sets a key to a value in volatile storage, used for storing things.
 ```text
 
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {set;key;value} {get;key}

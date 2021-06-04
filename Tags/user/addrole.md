@@ -21,7 +21,9 @@ description: Gives a user a role. Role is matched using a fuzzy matcher.
 The user would have the role. Returns nothing on success.
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.addrole;Humans;Sylver}

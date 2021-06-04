@@ -17,7 +17,9 @@ description: Returns the time the message was sent. "exact" is a true/false valu
 ```text
 Nov 4, 2015
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {message.timestamp;true}

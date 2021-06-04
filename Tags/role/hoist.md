@@ -17,7 +17,9 @@ description: Returns a true/false value on whether the role is set to display me
 ```text
 true
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.hoist;Atlas}

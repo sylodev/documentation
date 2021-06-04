@@ -17,7 +17,9 @@ description: Returns a true/false value on whether the role is managed by a thir
 ```text
 false
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.managed;Atlas}

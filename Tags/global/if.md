@@ -19,7 +19,9 @@ Available operators are `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, `===`, `startsw
 ```text
 yay
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;condition;yay;nay}
@@ -30,7 +32,9 @@ yay
 ```text
 yay
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;cond;===;cond;yay}
@@ -41,7 +45,9 @@ yay
 ```text
 yay
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;cond;!==;cond;yay}
@@ -52,7 +58,9 @@ yay
 ```text
 
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;true;===;true;yay;nay}
@@ -63,7 +71,9 @@ yay
 ```text
 yay
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;test;!includes;no;true}

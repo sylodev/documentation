@@ -17,7 +17,9 @@ description: Returns true if the input is a valid Discord snowflake, or false fo
 ```text
 true
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isSnowflake;awd}
@@ -28,7 +30,9 @@ true
 ```text
 false
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isSnowflake;}
@@ -39,7 +43,9 @@ false
 ```text
 false
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isSnowflake;{user.id}}

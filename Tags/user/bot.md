@@ -21,7 +21,9 @@ false
 Assumes the user in context is not a bot. 
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.bot;Atlas}

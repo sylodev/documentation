@@ -17,7 +17,9 @@ description: Returns the date the channel was created. "exact" is a true/false v
 ```text
 Jul 31, 2018
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {channel.createdAt;general;true}

@@ -17,7 +17,9 @@ description: Gets the ID of the owner.
 ```text
 111372124383428608
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.username;{guild.ownerID}}

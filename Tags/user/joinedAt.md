@@ -17,7 +17,9 @@ description: Returns the date the user joined the server at. "exact" is a true/f
 ```text
 Jul 28, 2017
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.joinedAt;true}

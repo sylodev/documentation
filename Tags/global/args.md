@@ -21,7 +21,9 @@ arg1
 Input would be "a!actionlabel arg1 arg2".
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {args;2}
@@ -36,7 +38,9 @@ arg2
 Input would be "a!actionlabel arg1 arg2".
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {args}
@@ -51,7 +55,9 @@ arg1 arg2
 Input would be "a!actionlabel arg1 arg2".
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {args;2;2}
@@ -66,7 +72,9 @@ arg2 arg3
 Input would be "a!actionlabel arg1 arg2 arg3 arg4
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {args;2;infinity}

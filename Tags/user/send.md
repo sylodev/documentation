@@ -21,7 +21,9 @@ description: Direct-messages a user a message. If the user does not allow direct
 This tag does not output anything on success.
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.send;Hello :)}

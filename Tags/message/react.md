@@ -21,7 +21,9 @@ description: Reacts to the message in context with [emoji].
 The message in context would have the eggplant emoji added to it.
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {message.react;🍆}

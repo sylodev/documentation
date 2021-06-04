@@ -17,7 +17,9 @@ description: Returns the date the guild was created. "exact" is a true/false val
 ```text
 Jul 31, 2018
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {guild.createdAt;true}

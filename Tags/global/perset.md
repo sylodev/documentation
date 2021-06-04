@@ -17,7 +17,9 @@ description: Sets a key to a value in persistent storage.
 ```text
 
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {perset;key;value} {perget;key}
@@ -28,7 +30,9 @@ description: Sets a key to a value in persistent storage.
 ```text
 value
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {perset;key}

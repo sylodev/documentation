@@ -17,7 +17,9 @@ description: Returns true if <string> is a valid web URL, or false if it's anyth
 ```text
 true
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isUrl;hahaepic}
@@ -28,7 +30,9 @@ true
 ```text
 false
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isUrl;}
@@ -39,7 +43,9 @@ false
 ```text
 false
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isUrl;protocol://example.com}

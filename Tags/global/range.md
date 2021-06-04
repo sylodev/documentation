@@ -17,7 +17,9 @@ description: Gets a number between [min] and [max].
 ```text
 7
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {range;0;100}

@@ -17,7 +17,9 @@ description: Sends a message to the channel.
 ```text
 ayyy
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {channel.send;ayyy;#general}

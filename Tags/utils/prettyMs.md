@@ -17,7 +17,9 @@ description: Converts milliseconds to a pretty date. If verbose is true, it will
 ```text
 2 minutes 13 seconds
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.prettyMs;133769;false}

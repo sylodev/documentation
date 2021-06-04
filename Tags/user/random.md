@@ -17,7 +17,9 @@ description: Gets the ID of a random user.
 ```text
 111372124383428608
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 I pick you, {user.tag;{user.random}}!

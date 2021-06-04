@@ -21,7 +21,9 @@ test
 This assumes the role name is "test" and the input is incomplete.
 {% endhint %}
 {% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.name;340583469149192204}

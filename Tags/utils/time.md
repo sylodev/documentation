@@ -17,7 +17,9 @@ description: Formats the current/a date to a pretty timestamp.
 ```text
 Dec 10, 2018, 4:08 PM
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.time;true;Mon, 10 Dec 2018 16:06:14 GMT}
@@ -28,7 +30,9 @@ Dec 10, 2018, 4:08 PM
 ```text
 Dec 10, 2018, 4:06 PM
 ```{% endtab %}
-{% endtabs %}{% tabs %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.time;false}
