@@ -16,7 +16,8 @@ description: Gets the ID of the owner.
 {% tab title="Output" %}
 ```text
 111372124383428608
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Gets the ID of the owner.
 {% tab title="Output" %}
 ```text
 Sylver
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

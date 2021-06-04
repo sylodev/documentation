@@ -16,5 +16,6 @@ description: Evaluates a math expression.
 {% tab title="Output" %}
 ```text
 21
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

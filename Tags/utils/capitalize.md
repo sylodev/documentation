@@ -16,5 +16,6 @@ description: Capitalizes the first letter of a string.
 {% tab title="Output" %}
 ```text
 Hehe epic
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

@@ -16,5 +16,6 @@ description: Gets the content or "suggestion" of a suggestion.
 {% tab title="Output" %}
 ```text
 hey i think it would be really cool if you added roblox integration
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

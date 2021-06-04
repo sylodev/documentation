@@ -16,5 +16,6 @@ description: Calculates the remaining XP to level up, where <number> is the amou
 {% tab title="Output" %}
 ```text
 462
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

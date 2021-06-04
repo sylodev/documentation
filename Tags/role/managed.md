@@ -16,7 +16,8 @@ description: Returns a true/false value on whether the role is managed by a thir
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ false
 {% tab title="Output" %}
 ```text
 true
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

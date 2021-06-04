@@ -16,5 +16,6 @@ description: Returns a true/false value on whether the role can be mentioned.
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

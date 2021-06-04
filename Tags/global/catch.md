@@ -16,7 +16,8 @@ description: If an error occures on any of the subtags, it will retun [message] 
 {% tab title="Output" %}
 ```text
 Something bad happened :c
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}

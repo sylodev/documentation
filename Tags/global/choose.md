@@ -16,7 +16,8 @@ description: Returns a random argument.
 {% tab title="Output" %}
 ```text
 a
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ Cats are {choose;good;bad} mkay
 {% tab title="Output" %}
 ```text
 Cats are bad mkay
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -42,5 +44,6 @@ Doggos are {choose;good;good} mkay
 {% tab title="Output" %}
 ```text
 Doggos are good mkay
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

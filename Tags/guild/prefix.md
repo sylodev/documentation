@@ -16,5 +16,6 @@ description: Gets the guild prefix.
 {% tab title="Output" %}
 ```text
 a!
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

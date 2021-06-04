@@ -16,7 +16,8 @@ description: Formats the current/a date to a pretty timestamp.
 {% tab title="Output" %}
 ```text
 Dec 10, 2018, 4:08 PM
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ Dec 10, 2018, 4:08 PM
 {% tab title="Output" %}
 ```text
 Dec 10, 2018, 4:06 PM
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -42,5 +44,6 @@ Dec 10, 2018, 4:06 PM
 {% tab title="Output" %}
 ```text
 Dec 10, 2018
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

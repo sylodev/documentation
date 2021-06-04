@@ -16,5 +16,6 @@ description: Gets an emoji's category name.
 {% tab title="Output" %}
 ```text
 people
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

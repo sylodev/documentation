@@ -16,5 +16,6 @@ description: Gets the user's next level's xp required to level up to it.
 {% tab title="Output" %}
 ```text
 155
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

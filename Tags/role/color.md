@@ -16,7 +16,8 @@ description: Gets the hex code of a role. If <hex=false>, the color will be in b
 {% tab title="Output" %}
 ```text
 #95a5a6
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ description: Gets the hex code of a role. If <hex=false>, the color will be in b
 {% tab title="Output" %}
 ```text
 9807270
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}

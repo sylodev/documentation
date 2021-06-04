@@ -16,5 +16,6 @@ description: Converts a string to lowercase.
 {% tab title="Output" %}
 ```text
 now this is epic
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

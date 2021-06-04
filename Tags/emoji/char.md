@@ -16,5 +16,6 @@ description: Gets an emoji character.
 {% tab title="Output" %}
 ```text
 😄
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

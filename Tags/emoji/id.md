@@ -16,7 +16,8 @@ description: Gets an emoji ID. .
 {% tab title="Output" %}
 ```text
 😄
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Gets an emoji ID. .
 {% tab title="Output" %}
 ```text
 538223757291028480
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

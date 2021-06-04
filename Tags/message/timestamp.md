@@ -16,7 +16,8 @@ description: Returns the time the message was sent. "exact" is a true/false valu
 {% tab title="Output" %}
 ```text
 Nov 4, 2015
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ Nov 4, 2015
 {% tab title="Output" %}
 ```text
 Nov 4, 2015, 7:53 AM
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

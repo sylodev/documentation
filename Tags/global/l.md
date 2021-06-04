@@ -16,5 +16,6 @@ description: A left {, incase you need one and don't want the parser eating it u
 {% tab title="Output" %}
 ```text
 {
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

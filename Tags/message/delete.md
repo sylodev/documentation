@@ -16,5 +16,6 @@ description: Deletes the message.
 {% tab title="Output" %}
 ```text
 
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

@@ -16,5 +16,6 @@ description: Returns a list of the members roles.
 {% tab title="Output" %}
 ```text
 340583469149192204 442989971020840960
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

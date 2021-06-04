@@ -16,5 +16,6 @@ description: Gets the ID of the ticket's channel, if one is in context.
 {% tab title="Output" %}
 ```text
 544275146001743872
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

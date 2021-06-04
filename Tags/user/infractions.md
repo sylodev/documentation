@@ -16,7 +16,8 @@ description: Gets the number of infractions a user has.
 {% tab title="Output" %}
 ```text
 0
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ description: Gets the number of infractions a user has.
 {% tab title="Output" %}
 ```text
 0
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -42,5 +44,6 @@ description: Gets the number of infractions a user has.
 {% tab title="Output" %}
 ```text
 69
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

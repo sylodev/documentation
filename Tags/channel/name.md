@@ -16,5 +16,6 @@ description: Gets the name of the channel.
 {% tab title="Output" %}
 ```text
 general
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

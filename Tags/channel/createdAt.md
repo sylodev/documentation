@@ -16,7 +16,8 @@ description: Returns the date the channel was created. "exact" is a true/false v
 {% tab title="Output" %}
 ```text
 Jul 31, 2018
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ Jul 31, 2018
 {% tab title="Output" %}
 ```text
 Jul 31, 2018, 9:19 PM
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

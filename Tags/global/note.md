@@ -16,5 +16,6 @@ description: Returns nothing, useful for notes.
 {% tab title="Output" %}
 ```text
 
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

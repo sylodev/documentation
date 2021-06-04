@@ -16,5 +16,6 @@ description: Gets the name of an emoji. Query can be an emoji name, the emoji it
 {% tab title="Output" %}
 ```text
 smile
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

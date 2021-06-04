@@ -16,5 +16,6 @@ description: Gets the message author's ID.
 {% tab title="Output" %}
 ```text
 111372124383428608
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

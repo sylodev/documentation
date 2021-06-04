@@ -16,7 +16,8 @@ description: Finds <search> in <target>, now with extra regexp flavour. <group> 
 {% tab title="Output" %}
 ```text
 test
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ test
 {% tab title="Output" %}
 ```text
 
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}

@@ -16,7 +16,8 @@ description: Returns "true" if all args are present, or "false" in any other cir
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ false
 {% tab title="Output" %}
 ```text
 true
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}

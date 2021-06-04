@@ -16,7 +16,8 @@ description: Sends a message to the channel.
 {% tab title="Output" %}
 ```text
 ayyy
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}

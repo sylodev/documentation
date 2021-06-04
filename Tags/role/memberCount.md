@@ -16,5 +16,6 @@ description: Gets the amount of members in a role. **This can be wildly inaccura
 {% tab title="Output" %}
 ```text
 1
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

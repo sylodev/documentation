@@ -16,7 +16,8 @@ description: Gets the user's color, based on their highest role. If <hex=true>, 
 {% tab title="Output" %}
 ```text
 #95a5a6
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ description: Gets the user's color, based on their highest role. If <hex=true>, 
 {% tab title="Output" %}
 ```text
 9807270
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -42,5 +44,6 @@ description: Gets the user's color, based on their highest role. If <hex=true>, 
 {% tab title="Output" %}
 ```text
 #03a9f4
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

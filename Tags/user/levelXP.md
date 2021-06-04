@@ -16,7 +16,8 @@ description: Gets the user's XP count.
 {% tab title="Output" %}
 ```text
 54
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Gets the user's XP count.
 {% tab title="Output" %}
 ```text
 1348
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

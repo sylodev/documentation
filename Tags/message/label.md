@@ -16,5 +16,6 @@ description: If the message called a command, this is the command name. Will not
 {% tab title="Output" %}
 ```text
 test
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

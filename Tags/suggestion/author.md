@@ -16,7 +16,8 @@ description: Gets the ID of the suggestions author, if one is in context.
 {% tab title="Output" %}
 ```text
 111372124383428608
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Gets the ID of the suggestions author, if one is in context.
 {% tab title="Output" %}
 ```text
 @Sylver#1058
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

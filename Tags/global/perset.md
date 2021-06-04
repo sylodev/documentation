@@ -16,7 +16,8 @@ description: Sets a key to a value in persistent storage.
 {% tab title="Output" %}
 ```text
 
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ description: Sets a key to a value in persistent storage.
 {% tab title="Output" %}
 ```text
 value
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}

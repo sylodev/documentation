@@ -16,7 +16,8 @@ description: Returns the date the users account was created. "exact" is a true/f
 {% tab title="Output" %}
 ```text
 Nov 4, 2015
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ Nov 4, 2015
 {% tab title="Output" %}
 ```text
 Nov 4, 2015, 7:53 AM
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

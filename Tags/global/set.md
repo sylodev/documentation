@@ -16,7 +16,8 @@ description: Sets a key to a value in volatile storage, used for storing things.
 {% tab title="Output" %}
 ```text
 
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Sets a key to a value in volatile storage, used for storing things.
 {% tab title="Output" %}
 ```text
 value
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

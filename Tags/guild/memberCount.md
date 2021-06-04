@@ -16,5 +16,6 @@ description: Gets the total number of members in the server.
 {% tab title="Output" %}
 ```text
 69
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

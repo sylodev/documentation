@@ -16,7 +16,8 @@ description: Gets a number between [min] and [max].
 {% tab title="Output" %}
 ```text
 7
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Gets a number between [min] and [max].
 {% tab title="Output" %}
 ```text
 69
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

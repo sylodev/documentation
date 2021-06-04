@@ -16,5 +16,6 @@ description: Gets the ID of the last message in the channel.
 {% tab title="Output" %}
 ```text
 520723523166011403
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

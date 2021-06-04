@@ -16,7 +16,8 @@ description: Parses a "human" time (e.g, "in 2h", "2h3m") to a timestamp compati
 {% tab title="Output" %}
 ```text
 2019-04-01T23:33:26.128Z
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Parses a "human" time (e.g, "in 2h", "2h3m") to a timestamp compati
 {% tab title="Output" %}
 ```text
 Apr 1, 2019
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

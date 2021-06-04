@@ -16,5 +16,6 @@ description: Gets the users next level from their XP.
 {% tab title="Output" %}
 ```text
 6
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

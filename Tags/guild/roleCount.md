@@ -16,5 +16,6 @@ description: Gets a total count of all the roles in the guild.
 {% tab title="Output" %}
 ```text
 7
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

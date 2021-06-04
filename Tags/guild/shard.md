@@ -16,5 +16,6 @@ description: Gets the guild's shard ID. I can't think of any circumstance where 
 {% tab title="Output" %}
 ```text
 6
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

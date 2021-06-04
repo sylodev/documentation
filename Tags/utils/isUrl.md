@@ -16,7 +16,8 @@ description: Returns true if <string> is a valid web URL, or false if it's anyth
 {% tab title="Output" %}
 ```text
 true
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,7 +30,8 @@ true
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -42,7 +44,8 @@ false
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -55,5 +58,6 @@ false
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

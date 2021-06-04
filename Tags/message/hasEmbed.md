@@ -16,5 +16,6 @@ description: Returns true if the message has an embed, false in any other circum
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

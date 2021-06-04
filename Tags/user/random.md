@@ -16,7 +16,8 @@ description: Gets the ID of a random user.
 {% tab title="Output" %}
 ```text
 111372124383428608
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ I pick you, {user.tag;{user.random}}!
 {% tab title="Output" %}
 ```text
 I pick you, Sylver#1058!
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

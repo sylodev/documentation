@@ -16,5 +16,6 @@ description: Gets the position of a role.
 {% tab title="Output" %}
 ```text
 7
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

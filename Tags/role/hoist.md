@@ -16,7 +16,8 @@ description: Returns a true/false value on whether the role is set to display me
 {% tab title="Output" %}
 ```text
 true
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ true
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

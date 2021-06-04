@@ -16,5 +16,6 @@ description: Gets a users id, otherwise known as snowflake.
 {% tab title="Output" %}
 ```text
 111372124383428608
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

@@ -16,5 +16,6 @@ description: Gets a message attachment.
 {% tab title="Output" %}
 ```text
 
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

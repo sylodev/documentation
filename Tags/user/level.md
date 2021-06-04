@@ -16,5 +16,6 @@ description: Gets the users level.
 {% tab title="Output" %}
 ```text
 1
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

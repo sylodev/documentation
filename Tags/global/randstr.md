@@ -16,7 +16,8 @@ description: Creates a random string from the characters provided of <length>.
 {% tab title="Output" %}
 ```text
 AuB9N4
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ AuB9N4
 {% tab title="Output" %}
 ```text
 ac
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

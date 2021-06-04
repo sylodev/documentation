@@ -16,7 +16,8 @@ description: Returns the date the role was created. "exact" is a true/false valu
 {% tab title="Output" %}
 ```text
 Jul 28, 2017
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ Jul 28, 2017
 {% tab title="Output" %}
 ```text
 Jul 28, 2017, 7:57 PM
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

@@ -16,5 +16,6 @@ description: Gets a users tag.
 {% tab title="Output" %}
 ```text
 Sylver#1058
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

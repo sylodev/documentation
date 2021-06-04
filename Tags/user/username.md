@@ -16,5 +16,6 @@ description: The username of the user. You can use {user.nickname} to get their 
 {% tab title="Output" %}
 ```text
 Sylver
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

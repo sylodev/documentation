@@ -16,7 +16,8 @@ description: Converts milliseconds to a pretty date. If verbose is true, it will
 {% tab title="Output" %}
 ```text
 2 minutes 13 seconds
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Converts milliseconds to a pretty date. If verbose is true, it will
 {% tab title="Output" %}
 ```text
 2m 13s
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

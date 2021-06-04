@@ -16,5 +16,6 @@ description: Gets the ID of the channel.
 {% tab title="Output" %}
 ```text
 357192331021254656
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

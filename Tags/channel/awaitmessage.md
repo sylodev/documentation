@@ -16,5 +16,6 @@ description: Wait for a message in a channel. Returns the message content. Autho
 {% tab title="Output" %}
 ```text
 wew
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

@@ -16,5 +16,6 @@ description: Returns the role @mention.
 {% tab title="Output" %}
 ```text
 @Developer
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

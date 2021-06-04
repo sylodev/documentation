@@ -16,5 +16,6 @@ description: Gets the message ID.
 {% tab title="Output" %}
 ```text
 521710205201809408
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

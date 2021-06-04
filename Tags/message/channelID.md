@@ -16,5 +16,6 @@ description: Gets the channel ID the message was sent to.
 {% tab title="Output" %}
 ```text
 473962909765206016
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

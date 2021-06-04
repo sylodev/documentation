@@ -16,5 +16,6 @@ description: The nickname of the user.
 {% tab title="Output" %}
 ```text
 sylver
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

@@ -16,5 +16,6 @@ description: Gets the length of a string.
 {% tab title="Output" %}
 ```text
 3
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

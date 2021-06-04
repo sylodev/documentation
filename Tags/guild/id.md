@@ -16,5 +16,6 @@ description: Gets the guild ID.
 {% tab title="Output" %}
 ```text
 345177567541723137
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

@@ -16,7 +16,8 @@ description: Returns the first argument that exist and is not empty.
 {% tab title="Output" %}
 ```text
 test
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ test
 {% tab title="Output" %}
 ```text
 first
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

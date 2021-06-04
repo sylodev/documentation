@@ -16,5 +16,6 @@ description: Gets the user's next level.
 {% tab title="Output" %}
 ```text
 2
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

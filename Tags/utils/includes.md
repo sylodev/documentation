@@ -16,7 +16,8 @@ description: Returns true or false if [string] includes [query].
 {% tab title="Output" %}
 ```text
 true
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ true
 {% tab title="Output" %}
 ```text
 true
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

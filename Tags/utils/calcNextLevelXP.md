@@ -16,5 +16,6 @@ description: Calculates the XP the next level requires, where <number> is the am
 {% tab title="Output" %}
 ```text
 1380
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

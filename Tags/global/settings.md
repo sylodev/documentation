@@ -16,7 +16,8 @@ description: Gets a raw setting value. This is an advanced tag, if you don't und
 {% tab title="Output" %}
 ```text
 a!
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ a!
 {% tab title="Output" %}
 ```text
 enabled
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

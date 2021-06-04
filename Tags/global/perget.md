@@ -16,5 +16,6 @@ description: Gets a key from persistent storage.
 {% tab title="Output" %}
 ```text
 value
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

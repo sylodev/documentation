@@ -16,5 +16,6 @@ description: Gets a total count of all the channels in the guild.
 {% tab title="Output" %}
 ```text
 11
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

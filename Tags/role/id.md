@@ -16,5 +16,6 @@ description: Gets the ID of a role.
 {% tab title="Output" %}
 ```text
 340583469149192204
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

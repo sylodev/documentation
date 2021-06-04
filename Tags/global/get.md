@@ -16,5 +16,6 @@ description: Gets a key from volatile storage. If you want full persistence, loo
 {% tab title="Output" %}
 ```text
 value
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

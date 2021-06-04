@@ -16,5 +16,6 @@ description: Returns true/false on whether the message is pinned or not.
 {% tab title="Output" %}
 ```text
 false
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

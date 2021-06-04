@@ -16,7 +16,8 @@ description: Gets the type of the channel.
 {% tab title="Output" %}
 ```text
 text
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ text
 {% tab title="Output" %}
 ```text
 voice
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

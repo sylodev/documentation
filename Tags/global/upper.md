@@ -16,5 +16,6 @@ description: Converts a string to uppercase.
 {% tab title="Output" %}
 ```text
 TEST
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

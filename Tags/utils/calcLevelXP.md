@@ -16,5 +16,6 @@ description: Gets the amount of XP required for a level.
 {% tab title="Output" %}
 ```text
 5
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

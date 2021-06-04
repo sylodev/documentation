@@ -16,5 +16,6 @@ description: Gets a level from an XP count.
 {% tab title="Output" %}
 ```text
 5
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

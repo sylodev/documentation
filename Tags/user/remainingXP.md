@@ -16,7 +16,8 @@ description: Gets the remaining XP until the user levels up.
 {% tab title="Output" %}
 ```text
 1
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -29,5 +30,6 @@ description: Gets the remaining XP until the user levels up.
 {% tab title="Output" %}
 ```text
 2016
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

@@ -18,7 +18,8 @@ Available operators are `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, `===`, `startsw
 {% tab title="Output" %}
 ```text
 yay
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -31,7 +32,8 @@ yay
 {% tab title="Output" %}
 ```text
 yay
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -44,7 +46,8 @@ yay
 {% tab title="Output" %}
 ```text
 yay
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -57,7 +60,8 @@ yay
 {% tab title="Output" %}
 ```text
 
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -70,7 +74,8 @@ yay
 {% tab title="Output" %}
 ```text
 yay
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}
@@ -83,5 +88,6 @@ yay
 {% tab title="Output" %}
 ```text
 true
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

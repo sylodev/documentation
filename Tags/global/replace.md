@@ -16,7 +16,8 @@ description: Replaces <search> in <string> with <replacement>, now with extra re
 {% tab title="Output" %}
 ```text
 puppies are the best
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
 
 {% tabs %}

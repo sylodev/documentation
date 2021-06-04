@@ -16,5 +16,6 @@ description: Returns a semi-colon. Useful if you need to use one in a tag. <inse
 {% tab title="Output" %}
 ```text
 ;
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}

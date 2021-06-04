@@ -16,5 +16,6 @@ description: Mention a @user.
 {% tab title="Output" %}
 ```text
 @Sylver#1058
-```{% endtab %}
+```
+{% endtab %}
 {% endtabs %}
