@@ -2,7 +2,7 @@
 description: Gets a raw setting value. This is an advanced tag, if you don't understand how to use it or what it does, then you probably shouldn't be using it.
 ---
 
-# settings \<key\>
+# settings <key\>
 
 ### Examples
 

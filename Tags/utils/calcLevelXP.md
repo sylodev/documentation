@@ -2,7 +2,7 @@
 description: Gets the amount of XP required for a level.
 ---
 
-# utils.calcLevelXP \<number\>
+# utils.calcLevelXP <number\>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: Gets the user's color, based on their highest role. If <hex=true>, the output will be in hex (#ffffff).
 ---
 
-# user.color <hex=true> \<user\>
+# user.color <hex=true> <user\>
 
 ### Examples
 

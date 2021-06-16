@@ -2,7 +2,7 @@
 description: Returns a true/false value on whether the role can be mentioned.
 ---
 
-# role.mentionable \<role\>
+# role.mentionable <role\>
 
 ### Examples
 

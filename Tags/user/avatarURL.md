@@ -2,7 +2,7 @@
 description: The avatar URL of the user.
 ---
 
-# user.avatarURL \<user\>
+# user.avatarURL <user\>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: The username of the user. You can use {user.nickname} to get their nickname, which is preferable in most cases.
 ---
 
-# user.username \<user\>
+# user.username <user\>
 
 ### Examples
 

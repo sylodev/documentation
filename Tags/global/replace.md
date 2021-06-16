@@ -1,8 +1,8 @@
 ---
-description: Replaces \<search\> in \<string\> with \<replacement\>, now with extra regexp flavour.
+description: Replaces <search\> in <string\> with <replacement\>, now with extra regexp flavour.
 ---
 
-# replace \<string\> \<search\> [replacement]
+# replace <string\> <search\> [replacement]
 
 ### Examples
 

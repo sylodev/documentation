@@ -2,7 +2,7 @@
 description: Gets an emoji character.
 ---
 
-# emoji.char \<query\>
+# emoji.char <query\>
 
 ### Examples
 

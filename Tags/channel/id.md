@@ -2,7 +2,7 @@
 description: Gets the ID of the channel.
 ---
 
-# channel.id \<channel\>
+# channel.id <channel\>
 
 ### Examples
 

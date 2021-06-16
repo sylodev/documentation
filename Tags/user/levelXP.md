@@ -2,7 +2,7 @@
 description: Gets the user's XP count.
 ---
 
-# user.levelXP \<user\>
+# user.levelXP <user\>
 
 ### Examples
 

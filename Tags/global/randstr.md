@@ -1,5 +1,5 @@
 ---
-description: Creates a random string from the characters provided of \<length\>.
+description: Creates a random string from the characters provided of <length\>.
 ---
 
 # randstr

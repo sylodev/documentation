@@ -2,7 +2,7 @@
 description: Gets the topic of the channel.
 ---
 
-# channel.topic \<channel\>
+# channel.topic <channel\>
 
 ### Examples
 

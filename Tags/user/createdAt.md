@@ -2,7 +2,7 @@
 description: Returns the date the users account was created. "exact" is a true/false value on whether to include hours/minutes.
 ---
 
-# user.createdAt \<exact\> \<user\>
+# user.createdAt <exact\> <user\>
 
 ### Examples
 

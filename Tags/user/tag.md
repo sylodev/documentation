@@ -2,7 +2,7 @@
 description: Gets a users tag.
 ---
 
-# user.tag \<user\>
+# user.tag <user\>
 
 ### Examples
 

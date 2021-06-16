@@ -2,7 +2,7 @@
 description: Gives a user a role. Role is matched using a fuzzy matcher.
 ---
 
-# user.addrole [role id/name/mention] \<user\>
+# user.addrole [role id/name/mention] <user\>
 
 ### Examples
 

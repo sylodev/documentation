@@ -2,7 +2,7 @@
 description: Gets a level from an XP count.
 ---
 
-# utils.calcLevel \<number\>
+# utils.calcLevel <number\>
 
 ### Examples
 

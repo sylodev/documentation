@@ -2,7 +2,7 @@
 description: Returns the date the guild was created. "exact" is a true/false value on whether to include hours/minutes.
 ---
 
-# guild.createdAt \<exact\>
+# guild.createdAt <exact\>
 
 ### Examples
 

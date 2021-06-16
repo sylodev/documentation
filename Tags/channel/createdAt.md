@@ -2,7 +2,7 @@
 description: Returns the date the channel was created. "exact" is a true/false value on whether to include hours/minutes.
 ---
 
-# channel.createdAt \<exact\> \<channel\>
+# channel.createdAt <exact\> <channel\>
 
 ### Examples
 

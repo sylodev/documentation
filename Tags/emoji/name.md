@@ -2,7 +2,7 @@
 description: Gets the name of an emoji. Query can be an emoji name, the emoji itself or a keyword.
 ---
 
-# emoji.name \<query\>
+# emoji.name <query\>
 
 ### Examples
 

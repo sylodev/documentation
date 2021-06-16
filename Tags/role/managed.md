@@ -2,7 +2,7 @@
 description: Returns a true/false value on whether the role is managed by a third party connection.
 ---
 
-# role.managed \<role\>
+# role.managed <role\>
 
 ### Examples
 

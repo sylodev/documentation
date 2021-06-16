@@ -2,7 +2,7 @@
 description: Gets an emoji's category name.
 ---
 
-# emoji.category \<query\>
+# emoji.category <query\>
 
 ### Examples
 

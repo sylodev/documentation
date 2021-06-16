@@ -2,7 +2,7 @@
 description: Removes a role from the user. Role is matched using a fuzzy matcher.
 ---
 
-# user.removerole [role id/name/mention] \<user\>
+# user.removerole [role id/name/mention] <user\>
 
 ### Examples
 

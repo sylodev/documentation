@@ -2,7 +2,7 @@
 description: Gets the name of a role.
 ---
 
-# role.name \<role\>
+# role.name <role\>
 
 ### Examples
 

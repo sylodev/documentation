@@ -1,8 +1,8 @@
 ---
-description: Finds \<search\> in \<target\>, now with extra regexp flavour. \<group\> is an optional capture group to return when using regex. \<flags\> are any regex flags like "g" or "i", you can mix and match groups like "gi".
+description: Finds <search\> in <target\>, now with extra regexp flavour. <group\> is an optional capture group to return when using regex. <flags\> are any regex flags like "g" or "i", you can mix and match groups like "gi".
 ---
 
-# find \<target\> \<search\> \<group\> <flags=i>
+# find <target\> <search\> <group\> <flags=i>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: Gets the position of a role.
 ---
 
-# role.position \<role\>
+# role.position <role\>
 
 ### Examples
 

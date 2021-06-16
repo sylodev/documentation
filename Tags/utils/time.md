@@ -2,7 +2,7 @@
 description: Formats the current/a date to a pretty timestamp.
 ---
 
-# utils.time <exact=true> \<timestamp\>
+# utils.time <exact=true> <timestamp\>
 
 ### Examples
 

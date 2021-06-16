@@ -2,7 +2,7 @@
 description: Returns the role @mention.
 ---
 
-# role.mention \<role\>
+# role.mention <role\>
 
 ### Examples
 

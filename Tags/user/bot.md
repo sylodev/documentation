@@ -2,7 +2,7 @@
 description: Checks whether a user is a bot. Returns true/false.
 ---
 
-# user.bot \<user\>
+# user.bot <user\>
 
 ### Examples
 

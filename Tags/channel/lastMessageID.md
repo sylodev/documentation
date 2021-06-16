@@ -2,7 +2,7 @@
 description: Gets the ID of the last message in the channel.
 ---
 
-# channel.lastMessageID \<channel\>
+# channel.lastMessageID <channel\>
 
 ### Examples
 

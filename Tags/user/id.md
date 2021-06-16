@@ -2,7 +2,7 @@
 description: Gets a users id, otherwise known as snowflake.
 ---
 
-# user.id \<user\>
+# user.id <user\>
 
 ### Examples
 
