@@ -2,7 +2,7 @@
 description: Sends a message to the channel.
 ---
 
-# channel.send <content> [channel] [return-id]
+# channel.send \<content\> [channel] [return-id]
 
 ### Examples
 
