@@ -2,7 +2,7 @@
 description: Returns true/false on whether the message is pinned or not.
 ---
 
-# message.pinned <message id> <message channel>
+# message.pinned &lt;message id> &lt;message channel>
 
 ### Examples
 

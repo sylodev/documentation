@@ -2,7 +2,7 @@
 description: Returns true/false on whether the message uses text-to-speech or not.
 ---
 
-# message.tts <message id> <message channel>
+# message.tts &lt;message id> &lt;message channel>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: Gets the message ID.
 ---
 
-# message.id <message id> <message channel>
+# message.id &lt;message id> &lt;message channel>
 
 ### Examples
 

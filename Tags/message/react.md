@@ -2,7 +2,7 @@
 description: Reacts to the message in context with [emoji]. 
 ---
 
-# message.react [emoji] <message id> <channel id>
+# message.react [emoji] &lt;message id> &lt;channel id>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: Deletes the message.
 ---
 
-# message.delete <message id> <message channel>
+# message.delete &lt;message id> &lt;message channel>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: Returns true if the message has an embed, false in any other circumstance.
 ---
 
-# message.hasEmbed <message id> <message channel>
+# message.hasEmbed &lt;message id> &lt;message channel>
 
 ### Examples
 

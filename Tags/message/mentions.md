@@ -2,7 +2,7 @@
 description: Returns all message mentions in a message by ID. This includes user, role and channel mentions.
 ---
 
-# message.mentions <message id> <message channel>
+# message.mentions &lt;message id> &lt;message channel>
 
 ### Examples
 
