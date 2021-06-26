@@ -2,7 +2,7 @@
 description: Gets a message attachment.
 ---
 
-# message.attachment <index=1>
+# message.attachment &lt;index=1>
 
 ### Examples
 

@@ -1,8 +1,8 @@
 ---
-description: Gets the hex code of a role. If <hex=false>, the color will be in base 10 and may be empty if the role has no color.
+description: Gets the hex code of a role. If &lt;hex=false>, the color will be in base 10 and may be empty if the role has no color.
 ---
 
-# role.color <hex=true> &lt;role>
+# role.color &lt;hex=true> &lt;role>
 
 ### Examples
 

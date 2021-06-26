@@ -2,7 +2,7 @@
 description: Finds &lt;search> in &lt;target>, now with extra regexp flavour. &lt;group> is an optional capture group to return when using regex. &lt;flags> are any regex flags like "g" or "i", you can mix and match groups like "gi".
 ---
 
-# find &lt;target> &lt;search> &lt;group> <flags=i>
+# find &lt;target> &lt;search> &lt;group> &lt;flags=i>
 
 ### Examples
 

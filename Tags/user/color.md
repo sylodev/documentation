@@ -1,8 +1,8 @@
 ---
-description: Gets the user's color, based on their highest role. If <hex=true>, the output will be in hex (#ffffff).
+description: Gets the user's color, based on their highest role. If &lt;hex=true>, the output will be in hex (#ffffff).
 ---
 
-# user.color <hex=true> &lt;user>
+# user.color &lt;hex=true> &lt;user>
 
 ### Examples
 

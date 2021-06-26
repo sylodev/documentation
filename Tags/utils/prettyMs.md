@@ -2,7 +2,7 @@
 description: Converts milliseconds to a pretty date. If verbose is true, it will use long names instead of short names, like "minutes" instead of "m".
 ---
 
-# utils.prettyMs [milliseconds] <verbose=true>
+# utils.prettyMs [milliseconds] &lt;verbose=true>
 
 ### Examples
 
