@@ -2,7 +2,7 @@
 description: Whether or not the current channel is not safe for work.
 ---
 
-# channel.nsfw <channel\>
+# channel.nsfw &lt;channel>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: Returns the date the role was created. "exact" is a true/false value on whether to include hours/minutes.
 ---
 
-# role.createdAt [role] <exact\> <role\>
+# role.createdAt [role] &lt;exact> &lt;role>
 
 ### Examples
 

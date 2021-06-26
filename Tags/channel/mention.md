@@ -2,7 +2,7 @@
 description: Gets the #mention of the channel.
 ---
 
-# channel.mention <channel\>
+# channel.mention &lt;channel>
 
 ### Examples
 

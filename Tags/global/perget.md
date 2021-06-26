@@ -2,7 +2,7 @@
 description: Gets a key from persistent storage.
 ---
 
-# perget <key\>
+# perget &lt;key>
 
 ### Examples
 

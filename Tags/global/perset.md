@@ -2,7 +2,7 @@
 description: Sets a key to a value in persistent storage.
 ---
 
-# perset <key\> [value]
+# perset &lt;key> [value]
 
 ### Examples
 

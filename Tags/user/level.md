@@ -2,7 +2,7 @@
 description: Gets the users level.
 ---
 
-# user.level <user\>
+# user.level &lt;user>
 
 ### Examples
 

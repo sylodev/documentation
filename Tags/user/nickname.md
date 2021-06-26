@@ -2,7 +2,7 @@
 description: The nickname of the user.
 ---
 
-# user.nickname <user\>
+# user.nickname &lt;user>
 
 ### Examples
 

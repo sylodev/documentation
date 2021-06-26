@@ -2,7 +2,7 @@
 description: Mention a @user.
 ---
 
-# user.mention <user\>
+# user.mention &lt;user>
 
 ### Examples
 

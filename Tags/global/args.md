@@ -2,7 +2,7 @@
 description: Returns a random argument.
 ---
 
-# args <index\> <range=1>
+# args &lt;index> <range=1>
 
 ### Examples
 

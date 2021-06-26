@@ -2,7 +2,7 @@
 description: Returns a list of the members roles.
 ---
 
-# user.roles <user\>
+# user.roles &lt;user>
 
 ### Examples
 

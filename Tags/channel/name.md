@@ -2,7 +2,7 @@
 description: Gets the name of the channel.
 ---
 
-# channel.name <channel\>
+# channel.name &lt;channel>
 
 ### Examples
 

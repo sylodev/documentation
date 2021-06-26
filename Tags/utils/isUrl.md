@@ -1,8 +1,8 @@
 ---
-description: Returns true if <string\> is a valid web URL, or false if it's anything else.
+description: Returns true if &lt;string> is a valid web URL, or false if it's anything else.
 ---
 
-# utils.isUrl <string\>
+# utils.isUrl &lt;string>
 
 ### Examples
 

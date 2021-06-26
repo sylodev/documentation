@@ -1,8 +1,8 @@
 ---
-description: Calculates the remaining XP to level up, where <number\> is the amount of XP the user has.
+description: Calculates the remaining XP to level up, where &lt;number> is the amount of XP the user has.
 ---
 
-# utils.calcRemainingXP <number\>
+# utils.calcRemainingXP &lt;number>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: Gets the type of the channel.
 ---
 
-# channel.type <channel\>
+# channel.type &lt;channel>
 
 ### Examples
 

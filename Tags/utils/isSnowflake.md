@@ -2,7 +2,7 @@
 description: Returns true if the input is a valid Discord snowflake, or false for any other circumstance. This does not mean the snowflake is definitely used by something, just that it could be in use or used in the future.
 ---
 
-# utils.isSnowflake <string\>
+# utils.isSnowflake &lt;string>
 
 ### Examples
 

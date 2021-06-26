@@ -2,7 +2,7 @@
 description: Gets the length of a string.
 ---
 
-# length <string\>
+# length &lt;string>
 
 ### Examples
 

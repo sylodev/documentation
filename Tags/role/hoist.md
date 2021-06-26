@@ -2,7 +2,7 @@
 description: Returns a true/false value on whether the role is set to display members separately from online members.
 ---
 
-# role.hoist <role\>
+# role.hoist &lt;role>
 
 ### Examples
 

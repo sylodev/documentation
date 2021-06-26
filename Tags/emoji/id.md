@@ -2,7 +2,7 @@
 description: Gets an emoji ID. .
 ---
 
-# emoji.id <query\>
+# emoji.id &lt;query>
 
 ### Examples
 

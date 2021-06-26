@@ -2,7 +2,7 @@
 description: Gets a users discriminator. It can be anything between 0001 - 9999
 ---
 
-# user.discriminator <user\>
+# user.discriminator &lt;user>
 
 ### Examples
 

@@ -2,7 +2,7 @@
 description: Gets a key from volatile storage. If you want full persistence, look at "perset" and "perget".
 ---
 
-# get <key\>
+# get &lt;key>
 
 ### Examples
 

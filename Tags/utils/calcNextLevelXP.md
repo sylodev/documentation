@@ -1,8 +1,8 @@
 ---
-description: Calculates the XP the next level requires, where <number\> is the amount of XP the user has.
+description: Calculates the XP the next level requires, where &lt;number> is the amount of XP the user has.
 ---
 
-# utils.calcNextLevelXP <number\>
+# utils.calcNextLevelXP &lt;number>
 
 ### Examples
 

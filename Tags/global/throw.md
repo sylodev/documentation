@@ -22,7 +22,7 @@ description: Throws a TagError with whatever you want. Useful for testing or if 
 ```
 
 {% hint style="info" %}
-You can handle the error properly with {catch}.On error Atlas will replace the tag with {<tagname\>-ERROR<errorNumber\>}.
+You can handle the error properly with {catch}.On error Atlas will replace the tag with {&lt;tagname>-ERROR&lt;errorNumber>}.
 {% endhint %}
 {% endtab %}
 {% endtabs %}

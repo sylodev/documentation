@@ -2,7 +2,7 @@
 description: Converts a string to lowercase.
 ---
 
-# lower <string\>
+# lower &lt;string>
 
 ### Examples
 

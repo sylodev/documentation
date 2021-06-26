@@ -2,7 +2,7 @@
 description: Returns the date the user joined the server at. "exact" is a true/false value on whether to include hours/minutes.
 ---
 
-# user.joinedAt <exact\> <user\>
+# user.joinedAt &lt;exact> &lt;user>
 
 ### Examples
 

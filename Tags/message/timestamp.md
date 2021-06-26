@@ -2,7 +2,7 @@
 description: Returns the time the message was sent. "exact" is a true/false value on whether to include hours/minutes.
 ---
 
-# message.timestamp <exact\> <message id> <message channel>
+# message.timestamp &lt;exact> <message id> <message channel>
 
 ### Examples
 

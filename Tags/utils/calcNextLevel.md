@@ -2,7 +2,7 @@
 description: Gets the users next level from their XP.
 ---
 
-# utils.calcNextLevel <number\>
+# utils.calcNextLevel &lt;number>
 
 ### Examples
 

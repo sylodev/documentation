@@ -2,7 +2,7 @@
 description: Gets the number of infractions a user has.
 ---
 
-# user.infractions <user\>
+# user.infractions &lt;user>
 
 ### Examples
 

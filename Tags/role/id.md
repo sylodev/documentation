@@ -2,7 +2,7 @@
 description: Gets the ID of a role.
 ---
 
-# role.id <role\>
+# role.id &lt;role>
 
 ### Examples
 

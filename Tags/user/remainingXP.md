@@ -2,7 +2,7 @@
 description: Gets the remaining XP until the user levels up.
 ---
 
-# user.remainingXP <user\>
+# user.remainingXP &lt;user>
 
 ### Examples
 

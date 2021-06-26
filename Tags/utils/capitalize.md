@@ -2,7 +2,7 @@
 description: Capitalizes the first letter of a string.
 ---
 
-# utils.capitalize <string\>
+# utils.capitalize &lt;string>
 
 ### Examples
 

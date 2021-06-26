@@ -2,7 +2,7 @@
 description: Gets the user's next level's xp required to level up to it.
 ---
 
-# user.nextLevelXP <user\>
+# user.nextLevelXP &lt;user>
 
 ### Examples
 

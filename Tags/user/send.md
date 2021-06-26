@@ -2,7 +2,7 @@
 description: Direct-messages a user a message. If the user does not allow direct-messages from guild members, this will throw an error.
 ---
 
-# user.send <message\> [user] [return-id]
+# user.send &lt;message> [user] [return-id]
 
 ### Examples
 

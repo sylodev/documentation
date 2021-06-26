@@ -2,7 +2,7 @@
 description: Gets the amount of members in a role. **This can be wildly inaccurate for larger (>250 member) servers.**
 ---
 
-# role.memberCount <role\>
+# role.memberCount &lt;role>
 
 ### Examples
 

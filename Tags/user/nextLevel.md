@@ -2,7 +2,7 @@
 description: Gets the user's next level.
 ---
 
-# user.nextLevel <user\>
+# user.nextLevel &lt;user>
 
 ### Examples
 
