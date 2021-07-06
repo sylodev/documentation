@@ -4,7 +4,7 @@ Plugins are what makes Atlas so hot and spicy! This is a brief introduction to e
 
 The actions plugin is the pièce de résistance of Atlas; think custom commands… on Russian steroids. With over 100 specialized tags, the only limit to creating your very own action is your imagination! Just check out [what other people have made](https://github.com/doddsy/atlas-custom-actions) with actions!
 
-Ready to try it out? Check out [a guide](https://atlasbot.xyz/documentation/tutorials/Actions/Basic_Action) for creating your own basic action. If you aren’t very code-savvy, don’t worry! We have the solution! Just visit our [support server](https://atlasbot.xyz/support) and let our experienced team assist you.
+Ready to try it out? Check out [a guide](https://docs.atlas.bot/tutorials/Actions/Basic_Action) for creating your own basic action. If you aren’t very code-savvy, don’t worry! We have the solution! Just visit our [support server](https://atlas.bot/support) and let our experienced team assist you.
 
 ## Fun
 
@@ -12,13 +12,13 @@ Isn’t this kind of self-explanatory? The fun plugin houses a whole slew of exc
 
 ## Gatekeeper
 
-All hail! The gatekeeper is in charge of all users who dare enter your realm. Enable fully customizable join messages or leave messages that support [tags](https://atlasbot.xyz/documentation/tags).
+All hail! The gatekeeper is in charge of all users who dare enter your realm. Enable fully customizable join messages or leave messages that support [tags](https://docs.atlas.bot/tags).
 
 ## Images
 
 Your very own meme generator! Who hasn’t ever wanted that?! Impress all your friends by creating high-quality memes on the spot, no watermarks included!
 
-## Info 
+## Info
 
 General help centre, responsible for commands like `a!help` - the general help command that can provide additional information and usage for any command Atlas has - and `a!ping` - the command used to check if Atlas is online and the millisecond delay between Atlas and your server.
 
@@ -32,7 +32,7 @@ Whip those pesky troublemakers into shape with the raw might of the moderation p
 
 ## Music
 
-Ever wanted to listen to your favourite music while chatting with friends? Well, this plugin is for you. From playing any song of your choice to rick-rolling your friends, the music plugin has it all. *Psst, wanna play a song from your spotify playlist?* Good news, If you're a [Patreon](https://patreon.com/NotSylver) supporter, Atlas can do that too!
+Ever wanted to listen to your favourite music while chatting with friends? Well, this plugin is for you. From playing any song of your choice to rick-rolling your friends, the music plugin has it all. _Psst, wanna play a song from your spotify playlist?_ Good news, If you're a [Patreon](https://patreon.com/NotSylver) supporter, Atlas can do that too!
 
 ## Roles
 
@@ -44,10 +44,10 @@ Open up a public feedback system to your users by enabling user created suggesti
 
 Get it now by becoming a [Premium](https://www.patreon.com/NotSylver) user.
 
-## Tickets 
+## Tickets
 
 Allow members to easily create private channels to have one-on-one conversations with your server's staff team.
 
 ## Utilities
 
-The most useful commands of all usefulness. Create sexy embeds to your heart's desire; search terms on Google; get information about your favourite games, shows, minecraft servers, and movies; strip spoilers from any message; or learn all about what SpaceX is up to and more! 
+The most useful commands of all usefulness. Create sexy embeds to your heart's desire; search terms on Google; get information about your favourite games, shows, minecraft servers, and movies; strip spoilers from any message; or learn all about what SpaceX is up to and more!

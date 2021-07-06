@@ -19,10 +19,10 @@ So many questions, so little patience! You don't have time to ask your questions
 **A:** Atlas utilizes a feature for bots called sharding. Sharding splits up Atlas into many different individual instances. One of these instances of Atlas is what is running on your server. Every now and then, shards go down and automatically reboot (usually within 5 minutes). Two different servers can be on two different shards resulting in one instance of Atlas going offline while the other remains online.
 
 **Q**: I have ideas to improve Atlas for everyone. How do I let you know about them?
-**A:** Join our [support server](https://atlasbot.xyz/support)! Drop your ideas in the #suggestions channel and if they're accepted, they will be voted on by other Atlas users. If you're lucky, your idea might find its way into Atlas.
+**A:** Join our [support server](https://atlas.bot/support)! Drop your ideas in the #suggestions channel and if they're accepted, they will be voted on by other Atlas users. If you're lucky, your idea might find its way into Atlas.
 
 **Q**: I need help creating an action. What do I do?
-**A:** If you've checked out our [basic action tutorial](https://atlasbot.xyz/documentation/tutorials/Actions/Basic_Action) and think it's just barely out of your comfort zone to try it yourself, [let us help](https://atlasbot.xyz/support)! We have an experienced support team that would be happy to assist you.
+**A:** If you've checked out our [basic action tutorial](https://docs.atlas.bot/tutorials/Actions/Basic_Action) and think it's just barely out of your comfort zone to try it yourself, [let us help](https://atlas.bot/support)! We have an experienced support team that would be happy to assist you.
 
 **Q**: Why is Atlas saying "That command has been disabled" or "That plugin has been disabled"?
 **A:** Plugins and commands can be manually disabled by anyone with access to your dashboard. Chances are: if you didn't disable it, one of your staff members did. You can navigate to your dashboard and manually re-enable it or simply type `a!tp <plugin name>` for plugins or `a!tc <command name>` for commands.
@@ -31,9 +31,9 @@ So many questions, so little patience! You don't have time to ask your questions
 **A:** Atlas is entirely supported by user-purchased premium memberships. Visit the [developer's Patreon](https://www.patreon.com/NotSylver) to sign up to be a premium member. Your generous proceeds are what helps keep Atlas awesome!
 
 **Q**: How do I use `a!<command>`? or, alternatively: How do I use a subcommand of `a!<command>`?
-**A:** `a!help <command>` has all your answers. If you can’t find what you’re looking for, feel free to ask in our [support server](https://atlasbot.xyz/support).
+**A:** `a!help <command>` has all your answers. If you can’t find what you’re looking for, feel free to ask in our [support server](https://atlas.bot/support).
 
 **Q**: I did `a!role addall` but it only gave some people the role?
 **A:** For performance reasons, in large servers, `a!role addall` takes a bit of time to give everyone the role.
 
-If your question wasn’t answered here, feel free to join our [support server](https://atlasbot.xyz/support).
+If your question wasn’t answered here, feel free to join our [support server](https://atlas.bot/support).
