@@ -1,6 +1,6 @@
-Now that you've made a basic action and have a better understanding of how actions and tags work, we can get started on making a more advanced action with some [advanced tags](https://docs.atlas.bot/tutorials/Tags/Advanced_Tags). For this tutorial, we'll be making the [Basic Action](https://docs.atlas.bot/tutorials/Actions/Basic_Action) you made earlier a wee-bit more advanced.
+Now that you've made a basic action and have a better understanding of how actions and tags work, we can get started on making a more advanced action with some [advanced tags](https://docs.atlas.bot/tutorials/tags/advanced-tags). For this tutorial, we'll be making the [Basic Action](https://docs.atlas.bot/tutorials/actions/basic-action) you made earlier a wee-bit more advanced.
 
-In case you forgot, here is the code we just made with the [Basic Action](https://docs.atlas.bot/tutorials/Actions/Basic_Action): `{channel.topic;{args}}` We'll be improving upon it in this tutorial.
+In case you forgot, here is the code we just made with the [Basic Action](https://docs.atlas.bot/tutorials/actions/basic-action): `{channel.topic;{args}}` We'll be improving upon it in this tutorial.
 
 ## Improving The Code
 

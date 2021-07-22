@@ -22,7 +22,7 @@ So many questions, so little patience! You don't have time to ask your questions
 **A:** Join our [support server](https://atlas.bot/support)! Drop your ideas in the #suggestions channel and if they're accepted, they will be voted on by other Atlas users. If you're lucky, your idea might find its way into Atlas.
 
 **Q**: I need help creating an action. What do I do?
-**A:** If you've checked out our [basic action tutorial](https://docs.atlas.bot/tutorials/Actions/Basic_Action) and think it's just barely out of your comfort zone to try it yourself, [let us help](https://atlas.bot/support)! We have an experienced support team that would be happy to assist you.
+**A:** If you've checked out our [basic action tutorial](https://docs.atlas.bot/tutorials/actions/basic-action) and think it's just barely out of your comfort zone to try it yourself, [let us help](https://atlas.bot/support)! We have an experienced support team that would be happy to assist you.
 
 **Q**: Why is Atlas saying "That command has been disabled" or "That plugin has been disabled"?
 **A:** Plugins and commands can be manually disabled by anyone with access to your dashboard. Chances are: if you didn't disable it, one of your staff members did. You can navigate to your dashboard and manually re-enable it or simply type `a!tp <plugin name>` for plugins or `a!tc <command name>` for commands.

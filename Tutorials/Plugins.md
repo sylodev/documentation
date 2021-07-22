@@ -2,9 +2,9 @@ Plugins are what makes Atlas so hot and spicy! This is a brief introduction to e
 
 ## Actions
 
-The actions plugin is the pièce de résistance of Atlas; think custom commands… on Russian steroids. With over 100 specialized tags, the only limit to creating your very own action is your imagination! Just check out [what other people have made](https://github.com/doddsy/atlas-custom-actions) with actions!
+The actions plugin is the pièce de résistance of Atlas; think custom commands… on Russian steroids. With over 100 specialized tags, the only limit to creating your very own action is your imagination! Just check out [what other people have made](https://github.com/sylo-digital/community-actions) with actions!
 
-Ready to try it out? Check out [a guide](https://docs.atlas.bot/tutorials/Actions/Basic_Action) for creating your own basic action. If you aren’t very code-savvy, don’t worry! We have the solution! Just visit our [support server](https://atlas.bot/support) and let our experienced team assist you.
+Ready to try it out? Check out [a guide](https://docs.atlas.bot/tutorials/actions/basic-action) for creating your own basic action. If you aren’t very code-savvy, don’t worry! We have the solution! Just visit our [support server](https://atlas.bot/support) and let our experienced team assist you.
 
 ## Fun
 
