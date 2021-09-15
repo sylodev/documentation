@@ -48,6 +48,11 @@ yay
 {if;cond;!==;cond;yay}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}

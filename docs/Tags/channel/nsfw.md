@@ -14,4 +14,7 @@ description: Whether or not the current channel is not safe for work.
 false
 ```
 {% endtab %}
+{% hint style="info" %}
+This assumes the channel is not marked as NSFW.
+{% endhint % }
 {% endtabs %}

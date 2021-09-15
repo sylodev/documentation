@@ -21,4 +21,12 @@ A message I sent to test this tag.
 {channel.awaitmessage;{user.id};5}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+When no message matching the given filters is sent, nothing is returned.
+{% endhint % }
 {% endtabs %}

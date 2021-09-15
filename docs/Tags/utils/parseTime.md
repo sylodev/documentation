@@ -38,4 +38,7 @@ Aug 21, 2021
 Aug 21, 2021
 ```
 {% endtab %}
+{% hint style="info" %}
+Supports unix-style (second) and javascript-style (millisecond) timestamps.
+{% endhint % }
 {% endtabs %}

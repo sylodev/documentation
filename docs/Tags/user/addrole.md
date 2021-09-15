@@ -9,6 +9,14 @@ description: Gives a user a role.
 {user.addrole;human}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+This tag outputs nothing on success.
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -16,4 +24,12 @@ description: Gives a user a role.
 {user.addrole;Humans;Sylver}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+This would add the "Humans" role to the user "Sylver".
+{% endhint % }
 {% endtabs %}

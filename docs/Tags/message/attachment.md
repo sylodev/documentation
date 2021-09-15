@@ -9,4 +9,9 @@ description: Gets a message attachment.
 {message.attachment}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
 {% endtabs %}

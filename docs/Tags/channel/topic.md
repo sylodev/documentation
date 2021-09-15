@@ -14,4 +14,7 @@ description: Gets the topic of the channel.
 Welcome to General
 ```
 {% endtab %}
+{% hint style="info" %}
+This assumes the channel topic is set to "Welcome to General"
+{% endhint % }
 {% endtabs %}

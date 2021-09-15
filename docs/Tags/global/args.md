@@ -14,6 +14,9 @@ description: Access user-provided arguments.
 arg1
 ```
 {% endtab %}
+{% hint style="info" %}
+Input would be "a!actionlabel arg1 arg2".
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -26,6 +29,9 @@ arg1
 arg2
 ```
 {% endtab %}
+{% hint style="info" %}
+Input would be "a!actionlabel arg1 arg2".
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -38,6 +44,9 @@ arg2
 arg1 arg2
 ```
 {% endtab %}
+{% hint style="info" %}
+Input would be "a!actionlabel arg1 arg2".
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -50,6 +59,9 @@ arg1 arg2
 arg2 arg3
 ```
 {% endtab %}
+{% hint style="info" %}
+Input would be "a!actionlabel arg1 arg2 arg3 arg4
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -62,4 +74,7 @@ arg2 arg3
 arg2 arg3
 ```
 {% endtab %}
+{% hint style="info" %}
+This would return all args at index 2 to infinity.
+{% endhint % }
 {% endtabs %}

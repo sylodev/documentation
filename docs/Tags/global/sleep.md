@@ -16,4 +16,7 @@ before the sleep
 yay im back
 ```
 {% endtab %}
+{% hint style="info" %}
+"before the sleep" would be sent first, then 10 seconds later "yay im back" would follow. 
+{% endhint % }
 {% endtabs %}

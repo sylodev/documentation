@@ -26,6 +26,9 @@ puppies are the best
 puppies are the best
 ```
 {% endtab %}
+{% hint style="info" %}
+This tag is case-insensitive.
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -38,4 +41,7 @@ puppies are the best
 (an) (example) (phrase)
 ```
 {% endtab %}
+{% hint style="info" %}
+This example is advanced and uses regex. It surrounds words matched by `[A-z]+` with `(` and `)`.
+{% endhint % }
 {% endtabs %}

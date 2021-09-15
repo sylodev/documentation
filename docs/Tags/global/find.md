@@ -29,11 +29,19 @@ test
 fortnite
 ```
 {% endtab %}
+{% hint style="info" %}
+Wildcard matching
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
 ```text
 {find;example phrase;test}
+```
+{% endtab %}
+{% tab title="Output" %}
+```text
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -48,6 +56,9 @@ fortnite
 2020
 ```
 {% endtab %}
+{% hint style="info" %}
+Uses regex to match date formats.
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -55,4 +66,12 @@ fortnite
 {find;example;(x+x+)+y;1;gi;true}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+The tag would throw an error as "(x+x+)+y" is an unsafe regex pattern.
+{% endhint % }
 {% endtabs %}

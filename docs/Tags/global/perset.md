@@ -19,6 +19,14 @@ users balances.
 {perset;my-key;value}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+This tag outputs nothing on success.
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -38,4 +46,12 @@ value
 {perset;my-key} {perget;my-key}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+With no value the key is deleted.
+{% endhint % }
 {% endtabs %}

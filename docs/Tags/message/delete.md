@@ -9,4 +9,9 @@ description: Deletes the message.
 {message.delete}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
 {% endtabs %}

@@ -21,4 +21,12 @@ value
 {perget;non-existent-key}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+Unset keys return nothing.
+{% endhint % }
 {% endtabs %}

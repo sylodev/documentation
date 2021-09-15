@@ -14,6 +14,9 @@ description: Checks whether a user is a bot. Returns a boolean.
 false
 ```
 {% endtab %}
+{% hint style="info" %}
+Assumes the user in context is not a bot. 
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -26,4 +29,7 @@ false
 true
 ```
 {% endtab %}
+{% hint style="info" %}
+Assumes the user in context is a bot. 
+{% endhint % }
 {% endtabs %}

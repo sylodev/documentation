@@ -14,4 +14,7 @@ description: Gets the name of the guild.
 My Server
 ```
 {% endtab %}
+{% hint style="info" %}
+This assumes the name of the guild is "My Server"
+{% endhint % }
 {% endtabs %}

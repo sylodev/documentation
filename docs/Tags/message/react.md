@@ -9,6 +9,14 @@ description: Reacts to the message in context with [emoji].
 {message.react;eggplant}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+The message in context would have the eggplant emoji added to it.
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -16,4 +24,12 @@ description: Reacts to the message in context with [emoji].
 {message.react;🍆}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+The message in context would have the eggplant emoji added to it.
+{% endhint % }
 {% endtabs %}

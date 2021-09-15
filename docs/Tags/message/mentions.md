@@ -14,4 +14,7 @@ description: Returns all message mentions in a message by ID. This includes user
 111372124383428608 532902669220839426
 ```
 {% endtab %}
+{% hint style="info" %}
+In this case, the message content would be something like "@Sylver#1048 #general"
+{% endhint % }
 {% endtabs %}

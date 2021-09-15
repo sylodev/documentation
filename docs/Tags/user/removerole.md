@@ -9,6 +9,14 @@ description: Removes a role from the user.
 {user.removerole;human}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+This tag outputs nothing on success.
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -16,4 +24,12 @@ description: Removes a role from the user.
 {user.removerole;Humans;Sylver}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+This would remove the "Humans" role from the user "Sylver".
+{% endhint % }
 {% endtabs %}

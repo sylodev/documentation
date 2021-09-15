@@ -21,4 +21,9 @@ TEST
 {upper}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
 {% endtabs %}

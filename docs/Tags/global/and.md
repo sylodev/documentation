@@ -38,4 +38,7 @@ true
 true
 ```
 {% endtab %}
+{% hint style="info" %}
+Booleans are not parsed.
+{% endhint % }
 {% endtabs %}

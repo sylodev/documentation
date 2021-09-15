@@ -9,6 +9,11 @@ description: Outputs nothing. You should use this for adding comments to your co
 {note;This code does something very important}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -16,4 +21,12 @@ description: Outputs nothing. You should use this for adding comments to your co
 {note;{user.send;Hello}}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+The user would not receive the message because child tags are not executed.
+{% endhint % }
 {% endtabs %}

@@ -9,6 +9,14 @@ description: Direct-messages a user a message. If the user does not allow direct
 {user.send;Hello :)}
 ```
 {% endtab %}
+{% tab title="Output" %}
+```text
+
+```
+{% endtab %}
+{% hint style="info" %}
+This tag does not output anything on success if [returnId] is not true.
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -21,6 +29,9 @@ description: Direct-messages a user a message. If the user does not allow direct
 851450376993636362
 ```
 {% endtab %}
+{% hint style="info" %}
+Returns the ID of the message sent.
+{% endhint % }
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -33,4 +44,7 @@ description: Direct-messages a user a message. If the user does not allow direct
 {user.send-ERROR1}
 ```
 {% endtab %}
+{% hint style="info" %}
+This tag will throw an error if the user's direct-messages are not open.
+{% endhint % }
 {% endtabs %}
