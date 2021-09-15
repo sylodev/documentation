@@ -15,6 +15,6 @@ description: Gets a users discriminator.
 ```
 {% hint style="info" %}
 The users tag in this case would be "Username#1058"
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

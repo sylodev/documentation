@@ -15,7 +15,7 @@ description: Removes a role from the user.
 ```
 {% hint style="info" %}
 This tag outputs nothing on success.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 {% tabs %}
@@ -30,6 +30,6 @@ This tag outputs nothing on success.
 ```
 {% hint style="info" %}
 This would remove the "Humans" role from the user "Sylver".
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

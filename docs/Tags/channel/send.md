@@ -15,7 +15,7 @@ description: Sends a message to the channel.
 ```
 {% hint style="info" %}
 "Welcome to the thunder dome" would be sent to the context channel.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 {% tabs %}
@@ -30,7 +30,7 @@ description: Sends a message to the channel.
 ```
 {% hint style="info" %}
 If the third argument is "true", the ID of the created message will be returned.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 {% tabs %}
@@ -45,6 +45,6 @@ If the third argument is "true", the ID of the created message will be returned.
 ```
 {% hint style="info" %}
 This message would be sent to the #off-topic channel.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

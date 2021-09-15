@@ -69,5 +69,5 @@ function formatExampleTab(title, content, note = "") {
 }
 
 function formatExampleNote(content) {
-  return `{% hint style="info" %}\n${content}\n{% endhint % }\n`;
+  return `{% hint style="info" %}\n${content}\n{% endhint %}\n`;
 }

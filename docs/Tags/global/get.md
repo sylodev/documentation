@@ -27,6 +27,6 @@ value
 ```
 {% hint style="info" %}
 Unset keys return nothing.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

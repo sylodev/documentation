@@ -27,6 +27,6 @@ description: Outputs nothing. You should use this for adding comments to your co
 ```
 {% hint style="info" %}
 The user would not receive the message because child tags are not executed.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

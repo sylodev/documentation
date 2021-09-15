@@ -15,6 +15,6 @@ description: Throws an error with a custom message. Useful for testing or if you
 ```
 {% hint style="info" %}
 You can handle the error properly with {catch}.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

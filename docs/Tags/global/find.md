@@ -30,7 +30,7 @@ fortnite
 ```
 {% hint style="info" %}
 Wildcard matching
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 {% tabs %}
@@ -57,7 +57,7 @@ Wildcard matching
 ```
 {% hint style="info" %}
 Uses regex to match date formats.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 {% tabs %}
@@ -72,6 +72,6 @@ Uses regex to match date formats.
 ```
 {% hint style="info" %}
 The tag would throw an error as "(x+x+)+y" is an unsafe regex pattern.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

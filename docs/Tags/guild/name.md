@@ -15,6 +15,6 @@ My Server
 ```
 {% hint style="info" %}
 This assumes the name of the guild is "My Server"
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

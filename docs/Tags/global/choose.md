@@ -39,6 +39,6 @@ three
 ```
 {% hint style="info" %}
 If no arguments are given, nothing is returned.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

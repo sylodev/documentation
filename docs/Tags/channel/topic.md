@@ -15,6 +15,6 @@ Welcome to General
 ```
 {% hint style="info" %}
 This assumes the channel topic is set to "Welcome to General"
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

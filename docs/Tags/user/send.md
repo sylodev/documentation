@@ -15,7 +15,7 @@ description: Direct-messages a user a message. If the user does not allow direct
 ```
 {% hint style="info" %}
 This tag does not output anything on success if [returnId] is not true.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 {% tabs %}
@@ -30,7 +30,7 @@ This tag does not output anything on success if [returnId] is not true.
 ```
 {% hint style="info" %}
 Returns the ID of the message sent.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 {% tabs %}
@@ -45,6 +45,6 @@ Returns the ID of the message sent.
 ```
 {% hint style="info" %}
 This tag will throw an error if the user's direct-messages are not open.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

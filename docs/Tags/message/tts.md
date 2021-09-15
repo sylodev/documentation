@@ -15,6 +15,6 @@ false
 ```
 {% hint style="info" %}
 thank god
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

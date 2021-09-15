@@ -15,6 +15,6 @@ description: Returns all message mentions in a message by ID. This includes user
 ```
 {% hint style="info" %}
 In this case, the message content would be something like "@Sylver#1048 #general"
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}

@@ -39,6 +39,6 @@ Aug 21, 2021
 ```
 {% hint style="info" %}
 Supports unix-style (second) and javascript-style (millisecond) timestamps.
-{% endhint % }
+{% endhint %}
 {% endtab %}
 {% endtabs %}
