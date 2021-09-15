@@ -14,7 +14,8 @@ description: Replaces anything matching the pattern in the target with the repla
 puppies are the best
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {replace;Kittens are the best;kittens;puppies}
@@ -25,7 +26,8 @@ puppies are the best
 puppies are the best
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {replace;An example phrase;([A-z]+);($1)}

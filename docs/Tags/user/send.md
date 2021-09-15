@@ -9,7 +9,8 @@ description: Direct-messages a user a message. If the user does not allow direct
 {user.send;Hello :)}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.send;Bye;{user.id};true}
@@ -20,7 +21,8 @@ description: Direct-messages a user a message. If the user does not allow direct
 851450376993636362
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.send;Hello :)}

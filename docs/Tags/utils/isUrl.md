@@ -14,7 +14,8 @@ description: Returns a boolean indicating whether "url" is a valid URL.
 true
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isUrl;example.com}
@@ -25,7 +26,8 @@ true
 true
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isUrl;hahaepic}
@@ -36,7 +38,8 @@ true
 false
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isUrl;}
@@ -47,7 +50,8 @@ false
 false
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isUrl;protocol://example.com}

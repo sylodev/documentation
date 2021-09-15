@@ -60,7 +60,7 @@ function formatExamples(tag) {
     examples.push(`{% tabs %}\n${mergedContent}\n{% endtabs %}`);
   }
 
-  return examples;
+  return examples.join("\n");
 }
 
 function formatExampleTab(title, content) {

@@ -14,7 +14,8 @@ description: Gets the user's XP count.
 54
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.levelXP}

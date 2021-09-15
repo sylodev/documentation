@@ -14,7 +14,8 @@ description: Gets an emoji ID. For native emojis, this will return the emoji its
 😄
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {emoji.id;aguildemoji}

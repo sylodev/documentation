@@ -14,7 +14,8 @@ description: Access user-provided arguments.
 arg1
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {args;2}
@@ -25,7 +26,8 @@ arg1
 arg2
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {args}
@@ -36,7 +38,8 @@ arg2
 arg1 arg2
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {args;2;2}
@@ -47,7 +50,8 @@ arg1 arg2
 arg2 arg3
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {args;2;infinity}

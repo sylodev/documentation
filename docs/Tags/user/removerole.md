@@ -9,7 +9,8 @@ description: Removes a role from the user.
 {user.removerole;human}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.removerole;Humans;Sylver}

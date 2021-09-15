@@ -9,7 +9,8 @@ description: Gives a user a role.
 {user.addrole;human}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.addrole;Humans;Sylver}

@@ -17,7 +17,8 @@ If you are using regex, "forceRegex" should always be on. The default is for bac
 test
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {find;fortnite;fort*}
@@ -28,13 +29,15 @@ test
 fortnite
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {find;example phrase;test}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {find;The date is 21-08-2020;([0-9]{1,2})(?:/|-)([0-9]{1,2})(?:/|-)([0-9]{2,4});3}
@@ -45,7 +48,8 @@ fortnite
 2020
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {find;example;(x+x+)+y;1;gi;true}

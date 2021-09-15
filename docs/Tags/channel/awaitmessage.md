@@ -14,7 +14,8 @@ description: Wait for a message in the channel. <author> will listen for only me
 A message I sent to test this tag.
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {channel.awaitmessage;{user.id};5}

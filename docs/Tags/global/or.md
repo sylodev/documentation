@@ -14,7 +14,8 @@ description: Returns the first argument that exist and is not empty. Cannot be u
 test
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {or;first;second}

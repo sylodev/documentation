@@ -9,7 +9,8 @@ description: Outputs nothing. You should use this for adding comments to your co
 {note;This code does something very important}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {note;{user.send;Hello}}

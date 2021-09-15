@@ -14,7 +14,8 @@ description: Gets the hex code of a role. If "hex" is false, the color will be i
 #F38A8D
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.color;humans;false}
@@ -25,7 +26,8 @@ description: Gets the hex code of a role. If "hex" is false, the color will be i
 15960717
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.color;@everyone}

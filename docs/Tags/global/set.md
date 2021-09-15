@@ -9,7 +9,8 @@ description: Sets a key to a value in volatile storage. If "value" is empty, the
 {set;my-key;value}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {set;my-key;value} {get;my-key}
@@ -20,7 +21,8 @@ description: Sets a key to a value in volatile storage. If "value" is empty, the
 value
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {set;my-key} {get;my-key}

@@ -14,7 +14,8 @@ description: Gets the number of infractions a user has.
 0
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.infractions;93767954709094400}
@@ -25,7 +26,8 @@ description: Gets the number of infractions a user has.
 0
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.infractions;sylver}

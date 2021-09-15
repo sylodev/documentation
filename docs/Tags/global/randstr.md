@@ -14,7 +14,8 @@ description: Creates a random string of "length" from characters in "characters"
 AuB9N4
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {randstr;abc;2}

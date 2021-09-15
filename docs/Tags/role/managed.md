@@ -14,7 +14,8 @@ description: Returns a boolean indicating whether the role is managed by a third
 false
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.managed;Atlas}

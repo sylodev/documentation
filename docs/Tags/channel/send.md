@@ -9,7 +9,8 @@ description: Sends a message to the channel.
 {channel.send;Welcome to the thunder dome}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {channel.send;what;{channel.id};true}
@@ -20,7 +21,8 @@ description: Sends a message to the channel.
 532902719531515905
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {channel.send;ayyy;off-topic}

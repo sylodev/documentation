@@ -14,7 +14,8 @@ description: Gets the name of a role.
 test
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.name;340583469149192204}

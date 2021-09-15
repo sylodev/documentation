@@ -9,7 +9,8 @@ description: Reacts to the message in context with [emoji].
 {message.react;eggplant}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {message.react;🍆}

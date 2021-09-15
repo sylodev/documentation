@@ -14,7 +14,8 @@ description: Gets a raw setting value. This is an advanced tag, if you don't und
 a!
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {settings;plugins.moderation.state}

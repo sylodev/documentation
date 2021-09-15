@@ -14,7 +14,8 @@ description: When an error occurs in a child tag, we return the given message in
 Something bad happened :c
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {catch;{throw;test}}

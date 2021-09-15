@@ -19,7 +19,8 @@ users balances.
 {perset;my-key;value}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {perset;my-key;value} {perget;my-key}
@@ -30,7 +31,8 @@ users balances.
 value
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {perset;my-key} {perget;my-key}

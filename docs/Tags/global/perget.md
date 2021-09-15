@@ -14,7 +14,8 @@ description: Gets a key from persistent storage.
 value
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {perget;non-existent-key}

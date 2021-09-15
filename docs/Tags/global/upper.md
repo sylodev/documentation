@@ -14,7 +14,8 @@ description: Converts the input to uppercase.
 TEST
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {upper}

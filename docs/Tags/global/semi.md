@@ -14,7 +14,8 @@ description: A semi-colon. Use this if the parser keeps eating your semi-colon.
 ;
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {set;key;Whats up{semi} gamer} {get;key}

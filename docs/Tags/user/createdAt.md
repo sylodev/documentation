@@ -14,7 +14,8 @@ description: Returns the date the users account was created. "exact" is a boolea
 Nov 4, 2015
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.createdAt;true}

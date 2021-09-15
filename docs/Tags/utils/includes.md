@@ -14,7 +14,8 @@ description: Returns a boolean indicating whether "target" contains "term".
 true
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.includes;AN UPPERCASE STRING;uppercase}
@@ -25,7 +26,8 @@ true
 true
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.includes;;}

@@ -14,7 +14,8 @@ description: Gets the ID of the suggestions author, if one is in context.
 111372124383428608
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.mention;{suggestion.author}}

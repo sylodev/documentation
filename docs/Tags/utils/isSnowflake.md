@@ -14,7 +14,8 @@ description: Check if "input" is a valid Discord snowflake.
 true
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isSnowflake;awd}
@@ -25,7 +26,8 @@ true
 false
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isSnowflake;}
@@ -36,7 +38,8 @@ false
 false
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.isSnowflake;{user.id}}

@@ -14,7 +14,8 @@ description: Gets a random number between the minimum and maximum values. If the
 7
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {range;0;100}
@@ -25,7 +26,8 @@ description: Gets a random number between the minimum and maximum values. If the
 69
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {range;5}

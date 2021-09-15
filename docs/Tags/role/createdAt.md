@@ -14,7 +14,8 @@ description: Returns the date the role was created. "exact" is a boolean indicat
 Jul 28, 2017
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.createdAt;Developer;true}

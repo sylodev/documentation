@@ -14,7 +14,8 @@ description: Returns a random argument. Uses conditional parsing.
 a
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {choose;one;two;three;four}
@@ -25,7 +26,8 @@ a
 three
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {choose}

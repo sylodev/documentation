@@ -14,7 +14,8 @@ description: Gets the length of "input".
 3
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {length;}

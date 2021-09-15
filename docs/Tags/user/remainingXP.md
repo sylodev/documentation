@@ -14,7 +14,8 @@ description: Gets the remaining XP until the user levels up.
 1
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.remainingXP}

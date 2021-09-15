@@ -14,7 +14,8 @@ description: Parses a "human" time (e.g, "in 2h", "2h3m") to a timestamp compati
 2021-08-21T04:41:01.950Z
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.time;{utils.parseTime;1h}}
@@ -25,7 +26,8 @@ description: Parses a "human" time (e.g, "in 2h", "2h3m") to a timestamp compati
 Aug 21, 2021
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.time;{utils.parseTime;1629520892435}}

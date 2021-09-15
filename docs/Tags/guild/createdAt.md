@@ -14,7 +14,8 @@ description: Returns the date the guild was created. "exact" is a boolean indica
 Jul 31, 2018
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {guild.createdAt;true}

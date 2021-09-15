@@ -14,7 +14,8 @@ description: Checks whether a user is a bot. Returns a boolean.
 false
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {user.bot;Atlas}

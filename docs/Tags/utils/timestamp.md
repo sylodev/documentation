@@ -14,7 +14,8 @@ description: Gets the timestamp of a provided date or the current date if none i
 1623052829130
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.timestamp;{user.createdAt}}

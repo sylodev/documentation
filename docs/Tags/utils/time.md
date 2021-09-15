@@ -14,7 +14,8 @@ description: Formats the time to a human-readable format. If no time is provided
 Dec 10, 2018, 4:08 PM
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.time;true;Mon, 10 Dec 2018 16:06:14 GMT}
@@ -25,7 +26,8 @@ Dec 10, 2018, 4:08 PM
 Dec 10, 2018, 4:06 PM
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.time;false}
@@ -36,7 +38,8 @@ Dec 10, 2018, 4:06 PM
 Dec 10, 2018
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.time;true;10d}

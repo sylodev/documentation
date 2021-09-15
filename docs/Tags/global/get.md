@@ -14,7 +14,8 @@ description: Gets a key from volatile storage.
 value
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {get;non-existent-key}

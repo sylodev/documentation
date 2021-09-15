@@ -17,7 +17,8 @@ Adding '!' before an operator will invert the output.
 yay
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;condition;yay;nay}
@@ -28,7 +29,8 @@ yay
 yay
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;cond;===;cond;yay}
@@ -39,13 +41,15 @@ yay
 yay
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;cond;!==;cond;yay}
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;true;===;true;yay;nay}
@@ -56,7 +60,8 @@ yay
 yay
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {if;test;!includes;no;true}

@@ -14,7 +14,8 @@ description: A right bracket. Use this if the parser keeps eating brackets you w
 }
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {set;key;Whats up {r} gamer} {get;key}

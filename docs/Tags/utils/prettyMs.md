@@ -14,7 +14,8 @@ description: Formats milliseconds to a human-readable format. If verbose is true
 2 minutes 13 seconds
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {utils.prettyMs;133769;false}

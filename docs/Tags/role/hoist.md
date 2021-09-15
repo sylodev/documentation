@@ -14,7 +14,8 @@ description: Returns a boolean indicating whether the role is set to display mem
 true
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {role.hoist;Atlas}

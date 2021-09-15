@@ -14,7 +14,8 @@ description: A left bracket. Use this if the parser keeps eating brackets you wa
 {
 ```
 {% endtab %}
-{% endtabs %},{% tabs %}
+{% endtabs %}
+{% tabs %}
 {% tab title="Input" %}
 ```text
 {set;key;Whats up {l} gamer} {get;key}
