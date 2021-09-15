@@ -46,7 +46,7 @@ function formatUsage(tag) {
   });
 
   content.push(...args);
-  // gitbook has some problems with markdown in it's titles
+  // gitbook has some strange problems in it's titles
   return `{${content.join(";").replace(/</g, "&lt;")}}`;
 }
 
