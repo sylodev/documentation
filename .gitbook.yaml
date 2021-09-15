@@ -1,4 +1,6 @@
-root: ./
+root: ./docs
 
 ​structure:
   readme: README.md
+  # todo: script to generate summary file
+  # summary: SUMMARY.md

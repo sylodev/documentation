@@ -1,0 +1,11 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "tags": "node scripts/convert-tags.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.0.0"
+  }
+}
