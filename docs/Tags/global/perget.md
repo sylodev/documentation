@@ -25,8 +25,7 @@ value
 ```text
 
 ```
-{% endtab %}
 {% hint style="info" %}
 Unset keys return nothing.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

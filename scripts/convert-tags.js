@@ -55,8 +55,8 @@ function formatExamples(tag) {
   const examples = [];
   for (const example of tag.examples) {
     const content = [formatExampleTab("Input", example.input)];
-    content.push(formatExampleTab("Output", example.output));
-    if (example.note) content.push(formatExampleNote(example.note));
+    const note = example.note;
+    content.push(formatExampleTab("Output", example.output, note ? formatExampleNote(note) : undefined));
     const mergedContent = content.join("\n");
     examples.push(`{% tabs %}\n${mergedContent}\n{% endtabs %}`);
   }
@@ -64,8 +64,8 @@ function formatExamples(tag) {
   return examples.join("\n");
 }
 
-function formatExampleTab(title, content) {
-  return `{% tab title="${title}" %}\n\`\`\`text\n${content}\n\`\`\`\n{% endtab %}`;
+function formatExampleTab(title, content, note = "") {
+  return `{% tab title="${title}" %}\n\`\`\`text\n${content}\n\`\`\`\n${note}{% endtab %}`;
 }
 
 function formatExampleNote(content) {

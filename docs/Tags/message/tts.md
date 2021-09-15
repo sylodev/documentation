@@ -13,8 +13,7 @@ description: Returns a boolean indicating whether the message uses text-to-speec
 ```text
 false
 ```
-{% endtab %}
 {% hint style="info" %}
 thank god
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

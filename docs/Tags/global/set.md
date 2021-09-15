@@ -13,10 +13,9 @@ description: Sets a key to a value in volatile storage. If "value" is empty, the
 ```text
 
 ```
-{% endtab %}
 {% hint style="info" %}
 This tag outputs nothing on success.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -40,8 +39,7 @@ value
 ```text
 
 ```
-{% endtab %}
 {% hint style="info" %}
 With no value the key is deleted.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

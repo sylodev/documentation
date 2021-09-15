@@ -13,8 +13,7 @@ description: Gets the default notification level for the guild.
 ```text
 Only @mentions
 ```
-{% endtab %}
 {% hint style="info" %}
 Output can be either "Only @mentions" or "All Messages".
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

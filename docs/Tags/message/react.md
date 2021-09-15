@@ -13,10 +13,9 @@ description: Reacts to the message in context with [emoji].
 ```text
 
 ```
-{% endtab %}
 {% hint style="info" %}
 The message in context would have the eggplant emoji added to it.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -28,8 +27,7 @@ The message in context would have the eggplant emoji added to it.
 ```text
 
 ```
-{% endtab %}
 {% hint style="info" %}
 The message in context would have the eggplant emoji added to it.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

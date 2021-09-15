@@ -28,10 +28,9 @@ test
 ```text
 fortnite
 ```
-{% endtab %}
 {% hint style="info" %}
 Wildcard matching
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -55,10 +54,9 @@ Wildcard matching
 ```text
 2020
 ```
-{% endtab %}
 {% hint style="info" %}
 Uses regex to match date formats.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -70,8 +68,7 @@ Uses regex to match date formats.
 ```text
 
 ```
-{% endtab %}
 {% hint style="info" %}
 The tag would throw an error as "(x+x+)+y" is an unsafe regex pattern.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

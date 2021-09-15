@@ -13,8 +13,7 @@ description: Gets a users discriminator.
 ```text
 1058
 ```
-{% endtab %}
 {% hint style="info" %}
 The users tag in this case would be "Username#1058"
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

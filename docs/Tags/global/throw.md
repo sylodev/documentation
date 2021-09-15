@@ -13,8 +13,7 @@ description: Throws an error with a custom message. Useful for testing or if you
 ```text
 {throw-ERROR1-something-bad-happened}
 ```
-{% endtab %}
 {% hint style="info" %}
 You can handle the error properly with {catch}.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

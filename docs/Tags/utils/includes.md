@@ -37,8 +37,7 @@ true
 ```text
 false
 ```
-{% endtab %}
 {% hint style="info" %}
 If either of "target" or "term" are missing, the tag will return false.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

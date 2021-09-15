@@ -13,10 +13,9 @@ description: Access user-provided arguments.
 ```text
 arg1
 ```
-{% endtab %}
 {% hint style="info" %}
 Input would be "a!actionlabel arg1 arg2".
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -28,10 +27,9 @@ Input would be "a!actionlabel arg1 arg2".
 ```text
 arg2
 ```
-{% endtab %}
 {% hint style="info" %}
 Input would be "a!actionlabel arg1 arg2".
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -43,10 +41,9 @@ Input would be "a!actionlabel arg1 arg2".
 ```text
 arg1 arg2
 ```
-{% endtab %}
 {% hint style="info" %}
 Input would be "a!actionlabel arg1 arg2".
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -58,10 +55,9 @@ Input would be "a!actionlabel arg1 arg2".
 ```text
 arg2 arg3
 ```
-{% endtab %}
 {% hint style="info" %}
 Input would be "a!actionlabel arg1 arg2 arg3 arg4
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -73,8 +69,7 @@ Input would be "a!actionlabel arg1 arg2 arg3 arg4
 ```text
 arg2 arg3
 ```
-{% endtab %}
 {% hint style="info" %}
 This would return all args at index 2 to infinity.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

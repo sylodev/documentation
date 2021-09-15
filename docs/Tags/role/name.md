@@ -13,10 +13,9 @@ description: Gets the name of a role.
 ```text
 test
 ```
-{% endtab %}
 {% hint style="info" %}
 This assumes the role name is "test" and the input is incomplete.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -28,8 +27,7 @@ This assumes the role name is "test" and the input is incomplete.
 ```text
 Developer
 ```
-{% endtab %}
 {% hint style="info" %}
 This assumes the ID "340583469149192204" is for the "Developer" role.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

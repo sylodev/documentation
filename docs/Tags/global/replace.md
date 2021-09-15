@@ -25,10 +25,9 @@ puppies are the best
 ```text
 puppies are the best
 ```
-{% endtab %}
 {% hint style="info" %}
 This tag is case-insensitive.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -40,8 +39,7 @@ This tag is case-insensitive.
 ```text
 (an) (example) (phrase)
 ```
-{% endtab %}
 {% hint style="info" %}
 This example is advanced and uses regex. It surrounds words matched by `[A-z]+` with `(` and `)`.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

@@ -25,8 +25,7 @@ A message I sent to test this tag.
 ```text
 
 ```
-{% endtab %}
 {% hint style="info" %}
 When no message matching the given filters is sent, nothing is returned.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

@@ -25,8 +25,7 @@ Something bad happened :c
 ```text
 Something bad happened :c
 ```
-{% endtab %}
 {% hint style="info" %}
 The default message is "Something bad happened :c"
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

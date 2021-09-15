@@ -37,8 +37,7 @@ Aug 21, 2021
 ```text
 Aug 21, 2021
 ```
-{% endtab %}
 {% hint style="info" %}
 Supports unix-style (second) and javascript-style (millisecond) timestamps.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}

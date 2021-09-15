@@ -37,8 +37,7 @@ true
 ```text
 true
 ```
-{% endtab %}
 {% hint style="info" %}
 Booleans are not parsed.
-{% endhint % }
+{% endhint % }{% endtab %}
 {% endtabs %}
