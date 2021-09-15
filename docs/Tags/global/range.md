@@ -39,5 +39,6 @@ description: Gets a random number between the minimum and maximum values. If the
 ```
 {% hint style="info" %}
 With no maximum, the minimum becomes the maximum - this is equivalent to {range;0;5}.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}

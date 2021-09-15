@@ -15,7 +15,8 @@ test
 ```
 {% hint style="info" %}
 This assumes the role name is "test" and the input is incomplete.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -29,5 +30,6 @@ Developer
 ```
 {% hint style="info" %}
 This assumes the ID "340583469149192204" is for the "Developer" role.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}

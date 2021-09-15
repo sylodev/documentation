@@ -15,5 +15,6 @@ Only @mentions
 ```
 {% hint style="info" %}
 Output can be either "Only @mentions" or "All Messages".
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}

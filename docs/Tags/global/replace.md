@@ -27,7 +27,8 @@ puppies are the best
 ```
 {% hint style="info" %}
 This tag is case-insensitive.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -41,5 +42,6 @@ This tag is case-insensitive.
 ```
 {% hint style="info" %}
 This example is advanced and uses regex. It surrounds words matched by `[A-z]+` with `(` and `)`.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}

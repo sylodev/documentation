@@ -25,7 +25,8 @@ users balances.
 ```
 {% hint style="info" %}
 This tag outputs nothing on success.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -51,5 +52,6 @@ value
 ```
 {% hint style="info" %}
 With no value the key is deleted.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}

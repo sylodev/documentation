@@ -15,7 +15,8 @@ arg1
 ```
 {% hint style="info" %}
 Input would be "a!actionlabel arg1 arg2".
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -29,7 +30,8 @@ arg2
 ```
 {% hint style="info" %}
 Input would be "a!actionlabel arg1 arg2".
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -43,7 +45,8 @@ arg1 arg2
 ```
 {% hint style="info" %}
 Input would be "a!actionlabel arg1 arg2".
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -57,7 +60,8 @@ arg2 arg3
 ```
 {% hint style="info" %}
 Input would be "a!actionlabel arg1 arg2 arg3 arg4
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -71,5 +75,6 @@ arg2 arg3
 ```
 {% hint style="info" %}
 This would return all args at index 2 to infinity.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}

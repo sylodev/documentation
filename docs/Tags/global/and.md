@@ -39,5 +39,6 @@ true
 ```
 {% hint style="info" %}
 Booleans are not parsed.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}

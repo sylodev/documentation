@@ -15,5 +15,6 @@ false
 ```
 {% hint style="info" %}
 This assumes the channel is not marked as NSFW.
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}

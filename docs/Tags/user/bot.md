@@ -15,7 +15,8 @@ false
 ```
 {% hint style="info" %}
 Assumes the user in context is not a bot. 
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
 {% tabs %}
 {% tab title="Input" %}
@@ -29,5 +30,6 @@ true
 ```
 {% hint style="info" %}
 Assumes the user in context is a bot. 
-{% endhint % }{% endtab %}
+{% endhint % }
+{% endtab %}
 {% endtabs %}
