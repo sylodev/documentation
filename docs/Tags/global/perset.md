@@ -1,6 +1,5 @@
 ---
-description: 
-Sets a key to a value in persistent storage. 
+description: Sets a key to a value in persistent storage. 
 If "value" is empty, the key is deleted.
 
 Unless you need absolutely must persist data between action invocations, you should use {set} and {get}.

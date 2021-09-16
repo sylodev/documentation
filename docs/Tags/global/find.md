@@ -1,6 +1,5 @@
 ---
 description: Finds the pattern in the target. Supports regex. 
-
 If "forceRegex" is true, errors are thrown if we determine the pattern is unsafe instead of silently falling back to wildcard matching. 
 If you are using regex, "forceRegex" should always be on. The default is for backwards compatibility.
 ---
