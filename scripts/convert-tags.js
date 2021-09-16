@@ -10,7 +10,7 @@ fetch(TAGS_SOURCE).then(async (response) => {
   const tags = await response.json();
   let count = 0;
   for (const tag of tags) {
-    const description = tag.description.replace("\n", "");
+    const description = tag.description.replace(/\n/g, "");
     const content = [`---\ndescription: ${description}\n---`, `# ${formatUsage(tag)}`];
     if (tag.examples[0]) {
       content.push("## Examples", formatExamples(tag));
