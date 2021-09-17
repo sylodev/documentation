@@ -1,0 +1,28 @@
+name: Pull Latest Tags
+on: workflow_dispatch
+
+jobs:
+  pull-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+      - name: Install Dependencies
+        run: npm install
+      - name: Pull Tags
+        run: npm run pull-tags
+      - name: Commit Changes
+        run: |
+          git config user.name '${{ github.actor }}'
+          git config user.email '${{ github.actor }}@users.noreply.github.com'
+          git add docs/Tags
+          git commit -m 'chore: pull latest tags'
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: Latest Tag Changes
+          delete-branch: true
