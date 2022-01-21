@@ -2,13 +2,34 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-21T06:28:13.382Z
+date: 2022-01-21T06:41:42.937Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
 ---
 
 # Action Triggers
+
+## Slash Command
+
+> It may take a couple minutes for changes to application command actions to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-warning}
+
+The Slash Command trigger can be used to make your own custom commands. The action will trigger when someone runs `/<trigger value>`, for example the default trigger will register a `/my_command` command that you can run to invoke your action.  
+
+You can also configure options that the slash command can have, which will be passed to your action through the `{option}` tag. If you have an option named `target_user` that is a "User" option type, you can do `{option;target_user}` to get the target users ID, which can then be used in other tags, for example `{user.username;{option;target_user}}` to get the target users username.
+
+## Context Menu
+
+> It may take a couple minutes for changes to application command actions to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-warning}
+
+The Context Menu trigger can be used to invoke an action when someone right clicks a message or user and selects the trigger name under `Apps` in the context menu. 
+
+ <img src="https://i.imgur.com/2atG7Qb.png" alt="Example showing a Context Menu action in Discord" loading="lazy" />
+
+- For user context menus, the target user ID can be accessed through `{target}`, for example `{user.username;{target}}`
+- For message context menus, `{message}` will correspond to the message the action was used on and `{target}` will be the ID of the message.
+
+
 
 ## Keyword
 
