@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-21T07:01:16.230Z
+date: 2022-01-21T15:39:15.773Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -73,15 +73,19 @@ Some examples of valid schedules:
 - `at 5:00 pm on Weds,Thurs and Fri` fires at 5:00pm on Wednesday, Thursday, and Friday
 - `at 5:00 pm every 1 day of March in 2014` fires at 5:00pm every day of March in 2014
 
-# Webhook Receive
+## Webhook Receive
 
-Actions using this trigger will fire when a HTTP request is sent to a specified URL.
+Actions using this trigger will fire when a HTTP request is sent to the specified URL. To prevent loops, action locking is enforced for webhook actions and `{#fetch}` can only call webhooks from other servers.
 
 The request method must be `POST`. You can access body data via `{$request.body}` and `{$request.headers}`, for example `{$request.headers.content-type}`. For security, the `Authorization` and `Cookie` headers are inaccessible.
 
+You can append `?wait=false` to the webhook URL to skip waiting for the action to finish running and return early. This is necessary for actions that may run for a long time.
+
+
+####  Response data
 |   Property   |            Type             |                        Description                         |
 | :----------: | :-------------------------: | :--------------------------------------------------------: |
-|  statusCode  | `ERROR` \| `OK` \| `PROCESSING` |                The result of the invocation                |
+|  statusCode  | `"ERROR"` \| `"OK"` \| `"PROCESSING"` |                The result of the invocation                |
 |   content    |           string?           |                  The output of the action                  |
 | errorMessage |           string?           |       The error message if the action failed to run        |
 |  errorStack  |           string?           | The stack trace for the action if the action failed to run |
