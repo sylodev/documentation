@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-21T07:01:03.571Z
+date: 2022-01-21T07:01:16.230Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -81,7 +81,7 @@ The request method must be `POST`. You can access body data via `{$request.body}
 
 |   Property   |            Type             |                        Description                         |
 | :----------: | :-------------------------: | :--------------------------------------------------------: |
-|  statusCode  | `ERROR`\|`OK`\|`PROCESSING` |                The result of the invocation                |
+|  statusCode  | `ERROR` \| `OK` \| `PROCESSING` |                The result of the invocation                |
 |   content    |           string?           |                  The output of the action                  |
 | errorMessage |           string?           |       The error message if the action failed to run        |
 |  errorStack  |           string?           | The stack trace for the action if the action failed to run |
