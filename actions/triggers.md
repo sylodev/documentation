@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-21T06:41:42.937Z
+date: 2022-01-21T07:01:03.571Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -14,7 +14,7 @@ dateCreated: 2022-01-21T06:07:28.374Z
 
 > It may take a couple minutes for changes to application command actions to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-warning}
 
-The Slash Command trigger can be used to make your own custom commands. The action will trigger when someone runs `/<trigger value>`, for example the default trigger will register a `/my_command` command that you can run to invoke your action.  
+The Slash Command trigger can be used to make your own custom commands. The action will trigger when someone runs `/<trigger value>`, for example the default trigger will register a `/my_command` command that you can run to invoke your action.
 
 You can also configure options that the slash command can have, which will be passed to your action through the `{option}` tag. If you have an option named `target_user` that is a "User" option type, you can do `{option;target_user}` to get the target users ID, which can then be used in other tags, for example `{user.username;{option;target_user}}` to get the target users username.
 
@@ -22,20 +22,19 @@ You can also configure options that the slash command can have, which will be pa
 
 > It may take a couple minutes for changes to application command actions to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-warning}
 
-The Context Menu trigger can be used to invoke an action when someone right clicks a message or user and selects the trigger name under `Apps` in the context menu. 
+The Context Menu trigger can be used to invoke an action when someone right clicks a message or user and selects the trigger name under `Apps` in the context menu.
 
  <img src="https://i.imgur.com/2atG7Qb.png" alt="Example showing a Context Menu action in Discord" loading="lazy" />
 
 - For user context menus, the target user ID can be accessed through `{target}`, for example `{user.username;{target}}`
 - For message context menus, `{message}` will correspond to the message the action was used on and `{target}` will be the ID of the message.
 
-
-
 ## Keyword
 
 The keyword trigger can be used to trigger actions when messages contain a given phrase or match a RegEx pattern. Wildcards are supported. `hello*world` will be expanded to match `*hello*world*`, to avoid this you can use regex with `^` and `$`, such as `/^hello.*world$/` which will match messages matching "hello\*world" exactly, and not something like `hello world :)`.
 
 Some examples of valid patterns are
+
 - `world` will match message containing "world", such as "something here word", "bigworld", etc
 - `hello*world` will match messages such as "Hello World!", "Hello There World", "Something Hello World"
 - `/hello.world/i` is a regex pattern which will match messages such as "Hello World!", "Hello There World" but or even "unrelaetd helloxworld"
@@ -64,6 +63,7 @@ The format for cron expressions is as follows
 ```
 
 Some examples of valid schedules:
+
 - `0 0/5 14 * * ?` is a cron expression that fires every 5 minutes starting at 2pm and ending at 2:55pm, every day.
 - `at 10:15am`
 - `every 5 minutes`
@@ -72,3 +72,16 @@ Some examples of valid schedules:
 - `after 12th hour` fires every hour after noon every day
 - `at 5:00 pm on Weds,Thurs and Fri` fires at 5:00pm on Wednesday, Thursday, and Friday
 - `at 5:00 pm every 1 day of March in 2014` fires at 5:00pm every day of March in 2014
+
+# Webhook Receive
+
+Actions using this trigger will fire when a HTTP request is sent to a specified URL.
+
+The request method must be `POST`. You can access body data via `{$request.body}` and `{$request.headers}`, for example `{$request.headers.content-type}`. For security, the `Authorization` and `Cookie` headers are inaccessible.
+
+|   Property   |            Type             |                        Description                         |
+| :----------: | :-------------------------: | :--------------------------------------------------------: |
+|  statusCode  | `ERROR`\|`OK`\|`PROCESSING` |                The result of the invocation                |
+|   content    |           string?           |                  The output of the action                  |
+| errorMessage |           string?           |       The error message if the action failed to run        |
+|  errorStack  |           string?           | The stack trace for the action if the action failed to run |
