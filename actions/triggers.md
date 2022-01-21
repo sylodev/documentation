@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-21T06:24:44.075Z
+date: 2022-01-21T06:28:13.382Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -12,13 +12,13 @@ dateCreated: 2022-01-21T06:07:28.374Z
 
 ## Keyword
 
-The keyword trigger can be used to trigger actions when messages contain a given phrase or match a RegEx pattern. 
+The keyword trigger can be used to trigger actions when messages contain a given phrase or match a RegEx pattern. Wildcards are supported. `hello*world` will be expanded to match `*hello*world*`, to avoid this you can use regex with `^` and `$`, such as `/^hello.*world$/` which will match messages matching "hello\*world" exactly, and not something like `hello world :)`.
 
 Some examples of valid patterns are
-- `world` will match message such as "world", "something here word", "bigworld", etc
-- `hello*world` is a pattern that will match messages such as "Hello World!", "Hello There World", "Something Hello World"
+- `world` will match message containing "world", such as "something here word", "bigworld", etc
+- `hello*world` will match messages such as "Hello World!", "Hello There World", "Something Hello World"
 - `/hello.world/i` is a regex pattern which will match messages such as "Hello World!", "Hello There World" but or even "unrelaetd helloxworld"
-- `/^Hello World$/` is a regex pattern which will match messages exactly matching "Hello World" and nothing else
+- `/^Hello World$/` is a regex pattern which will match messages exactly matching "Hello World" and nothing else. `^` and `$` are used to ensure the match starts at the beginning of the message and ends at the ending.
 
 ## Interval
 
