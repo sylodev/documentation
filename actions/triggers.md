@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-23T20:42:28.265Z
+date: 2022-01-23T20:53:28.735Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -12,23 +12,11 @@ dateCreated: 2022-01-21T06:07:28.374Z
 
 ## Slash Command
 
-> It may take a couple minutes for changes to application command actions to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-warning}
+> It may take a couple minutes for changes to this trigger to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-info}
 
 The Slash Command trigger can be used to make your own custom commands. The action will trigger when someone runs `/<trigger value>`, for example the default trigger will register a `/my_command` command that you can run to invoke your action.
 
 You can also configure options that the slash command can have, which will be passed to your action through the `{option}` tag. If you have an option named `target_user` that is a "User" option type, you can do `{option;target_user}` to get the target users ID, which can then be used in other tags, for example `{user.username;{option;target_user}}` to get the target users username.
-
-## Context Menu
-
-> It may take a couple minutes for changes to application command actions to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-warning}
-
-The Context Menu trigger can be used to invoke an action when someone right clicks a message or user and selects the trigger name under `Apps` in the context menu.
-
- <img src="https://i.imgur.com/2atG7Qb.png" alt="Example showing a Context Menu action in Discord" loading="lazy" />
-
-- For user context menus, the target user ID can be accessed through `{$targetId}`, for example `{user.username;{$targetId}}`
-- For message context menus, `{message}` will correspond to the message the action was used on and `{$targetId}` will be the ID of the message.
-- `{$targetType}` can be used to get the [type of target](https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types).
 
 ## Keyword
 
@@ -40,6 +28,22 @@ Some examples of valid patterns are
 - `hello*world` will match messages such as "Hello World!", "Hello There World", "Something Hello World"
 - `/hello.world/i` is a regex pattern which will match messages such as "Hello World!", "Hello There World" but or even "unrelaetd helloxworld"
 - `/^Hello World$/` is a regex pattern which will match messages exactly matching "Hello World" and nothing else. `^` and `$` are used to ensure the match starts at the beginning of the message and ends at the ending.
+
+## Script
+
+Actions using this trigger can imported by other actions without having to first be exported. This allows you to create dynamic modules that can be shared across multiple actions. This trigger will never fire, which also means the settings for the action are ignored if any are defined.
+
+## Context Menu
+
+> It may take a couple minutes for changes to this trigger to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-info}
+
+The Context Menu trigger can be used to invoke an action when someone right clicks a message or user and selects the trigger name under `Apps` in the context menu.
+
+ <img src="https://i.imgur.com/2atG7Qb.png" alt="Example showing a Context Menu action in Discord" loading="lazy" />
+
+- For user context menus, the target user ID can be accessed through `{$targetId}`, for example `{user.username;{$targetId}}`
+- For message context menus, `{message}` will correspond to the message the action was used on and `{$targetId}` will be the ID of the message.
+- `{$targetType}` can be used to get the [type of target](https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types).
 
 ## Interval
 
@@ -76,7 +80,63 @@ Some examples of valid schedules:
 - `at 5:00 pm on Weds,Thurs and Fri` fires at 5:00pm on Wednesday, Thursday, and Friday
 - `at 5:00 pm every 1 day of March in 2014` fires at 5:00pm every day of March in 2014
 
-## Webhook Receive
+## Message Reaction Add
+
+Fires when a reaction is added to a message.
+
+## Message Reaction Remove
+
+Fires when a reaction is removed from a message. 
+
+## Message Create
+
+> Because this trigger is easy to abuse, there are extreme limits in place. {.is-danger}
+
+Fires when someone sends any message to a server. You can optionally filter by messages in a specific channel.
+
+## Guild Member Add
+
+Fires when a member joins the server.
+
+## Guild Member Remove
+
+Fires when a member leaves the server.
+
+## Guild Member Role Add
+
+> This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
+
+Fires when a member gets a new role. You can configure a specific role to listen for, otherwise any role being added will fire the action.
+
+## Guild Member Role Remove
+
+> This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
+
+Fires when a member is removed from a role. You can configure a specific role to listen for, otherwise any role being removed will fire the action.
+
+## Voice Channel Join
+
+Fires when a user joins a voice channel or switches to a new voice channel. 
+
+## Voice Channel Leave
+
+
+Fires when a user leaves a voice channel or switches to a new voice channel.
+
+## Guild Boost Add
+
+> This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
+
+Fires when a member boosts the server.
+
+## Guild Boost Remove
+
+> This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
+
+Fires when a member removes their boost from a server.
+
+## Webhook
+
 
 Actions using this trigger will fire when a HTTP request is sent to the specified URL. To prevent loops, action locking is enforced for webhook actions and `{#fetch}` can only call webhooks from other servers.
 
