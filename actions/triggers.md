@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-23T08:31:17.603Z
+date: 2022-01-23T09:55:04.461Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
