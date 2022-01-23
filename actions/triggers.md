@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-21T15:39:15.773Z
+date: 2022-01-23T08:16:40.700Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -79,13 +79,11 @@ Actions using this trigger will fire when a HTTP request is sent to the specifie
 
 The request method must be `POST`. You can access body data via `{$request.body}` and `{$request.headers}`, for example `{$request.headers.content-type}`. For security, the `Authorization` and `Cookie` headers are inaccessible.
 
-You can append `?wait=false` to the webhook URL to skip waiting for the action to finish running and return early. This is necessary for actions that may run for a long time.
-
 
 ####  Response data
 |   Property   |            Type             |                        Description                         |
 | :----------: | :-------------------------: | :--------------------------------------------------------: |
 |  statusCode  | `"ERROR"` \| `"OK"` \| `"PROCESSING"` |                The result of the invocation                |
-|   content    |           string?           |                  The output of the action                  |
+|   output    |           string?           |                  The output of the action                  |
 | errorMessage |           string?           |       The error message if the action failed to run        |
 |  errorStack  |           string?           | The stack trace for the action if the action failed to run |
