@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-23T08:30:55.402Z
+date: 2022-01-23T08:31:03.524Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -47,6 +47,8 @@ The interval trigger can be used to invoke an action on a schedule. The schedule
 Runs must be at minimum a minimum apart. If an action is scheduled to run every second, it will only be invoked every minute at most. Additionally, if an action is set to run every minute of 2022, once the year is over the action will be disabled and you will have to configure a new schedule.
 
 An action set to run every hour will be scheduled to run on the hour every hour. There is no guarantee the action will run at the exact time its scheduled, as priority may be given to actions that run less frequently, or there may be a lot of actions to run at that specific moment which will delay others. Actions set to run at midnight every day will be competing with thousands of others to run, so they may be delayed a couple seconds or minutes. You can configure this by setting a grace period. If the action does not run within the grace period of the target time, that run will be scrapped and the action will be rescheduled to run at the next scheduled date. For example, an action set to run every day at 5pm with a grace period of 30 minutes will not run if the bot is down from 5pm to 5:30pm.
+
+Actions with this trigger will run with the person who last updated the action in context, which will also mean the action inherits that users permissions in the server.
 
 The format for cron expressions is as follows
 
