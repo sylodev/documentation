@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-23T09:55:04.461Z
+date: 2022-01-23T20:41:28.128Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -26,8 +26,9 @@ The Context Menu trigger can be used to invoke an action when someone right clic
 
  <img src="https://i.imgur.com/2atG7Qb.png" alt="Example showing a Context Menu action in Discord" loading="lazy" />
 
-- For user context menus, the target user ID can be accessed through `{target}`, for example `{user.username;{target}}`
-- For message context menus, `{message}` will correspond to the message the action was used on and `{target}` will be the ID of the message.
+- For user context menus, the target user ID can be accessed through `{$targetId}`, for example `{user.username;{$targetId}}`
+- For message context menus, `{message}` will correspond to the message the action was used on and `{$targetId}` will be the ID of the message.
+- `{$targetType}` can be used to get the type of target.
 
 ## Keyword
 
