@@ -2,7 +2,7 @@
 title: Action Triggers
 description: Information on action triggers and how they work
 published: 1
-date: 2022-01-23T08:16:40.700Z
+date: 2022-01-23T08:30:55.402Z
 tags: actions
 editor: markdown
 dateCreated: 2022-01-21T06:07:28.374Z
@@ -78,6 +78,8 @@ Some examples of valid schedules:
 Actions using this trigger will fire when a HTTP request is sent to the specified URL. To prevent loops, action locking is enforced for webhook actions and `{#fetch}` can only call webhooks from other servers.
 
 The request method must be `POST`. You can access body data via `{$request.body}` and `{$request.headers}`, for example `{$request.headers.content-type}`. For security, the `Authorization` and `Cookie` headers are inaccessible.
+
+Actions with this trigger will run with the person who last updated the action in context, which will also mean the action inherits that users permissions in the server.
 
 
 ####  Response data
