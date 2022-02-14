@@ -1,8 +1,8 @@
 ---
-title: {kv}
+title: {store} tags
 description: Creates, deletes, or manipulates key-value variables.
 published: 1
-date: 2022-02-14T16:24:11.582Z
+date: 2022-02-14T16:24:54.186Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-24T16:12:52.291Z
