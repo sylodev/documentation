@@ -2,7 +2,7 @@
 title: Global tags
 description: 
 published: 1
-date: 2022-02-14T17:16:04.568Z
+date: 2022-02-14T17:23:02.173Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-14T17:16:04.568Z
@@ -85,3 +85,55 @@ Perform a HTTP request to a URL.
 `application/xml`, `text/xml`, `application/rss+xml` and `application/atom+xml` will be parsed as XML.
 
 `{=data;{#fetch;https://atlas.bot/api/status}}\n{$data.body.ok}` true
+
+## `{#if}`
+
+Compare different values and do things based on the result.
+
+```ts
+[
+      { input: "{#if;word;==;WORD;yay;nay}", output: "yay", note: '"==" is for case-insensitive comparison' },
+      { input: "{#if;word;===;WORD;yay;nay}", output: "nay", note: '"===" is for case-sensitive comparison' },
+      { input: "{#if;word;matches;/[a-z]+/gu;yay;nay}", output: "yay", note: '"matches" can be used for matching regex' },
+      { input: "{#if;true;===;yes;yay;nay}", output: "yay", note: "Boolean-like values are coerced to booleans" },
+      { input: "{#if;5;<;10;yay;nay}", output: "yay", note: "Numbers are compared as numbers." },
+      {
+        input: "{#if;true;{channel.send;yay};{channel.send;nay}}",
+        output: "yay",
+        note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run send both "yay" and "nay".',
+      },
+    ]
+```
+
+## `{#for;init;iterable;body}`
+
+Iterate over array items or loop however many times is necessary.
+
+```
+{=array;{[one;two;three]}}
+{#for;{=item};{$array};{$item}}
+```
+
+## `{#break}`
+
+Break for-loops early. In the example, only the first item would ever be output.
+
+```
+{=array;{[one;two;three]}}
+[#for;{=item};{$array}]
+	{$item}
+	{#break}
+[/for]
+```
+
+## `{#throw;message}`
+
+Throw an engine error. Depending on your action setup, these will be shown to the user and logged just as regular engine errors would be.
+
+## `{#catch;body;message}`
+
+Catch a thrown error.
+
+`{#catch;{#throw;Test error};Oh no! Something went wrong}` Oh no! Something went wrong
+`{#catch;{throw;Oopsy poopsy!}}` 
+`{#catch;{user.id}}` 111372124383428608
