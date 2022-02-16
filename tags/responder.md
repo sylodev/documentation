@@ -2,7 +2,7 @@
 title: {responder} tags
 description: 
 published: 1
-date: 2022-02-16T05:09:37.565Z
+date: 2022-02-16T05:37:30.487Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T05:09:37.565Z
@@ -56,4 +56,30 @@ Reset any options already applied to the responder.
 ```
 This would output "Something bad happened!"
 
-## 
+## `{responder.ephemeral}`
+
+Mark the message as ephemeral. Only works with interactions. 
+
+## `{responder.error;message}`
+
+This is the same as `{responder.text}`, with some extras;
+
+- Embeds will be set to red
+- The message will be set to ephemeral
+
+You should use this whenever sending error messages.
+
+## `{responder.send return_id=false}`
+
+Send the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully. `return_id` can be used to get the output message ID. Calling this is optional, once execution is over and there is a configured responder it will be sent automatically.
+
+## `{responder.button text handler payload link emoji dstyle}`
+
+Add a button to the message. 
+
+`text` is the button text.
+`handler` is the value of the component callback action to call when the button is clicked
+`payload` is an optional payload that will be accessible in the component callback action
+`link` can be used to link to external resources
+`emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.
+`style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `link` is present.
