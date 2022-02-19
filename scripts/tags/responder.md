@@ -2,7 +2,7 @@
 title: {responder} tags
 description: 
 published: 1
-date: 2022-02-19T16:51:30.975Z
+date: 2022-02-19T16:51:42.663Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T05:09:37.565Z
@@ -41,7 +41,7 @@ This tag is used to add embeds to the message. Calling it multiple times will ad
 `{responder.embed title="Hello world"}`
 `{responder.embed title=Test timestamp="5 hours ago"}`
 
-## `{responder.embedField}`
+## `{responder.embedField;name;value;inline}`
 
 Add a field to the last created embed.
 
