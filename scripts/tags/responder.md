@@ -2,7 +2,7 @@
 title: {responder} tags
 description: 
 published: 1
-date: 2022-02-16T05:37:30.487Z
+date: 2022-02-19T16:51:30.975Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T05:09:37.565Z
@@ -40,6 +40,16 @@ This tag is used to add embeds to the message. Calling it multiple times will ad
 
 `{responder.embed title="Hello world"}`
 `{responder.embed title=Test timestamp="5 hours ago"}`
+
+## `{responder.embedField}`
+
+Add a field to the last created embed.
+
+```
+{responder.embed title="My Embed" description="Fortnite or something idk"}
+{responder.embedField name="My Field" value="very cool" inline=true}
+{responder.embedField name="Another One" value="even cooler" inline=true}
+```
 
 ## `{responder.channel;channel}`
 
