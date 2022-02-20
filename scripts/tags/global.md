@@ -1,9 +1,9 @@
 ---
 title: Global tags
-description: 
+description:
 published: 1
 date: 2022-02-14T17:23:02.173Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2022-02-14T17:16:04.568Z
 ---
@@ -12,7 +12,7 @@ dateCreated: 2022-02-14T17:16:04.568Z
 
 ## `{time format;time}`
 
-Gets the current time and formats it as a string. 
+Gets the current time and formats it as a string.
 
 `time` can be any time that the bot can parse - this includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative time `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others.
 
@@ -52,19 +52,29 @@ Determine whether the target string is a snowflake.
 `{isSnowflake return_id=true;111372124383428608}` 111372124383428608
 `{isSnowflake lax=true return_id=true;<@111372124383428608>}` 111372124383428608
 
-## `{includes case_insensitive=true;target;pattern}`
+## `{find case_insensitive=true return_all=false;target;pattern}`
 
-Check whether `target` includes `pattern`. `/regex/i` is supported. `case_insensitive` is ignored for regex patterns.
+Find `pattern` in `target`. `/regex/i` is supported. `case_insensitive` is incompatible with regex patterns. `return_all` can be used with regex patterns to return all matches.
 
-`{includes;HELLO WORLD;world}` true
-`{includes case_insensitive=false;HELLO WORLD;world}` false
-`{includes;hello darkness;/hello .*/}` true
+`{find;hello;hello}` hello
+`{find;hello world;hello}` hello
+`{find;hello world;nothing}`
+`{find case_insensitive=false;hello world;HELLO}` HELLO
+`{find;hello world;/hello/i}`
+`{find return_all=true;hello hello hello world;/hello/ig}` {[hello;hello;hello]}
+
+## `{replace replace_all=true case_insensitive=true;target;pattern;replacement}`
+
+Replace in `target` values matched by `pattern` with `replacement`. `/regex/i` is supported. `case_insensitive` is incompatible with regex patterns. `replace_all` can be used to replace all matches instead of the first, and is incompatible with regex patterns - use the `g` flag.
+
+`{replace;hello world;hello;goodbye}` goodbye world
+`{replace;Hello World;/world/i;=)}` Hello =)
 
 ## `{sleep;duration}`
 
 Hold up processing. This does not schedule execution for later, it pauses execution until the sleep duration is up. You should only use this for very specific use cases and avoid it entirely if you can.
 
-## `{math precision_fix=true;expr}` 
+## `{math precision_fix=true;expr}`
 
 Evaluates math. `precision_fix` will enable a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.
 
@@ -79,7 +89,7 @@ Get a random item from a list.
 
 ## `{fetch;link}`
 
-Perform a HTTP request to a URL. 
+Perform a HTTP request to a URL.
 
 `application/json` will be parsed as JSON
 `application/xml`, `text/xml`, `application/rss+xml` and `application/atom+xml` will be parsed as XML.
@@ -92,17 +102,37 @@ Compare different values and do things based on the result.
 
 ```ts
 [
-      { input: "{#if;word;==;WORD;yay;nay}", output: "yay", note: '"==" is for case-insensitive comparison' },
-      { input: "{#if;word;===;WORD;yay;nay}", output: "nay", note: '"===" is for case-sensitive comparison' },
-      { input: "{#if;word;matches;/[a-z]+/gu;yay;nay}", output: "yay", note: '"matches" can be used for matching regex' },
-      { input: "{#if;true;===;yes;yay;nay}", output: "yay", note: "Boolean-like values are coerced to booleans" },
-      { input: "{#if;5;<;10;yay;nay}", output: "yay", note: "Numbers are compared as numbers." },
-      {
-        input: "{#if;true;{channel.send;yay};{channel.send;nay}}",
-        output: "yay",
-        note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run send both "yay" and "nay".',
-      },
-    ]
+  {
+    input: "{#if;word;==;WORD;yay;nay}",
+    output: "yay",
+    note: '"==" is for case-insensitive comparison',
+  },
+  {
+    input: "{#if;word;===;WORD;yay;nay}",
+    output: "nay",
+    note: '"===" is for case-sensitive comparison',
+  },
+  {
+    input: "{#if;word;matches;/[a-z]+/gu;yay;nay}",
+    output: "yay",
+    note: '"matches" can be used for matching regex',
+  },
+  {
+    input: "{#if;true;===;yes;yay;nay}",
+    output: "yay",
+    note: "Boolean-like values are coerced to booleans",
+  },
+  {
+    input: "{#if;5;<;10;yay;nay}",
+    output: "yay",
+    note: "Numbers are compared as numbers.",
+  },
+  {
+    input: "{#if;true;{channel.send;yay};{channel.send;nay}}",
+    output: "yay",
+    note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run send both "yay" and "nay".',
+  },
+];
 ```
 
 ## `{#for;init;iterable;body}`
@@ -135,5 +165,5 @@ Throw an engine error. Depending on your action setup, these will be shown to th
 Catch a thrown error.
 
 `{#catch;{#throw;Test error};Oh no! Something went wrong}` Oh no! Something went wrong
-`{#catch;{throw;Oopsy poopsy!}}` 
+`{#catch;{throw;Oopsy poopsy!}}`
 `{#catch;{user.id}}` 111372124383428608
