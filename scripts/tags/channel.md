@@ -39,7 +39,7 @@ Returns the Unix timestamp in milliseconds for the creation date of the channel
 
 ## `{channel.nsfw;channel}`
 
-Returns true the text channel is marked NSFW and false if it's not
+Returns true if the text channel is marked NSFW and false if it's not
 
 ## `{channel.name;channel}`
 
