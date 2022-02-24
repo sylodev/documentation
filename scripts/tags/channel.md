@@ -2,7 +2,7 @@
 title: {channel} tags
 description: 
 published: 1
-date: 2022-02-23T19:30:00.000Z
+date: 2022-02-24T02:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:15:22.397Z
@@ -12,11 +12,11 @@ dateCreated: 2022-02-16T06:15:22.397Z
 
 ## `{channel.mention;channel}`
 
-Returns a string with the channel mention
+Returns a string with a channel mention.
 
 ## `{channel.id;channel}`
 
-Returns the ID of a channel
+Returns the ID of a channel.
 
 ## `{channel.type;channel}`
 
@@ -35,27 +35,27 @@ Returns an integer for the [channel type](https://discordpy.readthedocs.io/en/st
 
 ## `{channel.createdAt;channel}`
 
-Returns the Unix timestamp in milliseconds for the creation date of the channel
+Returns the Unix timestamp in milliseconds for the creation date of a channel.
 
 ## `{channel.nsfw;channel}`
 
-Returns true if the text channel is marked NSFW and false if it's not
+Checks if a channel is marked as NSFW.
 
 ## `{channel.name;channel}`
 
-Returns the name of the channel
+Returns the name of a channel.
 
 ## `{channel.lastMessageId;channel}`
 
-Returns the ID of the last message sent in the channel
+Returns the ID of the last message sent in a channel.
 
 ## `{channel.topic;channel}`
 
-Returns the channel topic, AKA the channel description
+Returns a channel topic, AKA channel description.
 
 ## `{channel.edit;channel}`
 
-Update a channel.
+Updates a channel.
 
 #### Arguments
 - `name`: The new name of the channel
@@ -64,7 +64,7 @@ Update a channel.
 
 ## `{channel.create name type topic nsfw parent return_id;channel}`
 
-Create a new channel. 
+Creates a new channel. 
 
 #### Arguments
 - `name`: The name of the channel
@@ -78,4 +78,4 @@ Create a new channel.
 
 > This tag can do serious damage if you are not extremely careful with validating inputs. {.is-warning}
 
-Delete a channel.
+Deletes a channel.
