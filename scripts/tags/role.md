@@ -48,7 +48,7 @@ Returns the Unix timestamp in milliseconds for the creation date of a role.
 
 ## `{role.hasPermission;permission_name;role}`
 
-Checks whether a role has the specified permission.
+Checks if a role has the specified permission.
 
 `{role.hasPermission;administrator}`
 
