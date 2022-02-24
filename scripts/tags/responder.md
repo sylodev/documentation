@@ -2,7 +2,7 @@
 title: {responder} tags
 description: 
 published: 1
-date: 2022-02-19T16:51:42.663Z
+date: 2022-02-24T18:14:11.100Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T05:09:37.565Z
@@ -83,13 +83,13 @@ You should use this whenever sending error messages.
 
 Send the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully. `return_id` can be used to get the output message ID. Calling this is optional, once execution is over and there is a configured responder it will be sent automatically.
 
-## `{responder.button text handler payload link emoji dstyle}`
+## `{responder.button label handler state url emoji style}`
 
 Add a button to the message. 
 
-`text` is the button text.
+`label` is the button text.
 `handler` is the value of the component callback action to call when the button is clicked
-`payload` is an optional payload that will be accessible in the component callback action
-`link` can be used to link to external resources
+`state` is an optional payload that will be accessible in the component callback action
+`url` can be used to link to external resources
 `emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.
-`style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `link` is present.
+`style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.
