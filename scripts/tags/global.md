@@ -2,7 +2,7 @@
 title: Global tags
 description:
 published: 1
-date: 2022-02-24T20:00:00.000Z
+date: 2022-02-24T21:55:55.555Z
 tags:
 editor: markdown
 dateCreated: 2022-02-14T17:16:04.568Z
@@ -130,7 +130,7 @@ Performs a HTTP request to a URL.
 
 ## `{#if}`
 
-Compares different values and do things based on the result. Can be run as `{#if;boolean;run_if_true;run_if_false}` or `{#if;element1;operator;element2;run_if_true;run_if_false}`. Available operators: '==', '!=', '>=', '>', '<=', '<', '!=='.
+Compares different values and do things based on the result. Syntax is `{#if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{#if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `==`, `!=`, `>=`, `>`, `<=`, `<`, and `!==`.
 
 ```ts
 [
@@ -176,8 +176,6 @@ Iterates over array items or loop however many times is necessary.
 {#for;{=item};{$array};{$item}} // one two three
 ```
 
-Other use: `[for;init;iterable] body [/for]`
-
 ## `{#break}`
 
 Breaks for-loops early. In this example, only the first item would ever be output.
@@ -187,6 +185,28 @@ Breaks for-loops early. In this example, only the first item would ever be outpu
 [#for;{=item};{$array}]
 	{$item}
 	{#break}
+[/for]
+```
+
+## Blocks
+
+Both `{#if}` and `{#for}` also support a block syntax with regular brackets. For the `[#if]` block, it is not possible to have a body that will run when the condition is false.
+
+### `[#if]`
+Syntax: `[#if;condition] body [/if]`
+```
+[#if;{ticket.reason}]
+    // Add the ticket reason only if it is not empty
+    {responder.embedField name="Reason" value={ticket.reason}}
+[/if]
+```
+
+### `[#for]`
+Syntax: `[#for;init;iterable] body [/for]`
+```
+{=array;{[one;two;three]}}
+[#for;{=item};{$array}]
+	{responder.embedField name="Item Value" value={$item}
 [/for]
 ```
 
