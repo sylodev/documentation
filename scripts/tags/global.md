@@ -1,9 +1,9 @@
 ---
 title: Global tags
-description:
+description: 
 published: 1
-date: 2022-02-14T17:23:02.173Z
-tags:
+date: 2022-02-25T18:51:18.323Z
+tags: 
 editor: markdown
 dateCreated: 2022-02-14T17:16:04.568Z
 ---
@@ -95,6 +95,80 @@ Perform a HTTP request to a URL.
 `application/xml`, `text/xml`, `application/rss+xml` and `application/atom+xml` will be parsed as XML.
 
 `{=data;{#fetch;https://atlas.bot/api/status}}\n{$data.body.ok}` true
+
+## `{split;separator}`
+
+Split a string into multiple parts. `separator` can be an arbitrary string or regex pattern.
+
+`{split;one,two,three;,}` // `{[one;two;three]}`
+`{split;woah party tricks;/ +/g}` // `{[woah;party;tricks]}`
+`{split;one,two,three;/(,)/g}` // `{[one;,;two;,;three]}`, you can use groups to keep the separator in the output array.
+
+## `{push return?;array;value}`
+
+Add an item to an end of an array.
+
+`{push return;{[one]};two}` // `{[one;two]}`, `return` can be used to return the array.
+
+This will mutate the original array, which is why nothing is returned by default.
+
+```
+{=array;{[one]}}
+{push;{$array};two}
+{$array} // {[one;two]}
+```
+
+## `{unshift return?;array;value}`
+
+Add an item to the front of an array. Essentially the same as `{push}` but the item is added to the front.
+
+`{unshift return;{[two]};one}` // `{[one;two]}`
+
+## `{shift}`
+
+Get the item from the front of an array
+
+`{shift;{[one;two]}}` // `one`
+
+## `{pop}`
+
+Get the item from the end of an array
+
+`{pop;{[one;two]}}` // `two`
+
+## `{or boolean?;...}`
+
+Get the first parameter that is not empty or falsy.
+
+`{or;;two}` // "two"
+`{or;;}` // 
+`{or;false;two}` // "two"
+`{or;one;two}` // "one", "two" is never evaluated
+
+The `boolean` option can be used to return a boolean instead of the first valid value.
+
+`{or boolean;one;two}` // true
+`{or boolean;;}` // false
+
+## `{and boolean?;...}`
+
+Ensure all parameters are present, returning the last parameter if all are valid.
+
+`{and;;two}` // "", "two" is **not** evaluated
+`{and;one;two}` // "one", "two" **is** evaluated
+`{and;;}` // ""
+
+The `boolean` option can be used to return a boolean instead of the last parameter if all are valid.
+
+`{and boolean;one;two}` // true
+`{and boolean;;two}` // false
+
+## `{formatNumber;number}`
+
+Format a number. [Formats using the context locale if possible](https://en.wikipedia.org/wiki/Decimal_separator) (for example, the guild language).
+
+`{formatNumber;1000.5}` // 1,000.5
+`{formatNumber;1000.5}` // 1 000,5 for some other languages
 
 ## `{#if}`
 
