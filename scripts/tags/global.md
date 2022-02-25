@@ -2,7 +2,7 @@
 title: Global tags
 description:
 published: 1
-date: 2022-02-24T21:55:55.555Z
+date: 2022-02-25T17:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2022-02-14T17:16:04.568Z
@@ -12,22 +12,22 @@ dateCreated: 2022-02-14T17:16:04.568Z
 
 ## `{time format;time}`
 
-Gets the current time and formats it as a string. Is compatible with any of the `.createdAt` tags.
+Formats time as a string. Is compatible with any of the `.createdAt` tags.
 
 #### Arguments
-- `time`: Can be any time that the bot can parse - this includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative time `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others.
-- `format`: Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles), names or descriptions both work. If no style is provided, unix timestamps are returned. This should only be used when outputting time to users as it returns the time formatted with Discords timestamp markdown stuff.
+- `time`: Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.
+- `format`: Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.
 
 ```
-{time} // 1636084903
-{time format=relative_time;5 hours ago} // 5 hours ago
-{time;2021-11-05T04:01:43.661Z} // 1636084903
-{time format=relative_time;2022-08-21} // in 10 months
+{time}  // 1636084903
+{time format=relative_time;5 hours ago}  // 5 hours ago
+{time;2021-11-05T04:01:43.661Z}          // 1636084903
+{time format=relative_time;2022-08-21}   // in 10 months
 ```
 
 ## `{casing mode;input}`
 
-Converts casing of a string.
+Changes the casing of a string.
 
 Accepted modes:
 `lower` for lowercase
@@ -42,8 +42,8 @@ Accepted modes:
 Returns the number of characters in a string and the number of elements in an array.
 
 ```
-`{length;pog}` // 3
-`{length;{[one;two;three]}}` // 3
+{length;pog}  // 3
+{length;{[one;two;three]}}  // 3
 ```
 
 ## `{isSnowflake lax return_id;target}`
@@ -55,16 +55,16 @@ Determines whether the target string is a snowflake.
 - `return_id`: Whether to return a boolean or an ID. If the target is not a snowflake and `return_id` is set to true, the tag outputs nothing.
 
 ```
-{isSnowflake;111372124383428608} // true
-{isSnowflake;hello} // false
-{isSnowflake;123098123} // false
-{isSnowflake lax=true; hello 355876124779347968} // true
-{isSnowflake lax=true return_id=true;<@111372124383428608>} // 111372124383428608
+{isSnowflake;111372124383428608}  // true
+{isSnowflake;hello}               // false
+{isSnowflake;123098123}           // false
+{isSnowflake lax=true; hello 355876124779347968}             // true
+{isSnowflake lax=true return_id=true;<@111372124383428608>}  // 111372124383428608
 ```
 
 ## `{find case_insensitive=true return_all=false;target;pattern}`
 
-Finds `pattern` in `target` and returns the first match or all matches if specified. [regular expressions](https://regexr.com/) are supported.
+Finds `pattern` in `target` and returns the first match or all matches if specified. [Regular expressions](https://regexr.com/) are supported.
 
 #### Arguments
 - `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.
@@ -73,18 +73,16 @@ Finds `pattern` in `target` and returns the first match or all matches if specif
 - `pattern`: The string or regex pattern to find.
 
 ```
-{find;hello world;hello} // hello
+{find;hello world;hello}     // hello
 {find;hello world;nothing}
-{find case_insensitive=false;hello world;HELLO} // HELLO
-{find;hello world;/hello/i} // hello
+{find case_insensitive=false;hello world;HELLO}          // HELLO
+{find;hello world;/hello/i}  // hello
 {find return_all=true;hello hello hello world;/hello/ig} // {[hello;hello;hello]}
 ```
 
 ## `{replace replace_all=true case_insensitive=true;target;pattern;replacement}`
 
-Replace in `target` values matched by `pattern` with `replacement`
-
-Replaces matches of `pattern` in `target` by `replacement`. [regular expressions](https://regexr.com/) are supported.
+Replaces matches of `pattern` in `target` by `replacement`. [Regular expressions](https://regexr.com/) are supported.
 
 #### Arguments
 - `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.
@@ -94,10 +92,10 @@ Replaces matches of `pattern` in `target` by `replacement`. [regular expressions
 - `replacement`: The string to put in place of the pattern.
 
 ```
-{replace replace_all=false;hello hello;hell;hey}   // heyo hello
-{replace;hello hello;hell;hey}    // heyo heyo
-{replace;hello hello;/hell/;hey}  // heyo hello
-{replace;hello hello;/hell/g;hey} // heyo heyo
+{replace replace_all=false;hello hello;hell;hey}  // heyo hello
+{replace;hello hello;hell;hey}     // heyo heyo
+{replace;hello hello;/hell/;hey}   // heyo hello
+{replace;hello hello;/hell/g;hey}  // heyo heyo
 ```
 
 ## `{sleep;duration}`
@@ -106,31 +104,33 @@ Holds up processing. This does not schedule execution for later, it pauses execu
 
 ## `{math precision_fix=true;expr}`
 
-Evaluates math. `precision_fix` will enable a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.
+Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.
 
 ## `{random length=1 return_array=false;haystack}`
 
 Gets a random item from a list. `length` is the number of items to return. When `length` is true, you can choose to return the random items in an array with `return_array`.
 
-`{random;123}` 2
-`{random;{[1;2;3]}}` 1
-`{random length=2;123}` 21
-`{random length=2 return_array=true;123}` outputs `{[2;1]}`
+```
+{random;123}           // 2
+{random;{[1;2;3]}}     // 1
+{random length=2;123}  // 21
+{random length=2 return_array=true;123}  // {[2;1]}
+```
 
 ## `{fetch;link}`
 
 Performs a HTTP request to a URL.
 
-`application/json` will be parsed as JSON
+`application/json` will be parsed as JSON.
 `application/xml`, `text/xml`, `application/rss+xml` and `application/atom+xml` will be parsed as XML.
 
 ```
-{=data;{fetch;https://atlas.bot/api/status}}\n{$data.body.ok} // true
+{=data;{fetch;https://atlas.bot/api/status}}\n{$data.body.ok}  // true
 ```
 
 ## `{#if}`
 
-Compares different values and do things based on the result. Syntax is `{#if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{#if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `==`, `!=`, `>=`, `>`, `<=`, `<`, and `!==`.
+Compares different values and executes instructions based on the result. Syntax is `{#if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{#if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `===`, `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, and `matching`.
 
 ```ts
 [
@@ -162,18 +162,18 @@ Compares different values and do things based on the result. Syntax is `{#if;con
   {
     input: "{#if;true;{channel.send;yay};{channel.send;nay}}",
     output: "yay",
-    note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run send both "yay" and "nay".',
+    note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run and send both "yay" and "nay".',
   },
 ];
 ```
 
 ## `{#for;init;iterable;body}`
 
-Iterates over array items or loop however many times is necessary.
+Iterates over array items until `{#break}` is encountered or it reaches the end of the array.
 
 ```
 {=array;{[one;two;three]}}
-{#for;{=item};{$array};{$item}} // one two three
+{#for;{=item};{$array};{$item}}  // one two three
 ```
 
 ## `{#break}`
@@ -219,7 +219,7 @@ Throws an engine error. Depending on your action setup, these will be shown to t
 Catches a thrown error.
 
 ```
-`{#catch;{#throw;Test error};Oh no! Something went wrong}` // Oh no! Something went wrong
-`{#catch;{throw;Oopsy poopsy!}}`
-`{#catch;{user.id}}` // 111372124383428608
+{#catch;{#throw;Test error};Oh no! Something went wrong}  // Oh no! Something went wrong
+{#catch;{throw;Oopsy poopsy!}}
+{#catch;{user.id}}  // 111372124383428608
 ```

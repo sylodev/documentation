@@ -2,7 +2,7 @@
 title: {server} tags
 description: 
 published: 1
-date: 2022-02-24T02:15:15.151Z
+date: 2022-02-25T17:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:29:18.052Z
@@ -22,7 +22,7 @@ Returns the name of the server.
 
 ## `{server.icon;size;hash}`
 
-Gets the servers icon.
+Gets the icon of the server.
 
 #### Arguments
 - `size`: The size of the image to get. Must be a valid [CDN size](https://discord.com/developers/docs/reference#image-formatting).
@@ -30,7 +30,7 @@ Gets the servers icon.
 
 ## `{server.splash;size;hash}`
 
-Gets the server splash.
+Gets the splash image of the server.
 
 #### Arguments
 - `size`: The size of the splash to get. Must be a valid [CDN size](https://discord.com/developers/docs/reference#image-formatting).
@@ -38,7 +38,7 @@ Gets the server splash.
 
 ## `{server.banner;size;splash}`
 
-Gets the server banner.
+Gets the banner of the server.
 
 #### Arguments
 - `size`: The size of the banner to get. Must be a valid [CDN size](https://discord.com/developers/docs/reference#image-formatting).
@@ -54,7 +54,7 @@ Returns an array of IDs for all roles in the server.
 
 ## `{server.shardId}`
 
-Returns the ID of the shard the server is running on.
+Returns the ID of the shard the bot is running on in the server.
 
 ## `{server.ownerId}`
 
@@ -62,8 +62,8 @@ Returns the ID of the server owner.
 
 ## `{server.memberCount}`
 
-Get the total count of members in the server. This should be almost exactly accurate and is not subject to caching issues.
+Returns the total count of members in the server. This should be almost exactly accurate and is not subject to caching issues.
 
 ## `{server.createdAt}`
 
-Returns the Unix timestamp in milliseconds for the creation date of the server.
+Returns the number milliseconds between the UNIX epoch and the creation date of the server.

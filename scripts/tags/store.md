@@ -2,7 +2,7 @@
 title: {store} tags
 description: Creates, deletes, or manipulates key-value variables.
 published: 1
-date: 2022-02-24T18:50:50.500Z
+date: 2022-02-25T17:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2022-01-24T16:12:52.291Z
@@ -10,14 +10,14 @@ dateCreated: 2022-01-24T16:12:52.291Z
 
 # `{store}` tags
 
-Tags used to persist values across invocations. `{perset}` and `{perget}` are analogs from v8.
+Tags used to keep values and data across invocations. `{perset}` and `{perget}` are analogs from v8.
 
 ```
 {store.set;mykey;"This is a string"}
-{store.has;mykey} //output: true
-{store.get;mykey} //output: "This is a string"
+{store.has;mykey}  //output: true
+{store.get;mykey}  //output: "This is a string"
 {store.delete;mykey}
-{store.has;mykey} //output: false
+{store.has;mykey}  //output: false
 ```
 
 ## `{store.set;key;value}`
