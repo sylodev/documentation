@@ -57,7 +57,7 @@ Creates a new channel.
 
 #### Arguments
 - `name`: The name of the channel.
-- `type`: The [type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types) of the channel. `guildtext`, `guild_text`, `GUILD_TEXT`, and `GuildText` are all valid and will all resolve to a guild text channel.
+- `type`: The [type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types) of the channel. `guildtext`, `guild_text`, `GUILD_TEXT`, and `GuildText` are all valid and will all resolve to a guild text channel. IDs are also supported but the name is preferred.
 - `topic`: The topic of the channel.
 - `nsfw`: Whether the channel is NSFW or not.
 - `parent`: The parent channel, if any.
