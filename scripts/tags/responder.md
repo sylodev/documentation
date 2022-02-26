@@ -2,7 +2,7 @@
 title: {responder} tags
 description: 
 published: 1
-date: 2022-02-24T23:00:00.000Z
+date: 2022-02-25T17:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T05:09:37.565Z
@@ -98,8 +98,8 @@ Marks the message as ephemeral. Only works with interactions.
 
 This is the same as `{responder.text}`, with some extras:
 
-- Embed color will be set to red
-- The message will be set to ephemeral
+- Embed color will be set to red.
+- The message will be set to ephemeral.
 
 You should use this when sending error messages.
 
@@ -113,8 +113,8 @@ Adds a button to the message.
 
 #### Arguments
 - `label`: The button text.
-- `handler`: The value of the component callback action to call when the button is clicked
-- `state`: An optional payload that will be accessible in the component callback action
-- `url`: Used to link to external resources
+- `handler`: The value of the component callback action to call when the button is clicked.
+- `state`: An optional payload that will be accessible in the component callback action.
+- `url`: Used to link to external resources.
 - `emoji`: The name of an emoji to add to the button. Can be a guild emoji or a native emoji.
 - `style`: Can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.

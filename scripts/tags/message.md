@@ -2,7 +2,7 @@
 title: {message} tags
 description: 
 published: 1
-date: 2022-02-24T02:00:00.000Z
+date: 2022-02-25T17:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:33:41.532Z
@@ -16,7 +16,7 @@ Returns the ID of a message.
 
 ## `{message.content;message}`
 
-Returns a string with the content (or text) of a message.
+Returns a string with the content of a message.
 
 ## `{message.delete;message}`
 
@@ -31,14 +31,14 @@ Checks if a message is pinned.
 Pins a message.
 
 #### Arguments
-- `{reason}`: The reason for the action that will be displayed in the Audit Log
+- `{reason}`: The reason for the action that will be displayed in the Audit Log.
 
 ## `{message.unpin reason;message}`
 
-Unpins a message
+Unpins a message.
 
 #### Arguments
-- `{reason}`: The reason for the action that will be displayed in the Audit Log
+- `{reason}`: The reason for the action that will be displayed in the Audit Log.
 
 ## `{message.publish;message}`
 
@@ -49,25 +49,27 @@ Publishes a message. Only works in news channels.
 Adds a reaction to a message.
 
 #### Arguments
-- `{emoji}`: The emoji to add as the reaction
+- `{emoji}`: The emoji to add as the reaction.
 
 ## `{message.removeReaction;emoji;message}`
 
 Removes a reaction from a message.
 
 #### Arguments
-- `{emoji}`: The emoji to remove as the reaction
+- `{emoji}`: The emoji to remove as the reaction.
 
 ## `{message.removeReactions;emoji;message}`
 
 Removes all reactions, optionally for a specific emoji.
 
-`{message.removeReactions}` will remove all reactions
-`{message.removeReaction;emoji}` will remove all reactions for a specific emoji
+```
+{message.removeReactions}       // Will remove all reactions
+{message.removeReaction;emoji}  // Will remove all reactions for a specific emoji
+```
 
 ## `{message.link;message}`
 
-Returns a string with the jump url of a message.
+Returns a string with the jump URL of a message.
 
 ## `{message.authorId;message}`
 
@@ -83,4 +85,4 @@ Checks if a message was sent as text to speech.
 
 ## `{message.createdAt;message}`
 
-Returns the Unix timestamp in milliseconds for the creation date of a message.
+Returns the number milliseconds between the UNIX epoch and the creation date of a message.
