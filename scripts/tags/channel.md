@@ -20,18 +20,7 @@ Returns the ID of a channel.
 
 ## `{channel.type;channel}`
 
-Returns an integer for the [channel type](https://discordpy.readthedocs.io/en/stable/api.html#discord.ChannelType):
-
-| Number | Type        | Description                                           |
-|--------|-------------|-------------------------------------------------------|
-| 0      | text        | A text channel.                                       |
-| 1      | voice       | A voice channel.                                      |
-| 2      | private     | A private text channel. Also called a direct message. |
-| 3      | group       | A private group text channel.                         |
-| 4      | category    | A category channel.                                   |
-| 5      | news        | A guild news channel.                                 |
-| 6      | store       | A guild store channel.                                |
-| 7      | stage_voice | A guild stage voice channel.                          |
+Returns an integer for the [channel type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types).
 
 ## `{channel.createdAt;channel}`
 
@@ -68,7 +57,7 @@ Creates a new channel.
 
 #### Arguments
 - `name`: The name of the channel.
-- `type`: The type of the channel, eg `guild_text` to create a guild text channel.
+- `type`: The [type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types) of the channel, eg `guild_text` to create a guild text channel.
 - `topic`: The topic of the channel.
 - `nsfw`: Whether the channel is NSFW or not.
 - `parent`: The parent channel, if any.
