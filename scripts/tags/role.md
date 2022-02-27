@@ -2,7 +2,7 @@
 title: {role} tags
 description: 
 published: 1
-date: 2022-02-25T17:00:00.000Z
+date: 2022-02-27T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:20:40.655Z
@@ -44,7 +44,7 @@ Checks if a role is mentionable by everyone.
 
 ## `{role.createdAt}`
 
-Returns the number milliseconds between the UNIX epoch and the creation date of a role.
+Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a role that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
 
 ## `{role.hasPermission;permission_name;role}`
 

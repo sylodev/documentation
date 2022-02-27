@@ -2,7 +2,7 @@
 title: {user} tags
 description: 
 published: 1
-date: 2022-02-25T17:00:00.000Z
+date: 2022-02-27T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:24:57.222Z
@@ -52,11 +52,11 @@ Returns the display name of a user. This will be their nickname if they have one
 
 ## `{user.joinedAt;member}`
 
-Returns the number milliseconds between the UNIX epoch and the join date of a user.
+Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the join date of a user that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
 
 ## `{user.createdAt;user}`
 
-Returns the number milliseconds between the UNIX epoch and the creation date of a user's Discord account.
+Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a user's Discord account that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
 
 ## `{user.edit nick mute deaf channel;member}`
 

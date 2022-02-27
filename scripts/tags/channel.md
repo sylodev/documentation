@@ -2,7 +2,7 @@
 title: {channel} tags
 description: 
 published: 1
-date: 2022-02-25T17:00:00.000Z
+date: 2022-02-27T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:15:22.397Z
@@ -24,7 +24,7 @@ Returns an integer for the [channel type](https://discord.com/developers/docs/re
 
 ## `{channel.createdAt;channel}`
 
-Returns the number milliseconds between the UNIX epoch and the creation date of a channel.
+Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a channel that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
 
 ## `{channel.nsfw;channel}`
 

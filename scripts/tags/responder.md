@@ -2,7 +2,7 @@
 title: {responder} tags
 description: 
 published: 1
-date: 2022-02-25T17:00:00.000Z
+date: 2022-02-27T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T05:09:37.565Z
@@ -107,7 +107,7 @@ You should use this when sending error messages.
 
 Sends the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully. `return_id` is an optional boolean that controls whether it should return the output message ID. Calling this is optional, once execution is over and there is a configured responder it will be sent automatically.
 
-## `{responder.button label handler state url emoji style}`
+## `{responder.button label handler state? url? emoji? style?}`
 
 Adds a button to the message. 
 

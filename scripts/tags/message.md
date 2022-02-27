@@ -2,7 +2,7 @@
 title: {message} tags
 description: 
 published: 1
-date: 2022-02-25T17:00:00.000Z
+date: 2022-02-27T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:33:41.532Z
@@ -85,4 +85,4 @@ Checks if a message was sent as text to speech.
 
 ## `{message.createdAt;message}`
 
-Returns the number milliseconds between the UNIX epoch and the creation date of a message.
+Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a message that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).

@@ -2,7 +2,7 @@
 title: Global tags
 description: 
 published: 1
-date: 2022-02-25T17:00:00.000Z
+date: 2022-02-27T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2022-02-14T17:16:04.568Z
@@ -130,77 +130,91 @@ Performs a HTTP request to a URL.
 
 ## `{split;separator}`
 
-Split a string into multiple parts. `separator` can be an arbitrary string or regex pattern.
+Splits a string into multiple parts. `separator` can be an arbitrary string or regex pattern.
 
-`{split;one,two,three;,}` // `{[one;two;three]}`
-`{split;woah party tricks;/ +/g}` // `{[woah;party;tricks]}`
-`{split;one,two,three;/(,)/g}` // `{[one;,;two;,;three]}`, you can use groups to keep the separator in the output array.
+```
+{split;one,two,three;,}          // {[one;two;three]}
+{split;woah party tricks;/ +/g}  // {[woah;party;tricks]}
+{split;one,two,three;/(,)/g}     // {[one;,;two;,;three]}, you can use groups to keep the separator in the output array.
+```
 
 ## `{push return?;array;value}`
 
-Add an item to an end of an array.
-
-`{push return;{[one]};two}` // `{[one;two]}`, `return` can be used to return the array.
+Adds an item to the end of an array.
 
 This will mutate the original array, which is why nothing is returned by default.
 
 ```
 {=array;{[one]}}
-{push;{$array};two}
-{$array} // {[one;two]}
+{push;{$array};two}  // no output
+{$array}             // {[one;two]}
+{push return;{$array};three}  // {[one;two;three]}
 ```
 
 ## `{unshift return?;array;value}`
 
-Add an item to the front of an array. Essentially the same as `{push}` but the item is added to the front.
+Adds an item to the front of an array. Essentially the same as `{push}` but the item is added to the beginning of the array.
 
-`{unshift return;{[two]};one}` // `{[one;two]}`
+```
+{=array;{[three]}}
+{unshift;{$array};two}  // no output
+{$array}                // {[two;three]}
+{unshift return;{$array};one}  // {[one;two;three]}
+```
 
 ## `{shift}`
 
-Get the item from the front of an array
+Returns and deletes the first item of an array.
 
-`{shift;{[one;two]}}` // `one`
+```
+{=array;{[one;two;three]}}
+{shift;{$array}}  // one
+{$array}          // {[two;three]}
+```
 
 ## `{pop}`
 
-Get the item from the end of an array
+Returns and deletes the last item of an array.
 
-`{pop;{[one;two]}}` // `two`
+```
+{=array;{[one;two;three]}}
+{pop;{$array}}  // three
+{$array}        // {[onw;two]}
+```
 
 ## `{or boolean?;...}`
 
-Get the first parameter that is not empty or falsy.
+Gets the first parameter that is not empty or falsy. The `boolean` option can be used to return a boolean instead of the first valid value.
 
-`{or;;two}` // "two"
-`{or;;}` // 
-`{or;false;two}` // "two"
-`{or;one;two}` // "one", "two" is never evaluated
-
-The `boolean` option can be used to return a boolean instead of the first valid value.
-
-`{or boolean;one;two}` // true
-`{or boolean;;}` // false
+```
+{or;;two}       // "two"
+{or;;}          // no output
+{or;false;two}  // "two"
+{or;one;two}    // "one", "two" is never evaluated
+{or boolean;one;two}  // true
+{or boolean;;}  // false
+```
 
 ## `{and boolean?;...}`
 
-Ensure all parameters are present, returning the last parameter if all are valid.
+Ensures all parameters are present, returning the last parameter if all are valid. The `boolean` option can be used to return a boolean instead of the last parameter if all are valid.
 
-`{and;;two}` // "", "two" is **not** evaluated
-`{and;one;two}` // "one", "two" **is** evaluated
-`{and;;}` // ""
-
-The `boolean` option can be used to return a boolean instead of the last parameter if all are valid.
-
-`{and boolean;one;two}` // true
-`{and boolean;;two}` // false
+```
+{and;;two}     // no output, "two" is never evaluated
+{and;one;two}  // "one", "two" is evaluated
+{and;;}        // no output
+{and boolean;one;two}  // true
+{and boolean;one;}     // false
+```
 
 ## `{formatNumber;number}`
 
-Format a number. [Formats using the context locale if possible](https://en.wikipedia.org/wiki/Decimal_separator) (for example, the guild language).
+Formats a number. [Formats using the context locale if possible](https://en.wikipedia.org/wiki/Decimal_separator) (for example, the guild language).
 
-`{formatNumber;1000.5}` // 1,000.5
-`{formatNumber;1000.5}` // 1 000,5 for some other languages
+```
+{formatNumber;1000.5} // 1,000.5
+{formatNumber;1000.5} // 1 000,5 for some other languages
+```
 
 ## `{#if}`
 
