@@ -2,7 +2,7 @@
 title: {role} tags
 description: 
 published: 1
-date: 2022-02-16T06:20:40.655Z
+date: 2022-02-27T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:20:40.655Z
@@ -12,54 +12,76 @@ dateCreated: 2022-02-16T06:20:40.655Z
 
 ## `{role.id;role}`
 
+Returns the ID of a role.
+
 ## `{role.name;role}`
+
+Returns the name of a role.
 
 ## `{role.mention;role}`
 
+Returns a string with a role mention.
+
 ## `{role.position;role}`
 
-## `{role.colour;role}`
+Returns an integer corresponding to a role position. A higher number means a role higher in the hierarchy. Position 0 corresponds to `@everyone`.
+
+## `{role.colour;role}` or `{role.color;role}`
+
+Returns the hexadecimal value for the color of a role. Every time `color` is mentioned in the documentation, `colour` can also be used.
 
 ## `{role.hoisted;role}`
 
+Checks if a role is hoisted.
+
 ## `{role.managed;role}`
+
+Checks if a role is managed by an application.
 
 ## `{role.mentionable;role}`
 
+Checks if a role is mentionable by everyone.
+
 ## `{role.createdAt}`
+
+Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a role that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
 
 ## `{role.hasPermission;permission_name;role}`
 
-Check whether the role has the specified permission.
+Checks if a role has the specified permission.
 
-`{role.hasPermission;administrator}`
+```
+{role.hasPermission;administrator}  // true or false
+```
 
 ## `{role.edit name color reason;role}`
 
-Edit the role.
+Edits a role.
 
-`name` is the new role name
-`color` is the new colour of the role
-`reason` is the reason for editing this role
+#### Arguments
+- `name`: The new role name.
+- `color`: The new color of the role.
+- `reason`: The reason for the action that will be displayed in the Audit Log.
 
 ```
-{role.edit name="Very cool" colour=teal}
+{role.edit name="Very cool" color=teal}
 ```
 
 ## `{role.create name color reason return_id;role}`
 
-Create a new role.
+Creates a new role.
 
-`name` is the name of the role
-`color` is the colour of the role
-`reason` is the reason for creating the role
-`return_id` is whether to return the created roles ID.
+#### Arguments
+- `name`: The name of the role.
+- `color`: The color of the role.
+- `reason`: The reason for the action that will be displayed in the Audit Log.
+- `return_id`: Whether to return the ID of the created role or not.
 
 ## `{role.delete reason;role}`
 
 > This tag can do serious damage. Make sure you are properly restricting access to any scripts using this tag. {.is-warning}
 
-Delete a role.
+Deletes a role.
 
-`reason` is why you are deleting this role.
-
+#### Arguments
+- `reason`: The reason for the action that will be displayed in the Audit Log.

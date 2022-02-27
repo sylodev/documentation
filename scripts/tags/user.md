@@ -2,7 +2,7 @@
 title: {user} tags
 description: 
 published: 1
-date: 2022-02-16T06:24:57.222Z
+date: 2022-02-27T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-16T06:24:57.222Z
@@ -12,51 +12,78 @@ dateCreated: 2022-02-16T06:24:57.222Z
 
 ## `{user.mention;user}`
 
+Returns a string with a user mention.
+
 ## `{user.id;user}`
+
+Returns the ID of a user.
 
 ## `{user.username;user}`
 
+Returns the username of a user.
+
 ## `{user.bot;user}`
+
+Checks whether a user is a bot account.
 
 ## `{user.tag;user}`
 
+Returns the tag of a user with the username and discriminator, for example `Grainus#0432`.
+
 ## `{user.discriminator;user}`
+
+Returns the discriminator of a user, which is the four digits at the end of the username.
 
 ## `{user.avatar;user}`
 
-Returns the users avatar, or their server avatar if they have one configured.
+Returns the avatar URL of a user. Their server avatar will take priority if they have one.
 
 ## `{user.roles;member}`
 
-Returns an array containing all roles the user has.
+Returns an array of IDs for all the roles of a user.
 
 ```
-{choose;{user.roles}} // a random role the user has
+{choose;{user.roles}}  // A random role the user has
 ```
 
 ## `{user.nickname;member}`
 
+Returns the display name of a user. This will be their nickname if they have one set and their username otherwise.
+
 ## `{user.joinedAt;member}`
+
+Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the join date of a user that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
 
 ## `{user.createdAt;user}`
 
+Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a user's Discord account that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
+
 ## `{user.edit nick mute deaf channel;member}`
 
-Edit a user.
+Edits a user.
 
-`nick` is the users new nickname. Leave empty to clear.
-`mute` is whether the user is mute in voice channels.
-`deaf` is whether the user is deafened in voice channels.
-`channel` is the new channel to move the user to if they are in voice.
+#### Arguments
+- `nick`: The user's new nickname. Leave empty to clear.
+- `mute`: Whether the user will be server muted in voice channels.
+- `deaf`: Whether the user will be server deafened in voice channels.
+- `channel`: The new channel to move the user to if they are in voice channel.
 
 ## `{user.addrole reason;role;member}`
 
-Give a user a role.
+Gives a user a role.
+
+#### Arguments
+- `reason`: The reason for the action that will be displayed in the Audit Log.
+- `role`: The role to add to the user.
 
 ## `{user.removerole reason;role;member}`
 
-Remove a role from the user.
+Removes a role from a user.
+
+#### Arguments
+- `reason`: The reason for the action that will be displayed in the Audit Log.
+- `role`: The role to remove from the user.
 
 ## `{user.colour;member}`
 
-Get the users colour based on their highest role.
+Gets a user's color based on their highest role.

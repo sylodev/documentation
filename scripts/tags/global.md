@@ -2,8 +2,8 @@
 title: Global tags
 description: 
 published: 1
-date: 2022-02-25T18:51:18.323Z
-tags: 
+date: 2022-02-27T00:00:00.000Z
+tags:
 editor: markdown
 dateCreated: 2022-02-14T17:16:04.568Z
 ---
@@ -12,167 +12,213 @@ dateCreated: 2022-02-14T17:16:04.568Z
 
 ## `{time format;time}`
 
-Gets the current time and formats it as a string.
+Formats time as a string. Is compatible with any of the `.createdAt` tags.
 
-`time` can be any time that the bot can parse - this includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative time `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others.
-
-`format` can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles), names or descriptions both work. If no style is provided, unix timestamps are returned. This should only be used when outputting time to users as it returns the time formatted with Discords timestamp markdown stuff.
+#### Arguments
+- `time`: Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.
+- `format`: Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.
 
 ```
-{time} // 1636084903
-{time format=relative_time;5 hours ago} // 5 hours ago
-{time;2021-11-05T04:01:43.661Z} // 1636084903
-{time format=relative_time;2022-08-21} // in 10 months
+{time}  // 1636084903
+{time format=relative_time;5 hours ago}  // 5 hours ago
+{time;2021-11-05T04:01:43.661Z}          // 1636084903
+{time format=relative_time;2022-08-21}   // in 10 months
 ```
 
 ## `{casing mode;input}`
 
-Converts casing of a string.
+Changes the casing of a string.
 
+Accepted modes:
 `lower` for lowercase
 `upper` for uppercase
 `first` to capitalise the first letter
-`title` to use "Title Case"
+`title` for "Title Case"
 `camel` for camelCase
 `constant` for CONSTANT_CASE
 
 ## `{length;string_or_array}`
 
-`{length;pog}` 3
-`{length;{[one;two;three]}}` 3
+Returns the number of characters in a string and the number of elements in an array.
+
+```
+{length;pog}  // 3
+{length;{[one;two;three]}}  // 3
+```
 
 ## `{isSnowflake lax return_id;target}`
 
-Determine whether the target string is a snowflake.
+Determines whether the target string is a snowflake.
 
-`{isSnowflake;111372124383428608}` true
-`{isSnowflake;hello}` false
-`{isSnowflake;123098123}` false
-`{isSnowflake lax=true;<@111372124383428608>}` true
-`{isSnowflake return_id=true;111372124383428608}` 111372124383428608
-`{isSnowflake lax=true return_id=true;<@111372124383428608>}` 111372124383428608
+#### Arguments
+- `lax`: Whether to accept snowflakes surrounded by characters or not.
+- `return_id`: Whether to return a boolean or an ID. If the target is not a snowflake and `return_id` is set to true, the tag outputs nothing.
+
+```
+{isSnowflake;111372124383428608}  // true
+{isSnowflake;hello}               // false
+{isSnowflake;123098123}           // false
+{isSnowflake lax=true; hello 355876124779347968}             // true
+{isSnowflake lax=true return_id=true;<@111372124383428608>}  // 111372124383428608
+```
 
 ## `{find case_insensitive=true return_all=false;target;pattern}`
 
-Find `pattern` in `target`. `/regex/i` is supported. `case_insensitive` is incompatible with regex patterns. `return_all` can be used with regex patterns to return all matches.
+Finds `pattern` in `target` and returns the first match or all matches if specified. [Regular expressions](https://regexr.com/) are supported.
 
-`{find;hello;hello}` hello
-`{find;hello world;hello}` hello
-`{find;hello world;nothing}`
-`{find case_insensitive=false;hello world;HELLO}` HELLO
-`{find;hello world;/hello/i}`
-`{find return_all=true;hello hello hello world;/hello/ig}` {[hello;hello;hello]}
+#### Arguments
+- `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.
+- `return_all`: Whether to return an array of all matches or only the first one. Cannot be used without `/regex/g`.
+- `target`: The string to search.
+- `pattern`: The string or regex pattern to find.
+
+```
+{find;hello world;hello}     // hello
+{find;hello world;nothing}
+{find case_insensitive=false;hello world;HELLO}          // HELLO
+{find;hello world;/hello/i}  // hello
+{find return_all=true;hello hello hello world;/hello/ig} // {[hello;hello;hello]}
+```
 
 ## `{replace replace_all=true case_insensitive=true;target;pattern;replacement}`
 
-Replace in `target` values matched by `pattern` with `replacement`. `/regex/i` is supported. `case_insensitive` is incompatible with regex patterns. `replace_all` can be used to replace all matches instead of the first, and is incompatible with regex patterns - use the `g` flag.
+Replaces matches of `pattern` in `target` by `replacement`. [Regular expressions](https://regexr.com/) are supported.
 
-`{replace;hello world;hello;goodbye}` goodbye world
-`{replace;Hello World;/world/i;=)}` Hello =)
+#### Arguments
+- `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.
+- `replace_all`: Whether to replace all matches or only the first one. Is incompatible with regex; use the flag `g` instead.
+- `target`: The string to search.
+- `pattern`: The string or regex pattern to find.
+- `replacement`: The string to put in place of the pattern.
+
+```
+{replace replace_all=false;hello hello;hell;hey}  // heyo hello
+{replace;hello hello;hell;hey}     // heyo heyo
+{replace;hello hello;/hell/;hey}   // heyo hello
+{replace;hello hello;/hell/g;hey}  // heyo heyo
+```
 
 ## `{sleep;duration}`
 
-Hold up processing. This does not schedule execution for later, it pauses execution until the sleep duration is up. You should only use this for very specific use cases and avoid it entirely if you can.
+Holds up processing. This does not schedule execution for later, it pauses execution until the sleep duration is up. You should only use this in very specific cases and avoid it entirely if possible.
 
 ## `{math precision_fix=true;expr}`
 
-Evaluates math. `precision_fix` will enable a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.
+Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.
 
 ## `{random length=1 return_array=false;haystack}`
 
-Get a random item from a list.
+Gets a random item from a list. `length` is the number of items to return. When `length` is true, you can choose to return the random items in an array with `return_array`.
 
-`{random;123}` 2
-`{random;{[1;2;3]}}` 1
-`{random length=2;123}` 21
-`{random length=2 return_array=true;123}` outputs `{[2;1]}`
+```
+{random;123}           // 2
+{random;{[1;2;3]}}     // 1
+{random length=2;123}  // 21
+{random length=2 return_array=true;123}  // {[2;1]}
+```
 
 ## `{fetch;link}`
 
-Perform a HTTP request to a URL.
+Performs a HTTP request to a URL.
 
-`application/json` will be parsed as JSON
+`application/json` will be parsed as JSON.
 `application/xml`, `text/xml`, `application/rss+xml` and `application/atom+xml` will be parsed as XML.
 
-`{=data;{#fetch;https://atlas.bot/api/status}}\n{$data.body.ok}` true
+```
+{=data;{fetch;https://atlas.bot/api/status}}\n{$data.body.ok}  // true
+```
 
 ## `{split;separator}`
 
-Split a string into multiple parts. `separator` can be an arbitrary string or regex pattern.
+Splits a string into multiple parts. `separator` can be an arbitrary string or regex pattern.
 
-`{split;one,two,three;,}` // `{[one;two;three]}`
-`{split;woah party tricks;/ +/g}` // `{[woah;party;tricks]}`
-`{split;one,two,three;/(,)/g}` // `{[one;,;two;,;three]}`, you can use groups to keep the separator in the output array.
+```
+{split;one,two,three;,}          // {[one;two;three]}
+{split;woah party tricks;/ +/g}  // {[woah;party;tricks]}
+{split;one,two,three;/(,)/g}     // {[one;,;two;,;three]}, you can use groups to keep the separator in the output array.
+```
 
 ## `{push return?;array;value}`
 
-Add an item to an end of an array.
-
-`{push return;{[one]};two}` // `{[one;two]}`, `return` can be used to return the array.
+Adds an item to the end of an array.
 
 This will mutate the original array, which is why nothing is returned by default.
 
 ```
 {=array;{[one]}}
-{push;{$array};two}
-{$array} // {[one;two]}
+{push;{$array};two}  // no output
+{$array}             // {[one;two]}
+{push return;{$array};three}  // {[one;two;three]}
 ```
 
 ## `{unshift return?;array;value}`
 
-Add an item to the front of an array. Essentially the same as `{push}` but the item is added to the front.
+Adds an item to the front of an array. Essentially the same as `{push}` but the item is added to the beginning of the array.
 
-`{unshift return;{[two]};one}` // `{[one;two]}`
+```
+{=array;{[three]}}
+{unshift;{$array};two}  // no output
+{$array}                // {[two;three]}
+{unshift return;{$array};one}  // {[one;two;three]}
+```
 
 ## `{shift}`
 
-Get the item from the front of an array
+Returns and deletes the first item of an array.
 
-`{shift;{[one;two]}}` // `one`
+```
+{=array;{[one;two;three]}}
+{shift;{$array}}  // one
+{$array}          // {[two;three]}
+```
 
 ## `{pop}`
 
-Get the item from the end of an array
+Returns and deletes the last item of an array.
 
-`{pop;{[one;two]}}` // `two`
+```
+{=array;{[one;two;three]}}
+{pop;{$array}}  // three
+{$array}        // {[onw;two]}
+```
 
 ## `{or boolean?;...}`
 
-Get the first parameter that is not empty or falsy.
+Gets the first parameter that is not empty or falsy. The `boolean` option can be used to return a boolean instead of the first valid value.
 
-`{or;;two}` // "two"
-`{or;;}` // 
-`{or;false;two}` // "two"
-`{or;one;two}` // "one", "two" is never evaluated
-
-The `boolean` option can be used to return a boolean instead of the first valid value.
-
-`{or boolean;one;two}` // true
-`{or boolean;;}` // false
+```
+{or;;two}       // "two"
+{or;;}          // no output
+{or;false;two}  // "two"
+{or;one;two}    // "one", "two" is never evaluated
+{or boolean;one;two}  // true
+{or boolean;;}  // false
+```
 
 ## `{and boolean?;...}`
 
-Ensure all parameters are present, returning the last parameter if all are valid.
+Ensures all parameters are present, returning the last parameter if all are valid. The `boolean` option can be used to return a boolean instead of the last parameter if all are valid.
 
-`{and;;two}` // "", "two" is **not** evaluated
-`{and;one;two}` // "one", "two" **is** evaluated
-`{and;;}` // ""
-
-The `boolean` option can be used to return a boolean instead of the last parameter if all are valid.
-
-`{and boolean;one;two}` // true
-`{and boolean;;two}` // false
+```
+{and;;two}     // no output, "two" is never evaluated
+{and;one;two}  // "one", "two" is evaluated
+{and;;}        // no output
+{and boolean;one;two}  // true
+{and boolean;one;}     // false
+```
 
 ## `{formatNumber;number}`
 
-Format a number. [Formats using the context locale if possible](https://en.wikipedia.org/wiki/Decimal_separator) (for example, the guild language).
+Formats a number. [Formats using the context locale if possible](https://en.wikipedia.org/wiki/Decimal_separator) (for example, the guild language).
 
-`{formatNumber;1000.5}` // 1,000.5
-`{formatNumber;1000.5}` // 1 000,5 for some other languages
+```
+{formatNumber;1000.5} // 1,000.5
+{formatNumber;1000.5} // 1 000,5 for some other languages
+```
 
 ## `{#if}`
 
-Compare different values and do things based on the result.
+Compares different values and executes instructions based on the result. Syntax is `{#if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{#if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `===`, `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, and `matching`.
 
 ```ts
 [
@@ -204,23 +250,23 @@ Compare different values and do things based on the result.
   {
     input: "{#if;true;{channel.send;yay};{channel.send;nay}}",
     output: "yay",
-    note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run send both "yay" and "nay".',
+    note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run and send both "yay" and "nay".',
   },
 ];
 ```
 
 ## `{#for;init;iterable;body}`
 
-Iterate over array items or loop however many times is necessary.
+Iterates over array items until `{#break}` is encountered or it reaches the end of the array.
 
 ```
 {=array;{[one;two;three]}}
-{#for;{=item};{$array};{$item}}
+{#for;{=item};{$array};{$item}}  // one two three
 ```
 
 ## `{#break}`
 
-Break for-loops early. In the example, only the first item would ever be output.
+Breaks for-loops early. In this example, only the first item would ever be output.
 
 ```
 {=array;{[one;two;three]}}
@@ -230,14 +276,38 @@ Break for-loops early. In the example, only the first item would ever be output.
 [/for]
 ```
 
+## Blocks
+
+Both `{#if}` and `{#for}` also support a block syntax with regular brackets. For the `[#if]` block, it is not possible to have a body that will run when the condition is false.
+
+### `[#if]`
+Syntax: `[#if;condition] body [/if]`
+```
+[#if;{ticket.reason}]
+    // Add the ticket reason only if it is not empty
+    {responder.embedField name="Reason" value={ticket.reason}}
+[/if]
+```
+
+### `[#for]`
+Syntax: `[#for;init;iterable] body [/for]`
+```
+{=array;{[one;two;three]}}
+[#for;{=item};{$array}]
+	{responder.embedField name="Item Value" value={$item}
+[/for]
+```
+
 ## `{#throw;message}`
 
-Throw an engine error. Depending on your action setup, these will be shown to the user and logged just as regular engine errors would be.
+Throws an engine error. Depending on your action setup, these will be shown to the user and logged just as regular engine errors would be.
 
 ## `{#catch;body;message}`
 
-Catch a thrown error.
+Catches a thrown error.
 
-`{#catch;{#throw;Test error};Oh no! Something went wrong}` Oh no! Something went wrong
-`{#catch;{throw;Oopsy poopsy!}}`
-`{#catch;{user.id}}` 111372124383428608
+```
+{#catch;{#throw;Test error};Oh no! Something went wrong}  // Oh no! Something went wrong
+{#catch;{throw;Oopsy poopsy!}}
+{#catch;{user.id}}  // 111372124383428608
+```
