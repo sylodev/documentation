@@ -1,6 +1,6 @@
 ---
 title: Global tags
-description: 
+description:
 published: 1
 date: 2022-02-27T00:00:00.000Z
 tags:
@@ -15,6 +15,7 @@ dateCreated: 2022-02-14T17:16:04.568Z
 Formats time as a string. Is compatible with any of the `.createdAt` tags.
 
 #### Arguments
+
 - `time`: Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.
 - `format`: Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.
 
@@ -51,6 +52,7 @@ Returns the number of characters in a string and the number of elements in an ar
 Determines whether the target string is a snowflake.
 
 #### Arguments
+
 - `lax`: Whether to accept snowflakes surrounded by characters or not.
 - `return_id`: Whether to return a boolean or an ID. If the target is not a snowflake and `return_id` is set to true, the tag outputs nothing.
 
@@ -62,11 +64,32 @@ Determines whether the target string is a snowflake.
 {isSnowflake lax=true return_id=true;<@111372124383428608>}  // 111372124383428608
 ```
 
+## `{snippet maxLength=100 suffix=… extra;target}`
+
+Create a snippet of a string, truncating it if it is over the max length.
+
+#### Arguments
+
+- `maxLength`: The maximum length of the snippet.
+- `suffix`: The suffix to add to the end of the snippet if it is truncated.
+- `extra`: The extra text to add to the end of the snippet, regardless of whether its truncated.
+- `target`: The string to create a snippet from.
+
+## `{settings;pluginCode;settingsKey}`
+
+Get a settings value from a plugin. This tag is intended mostly for internal use and as such there is no official list of all the settings keys available.
+
+#### Arguments
+
+- `pluginCode`: The code of the plugin to get settings of, for example `suggestions`.
+- `settingsKey`: The settings key to get, for example `anonymousSuggestions` would check if the bot should make suggestions anonymous for the suggestions plugin.
+
 ## `{find case_insensitive=true return_all=false;target;pattern}`
 
 Finds `pattern` in `target` and returns the first match or all matches if specified. [Regular expressions](https://regexr.com/) are supported.
 
 #### Arguments
+
 - `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.
 - `return_all`: Whether to return an array of all matches or only the first one. Cannot be used without `/regex/g`.
 - `target`: The string to search.
@@ -85,6 +108,7 @@ Finds `pattern` in `target` and returns the first match or all matches if specif
 Replaces matches of `pattern` in `target` by `replacement`. [Regular expressions](https://regexr.com/) are supported.
 
 #### Arguments
+
 - `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.
 - `replace_all`: Whether to replace all matches or only the first one. Is incompatible with regex; use the flag `g` instead.
 - `target`: The string to search.
@@ -281,7 +305,9 @@ Breaks for-loops early. In this example, only the first item would ever be outpu
 Both `{#if}` and `{#for}` also support a block syntax with regular brackets. For the `[#if]` block, it is not possible to have a body that will run when the condition is false.
 
 ### `[#if]`
+
 Syntax: `[#if;condition] body [/if]`
+
 ```
 [#if;{ticket.reason}]
     // Add the ticket reason only if it is not empty
@@ -290,7 +316,9 @@ Syntax: `[#if;condition] body [/if]`
 ```
 
 ### `[#for]`
+
 Syntax: `[#for;init;iterable] body [/for]`
+
 ```
 {=array;{[one;two;three]}}
 [#for;{=item};{$array}]
