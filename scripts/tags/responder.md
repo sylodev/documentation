@@ -30,7 +30,7 @@ Sets the text of the output message. If output text already exists, the string i
 Note: These commands are not in succession. Assume they were all the first occurence of responder tags.
 ```
 
-## `{responder.dm fallback=false;member}` 
+## `{responder.dm fallback=false;member}`
 
 Sets the responder output location to an user's DM. This tag can be hit and miss if the user has their DMs closed.
 
@@ -39,11 +39,21 @@ Sets the responder output location to an user's DM. This tag can be hit and miss
 {responder.dm fallback=true;{user.id}}  // Will try to send the output in DM to the user and will send it in the context channel if that fails.
 ```
 
+## `{responder.reference;message?}`
+
+Set a message which the message will reply to. The referenced message must be in the same channel as the responder will send to, otherwise the reference will be removed. If `message` is missing, any existing references will be removed. References by default will be set to the message in context.
+
+```
+{responder.reference}              // To clear any existing references.
+{responder.reference;{message.id}} // To reference the context message
+```
+
 ## `{responder.embed}`
 
 Adds an embed to the output message. Calling it multiple times will add multiple embeds to the message, up to a maximum of 10. Only one argument is required in most cases, but you can add multiple.
 
 #### Arguments
+
 - `color`: The color of the embed.
 - `description`: The main text in the embed.
 - `footer`: The small text at the bottom of the embed.
@@ -66,6 +76,7 @@ Adds an embed to the output message. Calling it multiple times will add multiple
 Adds a field to the last created embed.
 
 #### Arguments
+
 - `name`: The name of the field.
 - `value`: The text in the field.
 - `inline`: Whether the field is inline or not, defaults to false.
@@ -92,7 +103,7 @@ Resets any options already applied to the responder.
 
 ## `{responder.ephemeral}`
 
-Marks the message as ephemeral. Only works with interactions. 
+Marks the message as ephemeral. Only works with interactions.
 
 ## `{responder.error;message}`
 
@@ -109,9 +120,10 @@ Sends the message immediately. This will automatically call `{responder.reset}` 
 
 ## `{responder.button label handler state? url? emoji? style?}`
 
-Adds a button to the message. 
+Adds a button to the message.
 
 #### Arguments
+
 - `label`: The button text.
 - `handler`: The value of the component callback action to call when the button is clicked.
 - `state`: An optional payload that will be accessible in the component callback action.
