@@ -38,6 +38,8 @@ Returns a boolean indicating whether the role is set to display members separate
 
 ## `{role.managed;role}`
 
+Returns `true` for managed roles. ex: Server Boost and Bot roles.
+
 ## `{role.mentionable;role}`
 
 Returns a boolean indicating whether the role can be mentioned.
