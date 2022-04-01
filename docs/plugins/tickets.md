@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 Tickets
 
 ## Prefixes

@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # `{server}`
 
 This was previously named `{guild}`. All `{server}` tags have a `{guild}` alias for backwards compatibility. `{server.id}` is the same as `{guild.id}`.

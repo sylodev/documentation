@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # Comments
 
 Commenting your code can help you or others understand what it's doing.

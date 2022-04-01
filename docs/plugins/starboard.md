@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # Starboards
 
 Starboards are channels where messages go when a specific reaction is added. In the most common variant of this, reacting with a ⭐ would send an embed of that message to a channel named #starboard.

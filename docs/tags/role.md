@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # `{role}` tags
 
 ## `{role.id;role}`

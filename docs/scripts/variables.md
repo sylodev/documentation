@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # Variables
 
 Variables let you store data to use later in the same script.

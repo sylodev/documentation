@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # Arrays
 
 Arrays are lists of items that can be iterated over or passed to other tags. `{[one;two;three]}` would create an array with 3 elements.

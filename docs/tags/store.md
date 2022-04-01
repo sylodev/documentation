@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # `{store}` tags
 
 Tags used to keep values and data across invocations. `{perset}` and `{perget}` are analogs from v8.

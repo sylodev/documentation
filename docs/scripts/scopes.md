@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # Scopes
 
 Scopes are an advanced feature that is used in loops and functions. They limit variable assignments to the scope of the function or loop.
