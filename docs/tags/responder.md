@@ -1,13 +1,3 @@
----
-title: {responder} tags
-description: 
-published: 1
-date: 2022-03-18T00:33:10.252Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-16T05:09:37.565Z
----
-
 # `{responder}` tags
 
 `{responder}` tags let you construct a message that will be sent once the action is over, or you manually send it. These tags are meant to be chained together to form a complete responder.
@@ -26,13 +16,12 @@ Appends text to the output message. If there is more text, it will be appended t
 `{responder.text;Hello}{responder.text;World}` will make the output message "Hello World"
 `{responder.text;Hello}{responder.text;}` empty text will clear existing text.
 
-## `{responder.dm fallback=false;member}` 
+## `{responder.dm fallback=false;member}`
 
 Set the responder to dm a user. This tag can be hit and miss if the user has their direct-messages closed.
 
 `{responder.dm;{user.id}}` will make the message direct-message the user in context.
 `{responder.dm fallback=true;{user.id}}` will send a message to the user and will fall back to the context channel if the user has their direct-mesage closed.
-
 
 ## `{responder.embed}`
 
@@ -78,11 +67,12 @@ Reset any options already applied to the responder.
 {responder.reset}
 {responder.text;Something bad happened!}
 ```
+
 This would output "Something bad happened!"
 
 ## `{responder.ephemeral}`
 
-Mark the message as ephemeral. Only works with interactions. 
+Mark the message as ephemeral. Only works with interactions.
 
 ## `{responder.error;message}`
 
@@ -99,7 +89,7 @@ Send the message immediately. This will automatically call `{responder.reset}` i
 
 ## `{responder.button label handler state url emoji style}`
 
-Add a button to the message. 
+Add a button to the message.
 
 `label` is the button text.
 `handler` is the value of the component callback action to call when the button is clicked

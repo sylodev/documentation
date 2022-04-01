@@ -1,13 +1,3 @@
----
-title: {message} tags
-description: 
-published: 1
-date: 2022-02-27T00:00:00.000Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-16T06:33:41.532Z
----
-
 # `{message}`
 
 ## `{message.id;message}`
@@ -31,6 +21,7 @@ Checks if a message is pinned.
 Pins a message.
 
 #### Arguments
+
 - `{reason}`: The reason for the action that will be displayed in the Audit Log.
 
 ## `{message.unpin reason;message}`
@@ -38,6 +29,7 @@ Pins a message.
 Unpins a message.
 
 #### Arguments
+
 - `{reason}`: The reason for the action that will be displayed in the Audit Log.
 
 ## `{message.publish;message}`
@@ -49,6 +41,7 @@ Publishes a message. Only works in news channels.
 Adds a reaction to a message.
 
 #### Arguments
+
 - `{emoji}`: The emoji to add as the reaction.
 
 ## `{message.removeReaction;emoji;message}`
@@ -56,6 +49,7 @@ Adds a reaction to a message.
 Removes a reaction from a message.
 
 #### Arguments
+
 - `{emoji}`: The emoji to remove as the reaction.
 
 ## `{message.removeReactions;emoji;message}`

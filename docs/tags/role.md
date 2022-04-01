@@ -1,13 +1,3 @@
----
-title: {role} tags
-description: 
-published: 1
-date: 2022-03-17T16:46:30.001Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-16T06:20:40.655Z
----
-
 # `{role}` tags
 
 ## `{role.id;role}`
@@ -82,4 +72,3 @@ Create a new role.
 Delete a role.
 
 `reason` is why you are deleting this role.
-

@@ -1,13 +1,3 @@
----
-title: Importing Scripts
-description: 
-published: 1
-date: 2022-02-16T12:10:29.254Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-16T12:10:29.254Z
----
-
 # Importing Scripts
 
 Using `{#import}` you can import any action in the server. The `Script` action trigger type is specifically made for use with `{#import}`, as the trigger will never fire. `{#import}` will inline the imported script and expose any functions it has in the current script.
@@ -39,4 +29,3 @@ What will actually be run is effectively this
 ```
 
 With the imported script being inlined into the final script.
-

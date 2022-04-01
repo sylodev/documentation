@@ -1,21 +1,11 @@
----
-title: Action Triggers
-description: Information on action triggers and how they work
-published: 1
-date: 2022-02-23T17:55:55.555Z
-tags: actions
-editor: markdown
-dateCreated: 2022-01-21T06:07:28.374Z
----
-
 # Action Triggers
 
 ## Slash Command
 
-
 > It may take a couple minutes for changes to this trigger to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-info}
 
 #### Parameters
+
 - `{user}`: The user who invoked the command.
 - `{channel}`: The channel where the command was invoked.
 - `{option}`: The arguments that were passed to the command by the user.
@@ -27,6 +17,7 @@ You can also configure options that the slash command can have, which will be pa
 ## Keyword
 
 #### Parameters
+
 - `{channel}`: The channel where the command was invoked.
 - `{message}`: The message that invoked the command.
 - `{user}`: The user who invoked the command.
@@ -49,15 +40,18 @@ Actions using this trigger can imported by other actions without having to first
 > It may take a couple minutes for changes to this trigger to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-info}
 
 #### Parameters
+
 - `{channel}`: The channel where the command was invoked.
 - `{user}`: The user who invoked the command.
 - `{$targetType}`: The [type of target](https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types).
 
 #### Parameters for Message Context Menus
+
 - `{message}`: The message the action was used on.
 - `{$targetId}`: The ID of the message.
 
 #### Parameters for User Context Menus
+
 - `{$targetId}`: The ID of the user the action was used on.
 
 Fires when someone right clicks a message or user and selects the trigger name under `Apps` in the context menu.
@@ -104,6 +98,7 @@ Some examples of valid schedules:
 ## Message Reaction Add
 
 #### Parameters
+
 - `{channel}`: The channel where the command was invoked.
 - `{message}`: The message the reaction was for.
 - `{user}`: The user who reacted to the message.
@@ -114,6 +109,7 @@ Fires when a reaction is added to a message. You must specify a single emoji to 
 ## Message Reaction Remove
 
 #### Parameters
+
 - `{channel}`: The channel where the command was invoked.
 - `{message}`: The message the reaction was for.
 - `{user}`: The user whose reaction was removed.
@@ -126,6 +122,7 @@ Fires when a user remove a reaction from a message they previously reacted to. Y
 > Because this trigger is easy to abuse, there are extreme limits in place. {.is-danger}
 
 #### Parameters
+
 - `{channel}`: The channel of the message.
 - `{message}`: The message sent.
 - `{user}`: The user who sent the message.
@@ -135,6 +132,7 @@ Fires when someone sends any message to a server. You can optionally filter by m
 ## Guild Member Add
 
 #### Parameters
+
 - `{user}`: The user who joined the server.
 
 Fires when a member joins the server.
@@ -142,6 +140,7 @@ Fires when a member joins the server.
 ## Guild Member Remove
 
 #### Parameters
+
 - `{user}`: The user who left the server.
 
 Fires when a member leaves the server.
@@ -151,6 +150,7 @@ Fires when a member leaves the server.
 > This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
 
 #### Parameters
+
 - `{channel}`: The specified context channel.
 - `{role}`: The role that was added.
 - `{user}`: The user who received the role.
@@ -162,6 +162,7 @@ Fires when a member gets a new role. You can configure a specific role to listen
 > This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
 
 #### Parameters
+
 - `{channel}`: The specified context channel.
 - `{role}`: The role that was removed.
 - `{user}`: The user who lost the role.
@@ -171,14 +172,16 @@ Fires when a role is removed from a member. You can configure a specific role to
 ## Voice Channel Join
 
 #### Parameters
+
 - `{channel}`: The channel joined.
 - `{user}`: The user who joined a channel.
 
-Fires when a user joins a voice channel or switches to a new voice channel. 
+Fires when a user joins a voice channel or switches to a new voice channel.
 
 ## Voice Channel Leave
 
 #### Parameters
+
 - `{channel}`: The channel left.
 - `{user}`: The user who left a channel.
 
@@ -189,6 +192,7 @@ Fires when a user leaves a voice channel or switches to a new voice channel.
 > This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
 
 #### Parameters
+
 - `{user}`: The user who boosted.
 
 Fires when a member boosts the server.
@@ -198,12 +202,12 @@ Fires when a member boosts the server.
 > This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
 
 #### Parameters
+
 - `{user}`: The user who removed their boost.
 
 Fires when a member removes their boost from a server.
 
 ## Webhook
-
 
 Actions using this trigger will fire when a HTTP request is sent to the specified URL. To prevent loops, action locking is enforced for webhook actions and `{#fetch}` can only call webhooks from other servers.
 
@@ -211,11 +215,11 @@ The request method must be `POST`. You can access body data via `{$request.body}
 
 Actions with this trigger will run with the user who last updated the action in context, which will also mean the action inherits that users permissions in the server.
 
+#### Response data
 
-####  Response data
-|   Property   |            Type             |                        Description                         |
-| :----------: | :-------------------------: | :--------------------------------------------------------: |
+|   Property   |                 Type                  |                        Description                         |
+| :----------: | :-----------------------------------: | :--------------------------------------------------------: |
 |  statusCode  | `"ERROR"` \| `"OK"` \| `"PROCESSING"` |                The result of the invocation                |
-|   output    |           string?           |                  The output of the action                  |
-| errorMessage |           string?           |       The error message if the action failed to run        |
-|  errorStack  |           string?           | The stack trace for the action if the action failed to run |
+|    output    |                string?                |                  The output of the action                  |
+| errorMessage |                string?                |       The error message if the action failed to run        |
+|  errorStack  |                string?                | The stack trace for the action if the action failed to run |

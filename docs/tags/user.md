@@ -1,13 +1,3 @@
----
-title: {user} tags
-description: 
-published: 1
-date: 2022-02-27T00:00:00.000Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-16T06:24:57.222Z
----
-
 # `{user}` tags
 
 ## `{user.mention;user}`
@@ -63,6 +53,7 @@ Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 Edits a user.
 
 #### Arguments
+
 - `nick`: The user's new nickname. Leave empty to clear.
 - `mute`: Whether the user will be server muted in voice channels.
 - `deaf`: Whether the user will be server deafened in voice channels.
@@ -73,6 +64,7 @@ Edits a user.
 Gives a user a role.
 
 #### Arguments
+
 - `reason`: The reason for the action that will be displayed in the Audit Log.
 - `role`: The role to add to the user.
 
@@ -81,6 +73,7 @@ Gives a user a role.
 Removes a role from a user.
 
 #### Arguments
+
 - `reason`: The reason for the action that will be displayed in the Audit Log.
 - `role`: The role to remove from the user.
 

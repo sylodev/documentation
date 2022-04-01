@@ -1,13 +1,3 @@
----
-title: Global tags
-description:
-published: 1
-date: 2022-02-27T00:00:00.000Z
-tags:
-editor: markdown
-dateCreated: 2022-02-14T17:16:04.568Z
----
-
 # Global tags
 
 ## `{time format;time}`
@@ -246,36 +236,36 @@ Compares different values and executes instructions based on the result. Syntax 
 
 ```ts
 [
-  {
-    input: "{#if;word;==;WORD;yay;nay}",
-    output: "yay",
-    note: '"==" is for case-insensitive comparison',
-  },
-  {
-    input: "{#if;word;===;WORD;yay;nay}",
-    output: "nay",
-    note: '"===" is for case-sensitive comparison',
-  },
-  {
-    input: "{#if;word;matches;/[a-z]+/gu;yay;nay}",
-    output: "yay",
-    note: '"matches" can be used for matching regex',
-  },
-  {
-    input: "{#if;true;===;yes;yay;nay}",
-    output: "yay",
-    note: "Boolean-like values are coerced to booleans",
-  },
-  {
-    input: "{#if;5;<;10;yay;nay}",
-    output: "yay",
-    note: "Numbers are compared as numbers.",
-  },
-  {
-    input: "{#if;true;{channel.send;yay};{channel.send;nay}}",
-    output: "yay",
-    note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run and send both "yay" and "nay".',
-  },
+	{
+		input: "{#if;word;==;WORD;yay;nay}",
+		output: "yay",
+		note: '"==" is for case-insensitive comparison',
+	},
+	{
+		input: "{#if;word;===;WORD;yay;nay}",
+		output: "nay",
+		note: '"===" is for case-sensitive comparison',
+	},
+	{
+		input: "{#if;word;matches;/[a-z]+/gu;yay;nay}",
+		output: "yay",
+		note: '"matches" can be used for matching regex',
+	},
+	{
+		input: "{#if;true;===;yes;yay;nay}",
+		output: "yay",
+		note: "Boolean-like values are coerced to booleans",
+	},
+	{
+		input: "{#if;5;<;10;yay;nay}",
+		output: "yay",
+		note: "Numbers are compared as numbers.",
+	},
+	{
+		input: "{#if;true;{channel.send;yay};{channel.send;nay}}",
+		output: "yay",
+		note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run and send both "yay" and "nay".',
+	},
 ];
 ```
 

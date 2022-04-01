@@ -1,0 +1,29 @@
+  - actions
+    - [introduction](/actions/introduction.md)
+    - [triggers](/actions/triggers.md)
+  - plugins
+    - [starboard](/plugins/starboard.md)
+    - [tickets](/plugins/tickets.md)
+  - [restrictions](/restrictions.md)
+  - scripts
+    - [arrays](/scripts/arrays.md)
+    - [comments](/scripts/comments.md)
+    - [functions](/scripts/functions.md)
+    - [imports](/scripts/imports.md)
+    - [objects](/scripts/objects.md)
+    - [options and parameters](/scripts/options-and-parameters.md)
+    - [scopes](/scripts/scopes.md)
+    - [variables](/scripts/variables.md)
+  - tags
+    - [channel](/tags/channel.md)
+    - [command tags](/tags/command-tags.md)
+    - [global](/tags/global.md)
+    - [message](/tags/message.md)
+    - plugins
+      - [suggestion](/tags/plugins/suggestion.md)
+      - [ticket](/tags/plugins/ticket.md)
+    - [responder](/tags/responder.md)
+    - [role](/tags/role.md)
+    - [server](/tags/server.md)
+    - [store](/tags/store.md)
+    - [user](/tags/user.md)

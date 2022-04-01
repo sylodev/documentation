@@ -1,13 +1,3 @@
----
-title: Starboards
-description: 
-published: 1
-date: 2022-02-23T18:05:30.500Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-05T20:15:33.694Z
----
-
 # Starboards
 
 Starboards are channels where messages go when a specific reaction is added. In the most common variant of this, reacting with a ⭐ would send an embed of that message to a channel named #starboard.

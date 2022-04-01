@@ -1,13 +1,3 @@
----
-title: Scopes
-description: 
-published: 1
-date: 2022-02-24T16:03:06.021Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-24T16:03:06.021Z
----
-
 # Scopes
 
 Scopes are an advanced feature that is used in loops and functions. They limit variable assignments to the scope of the function or loop.

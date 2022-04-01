@@ -1,13 +1,3 @@
----
-title: {channel} tags
-description: 
-published: 1
-date: 2022-02-27T00:00:00.000Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-16T06:15:22.397Z
----
-
 # `{channel}` tags
 
 ## `{channel.mention;channel}`
@@ -47,15 +37,17 @@ Returns a channel topic, also known as channel description.
 Updates a channel.
 
 #### Arguments
+
 - `name`: The new name of the channel.
 - `topic`: The new topic of the channel.
 - `nsfw`: Whether the channel is NSFW or not.
 
 ## `{channel.create name type topic nsfw parent return_id;channel}`
 
-Creates a new channel. 
+Creates a new channel.
 
 #### Arguments
+
 - `name`: The name of the channel.
 - `type`: The [type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types) of the channel. `guildtext`, `guild_text`, `GUILD_TEXT`, and `GuildText` are all valid and will all resolve to a guild text channel. IDs are also supported but the name is preferred.
 - `topic`: The topic of the channel.

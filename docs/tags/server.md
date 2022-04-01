@@ -1,13 +1,3 @@
----
-title: {server} tags
-description: 
-published: 1
-date: 2022-02-27T00:00:00.000Z
-tags: 
-editor: markdown
-dateCreated: 2022-02-16T06:29:18.052Z
----
-
 # `{server}`
 
 This was previously named `{guild}`. All `{server}` tags have a `{guild}` alias for backwards compatibility. `{server.id}` is the same as `{guild.id}`.
@@ -25,6 +15,7 @@ Returns the name of the server.
 Gets the icon of the server.
 
 #### Arguments
+
 - `size`: The size of the image to get. Must be a valid [CDN size](https://discord.com/developers/docs/reference#image-formatting).
 - `hash`: Whether to return the hash directly instead of a URL.
 
@@ -33,6 +24,7 @@ Gets the icon of the server.
 Gets the splash image of the server.
 
 #### Arguments
+
 - `size`: The size of the splash to get. Must be a valid [CDN size](https://discord.com/developers/docs/reference#image-formatting).
 - `hash`: Whether to return the hash directly instead of a URL.
 
@@ -41,6 +33,7 @@ Gets the splash image of the server.
 Gets the banner of the server.
 
 #### Arguments
+
 - `size`: The size of the banner to get. Must be a valid [CDN size](https://discord.com/developers/docs/reference#image-formatting).
 - `hash`: Whether to return the hash directly instead of a URL.
 
