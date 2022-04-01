@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Importing Scripts
 
 Using `{#import}` you can import any action in the server. The `Script` action trigger type is specifically made for use with `{#import}`, as the trigger will never fire. `{#import}` will inline the imported script and expose any functions it has in the current script.

@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Objects
 
 Objects are used to store data in a structured format. You can use them to create embeds or store data about things.

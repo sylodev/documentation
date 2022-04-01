@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Ticket tags
 
 ## `{ticket.author;channel}`

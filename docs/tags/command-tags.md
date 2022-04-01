@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Command Tags
 
 > There are future plans to deprecate command tags and instead have each command register its own tag. {.is-warning}

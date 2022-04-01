@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Options & Parameters
 
 Tag parameters are how you get tags to do what you want. For example, `{channel.id;off-topic}` will get the `channel.id` tag to return the ID of the `off-topic` channel. In that example, `off-topic` is the tag parameter, and it will be given to `channel.id` so it knows what you want.

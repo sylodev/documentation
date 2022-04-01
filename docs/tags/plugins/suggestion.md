@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Suggestion tags
 
 ## `{suggestion.authorId}`
@@ -18,7 +22,7 @@ The unique ID of the suggestion. Globably incremented.
 
 ## `{suggestion.messageLink}`
 
-A direct link to the suggestion. 
+A direct link to the suggestion.
 
 ## `{suggestion.createdAt}`
 
@@ -42,7 +46,7 @@ When the suggestion last updated states.
 
 ## `{suggestion.state}`
 
-The state of the suggestion. 
+The state of the suggestion.
 
 `Pending`
 `Approved`

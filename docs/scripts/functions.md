@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Functions
 
 Scripts can define functions that can be invoked with arguments. The first parameter is the name of the function, and the last is the body of the function. Parameters in between are function parameters.
