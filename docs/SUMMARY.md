@@ -1,0 +1,31 @@
+# Atlas Documentation
+
+- [docs](docs/README.md)
+  - Plugins
+    * [starboard](docs/Plugins/starboard.md)
+    * [tickets](docs/Plugins/tickets.md)
+  - Scripts
+    * [arrays](docs/Scripts/arrays.md)
+    * [blocks](docs/Scripts/blocks.md)
+    * [comments](docs/Scripts/comments.md)
+    * [functions](docs/Scripts/functions.md)
+    * [imports](docs/Scripts/imports.md)
+    * [objects](docs/Scripts/objects.md)
+    * [options-and-parameters](docs/Scripts/options-and-parameters.md)
+    * [returning](docs/Scripts/returning.md)
+    * [scopes](docs/Scripts/scopes.md)
+    * [variables](docs/Scripts/variables.md)
+  - Tags
+    - Plugins
+      * [suggestion](docs/Tags/Plugins/suggestion.md)
+      * [ticket](docs/Tags/Plugins/ticket.md)
+    * [channel](docs/Tags/channel.md)
+    * [command-tags](docs/Tags/command-tags.md)
+    * [global](docs/Tags/global.md)
+    * [message](docs/Tags/message.md)
+    * [responder](docs/Tags/responder.md)
+    * [role](docs/Tags/role.md)
+    * [server](docs/Tags/server.md)
+    * [store](docs/Tags/store.md)
+    * [user](docs/Tags/user.md)
+  * [SUMMARY](docs/SUMMARY.md)

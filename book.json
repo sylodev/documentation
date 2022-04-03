@@ -1,0 +1,6 @@
+{
+	"root": "./docs",
+	"title": "Atlas Documentation",
+	"outputfile": "./docs/SUMMARY.md",
+	"disableTitleFormatting": true
+}
