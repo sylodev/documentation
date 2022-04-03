@@ -9,7 +9,7 @@ Formats time as a string. Is compatible with any of the `.createdAt` tags.
 - `time`: Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.
 - `format`: Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.
 
-```
+```json
 {time}  // 1636084903
 {time format=relative_time;5 hours ago}  // 5 hours ago
 {time;2021-11-05T04:01:43.661Z}          // 1636084903
@@ -32,7 +32,7 @@ Accepted modes:
 
 Returns the number of characters in a string and the number of elements in an array.
 
-```
+```json
 {length;pog}  // 3
 {length;{[one;two;three]}}  // 3
 ```
@@ -46,7 +46,7 @@ Determines whether the target string is a snowflake.
 - `lax`: Whether to accept snowflakes surrounded by characters or not.
 - `return_id`: Whether to return a boolean or an ID. If the target is not a snowflake and `return_id` is set to true, the tag outputs nothing.
 
-```
+```json
 {isSnowflake;111372124383428608}  // true
 {isSnowflake;hello}               // false
 {isSnowflake;123098123}           // false
@@ -85,7 +85,7 @@ Finds `pattern` in `target` and returns the first match or all matches if specif
 - `target`: The string to search.
 - `pattern`: The string or regex pattern to find.
 
-```
+```json
 {find;hello world;hello}     // hello
 {find;hello world;nothing}
 {find case_insensitive=false;hello world;HELLO}          // HELLO
@@ -105,7 +105,7 @@ Replaces matches of `pattern` in `target` by `replacement`. [Regular expressions
 - `pattern`: The string or regex pattern to find.
 - `replacement`: The string to put in place of the pattern.
 
-```
+```json
 {replace replace_all=false;hello hello;hell;hey}  // heyo hello
 {replace;hello hello;hell;hey}     // heyo heyo
 {replace;hello hello;/hell/;hey}   // heyo hello
@@ -124,7 +124,7 @@ Evaluates math. `precision_fix` enables a hack that fixes floating point precisi
 
 Gets a random item from a list. `length` is the number of items to return. When `length` is true, you can choose to return the random items in an array with `return_array`.
 
-```
+```json
 {random;123}           // 2
 {random;{[1;2;3]}}     // 1
 {random length=2;123}  // 21
@@ -146,7 +146,7 @@ Performs a HTTP request to a URL.
 
 Splits a string into multiple parts. `separator` can be an arbitrary string or regex pattern.
 
-```
+```json
 {split;one,two,three;,}          // {[one;two;three]}
 {split;woah party tricks;/ +/g}  // {[woah;party;tricks]}
 {split;one,two,three;/(,)/g}     // {[one;,;two;,;three]}, you can use groups to keep the separator in the output array.
@@ -158,7 +158,7 @@ Adds an item to the end of an array.
 
 This will mutate the original array, which is why nothing is returned by default.
 
-```
+```json
 {=array;{[one]}}
 {push;{$array};two}  // no output
 {$array}             // {[one;two]}
@@ -169,7 +169,7 @@ This will mutate the original array, which is why nothing is returned by default
 
 Adds an item to the front of an array. Essentially the same as `{push}` but the item is added to the beginning of the array.
 
-```
+```json
 {=array;{[three]}}
 {unshift;{$array};two}  // no output
 {$array}                // {[two;three]}
@@ -180,7 +180,7 @@ Adds an item to the front of an array. Essentially the same as `{push}` but the 
 
 Returns and deletes the first item of an array.
 
-```
+```json
 {=array;{[one;two;three]}}
 {shift;{$array}}  // one
 {$array}          // {[two;three]}
@@ -190,7 +190,7 @@ Returns and deletes the first item of an array.
 
 Returns and deletes the last item of an array.
 
-```
+```json
 {=array;{[one;two;three]}}
 {pop;{$array}}  // three
 {$array}        // {[onw;two]}
@@ -200,7 +200,7 @@ Returns and deletes the last item of an array.
 
 Gets the first parameter that is not empty or falsy. The `boolean` option can be used to return a boolean instead of the first valid value.
 
-```
+```json
 {or;;two}       // "two"
 {or;;}          // no output
 {or;false;two}  // "two"
@@ -213,7 +213,7 @@ Gets the first parameter that is not empty or falsy. The `boolean` option can be
 
 Ensures all parameters are present, returning the last parameter if all are valid. The `boolean` option can be used to return a boolean instead of the last parameter if all are valid.
 
-```
+```json
 {and;;two}     // no output, "two" is never evaluated
 {and;one;two}  // "one", "two" is evaluated
 {and;;}        // no output
@@ -225,7 +225,7 @@ Ensures all parameters are present, returning the last parameter if all are vali
 
 Formats a number. [Formats using the context locale if possible](https://en.wikipedia.org/wiki/Decimal_separator) (for example, the guild language).
 
-```
+```json
 {formatNumber;1000.5} // 1,000.5
 {formatNumber;1000.5} // 1 000,5 for some other languages
 ```
@@ -234,85 +234,52 @@ Formats a number. [Formats using the context locale if possible](https://en.wiki
 
 Compares different values and executes instructions based on the result. Syntax is `{if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `===`, `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, and `matching`.
 
-```ts
-[
-  {
-    input: "{if;word;==;WORD;yay;nay}",
-    output: "yay",
-    note: '"==" is for case-insensitive comparison',
-  },
-  {
-    input: "{if;word;===;WORD;yay;nay}",
-    output: "nay",
-    note: '"===" is for case-sensitive comparison',
-  },
-  {
-    input: "{if;word;matches;/[a-z]+/gu;yay;nay}",
-    output: "yay",
-    note: '"matches" can be used for matching regex',
-  },
-  {
-    input: "{if;true;===;yes;yay;nay}",
-    output: "yay",
-    note: "Boolean-like values are coerced to booleans",
-  },
-  {
-    input: "{if;5;<;10;yay;nay}",
-    output: "yay",
-    note: "Numbers are compared as numbers.",
-  },
-  {
-    input: "{if;true;{channel.send;yay};{channel.send;nay}}",
-    output: "yay",
-    note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run and send both "yay" and "nay".',
-  },
-];
+```json
+// "==" is used for case-insensitive comparison
+{if;word;==;WORD;yay;nay} // yay
+
+// "===" is for case-sensitive comparison
+{if;word;===;WORD;yay;nay} // nay
+
+// "matches" can be used for matching regex
+{if;word;matches;/[a-z]+/gu;yay;nay} // yay
+
+// Boolean-like values are coerced to booleans before comparison
+{if;true;===;yes;yay;nay} // yay
+
+// Numbers are compared as numbers
+{if;5;<;10;yay;nay} // yay
+
+// Conditional parsing is used, so in this example only "yay" is ever sent.
+// This is an exception instead of a rule as most other tags will parse all parameters regardless.
+{if;true;{channel.send;yay};{channel.send;nay}} // yay
 ```
 
 ## `{for;init;iterable;body}`
 
 Iterates over array items until `{break}` is encountered or it reaches the end of the array.
 
-```
+```json
 {=array;{[one;two;three]}}
+
+// regular format
 {for;{=item};{$array};{$item}}  // one two three
+
+// block format
+[#for;{=item};{$array}]
+  {$item}
+[/for]
 ```
 
 ## `{break}`
 
 Breaks for-loops early. In this example, only the first item would ever be output.
 
-```
+```json
 {=array;{[one;two;three]}}
 [#for;{=item};{$array}]
 	{$item}
 	{break}
-[/for]
-```
-
-## Blocks
-
-Both `{if}` and `{for}` also support a block syntax with regular brackets. For the `[#if]` block, it is not possible to have a body that will run when the condition is false.
-
-### `[#if]`
-
-Syntax: `[#if;condition] body [/if]`
-
-```
-[#if;{ticket.reason}]
-    // Add the ticket reason only if it is not empty
-    {responder.embedField name="Reason" value={ticket.reason}}
-[/if]
-```
-
-### `[#for]`
-
-Syntax: `[#for;init;iterable] body [/for]`
-
-```
-{=array;{[one;two;three]}}
-[#for;{=item};{$array}]
-	{responder.embedField name="Item Value" value={$item}
 [/for]
 ```
 
@@ -324,8 +291,30 @@ Throws an engine error. Depending on your action setup, these will be shown to t
 
 Catches a thrown error.
 
-```
+```json
 {catch;{throw;Test error};Oh no! Something went wrong}  // Oh no! Something went wrong
 {catch;{throw;Oopsy poopsy!}}
 {catch;{user.id}}  // 111372124383428608
+```
+
+## `{return}`
+
+Used to return early or to return rich data that may be butchered otherwise. Can be used in functions and the top-level scope. See more in the [returning](../scripts/returning.md) or [functions](../scripts/functions.md) sections.
+
+## `{void;...}`
+
+Used to void the output of its children.
+
+```json
+Hello {void;World} // "Hello "
+```
+
+## `{keys;object}`
+
+Get the keys of an object. Useful when you want to iterate over the keys or values of an object. Only top-level keys are returned
+
+```json
+{=object.key;value}
+{=object.nested.key;value}
+{keys;{$object}} // {[key;nested]}
 ```

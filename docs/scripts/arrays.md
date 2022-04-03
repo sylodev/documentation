@@ -4,7 +4,7 @@ Arrays are lists of items that can be iterated over or passed to other tags. `{[
 
 You can assign them to variables
 
-```
+```json
 {=myarray;{[one;two;three]}}
 {$myarray}
 {$myarray.0} // one
@@ -19,7 +19,7 @@ And you can iterate over them with `{for}`
 [/for]
 ```
 
-would print
+... which would print
 
 ```
 one
