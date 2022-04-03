@@ -1,6 +1,6 @@
 # Importing Scripts
 
-Using `{#import}` you can import any action in the server. The `Script` action trigger type is specifically made for use with `{#import}`, as the trigger will never fire. `{#import}` will inline the imported script and expose any functions it has in the current script.
+Using `{import}` you can import any action in the server. The `Script` action trigger type is specifically made for use with `{import}`, as the trigger will never fire. `{import}` will inline the imported script and expose any functions it has in the current script.
 
 You can use imports to share common functionality between scripts, and to be able to update functions without updating a dozen occurences across multiple scripts.
 
@@ -12,10 +12,10 @@ Let's say we have this saved as an action script:
 [/function]
 ```
 
-If we import it with `{#import}`
+If we import it with `{import}`
 
 ```
-{#import;actions/...}
+{import;actions/...}
 {my_function}
 ```
 

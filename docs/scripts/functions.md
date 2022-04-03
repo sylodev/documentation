@@ -10,13 +10,13 @@ Scripts can define functions that can be invoked with arguments. The first param
 ```
 
 ```
-{#function;my_function;{user.id}}
+{function;my_function;{user.id}}
 {my_function} // outputs the users ID
 ```
 
 Imporing scripts with functions will make those functions available to the script.
 
 ```
-{#import;actions/...}
+{import;actions/...}
 {my_function}
 ```

@@ -10,7 +10,7 @@ You can assign them to variables
 {$myarray.0} // one
 ```
 
-And you can iterate over them with `{#for}`
+And you can iterate over them with `{for}`
 
 ```
 {=target;{[one;two;three]}}

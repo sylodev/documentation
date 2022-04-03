@@ -230,55 +230,55 @@ Formats a number. [Formats using the context locale if possible](https://en.wiki
 {formatNumber;1000.5} // 1 000,5 for some other languages
 ```
 
-## `{#if}`
+## `{if}`
 
-Compares different values and executes instructions based on the result. Syntax is `{#if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{#if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `===`, `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, and `matching`.
+Compares different values and executes instructions based on the result. Syntax is `{if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `===`, `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, and `matching`.
 
 ```ts
 [
-	{
-		input: "{#if;word;==;WORD;yay;nay}",
-		output: "yay",
-		note: '"==" is for case-insensitive comparison',
-	},
-	{
-		input: "{#if;word;===;WORD;yay;nay}",
-		output: "nay",
-		note: '"===" is for case-sensitive comparison',
-	},
-	{
-		input: "{#if;word;matches;/[a-z]+/gu;yay;nay}",
-		output: "yay",
-		note: '"matches" can be used for matching regex',
-	},
-	{
-		input: "{#if;true;===;yes;yay;nay}",
-		output: "yay",
-		note: "Boolean-like values are coerced to booleans",
-	},
-	{
-		input: "{#if;5;<;10;yay;nay}",
-		output: "yay",
-		note: "Numbers are compared as numbers.",
-	},
-	{
-		input: "{#if;true;{channel.send;yay};{channel.send;nay}}",
-		output: "yay",
-		note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run and send both "yay" and "nay".',
-	},
+  {
+    input: "{if;word;==;WORD;yay;nay}",
+    output: "yay",
+    note: '"==" is for case-insensitive comparison',
+  },
+  {
+    input: "{if;word;===;WORD;yay;nay}",
+    output: "nay",
+    note: '"===" is for case-sensitive comparison',
+  },
+  {
+    input: "{if;word;matches;/[a-z]+/gu;yay;nay}",
+    output: "yay",
+    note: '"matches" can be used for matching regex',
+  },
+  {
+    input: "{if;true;===;yes;yay;nay}",
+    output: "yay",
+    note: "Boolean-like values are coerced to booleans",
+  },
+  {
+    input: "{if;5;<;10;yay;nay}",
+    output: "yay",
+    note: "Numbers are compared as numbers.",
+  },
+  {
+    input: "{if;true;{channel.send;yay};{channel.send;nay}}",
+    output: "yay",
+    note: 'Because this is a keyword tag, only "yay" will be sent. Regular tags would run and send both "yay" and "nay".',
+  },
 ];
 ```
 
-## `{#for;init;iterable;body}`
+## `{for;init;iterable;body}`
 
-Iterates over array items until `{#break}` is encountered or it reaches the end of the array.
+Iterates over array items until `{break}` is encountered or it reaches the end of the array.
 
 ```
 {=array;{[one;two;three]}}
-{#for;{=item};{$array};{$item}}  // one two three
+{for;{=item};{$array};{$item}}  // one two three
 ```
 
-## `{#break}`
+## `{break}`
 
 Breaks for-loops early. In this example, only the first item would ever be output.
 
@@ -286,13 +286,13 @@ Breaks for-loops early. In this example, only the first item would ever be outpu
 {=array;{[one;two;three]}}
 [#for;{=item};{$array}]
 	{$item}
-	{#break}
+	{break}
 [/for]
 ```
 
 ## Blocks
 
-Both `{#if}` and `{#for}` also support a block syntax with regular brackets. For the `[#if]` block, it is not possible to have a body that will run when the condition is false.
+Both `{if}` and `{for}` also support a block syntax with regular brackets. For the `[#if]` block, it is not possible to have a body that will run when the condition is false.
 
 ### `[#if]`
 
@@ -316,16 +316,16 @@ Syntax: `[#for;init;iterable] body [/for]`
 [/for]
 ```
 
-## `{#throw;message}`
+## `{throw;message}`
 
 Throws an engine error. Depending on your action setup, these will be shown to the user and logged just as regular engine errors would be.
 
-## `{#catch;body;message}`
+## `{catch;body;message}`
 
 Catches a thrown error.
 
 ```
-{#catch;{#throw;Test error};Oh no! Something went wrong}  // Oh no! Something went wrong
-{#catch;{throw;Oopsy poopsy!}}
-{#catch;{user.id}}  // 111372124383428608
+{catch;{throw;Test error};Oh no! Something went wrong}  // Oh no! Something went wrong
+{catch;{throw;Oopsy poopsy!}}
+{catch;{user.id}}  // 111372124383428608
 ```
