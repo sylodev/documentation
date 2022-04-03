@@ -1,6 +1,0 @@
-{
-	"root": "./docs",
-	"title": "Atlas Documentation",
-	"outputfile": "./docs/SUMMARY.md",
-	"ignores": ["SUMMARY.md"]
-}

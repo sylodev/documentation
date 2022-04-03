@@ -299,7 +299,7 @@ Catches a thrown error.
 
 ## `{return}`
 
-Used to return early or to return rich data that may be butchered otherwise. Can be used in functions and the top-level scope. See more in the [returning](../scripts/returning.md) or [functions](../scripts/functions.md) sections.
+Used to return early or to return rich data that may be butchered otherwise. Can be used in functions and the top-level scope. See more in the [returning](../Scripts/returning.md) or [functions](../Scripts/functions.md) sections.
 
 ## `{void;...}`
 
