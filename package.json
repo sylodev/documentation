@@ -1,6 +1,7 @@
 {
 	"name": "documentation",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "This repository contains the source for documentation hosted at https://docs.atlas.bot. You're welcome to submit a PR to help improve the documentation.",
 	"repository": {
 		"type": "git",
@@ -8,10 +9,10 @@
 	},
 	"scripts": {
 		"generate-summary": "book sm",
+		"fix-summary": "node ./scripts/fix-summary.js",
 		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"gitbook-summary": "^1.2.4",
-		"husky": "^7.0.0"
+		"gitbook-summary": "^1.2.4"
 	}
 }

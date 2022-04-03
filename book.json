@@ -2,5 +2,5 @@
 	"root": "./docs",
 	"title": "Atlas Documentation",
 	"outputfile": "./docs/SUMMARY.md",
-	"disableTitleFormatting": true
+	"ignores": ["SUMMARY.md"]
 }
