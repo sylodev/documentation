@@ -1,5 +1,26 @@
 # Global tags
 
+## `{option;name}`
+
+Get the value of a defined option.
+
+<img src="https://i.imgur.com/X6gT2Xc.png" alt="Example of how to define options" />
+
+For this example, we'll assume the user ran the command as `/inspect input:example text user:@Sylver#1058`
+
+```
+{option;input} // "example text"
+{option;user} // "111372124383428608"
+{user.username;{option;user}} // "Sylver"
+```
+
+And for this example, we'll assume the user ran the command as `/inspect input:example text`
+
+```
+{option;input} // "example text"
+{option;user} // "", because the user didn't provide a user option
+```
+
 ## `{time format;time}`
 
 Formats time as a string. Is compatible with any of the `.createdAt` tags.
