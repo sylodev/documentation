@@ -1,4 +1,4 @@
-# `{user}` tags
+# User
 
 ## `{user.mention;user}`
 

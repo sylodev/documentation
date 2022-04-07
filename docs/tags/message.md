@@ -1,4 +1,4 @@
-# `{message}`
+# Message
 
 ## `{message.id;message}`
 

@@ -1,4 +1,4 @@
-# `{store}` tags
+# Store
 
 Tags used to keep values and data across invocations. `{perset}` and `{perget}` are analogs from v8.
 

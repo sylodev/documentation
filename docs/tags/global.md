@@ -1,4 +1,4 @@
-# Global tags
+# Global
 
 ## `{option;name}`
 

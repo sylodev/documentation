@@ -1,4 +1,4 @@
-# `{channel}` tags
+# Channel
 
 ## `{channel.mention;channel}`
 

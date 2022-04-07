@@ -1,4 +1,4 @@
-# Ticket tags
+# Ticket
 
 ## `{ticket.author;channel}`
 

@@ -1,4 +1,4 @@
-# `{responder}` tags
+# Responder
 
 `{responder}` tags let you construct a message that will be sent once the action is over, or you manually send it. These tags are meant to be chained together to form a complete responder.
 

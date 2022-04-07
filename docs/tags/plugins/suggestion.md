@@ -1,4 +1,4 @@
-# Suggestion tags
+# Suggestion
 
 ## `{suggestion.authorId}`
 

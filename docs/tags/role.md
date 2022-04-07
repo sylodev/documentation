@@ -1,4 +1,4 @@
-# `{role}` tags
+# Role
 
 ## `{role.id;role}`
 
