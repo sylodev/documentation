@@ -13,55 +13,57 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 module.exports = {
-	sidebar: [
-		{
-			type: "doc",
-			label: "Introduction",
-			id: "README",
-		},
-		{
-			type: "category",
-			label: "Plugins",
-			items: ["plugins/starboard", "plugins/tickets"],
-		},
-		{
-			type: "category",
-			label: "Actions",
-			items: ["actions/triggers"],
-		},
-		{
-			type: "category",
-			label: "Scripts",
-			items: [
-				"scripts/arrays",
-				"scripts/blocks",
-				"scripts/comments",
-				"scripts/functions",
-				"scripts/imports",
-				"scripts/objects",
-				"scripts/options-and-parameters",
-				"scripts/returning",
-				"scripts/scopes",
-				"scripts/variables",
-			],
-		},
-		{
-			type: "category",
-			label: "Tags",
-			items: [
-				{
-					type: "category",
-					label: "Plugin Tags",
-					items: ["tags/plugins/suggestion", "tags/plugins/ticket"],
-				},
-				"tags/global",
-				"tags/message",
-				"tags/responder",
-				"tags/role",
-				"tags/server",
-				"tags/store",
-				"tags/user",
-			],
-		},
-	],
+  sidebar: [
+    {
+      type: "doc",
+      label: "Introduction",
+      id: "README",
+    },
+    {
+      type: "category",
+      label: "Plugins",
+      items: ["plugins/starboard", "plugins/tickets", "plugins/levels"],
+    },
+    {
+      type: "category",
+      label: "Actions",
+      items: ["actions/triggers"],
+    },
+    {
+      type: "category",
+      label: "Scripts",
+      items: [
+        "scripts/arrays",
+        "scripts/blocks",
+        "scripts/comments",
+        "scripts/functions",
+        "scripts/imports",
+        "scripts/objects",
+        "scripts/options-and-parameters",
+        "scripts/returning",
+        "scripts/scopes",
+        "scripts/variables",
+      ],
+    },
+    {
+      type: "category",
+      label: "Tags",
+      items: [
+        {
+          type: "category",
+          label: "Plugin Tags",
+          items: ["tags/plugins/suggestion", "tags/plugins/ticket"],
+        },
+        "tags/command-tags",
+        "tags/channel",
+        "tags/global",
+        "tags/message",
+        "tags/responder",
+        "tags/role",
+        "tags/server",
+        "tags/store",
+        "tags/user",
+      ],
+    },
+  ],
 };
