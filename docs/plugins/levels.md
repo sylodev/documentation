@@ -51,3 +51,7 @@ Level rewards are not adjusted when you change the level curve.
 <img src="https://i.imgur.com/XxALrjb.png" alt="An example of the level curve options" />
 
 <img src="https://i.imgur.com/3AuZs13.png" alt="An example of the curve preview for a custom level curve" />
+
+## Level Sync Mode
+
+The sync mode determines when level rewards are synced with the user. By default it's set to "on level up", which will only sync roles when the user levels up. This is the recommended mode, and means you can remove roles from users without the bot adding them back the second they send a message. The other mode is "on xp gain", which will sync their levels when the user gains XP by sending a message. You should only use this mode if you have a good reason to.
