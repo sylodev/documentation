@@ -65,5 +65,10 @@ module.exports = {
         "tags/user",
       ],
     },
+    {
+      type: "category",
+      label: "Tutorials",
+      items: ["tutorials/migrating-to-slash-commands"],
+    },
   ],
 };
