@@ -45,6 +45,10 @@ Get an embed from the message. The index is optional and will default to the fir
 {$embed.title}
 ```
 
+## `{message.referenceId;message}`
+
+The ID of the message this message is replying to.
+
 ## `{message.addReaction;emoji;message}`
 
 Adds a reaction to a message.
