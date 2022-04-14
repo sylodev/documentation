@@ -352,3 +352,7 @@ Join the items of an array together with the given separator.
 ## `{randomInt;min;max}`
 
 Get a random number between `min` and `max`. If `max` is not specified, `min` is used as the maximum and `0` is used as the minimum.
+
+## `{isUrl;input}`
+
+Determine if `input` is a valid URL. This will not query the domain to see if it is registered, but it will check for a valid protocol and top-level domain.
