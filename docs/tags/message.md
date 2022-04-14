@@ -36,6 +36,15 @@ Unpins a message.
 
 Publishes a message. Only works in news channels.
 
+## `{message.embed index=0;message}`
+
+Get an embed from the message. The index is optional and will default to the first embed if its not provided.
+
+```
+{=embed;{message.embed}}
+{$embed.title}
+```
+
 ## `{message.addReaction;emoji;message}`
 
 Adds a reaction to a message.
