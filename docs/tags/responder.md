@@ -97,3 +97,7 @@ Add a button to the message.
 `url` can be used to link to external resources
 `emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.
 `style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.
+
+## `{responder.edit;message}`
+
+Set the responder to edit the given message. Atlas must have sent the message to edit it.
