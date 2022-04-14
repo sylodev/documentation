@@ -356,3 +356,13 @@ Get a random number between `min` and `max`. If `max` is not specified, `min` is
 ## `{isUrl;input}`
 
 Determine if `input` is a valid URL. This will not query the domain to see if it is registered, but it will check for a valid protocol and top-level domain.
+
+## `{slice;target;start;end}`
+
+Get a slice of an array or string. If `end` is not specified, it is assumed to be the length of the target.
+
+```json
+{=array;{[one;two;three]}}
+{slice;{$array};1} // {[two;three]}
+{slice;{$array};1;2} // {[two]}
+```
