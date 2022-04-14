@@ -56,6 +56,7 @@ module.exports = {
         },
         "tags/command-tags",
         "tags/channel",
+        "tags/emoji",
         "tags/global",
         "tags/message",
         "tags/responder",
