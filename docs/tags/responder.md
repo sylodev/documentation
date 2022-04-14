@@ -87,7 +87,11 @@ You should use this whenever sending error messages.
 
 Send the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully. `return_id` can be used to get the output message ID. Calling this is optional, once execution is over and there is a configured responder it will be sent automatically.
 
-## `{responder.button label handler state url emoji style}`
+## `{responder.edit;message}`
+
+Set the responder to edit the given message. Atlas must have sent the message to edit it.
+
+## `{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex?}`
 
 Add a button to the message.
 
@@ -96,8 +100,26 @@ Add a button to the message.
 `state` is an optional payload that will be accessible in the component callback action
 `url` can be used to link to external resources
 `emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.
+`stateless` Whether this button should be forced to be a stateless interaction. Required if you don't want the button to expire.
 `style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.
 
-## `{responder.edit;message}`
+## `{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex?;options}`
 
-Set the responder to edit the given message. Atlas must have sent the message to edit it.
+Create a new select menu with the given options. The options must be provided as an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure).
+
+```
+{=options;{{
+  "value": [
+      {
+          "label": "Option One",
+          "value": "1"
+      },
+      {
+          "label": "Option Two",
+          "value": "2"
+      }
+  ]
+}}}
+
+{responder.select handler=my_callback placeholder="Select an option";{$options.value}}
+```
