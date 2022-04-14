@@ -339,3 +339,12 @@ Get the keys of an object. Useful when you want to iterate over the keys or valu
 {=object.nested.key;value}
 {keys;{$object}} // {[key;nested]}
 ```
+
+## `{join;array;separator}`
+
+Join the items of an array together with the given separator.
+
+```json
+{=array;{[one;two;three]}}
+{join;{$array};,} // one,two,three
+```
