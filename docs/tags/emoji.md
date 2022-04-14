@@ -1,3 +1,5 @@
+## Emoji
+
 ## `{emoji.id;emoji}`
 
 The ID of the emoji. For guild emojis, this is the emoji snowflake. For native emojis this is the native emoji character.
