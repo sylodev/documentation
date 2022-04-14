@@ -49,6 +49,10 @@ Get an embed from the message. The index is optional and will default to the fir
 
 The ID of the message this message is replying to.
 
+## `{message.reactions;message}`
+
+Get the list of all reactions on a message. Returns an array of [reaction objects](https://discord.com/developers/docs/resources/channel#reaction-object).
+
 ## `{message.addReaction;emoji;message}`
 
 Adds a reaction to a message.
