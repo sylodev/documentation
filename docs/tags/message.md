@@ -94,6 +94,10 @@ Returns the ID of the channel a message is in.
 
 Checks if a message was sent as text to speech.
 
+## `{message.mentions type?;message}`
+
+Get a list of mentions from a message. Returns an array of IDs that includes roles, channels and users unless a `type` is supplied. `type` can be one of `user`, `role` or `channel`. If provided, only mentions of the specified type will be returned.
+
 ## `{message.createdAt;message}`
 
 Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a message that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
