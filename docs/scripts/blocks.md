@@ -1,8 +1,8 @@
 # Blocks
 
-<!-- todo: this is awful -->
+Blocks are a way to format tags in a way that is more readable. You can use them to format `{if}`, `{loop}` and `{function}` in a way that is slightly more readable. Blocks aren't required, but they are recommended for readability in some circumstances.
 
-Both `{if}` and `{for}` also support a block syntax with regular brackets. For the `[#if]` block, it is not possible to have a body that will run when the condition is false.
+Tag names in blocks are prefixed with `#`. Without this prefix, the block will be ignored. Block nesting is supported.
 
 ## `[#if]`
 
