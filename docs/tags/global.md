@@ -348,3 +348,7 @@ Join the items of an array together with the given separator.
 {=array;{[one;two;three]}}
 {join;{$array};,} // one,two,three
 ```
+
+## `{randomInt;min;max}`
+
+Get a random number between `min` and `max`. If `max` is not specified, `min` is used as the maximum and `0` is used as the minimum.
