@@ -68,8 +68,8 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Tutorials",
-      items: ["tutorials/migrating-to-slash-commands"],
+      label: "Topics",
+      items: ["topics/migrating-to-slash-commands", "topics/command-syncing"],
     },
   ],
 };

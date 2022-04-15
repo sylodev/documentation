@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@docusaurus/core': 2.0.0-beta.18
+  '@docusaurus/plugin-client-redirects': ^2.0.0-beta.18
   '@docusaurus/preset-classic': 2.0.0-beta.18
   '@mdx-js/react': ^1.6.22
   clsx: ^1.1.1
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   '@docusaurus/core': 2.0.0-beta.18_react-dom@17.0.2+react@17.0.2
+  '@docusaurus/plugin-client-redirects': 2.0.0-beta.18_react-dom@17.0.2+react@17.0.2
   '@docusaurus/preset-classic': 2.0.0-beta.18_react-dom@17.0.2+react@17.0.2
   '@mdx-js/react': 1.6.22_react@17.0.2
   clsx: 1.1.1
@@ -1662,6 +1664,40 @@ packages:
       - '@swc/core'
       - esbuild
       - uglify-js
+      - webpack-cli
+    dev: false
+
+  /@docusaurus/plugin-client-redirects/2.0.0-beta.18_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-Hx2Tz/suK+0hNEuxOAokF1NMpd5vKnpTHENnVXJ9poSOFMFipudyht6Yjcrscar4wW971K2lBfX03lh8mNBQtg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: ^16.8.4 || ^17.0.0
+      react-dom: ^16.8.4 || ^17.0.0
+    dependencies:
+      '@docusaurus/core': 2.0.0-beta.18_react-dom@17.0.2+react@17.0.2
+      '@docusaurus/logger': 2.0.0-beta.18
+      '@docusaurus/utils': 2.0.0-beta.18
+      '@docusaurus/utils-common': 2.0.0-beta.18
+      '@docusaurus/utils-validation': 2.0.0-beta.18
+      eta: 1.12.3
+      fs-extra: 10.0.1
+      lodash: 4.17.21
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      tslib: 2.3.1
+    transitivePeerDependencies:
+      - '@parcel/css'
+      - '@swc/core'
+      - bufferutil
+      - csso
+      - debug
+      - esbuild
+      - eslint
+      - supports-color
+      - typescript
+      - uglify-js
+      - utf-8-validate
+      - vue-template-compiler
       - webpack-cli
     dev: false
 

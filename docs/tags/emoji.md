@@ -1,4 +1,4 @@
-## Emoji
+# Emoji
 
 ## `{emoji.id;emoji}`
 
