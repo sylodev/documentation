@@ -38,6 +38,8 @@ Embed Elements
 `description`
 `footer`
 `footer-icon`
+`image`
+`thumbnail`
 `timestamp`
 `title`
 `url`
@@ -90,6 +92,7 @@ Send the message immediately. This will automatically call `{responder.reset}` i
 ## `{responder.edit;message}`
 
 Set the responder to edit the given message. Atlas must have sent the message to edit it.
+Place after the new message content.
 
 ## `{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex?}`
 
@@ -102,6 +105,12 @@ Add a button to the message.
 `emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.
 `stateless` Whether this button should be forced to be a stateless interaction. Required if you don't want the button to expire.
 `style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.
+
+If you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.
+
+```
+‎
+```
 
 ## `{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex?;options}`
 
