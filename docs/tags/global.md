@@ -163,9 +163,9 @@ Performs a HTTP request to a URL.
 {=data;{fetch;https://atlas.bot/api/status}}\n{$data.body.ok}  // true
 ```
 
-## `{split;separator}`
+## `{split;input;separator}`
 
-Splits a string into multiple parts. `separator` can be an arbitrary string or regex pattern.
+Splits `input` into an array at `separator`. `separator` can be an arbitrary string or regex pattern.
 
 ```json
 {split;one,two,three;,}          // {[one;two;three]}
