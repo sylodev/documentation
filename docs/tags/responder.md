@@ -58,7 +58,7 @@ Add a field to the last created embed.
 
 ## `{responder.channel;channel}`
 
-Set the channel the message will be sent to. THe channel must support sending messages.
+Set the channel the message will be sent to. The channel must support sending messages.
 
 ## `{responder.reset}`
 
