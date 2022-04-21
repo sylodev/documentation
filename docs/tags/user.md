@@ -96,3 +96,11 @@ Returns the reward the user achieved by levelling up. Returns nothing if there w
 - `added`: Filters to roles that were added to the user by levelling up. If the user levels up to level 10 and that level has a reward but the user already has that reward, it would not be included in this filter. `achieved` on the other hand would have included it.
 - `removed`: Filters to rewards that were removed by levelling up.
 - `existing`: Filters to rewards that the user had before levelling up.
+
+As an example, you could set your level-up notification to this
+
+```
+{if;{user.reward};Congratulations {user.mention}! You levelled up to level {user.level} and got the {role.mention;{user.reward}} role!}
+```
+
+Which would send a level-up message only if the user got a new role.
