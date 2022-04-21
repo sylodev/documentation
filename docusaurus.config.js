@@ -23,7 +23,7 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/sylo-digital/documentation",
+          editUrl: "https://github.com/sylo-digital/documentation/tree/main",
         },
       }),
     ],

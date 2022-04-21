@@ -95,6 +95,8 @@ Some examples of valid schedules:
 - `at 5:00 pm on Weds,Thurs and Fri` fires at 5:00pm on Wednesday, Thursday, and Friday.
 - `at 5:00 pm every 1 day of March in 2014` fires at 5:00pm every day of March in 2014.
 
+Use [this tool](https://crontab.guru/) to quickly write a cron expression.
+
 ## Message Reaction Add
 
 #### Parameters
