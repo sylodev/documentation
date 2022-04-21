@@ -77,7 +77,7 @@ Removes a role from a user.
 - `reason`: The reason for the action that will be displayed in the Audit Log.
 - `role`: The role to remove from the user.
 
-## `{user.colour;member}`
+## `{user.color;member}`
 
 Gets a user's color based on their highest role.
 
@@ -100,7 +100,7 @@ Returns the reward the user achieved by levelling up. Returns nothing if there w
 As an example, you could set your level-up notification to this
 
 ```
-{if;{user.reward};Congratulations {user.mention}! You levelled up to level {user.level} and got the {role.mention allow_mention=false;{user.reward}} role!}
+{if;{user.reward};Congratulations {user.mention}! You leveled up to level {user.level} and got the {role.mention allow_mention=false;{user.reward}} role!}
 ```
 
 Which would send a level-up message only if the user got a new role.
