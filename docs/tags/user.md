@@ -80,3 +80,19 @@ Removes a role from a user.
 ## `{user.colour;member}`
 
 Gets a user's color based on their highest role.
+
+## `{user.reward filter=achieved first=true raw=false}`
+
+Returns the reward the user achieved by levelling up. Returns nothing if there was no reward. **This tag is only available in level-up scripts** and cannot be used elsewhere.
+
+`first` is whether to return only the first reward in the filtered list. Some levels can have multiple rewards, so this might be useful for displaying all of them. An empty array will be returned if there are no rewards and `first=false`
+
+`raw` is whether to return a raw rewards object with more information about the reward. The object looks something like `{ level, roleId, stack }`
+
+`filter` is the kind of reward to return. The default, `achieved`, is recommended if you just want to tell the user of new roles they got by levelling up.
+
+- `achieved`: Filters to roles the user achieved by levelling up.
+- `entitled`: Filters to all roles the user is entitled to.
+- `added`: Filters to roles that were added to the user by levelling up. If the user levels up to level 10 and that level has a reward but the user already has that reward, it would not be included in this filter. `achieved` on the other hand would have included it.
+- `removed`: Filters to rewards that were removed by levelling up.
+- `existing`: Filters to rewards that the user had before levelling up.
