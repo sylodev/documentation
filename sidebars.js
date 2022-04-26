@@ -22,7 +22,12 @@ module.exports = {
     {
       type: "category",
       label: "Plugins",
-      items: ["plugins/starboard", "plugins/tickets", "plugins/levels"],
+      items: [
+        "plugins/starboard",
+        "plugins/tickets",
+        "plugins/levels",
+        "plugins/roles",
+      ],
     },
     {
       type: "category",
