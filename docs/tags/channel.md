@@ -32,6 +32,16 @@ Returns the ID of the last message sent in a channel.
 
 Returns a channel topic, also known as channel description.
 
+## `{channel.parentId}`
+
+Get the parent ID of the channel. For regular channels this is the category ID. For threads this is the ID of the parent channel.
+
+```json
+{channel.parentId} // "", a channel with no parent
+{channel.parentId} // "532902705404837888", a regular channel with a parent
+{channel.parentId} // "532902728834351115", a thread channel with a parent
+```
+
 ## `{channel.edit;channel}`
 
 Updates a channel.
