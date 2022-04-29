@@ -58,16 +58,32 @@ Add a field to the last created embed.
 
 ## `{responder.channel;channel}`
 
-Set the channel the message will be sent to. The channel must support sending messages.
+Set the channel the message will be sent to. Setting a channel with a context interaction will have the responder ignore that interaction when sending a message. **The context interaction must still be replied to or it will be marked as failed**.
+
+```json
+// Do some weird logging stuff to a separate channel that the user will never see
+{responder.channel;MY_LOG_CHANNEL}
+{responder.text;{user.mention} ran our command!}
+{responder.send} // Send the log message to the log channel
+
+// Now we reply to the slash command (context interaction). This is required,
+// not replying will have Discord mark the interaction as failed. Depending on a few factors,
+// if we don't reply Atlas will automatically send a "The action did not output anything" message
+// to stop it being marked as failed.
+{responder.text;Hi {user.mention}! This is a reply to the context interaction that is required for it not to fail}
+// No need for {responder.send} as it is automatically once the script finishes executing if its configured
+```
 
 ## `{responder.reset}`
 
 Reset any options already applied to the responder.
 
 ```
+
 {responder.text;Hello}
 {responder.reset}
 {responder.text;Something bad happened!}
+
 ```
 
 This would output "Something bad happened!"
@@ -85,9 +101,15 @@ This is the same as `{responder.text}`, with some extras;
 
 You should use this whenever sending error messages.
 
-## `{responder.send return_id=false}`
+## `{responder.send return_id=false ignore_interaction=false}`
 
-Send the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully. `return_id` can be used to get the output message ID. Calling this is optional, once execution is over and there is a configured responder it will be sent automatically.
+Send the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully.
+
+`return_id` can be used to get the output message ID. **return_id does not work when replying to an interaction**. Discord does not give us message data when we send an interaction, however because the responder will assume you mean the context interaction, leaving out the ID should do effectively the same thing.
+
+`ignore_interaction` can be set to have the responder ignore the context interaction and reply with a regular message in the context channel. **The interaction still needs a reply or it will be marked as failed**, you should only use this to send off a separate message.
+
+If the responder is configured when the script finishes, it will be sent automatically. This means you probably don't need `{responder.send}` unless you're sending multiple messages.
 
 ## `{responder.edit;message}`
 
@@ -109,7 +131,9 @@ Add a button to the message.
 If you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.
 
 ```
+
 ‎
+
 ```
 
 ## `{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex?;options}`
@@ -117,6 +141,7 @@ If you want a button to only have an emoji, here is a fun hack. Copy this empty 
 Create a new select menu with the given options. The options must be provided as an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure).
 
 ```
+
 {=options;{{
   "value": [
       {
@@ -131,4 +156,9 @@ Create a new select menu with the given options. The options must be provided as
 }}}
 
 {responder.select handler=my_callback placeholder="Select an option";{$options.value}}
+
+```
+
+```
+
 ```
