@@ -32,7 +32,7 @@ module.exports = {
     {
       type: "category",
       label: "Actions",
-      items: ["actions/triggers"],
+      items: ["actions/triggers", "actions/locking"],
     },
     {
       type: "category",
