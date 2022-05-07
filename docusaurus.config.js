@@ -14,7 +14,6 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   organizationName: "sylo.digital", // Usually your GitHub org/user name.
   projectName: "atlas", // Usually your repo name.
-
   presets: [
     [
       "classic",
@@ -45,6 +44,7 @@ const config = {
       },
     }),
   plugins: [
+    "@cmfcmf/docusaurus-search-local",
     [
       "@docusaurus/plugin-client-redirects",
       {
