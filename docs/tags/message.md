@@ -98,6 +98,13 @@ Checks if a message was sent as text to speech.
 
 Get a list of mentions from a message. Returns an array of IDs that includes roles, channels and users unless a `type` is supplied. `type` can be one of `user`, `role` or `channel`. If provided, only mentions of the specified type will be returned.
 
+## `{message.attachments single=true objects=false;message}`
+
+Get the attachments from a message. Returns the first attachments url by default.
+
+`single` is whether to return the first attachment or an array of attachments.
+`objects` is whether to return the [attachment objects](https://discord.com/developers/docs/resources/channel#attachment-object-attachment-structure) or just their urls.
+
 ## `{message.createdAt;message}`
 
 Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a message that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
