@@ -366,3 +366,36 @@ Get a slice of an array or string. If `end` is not specified, it is assumed to b
 {slice;{$array};1} // {[two;three]}
 {slice;{$array};1;2} // {[two]}
 ```
+
+## `{randomString;length;alphabet?}`
+
+Generate a random string.
+
+- `length` is the length of the string to generate
+- `alphabet` is the alphabet to use. If not specified, it is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`
+
+## `{includes;array;item}`
+
+Check whether an array includes an item.
+
+```json
+{=array;{[one;two;three]}}
+{includes;{$array};two} // true
+```
+
+## `{import;scriptId}`
+
+Import a `script` action. View more information on the [imports](../scripts/imports.md) guide.
+
+```json
+// In the script
+[#function;my_function]
+	Hello World!
+[/function]
+```
+
+```json
+// In another action
+{import;action/6c306503-adaf-48ae-b724-40b78d0edd28}
+{my_function} // "Hello World!"
+```

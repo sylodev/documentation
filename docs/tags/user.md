@@ -81,6 +81,40 @@ Removes a role from a user.
 
 Gets a user's colour based on their highest non-default (#99aab5) role.
 
+## `{user.hasPermission;permissions;member?}`
+
+Checks whether a user has the given permissions.
+
+- `permissions` can be a permissions number or name, for example `create_instant_invite`. A full list of permissions can be seen [here](https://discord.com/developers/docs/topics/permissions#permissions-bitwise-permission-flags).
+- `member` the member to check the permissions of. Defaults to the context user.
+
+## `{user.level;user?;set?}`
+
+Gets the level of a user, or sets the level if `set` is a number.
+
+- `user` the user to get the level of. Defaults to the context user.
+- `set` if set instead of retrieving the level, sets the level to the given number.
+
+## `{user.xp;user?;scoped?;set?}`
+
+Gets the XP of a user, or sets the XP if `set` is a number.
+
+- `user` the user to get the XP of. Defaults to the context user.
+- `scoped` whether to get XP on the current level or total XP, defaults to total XP.
+- `set` if set instead of retrieving the XP, sets the XP to the given number.
+
+## `{user.nextLevel;user?}`
+
+Gets the next level the user will become.
+
+## `{user.nextLevelXP;user?}`
+
+Get the XP required for the users next level.
+
+## `{user.remainingXP;user?}`
+
+Gets the amount of XP a user needs to level up to the next level.
+
 ## `{user.reward filter=achieved first=true raw=false}`
 
 Returns the reward the user achieved by levelling up. Returns nothing if there was no reward. **This tag is only available in level-up scripts** and cannot be used elsewhere.

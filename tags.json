@@ -449,6 +449,34 @@
     "shortDescription": "Get a slice of an array or string"
   },
   {
+    "id": "randomstringlengthalphabet",
+    "name": "randomString",
+    "url": "https://docs.atlas.bot/tags/global#randomstringlengthalphabet",
+    "signature": "{randomString;length;alphabet?}",
+    "longDescription": "Generate a random string.\n\n*   `length` is the length of the string to generate\n*   `alphabet` is the alphabet to use. If not specified, it is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`\n",
+    "shortDescription": "Generate a random string"
+  },
+  {
+    "id": "includesarrayitem",
+    "name": "includes",
+    "url": "https://docs.atlas.bot/tags/global#includesarrayitem",
+    "signature": "{includes;array;item}",
+    "longDescription": "Check whether an array includes an item.\n\n```pella\n{=array;{[one;two;three]}}\n{includes;{$array};two} // true\n```\n",
+    "shortDescription": "Check whether the target contains the value"
+  },
+  {
+    "id": "importscriptid",
+    "name": "import",
+    "url": "https://docs.atlas.bot/tags/global#importscriptid",
+    "signature": "{import;scriptId}",
+    "longDescription": "Import a `script` action. View more information on the [imports](../scripts/imports.md) guide.\n\n```pella\n// In the script\n[#function;my_function]\n\tHello World!\n[/function]\n```\n\n```pella\n// In another action\n{import;action/6c306503-adaf-48ae-b724-40b78d0edd28}\n{my_function} // \"Hello World!\"\n```\n",
+    "shortDescription": "Import a script or action",
+    "aliases": [
+      "#import"
+    ],
+    "expensive": true
+  },
+  {
     "id": "messageidmessage",
     "name": "message.id",
     "url": "https://docs.atlas.bot/tags/message#messageidmessage",
@@ -870,6 +898,14 @@
     "shortDescription": "Add a select menu to the message"
   },
   {
+    "id": "responderreferencemessage",
+    "name": "responder.reference",
+    "url": "https://docs.atlas.bot/tags/responder#responderreferencemessage",
+    "signature": "{responder.reference;message?}",
+    "longDescription": "Set the responder to reference the given message. Call with no params, `{responder.reference}`, to stop the bot replying to the context message.\n",
+    "shortDescription": "Reference a message or remove the existing reference"
+  },
+  {
     "id": "roleidrole",
     "name": "role.id",
     "url": "https://docs.atlas.bot/tags/role#roleidrole",
@@ -1095,6 +1131,17 @@
     ]
   },
   {
+    "id": "serverprefix",
+    "name": "server.prefix",
+    "url": "https://docs.atlas.bot/tags/server#serverprefix",
+    "signature": "{server.prefix}",
+    "longDescription": "Gets the legacy prefix of the server. This tag is only available for compatibility reasons and is not recommended in new actions. This tag is deprecated and may be removed in a future release.\n",
+    "shortDescription": "Get the prefix of the server",
+    "aliases": [
+      "guild.prefix"
+    ]
+  },
+  {
     "id": "storesetkeyvalue",
     "name": "store.set",
     "url": "https://docs.atlas.bot/tags/store#storesetkeyvalue",
@@ -1254,6 +1301,59 @@
     "aliases": [
       "user.color"
     ]
+  },
+  {
+    "id": "userhaspermissionpermissionsmember",
+    "name": "user.hasPermission",
+    "url": "https://docs.atlas.bot/tags/user#userhaspermissionpermissionsmember",
+    "signature": "{user.hasPermission;permissions;member?}",
+    "longDescription": "Checks whether a user has the given permissions.\n\n*   `permissions` can be a permissions number or name, for example `create_instant_invite`. A full list of permissions can be seen [here](https://discord.com/developers/docs/topics/permissions#permissions-bitwise-permission-flags).\n*   `member` the member to check the permissions of. Defaults to the context user.\n",
+    "shortDescription": "Check if the user has a permission",
+    "aliases": [
+      "user.hasPermissions"
+    ]
+  },
+  {
+    "id": "userleveluserset",
+    "name": "user.level",
+    "url": "https://docs.atlas.bot/tags/user#userleveluserset",
+    "signature": "{user.level;user?;set?}",
+    "longDescription": "Gets the level of a user, or sets the level if `set` is a number.\n\n*   `user` the user to get the level of. Defaults to the context user.\n*   `set` if set instead of retrieving the level, sets the level to the given number.\n",
+    "shortDescription": "Get the users level"
+  },
+  {
+    "id": "userxpuserscopedset",
+    "name": "user.xp",
+    "url": "https://docs.atlas.bot/tags/user#userxpuserscopedset",
+    "signature": "{user.xp;user?;scoped?;set?}",
+    "longDescription": "Gets the XP of a user, or sets the XP if `set` is a number.\n\n*   `user` the user to get the XP of. Defaults to the context user.\n*   `scoped` whether to get XP on the current level or total XP, defaults to total XP.\n*   `set` if set instead of retrieving the XP, sets the XP to the given number.\n",
+    "shortDescription": "Get the users xp amount",
+    "aliases": [
+      "user.levelXP",
+      "user.totalXP"
+    ]
+  },
+  {
+    "id": "usernextleveluser",
+    "name": "user.nextLevel",
+    "url": "https://docs.atlas.bot/tags/user#usernextleveluser",
+    "signature": "{user.nextLevel;user?}",
+    "shortDescription": "Get the next level the user will achieve"
+  },
+  {
+    "id": "usernextlevelxpuser",
+    "name": "user.nextLevelXP",
+    "url": "https://docs.atlas.bot/tags/user#usernextlevelxpuser",
+    "signature": "{user.nextLevelXP;user?}",
+    "shortDescription": "Get the xp required for the user's next level"
+  },
+  {
+    "id": "userremainingxpuser",
+    "name": "user.remainingXP",
+    "url": "https://docs.atlas.bot/tags/user#userremainingxpuser",
+    "signature": "{user.remainingXP;user?}",
+    "longDescription": "Gets the amount of XP a user needs to level up to the next level.\n",
+    "shortDescription": "Get the amount of xp the user needs to level up"
   },
   {
     "id": "userreward-filterachieved-firsttrue-rawfalse",

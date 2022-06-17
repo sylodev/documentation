@@ -60,3 +60,7 @@ Returns the total count of members in the server. This should be almost exactly 
 ## `{server.createdAt}`
 
 Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a server that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).
+
+## `{server.prefix}`
+
+Gets the legacy prefix of the server. This tag is only available for compatibility reasons and is not recommended in new actions. This tag is deprecated and may be removed in a future release.

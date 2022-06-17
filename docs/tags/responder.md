@@ -162,3 +162,7 @@ Create a new select menu with the given options. The options must be provided as
 ```
 
 ```
+
+## `{responder.reference;message?}`
+
+Set the responder to reference the given message. Call with no params, `{responder.reference}`, to stop the bot replying to the context message.
