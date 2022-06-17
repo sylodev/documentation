@@ -42,7 +42,19 @@ Get the parent ID of the channel. For regular channels this is the category ID. 
 {channel.parentId} // "532902728834351115", a thread channel with a parent
 ```
 
-## `{channel.edit;channel}`
+## `{channel.isThread}`
+
+Returns true if the channel is a thread.
+
+## `{channel.isVoice}`
+
+Returns true if the channel is a voice channel.
+
+## `{channel.isTextable}`
+
+Returns true if the channel can accept messages.
+
+## `{channel.edit name? topic? nsfw? archived? ratelimit? parent?;channel}`
 
 Updates a channel.
 
@@ -51,6 +63,22 @@ Updates a channel.
 - `name`: The new name of the channel.
 - `topic`: The new topic of the channel.
 - `nsfw`: Whether the channel is NSFW or not.
+- `archived`: Whether this channel is archived; channel must be a thread.
+- `ratelimit`: How often users can send messages in this channel, for example `1m`.
+- `parent`: The category to move the channel to.
+
+## `{channel.startThread auto_archive_duration? ratelimit? invitable? is_private? return_id? channel?;name;message?}`
+
+Creates a new thread.
+
+- `name` the name of the thread.
+- `message` the message the thread is created from.
+- `auto_archive_duration` the time until threads are archived after inactivity. Can be `one_hour`, `one_day`, `three_days` or `one_week`.
+- `ratelimit` how often users can send messages in the thread, for example `1m`.
+- `invitable` whether non-moderators can add other non-moderators to the thread; only available on private threads.
+- `is_private` whether the read is private, must not have a message to be private.
+- `return_id` whether to return the ID of the created thread.
+- `channel` the channel to create the thread on.
 
 ## `{channel.create name type topic nsfw parent return_id;channel}`
 

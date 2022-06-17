@@ -74,12 +74,42 @@
     "shortDescription": "Get the parent of a channel."
   },
   {
-    "id": "channeleditchannel",
+    "id": "channelisthread",
+    "name": "channel.isThread",
+    "url": "https://docs.atlas.bot/tags/channel#channelisthread",
+    "signature": "{channel.isThread}",
+    "shortDescription": "Determine whether the channel is a thread"
+  },
+  {
+    "id": "channelisvoice",
+    "name": "channel.isVoice",
+    "url": "https://docs.atlas.bot/tags/channel#channelisvoice",
+    "signature": "{channel.isVoice}",
+    "shortDescription": "Determine whether the channel is a voice channel"
+  },
+  {
+    "id": "channelistextable",
+    "name": "channel.isTextable",
+    "url": "https://docs.atlas.bot/tags/channel#channelistextable",
+    "signature": "{channel.isTextable}",
+    "shortDescription": "Determine whether a channel can accept text messages"
+  },
+  {
+    "id": "channeledit-name-topic-nsfw-archived-ratelimit-parentchannel",
     "name": "channel.edit",
-    "url": "https://docs.atlas.bot/tags/channel#channeleditchannel",
-    "signature": "{channel.edit;channel}",
-    "longDescription": "Updates a channel.\n\n#### Arguments\n\n*   `name`: The new name of the channel.\n*   `topic`: The new topic of the channel.\n*   `nsfw`: Whether the channel is NSFW or not.\n",
+    "url": "https://docs.atlas.bot/tags/channel#channeledit-name-topic-nsfw-archived-ratelimit-parentchannel",
+    "signature": "{channel.edit name? topic? nsfw? archived? ratelimit? parent?;channel}",
+    "longDescription": "Updates a channel.\n\n#### Arguments\n\n*   `name`: The new name of the channel.\n*   `topic`: The new topic of the channel.\n*   `nsfw`: Whether the channel is NSFW or not.\n*   `archived`: Whether this channel is archived; channel must be a thread.\n*   `ratelimit`: How often users can send messages in this channel, for example `1m`.\n*   `parent`: The category to move the channel to.\n",
     "shortDescription": "Edit the options for a channel",
+    "expensive": true
+  },
+  {
+    "id": "channelstartthread-auto_archive_duration-ratelimit-invitable-is_private-return_id-channelnamemessage",
+    "name": "channel.startThread",
+    "url": "https://docs.atlas.bot/tags/channel#channelstartthread-auto_archive_duration-ratelimit-invitable-is_private-return_id-channelnamemessage",
+    "signature": "{channel.startThread auto_archive_duration? ratelimit? invitable? is_private? return_id? channel?;name;message?}",
+    "longDescription": "Creates a new thread.\n\n*   `name` the name of the thread.\n*   `message` the message the thread is created from.\n*   `auto_archive_duration` the time until threads are archived after inactivity. Can be `one_hour`, `one_day`, `three_days` or `one_week`.\n*   `ratelimit` how often users can send messages in the thread, for example `1m`.\n*   `invitable` whether non-moderators can add other non-moderators to the thread; only available on private threads.\n*   `is_private` whether the read is private, must not have a message to be private.\n*   `return_id` whether to return the ID of the created thread.\n*   `channel` the channel to create the thread on.\n",
+    "shortDescription": "Create a new thread channel",
     "expensive": true
   },
   {
@@ -475,6 +505,14 @@
       "#import"
     ],
     "expensive": true
+  },
+  {
+    "id": "sortarraykey",
+    "name": "sort",
+    "url": "https://docs.atlas.bot/tags/global#sortarraykey",
+    "signature": "{sort;array;key?}",
+    "longDescription": "Sort an array. Returns a new array and does not mutate the original.\n\n*   `array` the array to sort\n*   `key` the key to sort by if the array is an array of objects.\n",
+    "shortDescription": "Sort an array. Will not mutate the original array"
   },
   {
     "id": "messageidmessage",

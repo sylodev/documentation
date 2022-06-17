@@ -399,3 +399,10 @@ Import a `script` action. View more information on the [imports](../scripts/impo
 {import;action/6c306503-adaf-48ae-b724-40b78d0edd28}
 {my_function} // "Hello World!"
 ```
+
+## `{sort;array;key?}`
+
+Sort an array. Returns a new array and does not mutate the original.
+
+- `array` the array to sort
+- `key` the key to sort by if the array is an array of objects.
