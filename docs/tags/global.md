@@ -141,6 +141,37 @@ Holds up processing. This does not schedule execution for later, it pauses execu
 
 Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.
 
+
+```json
+// Supported operators
+{math; 1 + 1} // Addition
+{math; 1 - 1} // Substraction
+{math; 1 * 1} // Multiplication
+{math; 1 / 1} // Division
+{math; 1 ^ 1} // Power
+{math; 1 % 1} // Modulo
+
+// Bitwise operators
+{math; 0011 | 0101} // Logical OR (0111)
+{math; 0011 & 0101} // Logical AND (0001)
+
+// Supported functions
+{math; sqrt(1)} // Square-root
+{math; log(1)}  // Logarithm
+
+// Trigonometry functions. All of them are using values in degrees.
+{math; sin(1)} // Sine
+{math; cos(1)} // Cosine
+{math; tan(1)} // Tangent
+```
+
+### Use-case
+```json
+{=var;4}
+{=res;{math;{$var} + 4} // {$res} -> 8
+```
+
+
 ## `{random length=1 return_array=false;haystack}`
 
 Gets a random item from a list. `length` is the number of items to return. When `length` is true, you can choose to return the random items in an array with `return_array`.
