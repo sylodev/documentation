@@ -91,4 +91,4 @@ The `{store}` tags do not understand nested keys, so you can't retrieve partial 
 {store.get;user} // Prints nothing because it looks up the "user" key while our data is stored at the "user.id" key.
 ```
 
-See [{store}](https://documentation.atlas.bot/en/scripts/tags/store) for information.
+See [{store}](https://docs.atlas.bot/tags/store) for information.
