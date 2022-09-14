@@ -30,12 +30,6 @@ The message for the current state of the Suggestion.
 
 If the suggestion is waiting to be verified its the verification message. Once verified its the message in the suggestions channel. etc;
 
-## `{suggestion.channelId}`
-
-The channel for the current state of the Suggestion.
-
-If the suggestion is waiting to be verified its the verification channel. Once verified its the suggestions channel. etc;
-
 ## `{suggestion.updatedAt}`
 
 When the suggestion last updated states.

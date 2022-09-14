@@ -8,7 +8,8 @@
     "shortDescription": "Get the #mention for the channel",
     "aliases": [
       "channel"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "channelidchannel",
@@ -16,7 +17,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channelidchannel",
     "signature": "{channel.id;channel}",
     "longDescription": "Returns the ID of a channel.\n",
-    "shortDescription": "Get the id of the channel"
+    "shortDescription": "Get the id of the channel",
+    "parameters": []
   },
   {
     "id": "channeltypechannel",
@@ -24,7 +26,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channeltypechannel",
     "signature": "{channel.type;channel}",
     "longDescription": "Returns an integer for the [channel type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types).\n",
-    "shortDescription": "Get the type of the channel. "
+    "shortDescription": "Get the type of the channel. ",
+    "parameters": []
   },
   {
     "id": "channelcreatedatchannel",
@@ -32,14 +35,16 @@
     "url": "https://docs.atlas.bot/tags/channel#channelcreatedatchannel",
     "signature": "{channel.createdAt;channel}",
     "longDescription": "Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a channel that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).\n",
-    "shortDescription": "Get the time that this channel was created at."
+    "shortDescription": "Get the time that this channel was created at.",
+    "parameters": []
   },
   {
     "id": "channelnsfwchannel",
     "name": "channel.nsfw",
     "url": "https://docs.atlas.bot/tags/channel#channelnsfwchannel",
     "signature": "{channel.nsfw;channel}",
-    "shortDescription": "Check whether this channel contains explicit content."
+    "shortDescription": "Check whether this channel contains explicit content.",
+    "parameters": []
   },
   {
     "id": "channelnamechannel",
@@ -47,7 +52,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channelnamechannel",
     "signature": "{channel.name;channel}",
     "longDescription": "Returns the name of a channel.\n",
-    "shortDescription": "Get the name of the channel"
+    "shortDescription": "Get the name of the channel",
+    "parameters": []
   },
   {
     "id": "channellastmessageidchannel",
@@ -55,7 +61,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channellastmessageidchannel",
     "signature": "{channel.lastMessageId;channel}",
     "longDescription": "Returns the ID of the last message sent in a channel.\n",
-    "shortDescription": "Get the last message sent in a channel."
+    "shortDescription": "Get the last message sent in a channel.",
+    "parameters": []
   },
   {
     "id": "channeltopicchannel",
@@ -63,7 +70,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channeltopicchannel",
     "signature": "{channel.topic;channel}",
     "longDescription": "Returns a channel topic, also known as channel description.\n",
-    "shortDescription": "Get the topic of the channel."
+    "shortDescription": "Get the topic of the channel.",
+    "parameters": []
   },
   {
     "id": "channelparentid",
@@ -71,28 +79,32 @@
     "url": "https://docs.atlas.bot/tags/channel#channelparentid",
     "signature": "{channel.parentId}",
     "longDescription": "Get the parent ID of the channel. For regular channels this is the category ID. For threads this is the ID of the parent channel.\n\n```pella\n{channel.parentId} // \"\", a channel with no parent\n{channel.parentId} // \"532902705404837888\", a regular channel with a parent\n{channel.parentId} // \"532902728834351115\", a thread channel with a parent\n```\n",
-    "shortDescription": "Get the parent of a channel."
+    "shortDescription": "Get the parent of a channel.",
+    "parameters": []
   },
   {
     "id": "channelisthread",
     "name": "channel.isThread",
     "url": "https://docs.atlas.bot/tags/channel#channelisthread",
     "signature": "{channel.isThread}",
-    "shortDescription": "Determine whether the channel is a thread"
+    "shortDescription": "Determine whether the channel is a thread",
+    "parameters": []
   },
   {
     "id": "channelisvoice",
     "name": "channel.isVoice",
     "url": "https://docs.atlas.bot/tags/channel#channelisvoice",
     "signature": "{channel.isVoice}",
-    "shortDescription": "Determine whether the channel is a voice channel"
+    "shortDescription": "Determine whether the channel is a voice channel",
+    "parameters": []
   },
   {
     "id": "channelistextable",
     "name": "channel.isTextable",
     "url": "https://docs.atlas.bot/tags/channel#channelistextable",
     "signature": "{channel.isTextable}",
-    "shortDescription": "Determine whether a channel can accept text messages"
+    "shortDescription": "Determine whether a channel can accept text messages",
+    "parameters": []
   },
   {
     "id": "channeledit-name-topic-nsfw-archived-ratelimit-parentchannel",
@@ -101,7 +113,8 @@
     "signature": "{channel.edit name? topic? nsfw? archived? ratelimit? parent?;channel}",
     "longDescription": "Updates a channel.\n\n#### Arguments\n\n*   `name`: The new name of the channel.\n*   `topic`: The new topic of the channel.\n*   `nsfw`: Whether the channel is NSFW or not.\n*   `archived`: Whether this channel is archived; channel must be a thread.\n*   `ratelimit`: How often users can send messages in this channel, for example `1m`.\n*   `parent`: The category to move the channel to.\n",
     "shortDescription": "Edit the options for a channel",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "channelstartthread-auto_archive_duration-ratelimit-invitable-is_private-return_id-channelnamemessage",
@@ -110,7 +123,8 @@
     "signature": "{channel.startThread auto_archive_duration? ratelimit? invitable? is_private? return_id? channel?;name;message?}",
     "longDescription": "Creates a new thread.\n\n*   `name` the name of the thread.\n*   `message` the message the thread is created from.\n*   `auto_archive_duration` the time until threads are archived after inactivity. Can be `one_hour`, `one_day`, `three_days` or `one_week`.\n*   `ratelimit` how often users can send messages in the thread, for example `1m`.\n*   `invitable` whether non-moderators can add other non-moderators to the thread; only available on private threads.\n*   `is_private` whether the read is private, must not have a message to be private.\n*   `return_id` whether to return the ID of the created thread.\n*   `channel` the channel to create the thread on.\n",
     "shortDescription": "Create a new thread channel",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "channelcreate-name-type-topic-nsfw-parent-return_idchannel",
@@ -119,7 +133,8 @@
     "signature": "{channel.create name type topic nsfw parent return_id;channel}",
     "longDescription": "Creates a new channel.\n\n#### Arguments\n\n*   `name`: The name of the channel.\n*   `type`: The [type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types) of the channel. `guildtext`, `guild_text`, `GUILD_TEXT`, and `GuildText` are all valid and will all resolve to a guild text channel. IDs are also supported but the name is preferred.\n*   `topic`: The topic of the channel.\n*   `nsfw`: Whether the channel is NSFW or not.\n*   `parent`: The parent channel, if any.\n*   `return_id`: Whether to return the created channels ID or not.\n",
     "shortDescription": "Create a new channel",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "channeldeletechannel",
@@ -128,7 +143,8 @@
     "signature": "{channel.delete;channel}",
     "longDescription": "> This tag can do serious damage if you are not extremely careful with validating inputs. {.is-warning}\n\nDeletes a channel.\n",
     "shortDescription": "Delete a channel",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "emojiidemoji",
@@ -136,7 +152,8 @@
     "url": "https://docs.atlas.bot/tags/emoji#emojiidemoji",
     "signature": "{emoji.id;emoji}",
     "longDescription": "The ID of the emoji. For guild emojis, this is the emoji snowflake. For native emojis this is the native emoji character.\n",
-    "shortDescription": "Gets the guild emoji ID or native emoji character"
+    "shortDescription": "Gets the guild emoji ID or native emoji character",
+    "parameters": []
   },
   {
     "id": "emojimarkdownemoji",
@@ -148,14 +165,16 @@
     "aliases": [
       "emoji",
       "emoji.char"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "emojinameemoji",
     "name": "emoji.name",
     "url": "https://docs.atlas.bot/tags/emoji#emojinameemoji",
     "signature": "{emoji.name;emoji}",
-    "shortDescription": "Gets the name of an emoji"
+    "shortDescription": "Gets the name of an emoji",
+    "parameters": []
   },
   {
     "id": "emojiurlemoji",
@@ -163,7 +182,8 @@
     "url": "https://docs.atlas.bot/tags/emoji#emojiurlemoji",
     "signature": "{emoji.url;emoji}",
     "longDescription": "The URL to the emoji. For guild emojis, this is the .gif or .png link. For native emojis, this is a .png link to the twemoji image.\n",
-    "shortDescription": "Gets the url of an emoji"
+    "shortDescription": "Gets the url of an emoji",
+    "parameters": []
   },
   {
     "id": "emojianimatedemoji",
@@ -171,7 +191,8 @@
     "url": "https://docs.atlas.bot/tags/emoji#emojianimatedemoji",
     "signature": "{emoji.animated;emoji}",
     "longDescription": "Whether the emoji is animated. False for native emojis.\n",
-    "shortDescription": "Gets whether an emoji is animated"
+    "shortDescription": "Gets whether an emoji is animated",
+    "parameters": []
   },
   {
     "id": "emojicategoryemoji",
@@ -179,7 +200,8 @@
     "url": "https://docs.atlas.bot/tags/emoji#emojicategoryemoji",
     "signature": "{emoji.category;emoji}",
     "longDescription": "Get the category of an emoji. For native emojis this matches the lowercase name of categories from the emoji picker in Discord, for example `people` or `objects`. For guild emojis this will be `guild`.\n",
-    "shortDescription": "Gets the category of an emoji"
+    "shortDescription": "Gets the category of an emoji",
+    "parameters": []
   },
   {
     "id": "emojialiasesemoji",
@@ -187,7 +209,8 @@
     "url": "https://docs.atlas.bot/tags/emoji#emojialiasesemoji",
     "signature": "{emoji.aliases;emoji}",
     "longDescription": "Get the aliases for an emoji. Native emojis only.\n",
-    "shortDescription": "Gets the aliases of an emoji"
+    "shortDescription": "Gets the aliases of an emoji",
+    "parameters": []
   },
   {
     "id": "optionname",
@@ -195,7 +218,8 @@
     "url": "https://docs.atlas.bot/tags/global#optionname",
     "signature": "{option;name}",
     "longDescription": "Get the value of a defined option.\n\n<img src=\"https://i.imgur.com/X6gT2Xc.png\" alt=\"Example of how to define options\" />\n\nFor this example, we'll assume the user ran the command as `/inspect input:example text user:@Sylver#1058`\n\n    {option;input} // \"example text\"\n    {option;user} // \"111372124383428608\"\n    {user.username;{option;user}} // \"Sylver\"\n\nAnd for this example, we'll assume the user ran the command as `/inspect input:example text`\n\n    {option;input} // \"example text\"\n    {option;user} // \"\", because the user didn't provide a user option\n",
-    "shortDescription": "Get an interaction option"
+    "shortDescription": "Get an interaction option",
+    "parameters": []
   },
   {
     "id": "time-formattime",
@@ -206,7 +230,8 @@
     "shortDescription": "Get the current time, format it or return it in unix milliseconds.",
     "aliases": [
       "utils.time"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "casing-modeinput",
@@ -214,7 +239,8 @@
     "url": "https://docs.atlas.bot/tags/global#casing-modeinput",
     "signature": "{casing mode;input}",
     "longDescription": "Changes the casing of a string.\n\nAccepted modes:\n`lower` for lowercase\n`upper` for uppercase\n`first` to capitalise the first letter\n`title` for \"Title Case\"\n`camel` for camelCase\n`constant` for CONSTANT\\_CASE\n",
-    "shortDescription": "Change the casing of a string"
+    "shortDescription": "Change the casing of a string",
+    "parameters": []
   },
   {
     "id": "lengthstring_or_array",
@@ -222,7 +248,8 @@
     "url": "https://docs.atlas.bot/tags/global#lengthstring_or_array",
     "signature": "{length;string_or_array}",
     "longDescription": "Returns the number of characters in a string and the number of elements in an array.\n\n```pella\n{length;pog}  // 3\n{length;{[one;two;three]}}  // 3\n```\n",
-    "shortDescription": "Get the length of a string or array."
+    "shortDescription": "Get the length of a string or array.",
+    "parameters": []
   },
   {
     "id": "issnowflake-lax-return_idtarget",
@@ -230,7 +257,8 @@
     "url": "https://docs.atlas.bot/tags/global#issnowflake-lax-return_idtarget",
     "signature": "{isSnowflake lax return_id;target}",
     "longDescription": "Determines whether the target string is a snowflake.\n\n#### Arguments\n\n*   `lax`: Whether to accept snowflakes surrounded by characters or not.\n*   `return_id`: Whether to return a boolean or an ID. If the target is not a snowflake and `return_id` is set to true, the tag outputs nothing.\n\n```pella\n{isSnowflake;111372124383428608}  // true\n{isSnowflake;hello}               // false\n{isSnowflake;123098123}           // false\n{isSnowflake lax=true; hello 355876124779347968}             // true\n{isSnowflake lax=true return_id=true;<@111372124383428608>}  // 111372124383428608\n```\n",
-    "shortDescription": "Determine whether the input string is a snowflake"
+    "shortDescription": "Determine whether the input string is a snowflake",
+    "parameters": []
   },
   {
     "id": "snippet-maxlength100-suffix-extratarget",
@@ -238,7 +266,8 @@
     "url": "https://docs.atlas.bot/tags/global#snippet-maxlength100-suffix-extratarget",
     "signature": "{snippet maxLength=100 suffix=… extra;target}",
     "longDescription": "Create a snippet of a string, truncating it if it is over the max length.\n\n#### Arguments\n\n*   `maxLength`: The maximum length of the snippet.\n*   `suffix`: The suffix to add to the end of the snippet if it is truncated.\n*   `extra`: The extra text to add to the end of the snippet, regardless of whether its truncated.\n*   `target`: The string to create a snippet from.\n",
-    "shortDescription": "Create a short snippet of a string"
+    "shortDescription": "Create a short snippet of a string",
+    "parameters": []
   },
   {
     "id": "settingsplugincodesettingskey",
@@ -247,7 +276,8 @@
     "signature": "{settings;pluginCode;settingsKey}",
     "longDescription": "Get a settings value from a plugin. This tag is intended mostly for internal use and as such there is no official list of all the settings keys available.\n\n#### Arguments\n\n*   `pluginCode`: The code of the plugin to get settings of, for example `suggestions`.\n*   `settingsKey`: The settings key to get, for example `anonymousSuggestions` would check if the bot should make suggestions anonymous for the suggestions plugin.\n",
     "shortDescription": "Get the settings for a plugin",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "find-case_insensitivetrue-return_allfalsetargetpattern",
@@ -255,7 +285,8 @@
     "url": "https://docs.atlas.bot/tags/global#find-case_insensitivetrue-return_allfalsetargetpattern",
     "signature": "{find case_insensitive=true return_all=false;target;pattern}",
     "longDescription": "Finds `pattern` in `target` and returns the first match or all matches if specified. [Regular expressions](https://regexr.com/) are supported.\n\n#### Arguments\n\n*   `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.\n*   `return_all`: Whether to return an array of all matches or only the first one. Cannot be used without `/regex/g`.\n*   `target`: The string to search.\n*   `pattern`: The string or regex pattern to find.\n\n```pella\n{find;hello world;hello}     // hello\n{find;hello world;nothing}\n{find case_insensitive=false;hello world;HELLO}          // HELLO\n{find;hello world;/hello/i}  // hello\n{find return_all=true;hello hello hello world;/hello/ig} // {[hello;hello;hello]}\n```\n",
-    "shortDescription": "Find a value in a string."
+    "shortDescription": "Find a value in a string.",
+    "parameters": []
   },
   {
     "id": "replace-replace_alltrue-case_insensitivetruetargetpatternreplacement",
@@ -263,7 +294,8 @@
     "url": "https://docs.atlas.bot/tags/global#replace-replace_alltrue-case_insensitivetruetargetpatternreplacement",
     "signature": "{replace replace_all=true case_insensitive=true;target;pattern;replacement}",
     "longDescription": "Replaces matches of `pattern` in `target` by `replacement`. [Regular expressions](https://regexr.com/) are supported.\n\n#### Arguments\n\n*   `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.\n*   `replace_all`: Whether to replace all matches or only the first one. Is incompatible with regex; use the flag `g` instead.\n*   `target`: The string to search.\n*   `pattern`: The string or regex pattern to find.\n*   `replacement`: The string to put in place of the pattern.\n\n```pella\n{replace replace_all=false;hello hello;hell;hey}  // heyo hello\n{replace;hello hello;hell;hey}     // heyo heyo\n{replace;hello hello;/hell/;hey}   // heyo hello\n{replace;hello hello;/hell/g;hey}  // heyo heyo\n```\n",
-    "shortDescription": "Find and replace a value in a string."
+    "shortDescription": "Find and replace a value in a string.",
+    "parameters": []
   },
   {
     "id": "sleepduration",
@@ -272,7 +304,8 @@
     "signature": "{sleep;duration}",
     "longDescription": "Holds up processing. This does not schedule execution for later, it pauses execution until the sleep duration is up. You should only use this in very specific cases and avoid it entirely if possible.\n",
     "shortDescription": "Temporarily hold up processing. Tags before it will run normally, tags after it will have to wait.",
-    "disableInLoop": true
+    "disableInLoop": true,
+    "parameters": []
   },
   {
     "id": "math-precision_fixtrueexpr",
@@ -280,7 +313,8 @@
     "url": "https://docs.atlas.bot/tags/global#math-precision_fixtrueexpr",
     "signature": "{math precision_fix=true;expr}",
     "longDescription": "Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.\n",
-    "shortDescription": "Evaluate math expressions"
+    "shortDescription": "Evaluate math expressions",
+    "parameters": []
   },
   {
     "id": "random-length1-return_arrayfalsehaystack",
@@ -288,7 +322,8 @@
     "url": "https://docs.atlas.bot/tags/global#random-length1-return_arrayfalsehaystack",
     "signature": "{random length=1 return_array=false;haystack}",
     "longDescription": "Gets a random item from a list. `length` is the number of items to return. When `length` is true, you can choose to return the random items in an array with `return_array`.\n\n```pella\n{random;123}           // 2\n{random;{[1;2;3]}}     // 1\n{random length=2;123}  // 21\n{random length=2 return_array=true;123}  // {[2;1]}\n```\n",
-    "shortDescription": "Get a random item from the list."
+    "shortDescription": "Get a random item from the list.",
+    "parameters": []
   },
   {
     "id": "fetchlink",
@@ -298,7 +333,8 @@
     "longDescription": "Performs a HTTP request to a URL.\n\n`application/json` will be parsed as JSON.\n`application/xml`, `text/xml`, `application/rss+xml` and `application/atom+xml` will be parsed as XML.\n\n    {=data;{fetch;https://atlas.bot/api/status}}\\n{$data.body.ok}  // true\n",
     "shortDescription": "Fetch a URL and return the response data.",
     "expensive": true,
-    "disableInLoop": true
+    "disableInLoop": true,
+    "parameters": []
   },
   {
     "id": "splitinputseparator",
@@ -306,7 +342,8 @@
     "url": "https://docs.atlas.bot/tags/global#splitinputseparator",
     "signature": "{split;input;separator}",
     "longDescription": "Splits `input` into an array at `separator`. `separator` can be an arbitrary string or regex pattern.\n\n```pella\n{split;one,two,three;,}          // {[one;two;three]}\n{split;woah party tricks;/ +/g}  // {[woah;party;tricks]}\n{split;one,two,three;/(,)/g}     // {[one;,;two;,;three]}, you can use groups to keep the separator in the output array.\n```\n",
-    "shortDescription": "Split a string into an array of strings."
+    "shortDescription": "Split a string into an array of strings.",
+    "parameters": []
   },
   {
     "id": "push-returnarrayvalue",
@@ -314,7 +351,8 @@
     "url": "https://docs.atlas.bot/tags/global#push-returnarrayvalue",
     "signature": "{push return?;array;value}",
     "longDescription": "Adds an item to the end of an array.\n\nThis will mutate the original array, which is why nothing is returned by default.\n\n```pella\n{=array;{[one]}}\n{push;{$array};two}  // no output\n{$array}             // {[one;two]}\n{push return;{$array};three}  // {[one;two;three]}\n```\n",
-    "shortDescription": "Add an item to an array"
+    "shortDescription": "Add an item to an array",
+    "parameters": []
   },
   {
     "id": "unshift-returnarrayvalue",
@@ -322,7 +360,8 @@
     "url": "https://docs.atlas.bot/tags/global#unshift-returnarrayvalue",
     "signature": "{unshift return?;array;value}",
     "longDescription": "Adds an item to the front of an array. Essentially the same as `{push}` but the item is added to the beginning of the array.\n\n```pella\n{=array;{[three]}}\n{unshift;{$array};two}  // no output\n{$array}                // {[two;three]}\n{unshift return;{$array};one}  // {[one;two;three]}\n```\n",
-    "shortDescription": "Add an item to the beginning of an array"
+    "shortDescription": "Add an item to the beginning of an array",
+    "parameters": []
   },
   {
     "id": "shift",
@@ -330,7 +369,8 @@
     "url": "https://docs.atlas.bot/tags/global#shift",
     "signature": "{shift}",
     "longDescription": "Returns and deletes the first item of an array.\n\n```pella\n{=array;{[one;two;three]}}\n{shift;{$array}}  // one\n{$array}          // {[two;three]}\n```\n",
-    "shortDescription": "Get the first item in an array"
+    "shortDescription": "Get the first item in an array",
+    "parameters": []
   },
   {
     "id": "pop",
@@ -338,7 +378,8 @@
     "url": "https://docs.atlas.bot/tags/global#pop",
     "signature": "{pop}",
     "longDescription": "Returns and deletes the last item of an array.\n\n```pella\n{=array;{[one;two;three]}}\n{pop;{$array}}  // three\n{$array}        // {[onw;two]}\n```\n",
-    "shortDescription": "Get the last item in an array"
+    "shortDescription": "Get the last item in an array",
+    "parameters": []
   },
   {
     "id": "or-boolean",
@@ -346,7 +387,8 @@
     "url": "https://docs.atlas.bot/tags/global#or-boolean",
     "signature": "{or boolean?;...}",
     "longDescription": "Gets the first parameter that is not empty or falsy. The `boolean` option can be used to return a boolean instead of the first valid value.\n\n```pella\n{or;;two}       // \"two\"\n{or;;}          // no output\n{or;false;two}  // \"two\"\n{or;one;two}    // \"one\", \"two\" is never evaluated\n{or boolean;one;two}  // true\n{or boolean;;}  // false\n```\n",
-    "shortDescription": "Check if any parameters are truthy"
+    "shortDescription": "Check if any parameters are truthy",
+    "parameters": []
   },
   {
     "id": "and-boolean",
@@ -354,7 +396,8 @@
     "url": "https://docs.atlas.bot/tags/global#and-boolean",
     "signature": "{and boolean?;...}",
     "longDescription": "Ensures all parameters are present, returning the last parameter if all are valid. The `boolean` option can be used to return a boolean instead of the last parameter if all are valid.\n\n```pella\n{and;;two}     // no output, \"two\" is never evaluated\n{and;one;two}  // \"one\", \"two\" is evaluated\n{and;;}        // no output\n{and boolean;one;two}  // true\n{and boolean;one;}     // false\n```\n",
-    "shortDescription": "Check of all parameters are truthy"
+    "shortDescription": "Check of all parameters are truthy",
+    "parameters": []
   },
   {
     "id": "formatnumbernumber",
@@ -362,7 +405,8 @@
     "url": "https://docs.atlas.bot/tags/global#formatnumbernumber",
     "signature": "{formatNumber;number}",
     "longDescription": "Formats a number. [Formats using the context locale if possible](https://en.wikipedia.org/wiki/Decimal_separator) (for example, the guild language).\n\n```pella\n{formatNumber;1000.5} // 1,000.5\n{formatNumber;1000.5} // 1 000,5 for some other languages\n```\n",
-    "shortDescription": "Format a number to the servers locale"
+    "shortDescription": "Format a number to the servers locale",
+    "parameters": []
   },
   {
     "id": "if",
@@ -373,7 +417,8 @@
     "shortDescription": "Compare different values and do things based on the result.",
     "aliases": [
       "#if"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "forinititerablebody",
@@ -386,7 +431,8 @@
       "#for"
     ],
     "expensive": true,
-    "disableInLoop": true
+    "disableInLoop": true,
+    "parameters": []
   },
   {
     "id": "break",
@@ -397,7 +443,8 @@
     "shortDescription": "Break out of a loop early",
     "aliases": [
       "#break"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "throwmessage",
@@ -408,7 +455,8 @@
     "shortDescription": "Throw an error that stops processing unless it is handled by a {catch} tag.",
     "aliases": [
       "#throw"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "catchbodymessage",
@@ -419,7 +467,8 @@
     "shortDescription": "Catch an engine error thrown by tags or a {throw} tag.",
     "aliases": [
       "#catch"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "return",
@@ -441,7 +490,8 @@
     "url": "https://docs.atlas.bot/tags/global#keysobject",
     "signature": "{keys;object}",
     "longDescription": "Get the keys of an object. Useful when you want to iterate over the keys or values of an object. Only top-level keys are returned\n\n```pella\n{=object.key;value}\n{=object.nested.key;value}\n{keys;{$object}} // {[key;nested]}\n```\n",
-    "shortDescription": "Get the keys of an object"
+    "shortDescription": "Get the keys of an object",
+    "parameters": []
   },
   {
     "id": "joinarrayseparator",
@@ -449,7 +499,8 @@
     "url": "https://docs.atlas.bot/tags/global#joinarrayseparator",
     "signature": "{join;array;separator}",
     "longDescription": "Join the items of an array together with the given separator.\n\n```pella\n{=array;{[one;two;three]}}\n{join;{$array};,} // one,two,three\n```\n",
-    "shortDescription": "Join an array into a string"
+    "shortDescription": "Join an array into a string",
+    "parameters": []
   },
   {
     "id": "randomintminmax",
@@ -457,7 +508,8 @@
     "url": "https://docs.atlas.bot/tags/global#randomintminmax",
     "signature": "{randomInt;min;max}",
     "longDescription": "Get a random number between `min` and `max`. If `max` is not specified, `min` is used as the maximum and `0` is used as the minimum.\n",
-    "shortDescription": "Get a random integer between the given range."
+    "shortDescription": "Get a random integer between the given range.",
+    "parameters": []
   },
   {
     "id": "isurlinput",
@@ -468,7 +520,8 @@
     "shortDescription": "Check if a string is a valid URL.",
     "aliases": [
       "utils.isUrl"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "slicetargetstartend",
@@ -476,7 +529,8 @@
     "url": "https://docs.atlas.bot/tags/global#slicetargetstartend",
     "signature": "{slice;target;start;end}",
     "longDescription": "Get a slice of an array or string. If `end` is not specified, it is assumed to be the length of the target.\n\n```pella\n{=array;{[one;two;three]}}\n{slice;{$array};1} // {[two;three]}\n{slice;{$array};1;2} // {[two]}\n```\n",
-    "shortDescription": "Get a slice of an array or string"
+    "shortDescription": "Get a slice of an array or string",
+    "parameters": []
   },
   {
     "id": "randomstringlengthalphabet",
@@ -484,7 +538,8 @@
     "url": "https://docs.atlas.bot/tags/global#randomstringlengthalphabet",
     "signature": "{randomString;length;alphabet?}",
     "longDescription": "Generate a random string.\n\n*   `length` is the length of the string to generate\n*   `alphabet` is the alphabet to use. If not specified, it is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`\n",
-    "shortDescription": "Generate a random string"
+    "shortDescription": "Generate a random string",
+    "parameters": []
   },
   {
     "id": "includesarrayitem",
@@ -492,7 +547,8 @@
     "url": "https://docs.atlas.bot/tags/global#includesarrayitem",
     "signature": "{includes;array;item}",
     "longDescription": "Check whether an array includes an item.\n\n```pella\n{=array;{[one;two;three]}}\n{includes;{$array};two} // true\n```\n",
-    "shortDescription": "Check whether the target contains the value"
+    "shortDescription": "Check whether the target contains the value",
+    "parameters": []
   },
   {
     "id": "importscriptid",
@@ -504,7 +560,8 @@
     "aliases": [
       "#import"
     ],
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "sortarraykey",
@@ -512,7 +569,8 @@
     "url": "https://docs.atlas.bot/tags/global#sortarraykey",
     "signature": "{sort;array;key?}",
     "longDescription": "Sort an array. Returns a new array and does not mutate the original.\n\n*   `array` the array to sort\n*   `key` the key to sort by if the array is an array of objects.\n",
-    "shortDescription": "Sort an array. Will not mutate the original array"
+    "shortDescription": "Sort an array. Will not mutate the original array",
+    "parameters": []
   },
   {
     "id": "messageidmessage",
@@ -520,7 +578,8 @@
     "url": "https://docs.atlas.bot/tags/message#messageidmessage",
     "signature": "{message.id;message}",
     "longDescription": "Returns the ID of a message.\n",
-    "shortDescription": "Get the ID of the message"
+    "shortDescription": "Get the ID of the message",
+    "parameters": []
   },
   {
     "id": "messagecontentmessage",
@@ -531,7 +590,8 @@
     "shortDescription": "Get the content of the message",
     "aliases": [
       "message"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "messagedeletemessage",
@@ -542,14 +602,16 @@
     "aliases": [
       "delete"
     ],
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "messagepinnedmessage",
     "name": "message.pinned",
     "url": "https://docs.atlas.bot/tags/message#messagepinnedmessage",
     "signature": "{message.pinned;message}",
-    "shortDescription": "Check whether the message is pinned"
+    "shortDescription": "Check whether the message is pinned",
+    "parameters": []
   },
   {
     "id": "messagepin-reasonmessage",
@@ -558,7 +620,8 @@
     "signature": "{message.pin reason;message}",
     "longDescription": "Pins a message.\n\n#### Arguments\n\n*   `{reason}`: The reason for the action that will be displayed in the Audit Log.\n",
     "shortDescription": "Pin the message",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "messageunpin-reasonmessage",
@@ -566,7 +629,8 @@
     "url": "https://docs.atlas.bot/tags/message#messageunpin-reasonmessage",
     "signature": "{message.unpin reason;message}",
     "longDescription": "Unpins a message.\n\n#### Arguments\n\n*   `{reason}`: The reason for the action that will be displayed in the Audit Log.\n",
-    "shortDescription": "Unpin the message"
+    "shortDescription": "Unpin the message",
+    "parameters": []
   },
   {
     "id": "messagepublishmessage",
@@ -575,7 +639,8 @@
     "signature": "{message.publish;message}",
     "longDescription": "Publishes a message. Only works in news channels.\n",
     "shortDescription": "Publish a message in a news channel",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "messageembed-index0message",
@@ -583,14 +648,16 @@
     "url": "https://docs.atlas.bot/tags/message#messageembed-index0message",
     "signature": "{message.embed index=0;message}",
     "longDescription": "Get an embed from the message. The index is optional and will default to the first embed if its not provided.\n\n    {=embed;{message.embed}}\n    {$embed.title}\n",
-    "shortDescription": "Get the embed of a message"
+    "shortDescription": "Get the embed of a message",
+    "parameters": []
   },
   {
     "id": "messagereferenceidmessage",
     "name": "message.referenceId",
     "url": "https://docs.atlas.bot/tags/message#messagereferenceidmessage",
     "signature": "{message.referenceId;message}",
-    "shortDescription": "Get the ID of the message this message is referencing"
+    "shortDescription": "Get the ID of the message this message is referencing",
+    "parameters": []
   },
   {
     "id": "messagereactionsmessage",
@@ -598,7 +665,8 @@
     "url": "https://docs.atlas.bot/tags/message#messagereactionsmessage",
     "signature": "{message.reactions;message}",
     "longDescription": "Get the list of all reactions on a message. Returns an array of [reaction objects](https://discord.com/developers/docs/resources/channel#reaction-object).\n",
-    "shortDescription": "Returns an array of reactions for the message"
+    "shortDescription": "Returns an array of reactions for the message",
+    "parameters": []
   },
   {
     "id": "messageaddreactionemojimessage",
@@ -607,7 +675,8 @@
     "signature": "{message.addReaction;emoji;message}",
     "longDescription": "Adds a reaction to a message.\n\n#### Arguments\n\n*   `{emoji}`: The emoji to add as the reaction.\n",
     "shortDescription": "Add a reaction to the message",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "messageremovereactionemojimessage",
@@ -616,7 +685,8 @@
     "signature": "{message.removeReaction;emoji;message}",
     "longDescription": "Removes a reaction from a message.\n\n#### Arguments\n\n*   `{emoji}`: The emoji to remove as the reaction.\n",
     "shortDescription": "Remove a reaction from the message",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "messageremovereactionsemojimessage",
@@ -625,7 +695,8 @@
     "signature": "{message.removeReactions;emoji;message}",
     "longDescription": "Removes all reactions, optionally for a specific emoji.\n\n    {message.removeReactions}       // Will remove all reactions\n    {message.removeReaction;emoji}  // Will remove all reactions for a specific emoji\n",
     "shortDescription": "Remove all reactions from the message, optionally for a specific emoji.",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "messagelinkmessage",
@@ -636,7 +707,8 @@
     "shortDescription": "Get the link to a message",
     "aliases": [
       "message.shareLink"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "messageauthoridmessage",
@@ -644,14 +716,16 @@
     "url": "https://docs.atlas.bot/tags/message#messageauthoridmessage",
     "signature": "{message.authorId;message}",
     "longDescription": "Returns the ID of the author of a message.\n",
-    "shortDescription": "Get the ID of the author of the message"
+    "shortDescription": "Get the ID of the author of the message",
+    "parameters": []
   },
   {
     "id": "messagechannelidmessage",
     "name": "message.channelId",
     "url": "https://docs.atlas.bot/tags/message#messagechannelidmessage",
     "signature": "{message.channelId;message}",
-    "shortDescription": "Get the ID of the channel the message was sent in"
+    "shortDescription": "Get the ID of the channel the message was sent in",
+    "parameters": []
   },
   {
     "id": "messagettsmessage",
@@ -659,7 +733,8 @@
     "url": "https://docs.atlas.bot/tags/message#messagettsmessage",
     "signature": "{message.tts;message}",
     "longDescription": "Checks if a message was sent as text to speech.\n",
-    "shortDescription": "Check whether a message is text-to-speech"
+    "shortDescription": "Check whether a message is text-to-speech",
+    "parameters": []
   },
   {
     "id": "messagementions-typemessage",
@@ -667,7 +742,8 @@
     "url": "https://docs.atlas.bot/tags/message#messagementions-typemessage",
     "signature": "{message.mentions type?;message}",
     "longDescription": "Get a list of mentions from a message. Returns an array of IDs that includes roles, channels and users unless a `type` is supplied. `type` can be one of `user`, `role` or `channel`. If provided, only mentions of the specified type will be returned.\n",
-    "shortDescription": "Get the mentions of a message"
+    "shortDescription": "Get the mentions of a message",
+    "parameters": []
   },
   {
     "id": "messageattachments-singletrue-objectsfalsemessage",
@@ -678,7 +754,8 @@
     "shortDescription": "Get the attachments of a message",
     "aliases": [
       "message.attachment"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "messagecreatedatmessage",
@@ -686,7 +763,8 @@
     "url": "https://docs.atlas.bot/tags/message#messagecreatedatmessage",
     "signature": "{message.createdAt;message}",
     "longDescription": "Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a message that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).\n",
-    "shortDescription": "Get the time at which the message was created"
+    "shortDescription": "Get the time at which the message was created",
+    "parameters": []
   },
   {
     "id": "suggestionauthorid",
@@ -696,14 +774,16 @@
     "shortDescription": "Get the author ID of the context suggestion",
     "aliases": [
       "suggestion.author"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "suggestioncontent",
     "name": "suggestion.content",
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestioncontent",
     "signature": "{suggestion.content}",
-    "shortDescription": "Get the content of the context suggestion"
+    "shortDescription": "Get the content of the context suggestion",
+    "parameters": []
   },
   {
     "id": "suggestiondeniedreason",
@@ -711,7 +791,8 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestiondeniedreason",
     "signature": "{suggestion.deniedReason}",
     "longDescription": "Why the suggestion was denied. Takes the input from the text input component.\n",
-    "shortDescription": "Get the denied reason of the context suggestion"
+    "shortDescription": "Get the denied reason of the context suggestion",
+    "parameters": []
   },
   {
     "id": "suggestionid",
@@ -719,21 +800,24 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionid",
     "signature": "{suggestion.id}",
     "longDescription": "The unique ID of the suggestion. Globably incremented.\n",
-    "shortDescription": "Get the ID of the context suggestion"
+    "shortDescription": "Get the ID of the context suggestion",
+    "parameters": []
   },
   {
     "id": "suggestionmessagelink",
     "name": "suggestion.messageLink",
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionmessagelink",
     "signature": "{suggestion.messageLink}",
-    "shortDescription": "Get a link to the suggestion message"
+    "shortDescription": "Get a link to the suggestion message",
+    "parameters": []
   },
   {
     "id": "suggestioncreatedat",
     "name": "suggestion.createdAt",
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestioncreatedat",
     "signature": "{suggestion.createdAt}",
-    "shortDescription": "Get the creation date of the context suggestion"
+    "shortDescription": "Get the creation date of the context suggestion",
+    "parameters": []
   },
   {
     "id": "suggestionmessageid",
@@ -744,21 +828,16 @@
     "shortDescription": "Get the message ID of the context suggestion",
     "aliases": [
       "suggestion.message"
-    ]
-  },
-  {
-    "id": "suggestionchannelid",
-    "name": "suggestion.channelId",
-    "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionchannelid",
-    "signature": "{suggestion.channelId}",
-    "longDescription": "The channel for the current state of the Suggestion.\n\nIf the suggestion is waiting to be verified its the verification channel. Once verified its the suggestions channel. etc;\n"
+    ],
+    "parameters": []
   },
   {
     "id": "suggestionupdatedat",
     "name": "suggestion.updatedAt",
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionupdatedat",
     "signature": "{suggestion.updatedAt}",
-    "shortDescription": "Get the creation date of the context suggestion"
+    "shortDescription": "Get the creation date of the context suggestion",
+    "parameters": []
   },
   {
     "id": "suggestionstate",
@@ -766,21 +845,24 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionstate",
     "signature": "{suggestion.state}",
     "longDescription": "The state of the suggestion.\n\n`Pending`\n`Approved`\n`Denied`\n",
-    "shortDescription": "Get the state of the context suggestion"
+    "shortDescription": "Get the state of the context suggestion",
+    "parameters": []
   },
   {
     "id": "suggestionkeywords",
     "name": "suggestion.keywords",
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionkeywords",
     "signature": "{suggestion.keywords}",
-    "shortDescription": "Get a list of extracted keywords for the suggestion"
+    "shortDescription": "Get a list of extracted keywords for the suggestion",
+    "parameters": []
   },
   {
     "id": "suggestionlabels",
     "name": "suggestion.labels",
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionlabels",
     "signature": "{suggestion.labels}",
-    "shortDescription": "Get the labels of the context suggestion"
+    "shortDescription": "Get the labels of the context suggestion",
+    "parameters": []
   },
   {
     "id": "ticketauthorchannel",
@@ -791,7 +873,8 @@
     "shortDescription": "Get the tickets author id",
     "aliases": [
       "ticket.author"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "ticketchannel",
@@ -802,7 +885,8 @@
     "shortDescription": "Get the tickets channel id",
     "aliases": [
       "ticket.channel"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "ticketclosechannel",
@@ -811,7 +895,8 @@
     "signature": "{ticket.close;channel}",
     "longDescription": "Close the ticket channel.\n",
     "shortDescription": "Close a ticket",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "ticketcreate-reason-user",
@@ -820,7 +905,8 @@
     "signature": "{ticket.create reason user}",
     "longDescription": "Open the ticket channel.\n\n`reason` set the reason for the ticket.\n`user` set the ticket author.\n",
     "shortDescription": "Create a new ticket",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "ticketprefixchannelprefix",
@@ -829,7 +915,8 @@
     "signature": "{ticket.prefix;channel;prefix}",
     "longDescription": "Add a prefix to the beinging of the ticket channel's name. Leave `prefix` blank to return the current prefix.\n",
     "shortDescription": "Set or get a tickets prefix",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "ticketreason",
@@ -837,7 +924,8 @@
     "url": "https://docs.atlas.bot/tags/plugins/ticket#ticketreason",
     "signature": "{ticket.reason}",
     "longDescription": "Gets the reason of the ticket, if one is in context.\n",
-    "shortDescription": "Get the reason a ticket was created"
+    "shortDescription": "Get the reason a ticket was created",
+    "parameters": []
   },
   {
     "id": "respondertextmessage",
@@ -845,7 +933,8 @@
     "url": "https://docs.atlas.bot/tags/responder#respondertextmessage",
     "signature": "{responder.text;message}",
     "longDescription": "Appends text to the output message. If there is more text, it will be appended to the existing text.\n\n`{responder.text;Hello World}` will make the output message \"Hello World\"\n`{responder.text;Hello}{responder.text;World}` will make the output message \"Hello World\"\n`{responder.text;Hello}{responder.text;}` empty text will clear existing text.\n",
-    "shortDescription": "Add text to the output message."
+    "shortDescription": "Add text to the output message.",
+    "parameters": []
   },
   {
     "id": "responderdm-fallbackfalsemember",
@@ -854,7 +943,8 @@
     "signature": "{responder.dm fallback=false;member}",
     "longDescription": "Set the responder to dm a user. This tag can be hit and miss if the user has their direct-messages closed.\n\n`{responder.dm;{user.id}}` will make the message direct-message the user in context.\n`{responder.dm fallback=true;{user.id}}` will send a message to the user and will fall back to the context channel if the user has their direct-mesage closed.\n",
     "shortDescription": "Configure the output message to go to a specific user",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "responderembed",
@@ -862,7 +952,8 @@
     "url": "https://docs.atlas.bot/tags/responder#responderembed",
     "signature": "{responder.embed}",
     "longDescription": "This tag is used to add embeds to the message. Calling it multiple times will add multiple embeds to the message, up to a maximum of 10.\n\n`{responder.embed title=\"Hello world\"}`\n`{responder.embed title=Test timestamp=\"5 hours ago\"}`\n\nEmbed Elements\n`author-image`\n`author-name`\n`author-url`\n`color`\n`description`\n`footer`\n`footer-icon`\n`image`\n`thumbnail`\n`timestamp`\n`title`\n`url`\n\nUse the [Embed Builder](https://staging.atlas.bot/tools/embed-builder) to quickly build an embed.\n",
-    "shortDescription": "Attach an embed to the output message."
+    "shortDescription": "Attach an embed to the output message.",
+    "parameters": []
   },
   {
     "id": "responderembedfieldnamevalueinline",
@@ -870,7 +961,8 @@
     "url": "https://docs.atlas.bot/tags/responder#responderembedfieldnamevalueinline",
     "signature": "{responder.embedField;name;value;inline}",
     "longDescription": "Add a field to the last created embed.\n\n    {responder.embed title=\"My Embed\" description=\"Fortnite or something idk\"}\n    {responder.embedField name=\"My Field\" value=\"very cool\" inline=true}\n    {responder.embedField name=\"Another One\" value=\"even cooler\" inline=true}\n",
-    "shortDescription": "Add a field to an embed"
+    "shortDescription": "Add a field to an embed",
+    "parameters": []
   },
   {
     "id": "responderchannelchannel",
@@ -878,7 +970,8 @@
     "url": "https://docs.atlas.bot/tags/responder#responderchannelchannel",
     "signature": "{responder.channel;channel}",
     "longDescription": "Set the channel the message will be sent to. Setting a channel with a context interaction will have the responder ignore that interaction when sending a message. **The context interaction must still be replied to or it will be marked as failed**.\n\n```pella\n// Do some weird logging stuff to a separate channel that the user will never see\n{responder.channel;MY_LOG_CHANNEL}\n{responder.text;{user.mention} ran our command!}\n{responder.send} // Send the log message to the log channel\n\n// Now we reply to the slash command (context interaction). This is required,\n// not replying will have Discord mark the interaction as failed. Depending on a few factors,\n// if we don't reply Atlas will automatically send a \"The action did not output anything\" message\n// to stop it being marked as failed.\n{responder.text;Hi {user.mention}! This is a reply to the context interaction that is required for it not to fail}\n// No need for {responder.send} as it is automatically once the script finishes executing if its configured\n```\n",
-    "shortDescription": "Configure the output channel for the responder content"
+    "shortDescription": "Configure the output channel for the responder content",
+    "parameters": []
   },
   {
     "id": "responderreset",
@@ -886,21 +979,24 @@
     "url": "https://docs.atlas.bot/tags/responder#responderreset",
     "signature": "{responder.reset}",
     "longDescription": "Reset any options already applied to the responder.\n\n```\n\n{responder.text;Hello}\n{responder.reset}\n{responder.text;Something bad happened!}\n\n```\n\nThis would output \"Something bad happened!\"\n",
-    "shortDescription": "Reset the responder settings to its initial state"
+    "shortDescription": "Reset the responder settings to its initial state",
+    "parameters": []
   },
   {
     "id": "responderephemeral",
     "name": "responder.ephemeral",
     "url": "https://docs.atlas.bot/tags/responder#responderephemeral",
     "signature": "{responder.ephemeral}",
-    "shortDescription": "Interaction-only; Whether the output message should be only viewable by the user who created the interaction."
+    "shortDescription": "Interaction-only; Whether the output message should be only viewable by the user who created the interaction.",
+    "parameters": []
   },
   {
     "id": "respondererrormessage",
     "name": "responder.error",
     "url": "https://docs.atlas.bot/tags/responder#respondererrormessage",
     "signature": "{responder.error;message}",
-    "shortDescription": "The same as {responder.text} except it does some error-related things, like making embeds red and making the message ephemeral. You should use this whenever sending an error message."
+    "shortDescription": "The same as {responder.text} except it does some error-related things, like making embeds red and making the message ephemeral. You should use this whenever sending an error message.",
+    "parameters": []
   },
   {
     "id": "respondersend-return_idfalse-ignore_interactionfalse",
@@ -909,7 +1005,8 @@
     "signature": "{responder.send return_id=false ignore_interaction=false}",
     "longDescription": "Send the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully.\n\n`return_id` can be used to get the output message ID. **return\\_id does not work when replying to an interaction**. Discord does not give us message data when we send an interaction, however because the responder will assume you mean the context interaction, leaving out the ID should do effectively the same thing.\n\n`ignore_interaction` can be set to have the responder ignore the context interaction and reply with a regular message in the context channel. **The interaction still needs a reply or it will be marked as failed**, you should only use this to send off a separate message.\n\nIf the responder is configured when the script finishes, it will be sent automatically. This means you probably don't need `{responder.send}` unless you're sending multiple messages.\n",
     "shortDescription": "Send the configured responder message",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "respondereditmessage",
@@ -917,7 +1014,8 @@
     "url": "https://docs.atlas.bot/tags/responder#respondereditmessage",
     "signature": "{responder.edit;message}",
     "longDescription": "Set the responder to edit the given message. Atlas must have sent the message to edit it.\nPlace after the new message content.\n",
-    "shortDescription": "Edit a message with the configured responder message"
+    "shortDescription": "Edit a message with the configured responder message",
+    "parameters": []
   },
   {
     "id": "responderbutton-label-handler-stateless-state-url-emoji-styleprimary-actionrowindex",
@@ -925,7 +1023,8 @@
     "url": "https://docs.atlas.bot/tags/responder#responderbutton-label-handler-stateless-state-url-emoji-styleprimary-actionrowindex",
     "signature": "{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex?}",
     "longDescription": "Add a button to the message.\n\n`label` is the button text.\n`handler` is the value of the component callback action to call when the button is clicked\n`state` is an optional payload that will be accessible in the component callback action\n`url` can be used to link to external resources\n`emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.\n`stateless` Whether this button should be forced to be a stateless interaction. Required if you don't want the button to expire.\n`style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.\n\nIf you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.\n\n```\n\n‎\n\n```\n",
-    "shortDescription": "Add a button to the message"
+    "shortDescription": "Add a button to the message",
+    "parameters": []
   },
   {
     "id": "responderselect-handler-statelessfalse-state-disabledfalse-placeholder-minvalues-maxvalues-actionrowindexoptions",
@@ -933,7 +1032,8 @@
     "url": "https://docs.atlas.bot/tags/responder#responderselect-handler-statelessfalse-state-disabledfalse-placeholder-minvalues-maxvalues-actionrowindexoptions",
     "signature": "{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex?;options}",
     "longDescription": "Create a new select menu with the given options. The options must be provided as an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure).\n\n```\n\n{=options;{{\n  \"value\": [\n      {\n          \"label\": \"Option One\",\n          \"value\": \"1\"\n      },\n      {\n          \"label\": \"Option Two\",\n          \"value\": \"2\"\n      }\n  ]\n}}}\n\n{responder.select handler=my_callback placeholder=\"Select an option\";{$options.value}}\n\n```\n\n```\n```\n",
-    "shortDescription": "Add a select menu to the message"
+    "shortDescription": "Add a select menu to the message",
+    "parameters": []
   },
   {
     "id": "responderreferencemessage",
@@ -941,21 +1041,24 @@
     "url": "https://docs.atlas.bot/tags/responder#responderreferencemessage",
     "signature": "{responder.reference;message?}",
     "longDescription": "Set the responder to reference the given message. Call with no params, `{responder.reference}`, to stop the bot replying to the context message.\n",
-    "shortDescription": "Reference a message or remove the existing reference"
+    "shortDescription": "Reference a message or remove the existing reference",
+    "parameters": []
   },
   {
     "id": "roleidrole",
     "name": "role.id",
     "url": "https://docs.atlas.bot/tags/role#roleidrole",
     "signature": "{role.id;role}",
-    "shortDescription": "Get the id of the given role."
+    "shortDescription": "Get the id of the given role.",
+    "parameters": []
   },
   {
     "id": "rolenamerole",
     "name": "role.name",
     "url": "https://docs.atlas.bot/tags/role#rolenamerole",
     "signature": "{role.name;role}",
-    "shortDescription": "Get the name of the given role."
+    "shortDescription": "Get the name of the given role.",
+    "parameters": []
   },
   {
     "id": "rolemention-allow_mentionrole",
@@ -966,14 +1069,16 @@
     "shortDescription": "Get the @mention of the given role.",
     "aliases": [
       "role"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "rolepositionrole",
     "name": "role.position",
     "url": "https://docs.atlas.bot/tags/role#rolepositionrole",
     "signature": "{role.position;role}",
-    "shortDescription": "Get the position of the given role."
+    "shortDescription": "Get the position of the given role.",
+    "parameters": []
   },
   {
     "id": "rolecolorrole",
@@ -983,7 +1088,8 @@
     "shortDescription": "Get the color of the given role.",
     "aliases": [
       "role.color"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "rolehoistedrole",
@@ -991,7 +1097,8 @@
     "url": "https://docs.atlas.bot/tags/role#rolehoistedrole",
     "signature": "{role.hoisted;role}",
     "longDescription": "Returns a boolean indicating whether the role is set to display members separately from online members.\n",
-    "shortDescription": "Get whether the given role is hoisted."
+    "shortDescription": "Get whether the given role is hoisted.",
+    "parameters": []
   },
   {
     "id": "rolemanagedrole",
@@ -999,7 +1106,8 @@
     "url": "https://docs.atlas.bot/tags/role#rolemanagedrole",
     "signature": "{role.managed;role}",
     "longDescription": "Returns `true` for managed roles. ex: Server Boost and Bot roles.\n",
-    "shortDescription": "Get whether the given role is managed."
+    "shortDescription": "Get whether the given role is managed.",
+    "parameters": []
   },
   {
     "id": "rolementionablerole",
@@ -1007,14 +1115,16 @@
     "url": "https://docs.atlas.bot/tags/role#rolementionablerole",
     "signature": "{role.mentionable;role}",
     "longDescription": "Returns a boolean indicating whether the role can be mentioned.\n",
-    "shortDescription": "Get whether the given role is mentionable."
+    "shortDescription": "Get whether the given role is mentionable.",
+    "parameters": []
   },
   {
     "id": "rolecreatedat",
     "name": "role.createdAt",
     "url": "https://docs.atlas.bot/tags/role#rolecreatedat",
     "signature": "{role.createdAt}",
-    "shortDescription": "Get the created at date of the given role."
+    "shortDescription": "Get the created at date of the given role.",
+    "parameters": []
   },
   {
     "id": "rolehaspermissionpermission_namerole",
@@ -1022,7 +1132,8 @@
     "url": "https://docs.atlas.bot/tags/role#rolehaspermissionpermission_namerole",
     "signature": "{role.hasPermission;permission_name;role}",
     "longDescription": "Check whether the role has the specified permission.\n\n`{role.hasPermission;administrator}`\n",
-    "shortDescription": "Check whether the role has the given permission"
+    "shortDescription": "Check whether the role has the given permission",
+    "parameters": []
   },
   {
     "id": "roleedit-name-color-reasonrole",
@@ -1031,7 +1142,8 @@
     "signature": "{role.edit name color reason;role}",
     "longDescription": "Edit the role.\n\n`name` is the new role name\n`color` is the new colour of the role\n`reason` is the reason for editing this role\n\n    {role.edit name=\"Very cool\" colour=teal}\n",
     "shortDescription": "Edit a roles settings",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "rolecreate-name-color-reason-return_idrole",
@@ -1040,7 +1152,8 @@
     "signature": "{role.create name color reason return_id;role}",
     "longDescription": "Create a new role.\n\n`name` is the name of the role\n`color` is the colour of the role\n`reason` is the reason for creating the role\n`return_id` is whether to return the created roles ID.\n",
     "shortDescription": "Create a guild role",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "roledelete-reasonrole",
@@ -1049,7 +1162,8 @@
     "signature": "{role.delete reason;role}",
     "longDescription": "> This tag can do serious damage. Make sure you are properly restricting access to any scripts using this tag. {.is-warning}\n\nDelete a role.\n\n`reason` is why you are deleting this role.\n",
     "shortDescription": "Delete a role",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "serverid",
@@ -1059,7 +1173,8 @@
     "shortDescription": "Get the id of the context server",
     "aliases": [
       "guild.id"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "servername",
@@ -1069,7 +1184,8 @@
     "shortDescription": "Get the name of the context server",
     "aliases": [
       "guild.name"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "servericonsizehash",
@@ -1081,7 +1197,8 @@
     "aliases": [
       "guild.icon",
       "guild.iconUrl"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "serversplashsizehash",
@@ -1092,7 +1209,8 @@
     "shortDescription": "Get the splash image of the context server",
     "aliases": [
       "guild.splash"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "serverbannersizesplash",
@@ -1103,7 +1221,8 @@
     "shortDescription": "Get the banner of the context server",
     "aliases": [
       "guild.banner"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "serverchannels",
@@ -1113,7 +1232,8 @@
     "shortDescription": "Get a list of all the channels in the server as a list of ids.",
     "aliases": [
       "guild.channels"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "serverroles",
@@ -1123,7 +1243,8 @@
     "shortDescription": "Get a list of all the roles in the server as a list of ids.",
     "aliases": [
       "guild.roles"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "servershardid",
@@ -1134,7 +1255,8 @@
     "shortDescription": "Get the id of the shard the server is on",
     "aliases": [
       "guild.shardId"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "serverownerid",
@@ -1144,7 +1266,8 @@
     "shortDescription": "Get the id of the owner of the context server",
     "aliases": [
       "guild.ownerId"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "servermembercount",
@@ -1155,7 +1278,8 @@
     "shortDescription": "Get how many members are currently in the server",
     "aliases": [
       "guild.memberCount"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "servercreatedat",
@@ -1166,7 +1290,8 @@
     "shortDescription": "Get the time the server was created as a unix millisecond timestamp.",
     "aliases": [
       "guild.createdAt"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "serverprefix",
@@ -1177,7 +1302,8 @@
     "shortDescription": "Get the prefix of the server",
     "aliases": [
       "guild.prefix"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "storesetkeyvalue",
@@ -1186,7 +1312,8 @@
     "signature": "{store.set;key;value}",
     "longDescription": "Adds an item to the store. `value` can be an object, array, string, number, etc. `key` will be coerced to a string.\n",
     "shortDescription": "Store a persistent value by a key",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "storegetkey",
@@ -1194,7 +1321,8 @@
     "url": "https://docs.atlas.bot/tags/store#storegetkey",
     "signature": "{store.get;key}",
     "shortDescription": "Get a persistent value by a key",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "storedeletekey",
@@ -1202,7 +1330,8 @@
     "url": "https://docs.atlas.bot/tags/store#storedeletekey",
     "signature": "{store.delete;key}",
     "shortDescription": "Delete a persistent value by a key",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "usermentionuser",
@@ -1214,7 +1343,8 @@
     "aliases": [
       "user",
       "mention"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "useriduser",
@@ -1222,7 +1352,8 @@
     "url": "https://docs.atlas.bot/tags/user#useriduser",
     "signature": "{user.id;user}",
     "longDescription": "Returns the ID of a user.\n",
-    "shortDescription": "Get the users id"
+    "shortDescription": "Get the users id",
+    "parameters": []
   },
   {
     "id": "userusernameuser",
@@ -1233,7 +1364,8 @@
     "shortDescription": "Get the users username",
     "aliases": [
       "user.name"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "userbotuser",
@@ -1241,7 +1373,8 @@
     "url": "https://docs.atlas.bot/tags/user#userbotuser",
     "signature": "{user.bot;user}",
     "longDescription": "Returns a boolean whether a user is a bot account.\n",
-    "shortDescription": "Check whether this user is a bot"
+    "shortDescription": "Check whether this user is a bot",
+    "parameters": []
   },
   {
     "id": "usertaguser",
@@ -1249,7 +1382,8 @@
     "url": "https://docs.atlas.bot/tags/user#usertaguser",
     "signature": "{user.tag;user}",
     "longDescription": "Returns the tag of a user with the username and discriminator, for example `DracoClaw#0065`.\n",
-    "shortDescription": "Get the username#discriminator combination for the user."
+    "shortDescription": "Get the username#discriminator combination for the user.",
+    "parameters": []
   },
   {
     "id": "userdiscriminatoruser",
@@ -1257,7 +1391,8 @@
     "url": "https://docs.atlas.bot/tags/user#userdiscriminatoruser",
     "signature": "{user.discriminator;user}",
     "longDescription": "Returns the discriminator of a user, which is the four digits at the end of the username.\n",
-    "shortDescription": "Get the users discriminator."
+    "shortDescription": "Get the users discriminator.",
+    "parameters": []
   },
   {
     "id": "useravataruser",
@@ -1268,7 +1403,8 @@
     "shortDescription": "Get the users avatar url.",
     "aliases": [
       "user.avatarURL"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "userrolesmember",
@@ -1276,7 +1412,8 @@
     "url": "https://docs.atlas.bot/tags/user#userrolesmember",
     "signature": "{user.roles;member}",
     "longDescription": "Returns an array of IDs for all the roles of a user.\n\n    {choose;{user.roles}}  // A random role the user has\n",
-    "shortDescription": "Get an array of ids corresponding to roles the user has."
+    "shortDescription": "Get an array of ids corresponding to roles the user has.",
+    "parameters": []
   },
   {
     "id": "usernicknamemember",
@@ -1284,7 +1421,8 @@
     "url": "https://docs.atlas.bot/tags/user#usernicknamemember",
     "signature": "{user.nickname;member}",
     "longDescription": "Returns the display name of a user. This will be their nickname if they have one set and their username otherwise.\n",
-    "shortDescription": "Get the users nickname. Returns the users username if they have no nickname."
+    "shortDescription": "Get the users nickname. Returns the users username if they have no nickname.",
+    "parameters": []
   },
   {
     "id": "userjoinedatmember",
@@ -1292,7 +1430,8 @@
     "url": "https://docs.atlas.bot/tags/user#userjoinedatmember",
     "signature": "{user.joinedAt;member}",
     "longDescription": "Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the join date of a user that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).\n",
-    "shortDescription": "Get the time the user joined the server at."
+    "shortDescription": "Get the time the user joined the server at.",
+    "parameters": []
   },
   {
     "id": "usercreatedatuser",
@@ -1300,7 +1439,8 @@
     "url": "https://docs.atlas.bot/tags/user#usercreatedatuser",
     "signature": "{user.createdAt;user}",
     "longDescription": "Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a user's Discord account that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).\n",
-    "shortDescription": "Get the time the user created their account."
+    "shortDescription": "Get the time the user created their account.",
+    "parameters": []
   },
   {
     "id": "useredit-nick-mute-deaf-channelmember",
@@ -1309,7 +1449,8 @@
     "signature": "{user.edit nick mute deaf channel;member}",
     "longDescription": "Edits a user.\n\n#### Arguments\n\n*   `nick`: The user's new nickname. Leave empty to clear.\n*   `mute`: Whether the user will be server muted in voice channels.\n*   `deaf`: Whether the user will be server deafened in voice channels.\n*   `channel`: The new channel to move the user to if they are in voice channel.\n",
     "shortDescription": "Edit the state or options for a user.",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "useraddrole-reasonrolemember",
@@ -1318,7 +1459,8 @@
     "signature": "{user.addrole reason;role;member}",
     "longDescription": "Gives a user a role.\n\n#### Arguments\n\n*   `reason`: The reason for the action that will be displayed in the Audit Log.\n*   `role`: The role to add to the user.\n",
     "shortDescription": "Give the user a role",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "userremoverole-reasonrolemember",
@@ -1327,7 +1469,8 @@
     "signature": "{user.removerole reason;role;member}",
     "longDescription": "Removes a role from a user.\n\n#### Arguments\n\n*   `reason`: The reason for the action that will be displayed in the Audit Log.\n*   `role`: The role to remove from the user.\n",
     "shortDescription": "Take a role from a user",
-    "expensive": true
+    "expensive": true,
+    "parameters": []
   },
   {
     "id": "usercolourmember",
@@ -1338,7 +1481,8 @@
     "shortDescription": "Get the colour of the user based on their highest role",
     "aliases": [
       "user.color"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "userhaspermissionpermissionsmember",
@@ -1349,7 +1493,8 @@
     "shortDescription": "Check if the user has a permission",
     "aliases": [
       "user.hasPermissions"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "userleveluserset",
@@ -1357,7 +1502,8 @@
     "url": "https://docs.atlas.bot/tags/user#userleveluserset",
     "signature": "{user.level;user?;set?}",
     "longDescription": "Gets the level of a user, or sets the level if `set` is a number.\n\n*   `user` the user to get the level of. Defaults to the context user.\n*   `set` if set instead of retrieving the level, sets the level to the given number.\n",
-    "shortDescription": "Get the users level"
+    "shortDescription": "Get the users level",
+    "parameters": []
   },
   {
     "id": "userxpuserscopedset",
@@ -1369,21 +1515,24 @@
     "aliases": [
       "user.levelXP",
       "user.totalXP"
-    ]
+    ],
+    "parameters": []
   },
   {
     "id": "usernextleveluser",
     "name": "user.nextLevel",
     "url": "https://docs.atlas.bot/tags/user#usernextleveluser",
     "signature": "{user.nextLevel;user?}",
-    "shortDescription": "Get the next level the user will achieve"
+    "shortDescription": "Get the next level the user will achieve",
+    "parameters": []
   },
   {
     "id": "usernextlevelxpuser",
     "name": "user.nextLevelXP",
     "url": "https://docs.atlas.bot/tags/user#usernextlevelxpuser",
     "signature": "{user.nextLevelXP;user?}",
-    "shortDescription": "Get the xp required for the user's next level"
+    "shortDescription": "Get the xp required for the user's next level",
+    "parameters": []
   },
   {
     "id": "userremainingxpuser",
@@ -1391,7 +1540,8 @@
     "url": "https://docs.atlas.bot/tags/user#userremainingxpuser",
     "signature": "{user.remainingXP;user?}",
     "longDescription": "Gets the amount of XP a user needs to level up to the next level.\n",
-    "shortDescription": "Get the amount of xp the user needs to level up"
+    "shortDescription": "Get the amount of xp the user needs to level up",
+    "parameters": []
   },
   {
     "id": "userreward-filterachieved-firsttrue-rawfalse",
@@ -1402,6 +1552,7 @@
     "shortDescription": "Get the list of the rewards the user is entitled to, were added, were removed or already had. Only available in level-up messages.",
     "aliases": [
       "user.rewards"
-    ]
+    ],
+    "parameters": []
   }
 ]
