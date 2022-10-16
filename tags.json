@@ -1497,26 +1497,40 @@
     "parameters": []
   },
   {
-    "id": "userleveluserset",
+    "id": "userleveluser",
     "name": "user.level",
-    "url": "https://docs.atlas.bot/tags/user#userleveluserset",
-    "signature": "{user.level;user?;set?}",
-    "longDescription": "Gets the level of a user, or sets the level if `set` is a number.\n\n*   `user` the user to get the level of. Defaults to the context user.\n*   `set` if set instead of retrieving the level, sets the level to the given number.\n",
+    "url": "https://docs.atlas.bot/tags/user#userleveluser",
+    "signature": "{user.level;user?}",
+    "longDescription": "Gets the level of a user.\n\n*   `user` the user to get the level of. Defaults to the context user.\n",
     "shortDescription": "Get the users level",
     "parameters": []
   },
   {
-    "id": "userxpuserscopedset",
+    "id": "userxpuserscoped",
     "name": "user.xp",
-    "url": "https://docs.atlas.bot/tags/user#userxpuserscopedset",
-    "signature": "{user.xp;user?;scoped?;set?}",
-    "longDescription": "Gets the XP of a user, or sets the XP if `set` is a number.\n\n*   `user` the user to get the XP of. Defaults to the context user.\n*   `scoped` whether to get XP on the current level or total XP, defaults to total XP.\n*   `set` if set instead of retrieving the XP, sets the XP to the given number.\n",
+    "url": "https://docs.atlas.bot/tags/user#userxpuserscoped",
+    "signature": "{user.xp;user?;scoped?}",
+    "longDescription": "*   `user` the user to get the XP of. Defaults to the context user.\n*   `scoped` whether to get XP on the current level or total XP, defaults to total XP.\n",
     "shortDescription": "Get the users xp amount",
     "aliases": [
       "user.levelXP",
       "user.totalXP"
     ],
     "parameters": []
+  },
+  {
+    "id": "usersetxpxptargetaddfalsesyncfalse",
+    "name": "user.setXP",
+    "url": "https://docs.atlas.bot/tags/user#usersetxpxptargetaddfalsesyncfalse",
+    "signature": "{user.setXP;xp;target?;add=false;sync=false}",
+    "longDescription": "Sets the users XP to the given amount.\n\n*   `xp` the amount of XP to set.\n*   `target` the user to set the XP of. Defaults to the context user.\n*   `add` whether to add the XP to their existing total.\n*   `sync` whether to sync level rewards for the user.\n"
+  },
+  {
+    "id": "usersetlevelleveltargetaddfalsesyncfalse",
+    "name": "user.setLevel",
+    "url": "https://docs.atlas.bot/tags/user#usersetlevelleveltargetaddfalsesyncfalse",
+    "signature": "{user.setLevel;level;target?;add=false;sync=false}",
+    "longDescription": "Sets the users level to the given amount.\n\n*   `level` the amount of levels to set.\n*   `target` the user to set the level of. Defaults to the context user.\n*   `add` whether to add the levels to their existing total.\n*   `sync` whether to sync level rewards for the user.\n"
   },
   {
     "id": "usernextleveluser",
