@@ -88,20 +88,34 @@ Checks whether a user has the given permissions.
 - `permissions` can be a permissions number or name, for example `create_instant_invite`. A full list of permissions can be seen [here](https://discord.com/developers/docs/topics/permissions#permissions-bitwise-permission-flags).
 - `member` the member to check the permissions of. Defaults to the context user.
 
-## `{user.level;user?;set?}`
+## `{user.level;user?}`
 
-Gets the level of a user, or sets the level if `set` is a number.
+Gets the level of a user.
 
 - `user` the user to get the level of. Defaults to the context user.
-- `set` if set instead of retrieving the level, sets the level to the given number.
 
-## `{user.xp;user?;scoped?;set?}`
-
-Gets the XP of a user, or sets the XP if `set` is a number.
+## `{user.xp;user?;scoped?}`
 
 - `user` the user to get the XP of. Defaults to the context user.
 - `scoped` whether to get XP on the current level or total XP, defaults to total XP.
-- `set` if set instead of retrieving the XP, sets the XP to the given number.
+
+## `{user.setXP;xp;target?;add=false;sync=false}`
+
+Sets the users XP to the given amount.
+
+- `xp` the amount of XP to set.
+- `target` the user to set the XP of. Defaults to the context user.
+- `add` whether to add the XP to their existing total.
+- `sync` whether to sync level rewards for the user.
+
+## `{user.setLevel;level;target?;add=false;sync=false}`
+
+Sets the users level to the given amount.
+
+- `level` the amount of levels to set.
+- `target` the user to set the level of. Defaults to the context user.
+- `add` whether to add the levels to their existing total.
+- `sync` whether to sync level rewards for the user.
 
 ## `{user.nextLevel;user?}`
 
