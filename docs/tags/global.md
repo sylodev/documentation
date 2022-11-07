@@ -141,6 +141,10 @@ Holds up processing. This does not schedule execution for later, it pauses execu
 
 Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.
 
+#### Supported Expressions
+
+```*, /, %, &, |, ^, +, -, (), sqrt(), log(), sin(), cos(), tan()```
+
 ## `{random length=1 return_array=false;haystack}`
 
 Gets a random item from a list. `length` is the number of items to return. When `length` is true, you can choose to return the random items in an array with `return_array`.

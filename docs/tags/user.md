@@ -18,7 +18,7 @@ Returns a boolean whether a user is a bot account.
 
 ## `{user.tag;user}`
 
-Returns the tag of a user with the username and discriminator, for example `DracoClaw#0065`.
+Returns the tag of a user with the username and discriminator, for example `Grainus#0432`.
 
 ## `{user.discriminator;user}`
 
