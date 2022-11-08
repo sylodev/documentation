@@ -253,7 +253,7 @@ Formats a number. [Formats using the context locale if possible](https://en.wiki
 
 ## `{if}`
 
-Compares different values and executes instructions based on the result. Syntax is `{if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `===`, `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, and `matching`.
+Compares different values and executes instructions based on the result. Syntax is `{if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator. The available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, and `matches`.
 
 ```json
 // "==" is used for case-insensitive comparison
