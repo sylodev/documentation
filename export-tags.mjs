@@ -95,7 +95,7 @@ for (const remoteTag of remoteTags) {
   }
 
   localTag.shortDescription = remoteTag.description;
-  if (remoteTag.description.length > localTag.longDescription.length - 4) {
+  if (remoteTag.description.length > localTag.longDescription?.length - 4) {
     delete localTag.longDescription;
   }
 

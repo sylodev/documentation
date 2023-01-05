@@ -318,6 +318,14 @@ Catches a thrown error.
 {catch;{user.id}}  // 111372124383428608
 ```
 
+## `{repeat;str;times}`
+
+Repeats a string a given number of times.
+
+```json
+{repeat;Hello;3} // HelloHelloHello
+```
+
 ## `{return}`
 
 Used to return early or to return rich data that may be butchered otherwise. Can be used in functions and the top-level scope. See more in the [returning](../scripts/returning.md) or [functions](../scripts/functions.md) sections.

@@ -22,10 +22,6 @@ Gets the position of a role.
 
 Gets the hex code of a role.
 
-## `{role.hoisted;role}`
-
-Returns a boolean indicating whether the role is set to display members separately from online members.
-
 ## `{role.managed;role}`
 
 Returns `true` for managed roles. ex: Server Boost and Bot roles.
@@ -43,6 +39,10 @@ Returns the date the role was created.
 Check whether the role has the specified permission.
 
 `{role.hasPermission;administrator}`
+
+## `{role.hoisted}`
+
+Returns a boolean indicating whether the role is hoisted above other roles in the member list.
 
 ## `{role.edit name color reason;role}`
 

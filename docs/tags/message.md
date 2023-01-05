@@ -49,10 +49,6 @@ Get an embed from the message. The index is optional and will default to the fir
 
 The ID of the message this message is replying to.
 
-## `{message.reactions;message}`
-
-Get the list of all reactions on a message. Returns an array of [reaction objects](https://discord.com/developers/docs/resources/channel#reaction-object).
-
 ## `{message.addReaction;emoji;message}`
 
 Adds a reaction to a message.
@@ -94,9 +90,51 @@ Returns the ID of the channel a message is in.
 
 Checks if a message was sent as text to speech.
 
-## `{message.mentions type?;message}`
+## `{message.mentions;message}`
 
-Get a list of mentions from a message. Returns an array of IDs that includes roles, channels and users unless a `type` is supplied. `type` can be one of `user`, `role` or `channel`. If provided, only mentions of the specified type will be returned.
+Get a list of mentions from a message. Returns an array of IDs that includes roles, channels and users.
+
+## `{message.reactions}`
+
+Get a list of reactions from a message. Returns an array of objects. For example, this message
+
+<img src="https://i.imgur.com/wZiESQ2.png" alt="A screenshot of a message with an :eggplant: and :fortnitedefaultdance: reaction." />
+
+Would result in this
+
+```json
+[
+  {
+    "count": 1,
+    "me": false,
+    "emoji": {
+      "id": null,
+      "animated": false,
+      "name": "🍆"
+    }
+  },
+  {
+    "count": 1,
+    "me": false,
+    "emoji": {
+      "id": "538224338269372438",
+      "animated": true,
+      "name": null
+    }
+  }
+]
+```
+
+```
+{=reactions;{message.reactions}}
+{$reactions.0.count} // 1
+{$reactions.0.me} // false (whether the bot has reacted with this message)
+{$reactions.0.emoji.id} // null
+{$reactions.0.emoji.animated} // false
+{$reactions.0.emoji.name} // 🍆
+```
+
+See [objects](../scripts/objects.md) for information on working with objects.
 
 ## `{message.attachments single=true objects=false;message}`
 
