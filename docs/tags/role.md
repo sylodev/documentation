@@ -56,6 +56,8 @@ Edit the role.
 {role.edit name="Very cool" colour=teal}
 ```
 
+[Here](https://micro.sylo.digital/p/cKM30n) is a list of valid color name defaults.
+
 ## `{role.create name color reason return_id;role}`
 
 Create a new role.
@@ -64,6 +66,8 @@ Create a new role.
 `color` is the colour of the role
 `reason` is the reason for creating the role
 `return_id` is whether to return the created roles ID.
+
+[Here](https://micro.sylo.digital/p/cKM30n) is a list of valid color name defaults.
 
 ## `{role.delete reason;role}`
 

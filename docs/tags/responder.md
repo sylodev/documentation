@@ -45,6 +45,7 @@ Embed Elements
 `url`
 
 Use the [Embed Builder](https://staging.atlas.bot/tools/embed-builder) to quickly build an embed.
+[Here](https://micro.sylo.digital/p/cKM30n) is a list of valid color name defaults.
 
 ## `{responder.embedField;name;value;inline}`
 
