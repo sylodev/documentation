@@ -45,7 +45,38 @@ Embed Elements
 `url`
 
 Use the [Embed Builder](https://staging.atlas.bot/tools/embed-builder) to quickly build an embed.
-[Here](https://micro.sylo.digital/p/cKM30n) is a list of valid color name defaults.
+
+<details>
+  <summary>Color Defaults</summary>
+  <p><code>Black: #000000
+Dark Mode: #36393f
+White: #FFFFFF
+Red: #ED4245
+Pink: #EB459E
+Fuchsia: #EB459E
+Purple: #9C27B0
+Blurple: #5865F2
+Blurple Classic: #7289DA
+Deep Purple: #673AB7
+Indigo: #3F51B5
+Blue: #2196F3
+Light Blue: #03A9F4
+Cyan: #00BCD4
+Teal: #009688
+Green: #57F287
+Light Green: #8BC34A
+Lime: #CDDC39
+Yellow: #FEE75C
+Amber: #FFC107
+Orange: #FF9800
+Deep Orange: #FF5722
+Brown: #795548
+Grey: #9E9E9E
+Blue Grey: #607D8B
+Role Default: #4f545c
+Magenta: #E91E63</code></p>
+</details>
+
 
 ## `{responder.embedField;name;value;inline}`
 
