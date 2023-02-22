@@ -64,3 +64,13 @@ Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 ## `{server.prefix}`
 
 Gets the legacy prefix of the server. This tag is only available for compatibility reasons and is not recommended in new actions. This tag is deprecated and may be removed in a future release.
+
+## `{server.subscriptionTier}`
+
+Returns the subscription tier level of the server.
+
+`0 = Prime`, `1 = PrimeClassic`, `2 = PrimeCommunity`
+
+## `{server.subscriptionUser}`
+
+Returns the ID of the user who added the subscription to the server.
