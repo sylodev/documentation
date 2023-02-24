@@ -464,5 +464,6 @@ Return an array with just the elements that pass a check.
 `endswith`
 `contains`
 `includes`
-`has`</code></p>
+`has`
+`matches`</code></p>
 </details>
