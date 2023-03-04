@@ -129,6 +129,10 @@ Get the XP required for the users next level.
 
 Gets the amount of XP a user needs to level up to the next level.
 
+## `{user.rank;user?}`
+
+Gets the rank of a user.
+
 ## `{user.reward filter=achieved first=true raw=false}`
 
 Returns the reward the user achieved by levelling up. Returns nothing if there was no reward. **This tag is only available in level-up scripts** and cannot be used elsewhere.
