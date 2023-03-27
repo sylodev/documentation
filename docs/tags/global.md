@@ -253,7 +253,26 @@ Formats a number. [Formats using the context locale if possible](https://en.wiki
 
 ## `{if}`
 
-Compares different values and executes instructions based on the result. Syntax is `{if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator. The available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, and `matches`.
+Compares different values and executes instructions based on the result. Syntax is `{if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator.
+
+<details>
+  <summary>Operators</summary>
+  <p><code>`==, eq, equals`
+`===, strict equals`
+`!=, not equals`
+`!==, strict not equals`
+`>, greater than`
+`<, less than`
+`>=, greater than or equal to`
+`<=, less than or equal to`
+`startswith`
+`endswith`
+`contains`
+`includes`
+`has`
+`matches`</code></p>
+</details>
+
 
 ```json
 // "==" is used for case-insensitive comparison
@@ -414,3 +433,37 @@ Sort an array. Returns a new array and does not mutate the original.
 
 - `array` the array to sort
 - `key` the key to sort by if the array is an array of objects.
+
+## `{index mode?;array;value}`
+
+Return the index at which a given element can be found in the array. Defaults to the first instance.
+
+- `mode?` an option mode for indexing the array. Can be `last` or `all`.
+- `array` the array to index
+- `value` the value to look for
+  
+## `{filter;array;value;operator?}`
+
+Return an array with just the elements that pass a check.
+
+- `array` the array to filter
+- `value` the value to filter by
+- `operator` the operator to filter by
+
+<details>
+  <summary>Operators</summary>
+  <p><code>`==, eq, equals`
+`===, strict equals`
+`!=, not equals`
+`!==, strict not equals`
+`>, greater than`
+`<, less than`
+`>=, greater than or equal to`
+`<=, less than or equal to`
+`startswith`
+`endswith`
+`contains`
+`includes`
+`has`
+`matches`</code></p>
+</details>

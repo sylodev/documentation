@@ -163,9 +163,7 @@ Add a button to the message.
 If you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.
 
 ```
-
 ‎
-
 ```
 
 ## `{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex?;options}`
@@ -188,12 +186,6 @@ Create a new select menu with the given options. The options must be provided as
 }}}
 
 {responder.select handler=my_callback placeholder="Select an option";{$options.value}}
-
-```
-
-```
-
-```
 
 ## `{responder.reference;message?}`
 
