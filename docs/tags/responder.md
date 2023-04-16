@@ -171,7 +171,6 @@ If you want a button to only have an emoji, here is a fun hack. Copy this empty 
 Create a new select menu with the given options. The options must be provided as an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure).
 
 ```
-
 {=options;{{
   "value": [
       {
@@ -186,6 +185,7 @@ Create a new select menu with the given options. The options must be provided as
 }}}
 
 {responder.select handler=my_callback placeholder="Select an option";{$options.value}}
+```
 
 ## `{responder.reference;message?}`
 
