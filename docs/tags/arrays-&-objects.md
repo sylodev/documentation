@@ -1,3 +1,5 @@
+# Arrays & Objects
+
 ## `{split;input;separator}`
 
 Splits `input` into an array at `separator`. `separator` can be an arbitrary string or regex pattern.
