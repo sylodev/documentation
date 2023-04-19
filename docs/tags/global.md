@@ -163,60 +163,6 @@ Performs a HTTP request to a URL.
 {=data;{fetch;https://atlas.bot/api/status}}\n{$data.body.ok}  // true
 ```
 
-## `{split;input;separator}`
-
-Splits `input` into an array at `separator`. `separator` can be an arbitrary string or regex pattern.
-
-```json
-{split;one,two,three;,}          // {[one;two;three]}
-{split;woah party tricks;/ +/g}  // {[woah;party;tricks]}
-{split;one,two,three;/(,)/g}     // {[one;,;two;,;three]}, you can use groups to keep the separator in the output array.
-```
-
-## `{push return?;array;value}`
-
-Adds an item to the end of an array.
-
-This will mutate the original array, which is why nothing is returned by default.
-
-```json
-{=array;{[one]}}
-{push;{$array};two}  // no output
-{$array}             // {[one;two]}
-{push return;{$array};three}  // {[one;two;three]}
-```
-
-## `{unshift return?;array;value}`
-
-Adds an item to the front of an array. Essentially the same as `{push}` but the item is added to the beginning of the array.
-
-```json
-{=array;{[three]}}
-{unshift;{$array};two}  // no output
-{$array}                // {[two;three]}
-{unshift return;{$array};one}  // {[one;two;three]}
-```
-
-## `{shift}`
-
-Returns and deletes the first item of an array.
-
-```json
-{=array;{[one;two;three]}}
-{shift;{$array}}  // one
-{$array}          // {[two;three]}
-```
-
-## `{pop}`
-
-Returns and deletes the last item of an array.
-
-```json
-{=array;{[one;two;three]}}
-{pop;{$array}}  // three
-{$array}        // {[onw;two]}
-```
-
 ## `{or boolean?;...}`
 
 Gets the first parameter that is not empty or falsy. The `boolean` option can be used to return a boolean instead of the first valid value.
@@ -279,22 +225,6 @@ The available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `sta
 {if;true;{channel.send;yay};{channel.send;nay}} // yay
 ```
 
-## `{for;init;iterable;body}`
-
-Iterates over array items until `{break}` is encountered or it reaches the end of the array.
-
-```json
-{=array;{[one;two;three]}}
-
-// regular format
-{for;{=item};{$array};{$item}}  // one two three
-
-// block format
-[#for;{=item};{$array}]
-  {$item}
-[/for]
-```
-
 ## `{break}`
 
 Breaks for-loops early. In this example, only the first item would ever be output.
@@ -341,25 +271,6 @@ Used to void the output of its children.
 Hello {void;World} // "Hello "
 ```
 
-## `{keys;object}`
-
-Get the keys of an object. Useful when you want to iterate over the keys or values of an object. Only top-level keys are returned
-
-```json
-{=object.key;value}
-{=object.nested.key;value}
-{keys;{$object}} // {[key;nested]}
-```
-
-## `{join;array;separator}`
-
-Join the items of an array together with the given separator.
-
-```json
-{=array;{[one;two;three]}}
-{join;{$array};,} // one,two,three
-```
-
 ## `{randomInt;min;max}`
 
 Get a random number between `min` and `max`. If `max` is not specified, `min` is used as the maximum and `0` is used as the minimum.
@@ -385,15 +296,6 @@ Generate a random string.
 - `length` is the length of the string to generate
 - `alphabet` is the alphabet to use. If not specified, it is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`
 
-## `{includes;array;item}`
-
-Check whether an array includes an item.
-
-```json
-{=array;{[one;two;three]}}
-{includes;{$array};two} // true
-```
-
 ## `{import;scriptId}`
 
 Import a `script` action. View more information on the [imports](../scripts/imports.md) guide.
@@ -410,28 +312,3 @@ Import a `script` action. View more information on the [imports](../scripts/impo
 {import;action/6c306503-adaf-48ae-b724-40b78d0edd28}
 {my_function} // "Hello World!"
 ```
-
-## `{sort;array;key?}`
-
-Sort an array. Returns a new array and does not mutate the original.
-
-- `array` the array to sort
-- `key` the key to sort by if the array is an array of objects.
-
-## `{index mode?;array;value}`
-
-Return the index at which a given element can be found in the array. Defaults to the first instance.
-
-- `mode?` an option mode for indexing the array. Can be `last` or `all`.
-- `array` the array to index
-- `value` the value to look for
-  
-## `{filter;array;value;operator?}`
-
-Return an array with just the elements that pass a check.
-
-- `array` the array to filter
-- `value` the value to filter by
-- `operator` the operator to filter by
-
-The available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `startswith`, `endswith`, `contains`, `includes`, `has` and `matches`.
