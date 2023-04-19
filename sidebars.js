@@ -63,7 +63,7 @@ module.exports = {
         "tags/channel",
         "tags/emoji",
         "tags/global",
-        "tags/arrays-&-objects",
+        "tags/arrays-and-objects",
         "tags/message",
         "tags/responder",
         "tags/role",
