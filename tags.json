@@ -260,11 +260,11 @@
     "expensive": false
   },
   {
-    "id": "time-formattime",
+    "id": "time-format-totime",
     "name": "time",
-    "url": "https://docs.atlas.bot/tags/global#time-formattime",
-    "signature": "{time format;time}",
-    "longDescription": "Formats time as a string. Is compatible with any of the `.createdAt` tags.\n\n#### Arguments\n\n*   `time`: Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.\n*   `format`: Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.\n\n```pella\n{time}  // 1636084903\n{time format=relative_time;5 hours ago}  // 5 hours ago\n{time;2021-11-05T04:01:43.661Z}          // 1636084903\n{time format=relative_time;2022-08-21}   // in 10 months\n```\n",
+    "url": "https://docs.atlas.bot/tags/global#time-format-totime",
+    "signature": "{time format to;time}",
+    "longDescription": "Formats time as a string. Is compatible with any of the `.createdAt` tags.\n\n#### Arguments\n\n*   `time` Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.\n*   `format` Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.\n*   `to` The Luxon format to use. Incompatible with `format`. See [Luxon's documentation](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) for a list of all available formats.\n\n```pella\n{time}  // 1636084903\n{time format=relative_time;5 hours ago}  // 5 hours ago\n{time;2021-11-05T04:01:43.661Z}          // 1636084903\n{time format=relative_time;2022-08-21}   // in 10 months\n```\n",
     "shortDescription": "Get the current time, format it or return it in unix milliseconds.",
     "aliases": [
       "utils.time"
@@ -279,7 +279,9 @@
     "signature": "{casing mode;input}",
     "longDescription": "Changes the casing of a string.\n\nAccepted modes:\n`lower` for lowercase\n`upper` for uppercase\n`first` to capitalise the first letter\n`title` for \"Title Case\"\n`camel` for camelCase\n`constant` for CONSTANT\\_CASE\n",
     "shortDescription": "Change the casing of a string",
-    "aliases": [],
+    "aliases": [
+      "case"
+    ],
     "disableInLoop": false,
     "expensive": false
   },
@@ -365,7 +367,7 @@
     "name": "math",
     "url": "https://docs.atlas.bot/tags/global#math-precision_fixtrueexpr",
     "signature": "{math precision_fix=true;expr}",
-    "longDescription": "Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.\n",
+    "longDescription": "Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.\n\nValid operators are `+`, `-`, `*`, `/`, `%`, `&`, `|`, and `^`\nValid functions are `sqrt`, `log`, `sin`, `cos`, `tan`, `sign`, `round`, `floor`, `ceil`, and `abs`\n",
     "shortDescription": "Evaluate math expressions",
     "aliases": [],
     "disableInLoop": false,
@@ -378,7 +380,9 @@
     "signature": "{random length=1 return_array=false;haystack}",
     "longDescription": "Gets a random item from a list. `length` is the number of items to return. When `length` is true, you can choose to return the random items in an array with `return_array`.\n\n```pella\n{random;123}           // 2\n{random;{[1;2;3]}}     // 1\n{random length=2;123}  // 21\n{random length=2 return_array=true;123}  // {[2;1]}\n```\n",
     "shortDescription": "Get a random item from the list.",
-    "aliases": [],
+    "aliases": [
+      "choose"
+    ],
     "disableInLoop": false,
     "expensive": false
   },
@@ -486,7 +490,7 @@
     "name": "if",
     "url": "https://docs.atlas.bot/tags/global#if",
     "signature": "{if}",
-    "longDescription": "Compares different values and executes instructions based on the result. Syntax is `{if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator such as `{if;10;>;5;10 is greater than 5;10 is not greater than 5;`. The available operators are `===`, `==`, `!=`, `>=`, `>`, `<=`, `<`, `!==`, and `matching`.\n\n```pella\n// \"==\" is used for case-insensitive comparison\n{if;word;==;WORD;yay;nay} // yay\n\n// \"===\" is for case-sensitive comparison\n{if;word;===;WORD;yay;nay} // nay\n\n// \"matches\" can be used for matching regex\n{if;word;matches;/[a-z]+/gu;yay;nay} // yay\n\n// Boolean-like values are coerced to booleans before comparison\n{if;true;===;yes;yay;nay} // yay\n\n// Numbers are compared as numbers\n{if;5;<;10;yay;nay} // yay\n\n// Conditional parsing is used, so in this example only \"yay\" is ever sent.\n// This is an exception instead of a rule as most other tags will parse all parameters regardless.\n{if;true;{channel.send;yay};{channel.send;nay}} // yay\n```\n",
+    "longDescription": "Compares different values and executes instructions based on the result. Syntax is `{if;condition;run_if_true;run_if_false}`. `condition` is either a boolean or a comparison with two elements and an operator.\n\nThe available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `startswith`, `endswith`, `contains`, `includes`, `has` and `matches`.\n\n```pella\n// \"==\" is used for case-insensitive comparison\n{if;word;==;WORD;yay;nay} // yay\n\n// \"===\" is for case-sensitive comparison\n{if;word;===;WORD;yay;nay} // nay\n\n// \"matches\" can be used for matching regex\n{if;word;matches;/[a-z]+/gu;yay;nay} // yay\n\n// Boolean-like values are coerced to booleans before comparison\n{if;true;===;yes;yay;nay} // yay\n\n// Numbers are compared as numbers\n{if;5;<;10;yay;nay} // yay\n\n// Conditional parsing is used, so in this example only \"yay\" is ever sent.\n// This is an exception instead of a rule as most other tags will parse all parameters regardless.\n{if;true;{channel.send;yay};{channel.send;nay}} // yay\n```\n",
     "shortDescription": "Compare different values and do things based on the result.",
     "aliases": [
       "#if"
@@ -675,6 +679,28 @@
     "expensive": false
   },
   {
+    "id": "index-modearrayvalue",
+    "name": "index",
+    "url": "https://docs.atlas.bot/tags/global#index-modearrayvalue",
+    "signature": "{index mode?;array;value}",
+    "longDescription": "Return the index at which a given element can be found in the array. Defaults to the first instance.\n\n*   `mode?` an option mode for indexing the array. Can be `last` or `all`.\n*   `array` the array to index\n*   `value` the value to look for\n",
+    "shortDescription": "Return the index at which a given element can be found in the array",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "filterarrayvalueoperator",
+    "name": "filter",
+    "url": "https://docs.atlas.bot/tags/global#filterarrayvalueoperator",
+    "signature": "{filter;array;value;operator?}",
+    "longDescription": "Return an array with just the elements that pass a check.\n\n*   `array` the array to filter\n*   `value` the value to filter by\n*   `operator` the operator to filter by\n\nThe available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `startswith`, `endswith`, `contains`, `includes`, `has` and `matches`.\n",
+    "shortDescription": "Return an array with just the elements that pass a check.",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
     "id": "messageidmessage",
     "name": "message.id",
     "url": "https://docs.atlas.bot/tags/message#messageidmessage",
@@ -781,7 +807,9 @@
     "signature": "{message.addReaction;emoji;message}",
     "longDescription": "Adds a reaction to a message.\n\n#### Arguments\n\n*   `{emoji}`: The emoji to add as the reaction.\n",
     "shortDescription": "Add a reaction to the message",
-    "aliases": [],
+    "aliases": [
+      "message.reactionAdd"
+    ],
     "disableInLoop": false,
     "expensive": true
   },
@@ -792,7 +820,9 @@
     "signature": "{message.removeReaction;emoji;message}",
     "longDescription": "Removes a reaction from a message.\n\n#### Arguments\n\n*   `{emoji}`: The emoji to remove as the reaction.\n",
     "shortDescription": "Remove a reaction from the message",
-    "aliases": [],
+    "aliases": [
+      "message.reactionRemove"
+    ],
     "disableInLoop": false,
     "expensive": true
   },
@@ -803,7 +833,9 @@
     "signature": "{message.removeReactions;emoji;message}",
     "longDescription": "Removes all reactions, optionally for a specific emoji.\n\n    {message.removeReactions}       // Will remove all reactions\n    {message.removeReaction;emoji}  // Will remove all reactions for a specific emoji\n",
     "shortDescription": "Remove all reactions from the message, optionally for a specific emoji.",
-    "aliases": [],
+    "aliases": [
+      "message.reactionsRemove"
+    ],
     "disableInLoop": false,
     "expensive": true
   },
@@ -1109,7 +1141,7 @@
     "name": "responder.embed",
     "url": "https://docs.atlas.bot/tags/responder#responderembed",
     "signature": "{responder.embed}",
-    "longDescription": "This tag is used to add embeds to the message. Calling it multiple times will add multiple embeds to the message, up to a maximum of 10.\n\n`{responder.embed title=\"Hello world\"}`\n`{responder.embed title=Test timestamp=\"5 hours ago\"}`\n\nEmbed Elements\n`author-image`\n`author-name`\n`author-url`\n`color`\n`description`\n`footer`\n`footer-icon`\n`image`\n`thumbnail`\n`timestamp`\n`title`\n`url`\n\nUse the [Embed Builder](https://staging.atlas.bot/tools/embed-builder) to quickly build an embed.\n",
+    "longDescription": "This tag is used to add embeds to the message. Calling it multiple times will add multiple embeds to the message, up to a maximum of 10.\n\n`{responder.embed title=\"Hello world\"}`\n`{responder.embed title=Test timestamp=\"5 hours ago\"}`\n\nEmbed Elements\n`author-image`\n`author-name`\n`author-url`\n`color`\n`description`\n`footer`\n`footer-icon`\n`image`\n`thumbnail`\n`timestamp`\n`title`\n`url`\n\nUse the [Embed Builder](https://staging.atlas.bot/tools/embed-builder) to quickly build an embed.\n\n<details>\n  <summary>Color Defaults</summary>\n  <p><code>Black: #000000\nDark Mode: #36393f\nWhite: #FFFFFF\nRed: #ED4245\nPink: #EB459E\nFuchsia: #EB459E\nPurple: #9C27B0\nBlurple: #5865F2\nBlurple Classic: #7289DA\nDeep Purple: #673AB7\nIndigo: #3F51B5\nBlue: #2196F3\nLight Blue: #03A9F4\nCyan: #00BCD4\nTeal: #009688\nGreen: #57F287\nLight Green: #8BC34A\nLime: #CDDC39\nYellow: #FEE75C\nAmber: #FFC107\nOrange: #FF9800\nDeep Orange: #FF5722\nBrown: #795548\nGrey: #9E9E9E\nBlue Grey: #607D8B\nRole Default: #4f545c\nMagenta: #E91E63</code></p>\n</details>\n",
     "shortDescription": "Attach an embed to the output message.",
     "aliases": [],
     "disableInLoop": false,
@@ -1191,22 +1223,22 @@
     "expensive": false
   },
   {
-    "id": "responderbutton-label-handler-stateless-state-url-emoji-styleprimary-actionrowindex",
+    "id": "responderbutton-label-handler-stateless-state-url-emoji-styleprimary-actionrowindex-disabledfalse",
     "name": "responder.button",
-    "url": "https://docs.atlas.bot/tags/responder#responderbutton-label-handler-stateless-state-url-emoji-styleprimary-actionrowindex",
-    "signature": "{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex?}",
-    "longDescription": "Add a button to the message.\n\n`label` is the button text.\n`handler` is the value of the component callback action to call when the button is clicked\n`state` is an optional payload that will be accessible in the component callback action\n`url` can be used to link to external resources\n`emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.\n`stateless` Whether this button should be forced to be a stateless interaction. Required if you don't want the button to expire.\n`style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.\n\nIf you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.\n\n```\n\n‎\n\n```\n",
+    "url": "https://docs.atlas.bot/tags/responder#responderbutton-label-handler-stateless-state-url-emoji-styleprimary-actionrowindex-disabledfalse",
+    "signature": "{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex? disabled=false}",
+    "longDescription": "Add a button to the message.\n\n#### Arguments\n\n*   `label` is the button text.\n*   `handler` is the value of the component callback action to call when the button is clicked\n*   `state` is an optional payload that will be accessible in the component callback action\n*   `url` can be used to link to external resources\n*   `emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.\n*   `stateless` Whether this button should be forced to be a stateless interaction. Required if you don't want the button to expire.\n*   `style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.\n*   `disabled` can be set to `true` to disable the button.\n*   `actionRowIndex` can be used to set the row the button is in. This is useful if you want to have multiple buttons in a row.\n\nIf you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.\n\n    ‎\n",
     "shortDescription": "Add a button to the message",
     "aliases": [],
     "disableInLoop": false,
     "expensive": false
   },
   {
-    "id": "responderselect-handler-statelessfalse-state-disabledfalse-placeholder-minvalues-maxvalues-actionrowindexoptions",
+    "id": "responderselect-handler-statelessfalse-state-disabledfalse-placeholder-minvalues-maxvalues-actionrowindex-typestringselectoptions",
     "name": "responder.select",
-    "url": "https://docs.atlas.bot/tags/responder#responderselect-handler-statelessfalse-state-disabledfalse-placeholder-minvalues-maxvalues-actionrowindexoptions",
-    "signature": "{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex?;options}",
-    "longDescription": "Create a new select menu with the given options. The options must be provided as an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure).\n\n```\n\n{=options;{{\n  \"value\": [\n      {\n          \"label\": \"Option One\",\n          \"value\": \"1\"\n      },\n      {\n          \"label\": \"Option Two\",\n          \"value\": \"2\"\n      }\n  ]\n}}}\n\n{responder.select handler=my_callback placeholder=\"Select an option\";{$options.value}}\n\n```\n\n```\n```\n",
+    "url": "https://docs.atlas.bot/tags/responder#responderselect-handler-statelessfalse-state-disabledfalse-placeholder-minvalues-maxvalues-actionrowindex-typestringselectoptions",
+    "signature": "{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex? type=StringSelect;options}",
+    "longDescription": "Create a new select menu with the given options.\n\n#### Arguments\n\n*   `handler` is the value of the component callback action to call when the menu is interacted with\n*   `state` is an optional payload that will be accessible in the component callback action\n*   `stateless` Whether this menu should be forced to be a stateless interaction. Required if you don't want the menu to expire.\n*   `disabled` can be set to `true` to disable the menu.\n*   `placeholder` is the text to show when no option is selected\n*   `minValues` is the minimum number of options that must be selected\n*   `maxValues` is the maximum number of options that can be selected\n*   `type` can be `StringSelect`, `UserSelect`, `RoleSelect`, `MentionableSelect`, or `ChannelSelect`.\n*   `actionRowIndex` can be used to set the row the menu is in. This is useful if you want to have multiple menus on a message.\n\n`options` is an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure), and is required for `StringSelect` menus.\n\n    {=options;{{\n      \"value\": [\n          {\n              \"label\": \"Option One\",\n              \"value\": \"1\"\n          },\n          {\n              \"label\": \"Option Two\",\n              \"value\": \"2\"\n          }\n      ]\n    }}}\n\n    {responder.select handler=my_callback placeholder=\"Select an option\";{$options.value}}\n",
     "shortDescription": "Add a select menu to the message",
     "aliases": [],
     "disableInLoop": false,
@@ -1337,7 +1369,7 @@
     "name": "role.edit",
     "url": "https://docs.atlas.bot/tags/role#roleedit-name-color-reasonrole",
     "signature": "{role.edit name color reason;role}",
-    "longDescription": "Edit the role.\n\n`name` is the new role name\n`color` is the new colour of the role\n`reason` is the reason for editing this role\n\n    {role.edit name=\"Very cool\" colour=teal}\n",
+    "longDescription": "Edit the role.\n\n`name` is the new role name\n`color` is the new colour of the role\n`reason` is the reason for editing this role\n\n    {role.edit name=\"Very cool\" colour=teal}\n\n<details>\n  <summary>Color Defaults</summary>\n  <p><code>Black: #000000\nDark Mode: #36393f\nWhite: #FFFFFF\nRed: #ED4245\nPink: #EB459E\nFuchsia: #EB459E\nPurple: #9C27B0\nBlurple: #5865F2\nBlurple Classic: #7289DA\nDeep Purple: #673AB7\nIndigo: #3F51B5\nBlue: #2196F3\nLight Blue: #03A9F4\nCyan: #00BCD4\nTeal: #009688\nGreen: #57F287\nLight Green: #8BC34A\nLime: #CDDC39\nYellow: #FEE75C\nAmber: #FFC107\nOrange: #FF9800\nDeep Orange: #FF5722\nBrown: #795548\nGrey: #9E9E9E\nBlue Grey: #607D8B\nRole Default: #4f545c\nMagenta: #E91E63</code></p>\n</details>\n",
     "shortDescription": "Edit a roles settings",
     "aliases": [],
     "disableInLoop": false,
@@ -1348,7 +1380,7 @@
     "name": "role.create",
     "url": "https://docs.atlas.bot/tags/role#rolecreate-name-color-reason-return_idrole",
     "signature": "{role.create name color reason return_id;role}",
-    "longDescription": "Create a new role.\n\n`name` is the name of the role\n`color` is the colour of the role\n`reason` is the reason for creating the role\n`return_id` is whether to return the created roles ID.\n",
+    "longDescription": "Create a new role.\n\n`name` is the name of the role\n`color` is the colour of the role\n`reason` is the reason for creating the role\n`return_id` is whether to return the created roles ID.\n\n<details>\n  <summary>Color Defaults</summary>\n  <p><code>Black: #000000\nDark Mode: #36393f\nWhite: #FFFFFF\nRed: #ED4245\nPink: #EB459E\nFuchsia: #EB459E\nPurple: #9C27B0\nBlurple: #5865F2\nBlurple Classic: #7289DA\nDeep Purple: #673AB7\nIndigo: #3F51B5\nBlue: #2196F3\nLight Blue: #03A9F4\nCyan: #00BCD4\nTeal: #009688\nGreen: #57F287\nLight Green: #8BC34A\nLime: #CDDC39\nYellow: #FEE75C\nAmber: #FFC107\nOrange: #FF9800\nDeep Orange: #FF5722\nBrown: #795548\nGrey: #9E9E9E\nBlue Grey: #607D8B\nRole Default: #4f545c\nMagenta: #E91E63</code></p>\n</details>\n",
     "shortDescription": "Create a guild role",
     "aliases": [],
     "disableInLoop": false,
@@ -1398,7 +1430,7 @@
     "shortDescription": "Get the icon of the context server",
     "aliases": [
       "guild.icon",
-      "guild.iconUrl",
+      "guild.iconURL",
       "server.icon_url",
       "server.iconURL"
     ],
@@ -1516,6 +1548,36 @@
     "expensive": false
   },
   {
+    "id": "serversubscriptiontier",
+    "name": "server.subscriptionTier",
+    "url": "https://docs.atlas.bot/tags/server#serversubscriptiontier",
+    "signature": "{server.subscriptionTier}",
+    "longDescription": "Returns the subscription tier level of the server.\n\n`0 = Prime`, `1 = PrimeClassic`, `2 = PrimeCommunity`\n",
+    "shortDescription": "Get the subscription level of the server",
+    "aliases": [
+      "guild.subscriptionTier",
+      "server.primeTier",
+      "guild.primeTier"
+    ],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "serversubscriptionuser",
+    "name": "server.subscriptionUser",
+    "url": "https://docs.atlas.bot/tags/server#serversubscriptionuser",
+    "signature": "{server.subscriptionUser}",
+    "longDescription": "Returns the ID of the user who added the subscription to the server.\n",
+    "shortDescription": "Get the user who added the subscription of the server",
+    "aliases": [
+      "guild.subscriptionUser",
+      "server.primeUser",
+      "guild.primeUser"
+    ],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
     "id": "storesetkeyvalue",
     "name": "store.set",
     "url": "https://docs.atlas.bot/tags/store#storesetkeyvalue",
@@ -1628,7 +1690,10 @@
     "shortDescription": "Get the users avatar url.",
     "aliases": [
       "user.avatarURL",
-      "user.avatar_url"
+      "user.avatar_url",
+      "user.icon",
+      "user.iconURL",
+      "user.icon_url"
     ],
     "disableInLoop": false,
     "expensive": false
@@ -1697,7 +1762,9 @@
     "signature": "{user.addrole reason;role;member}",
     "longDescription": "Gives a user a role.\n\n#### Arguments\n\n*   `reason`: The reason for the action that will be displayed in the Audit Log.\n*   `role`: The role to add to the user.\n",
     "shortDescription": "Give the user a role",
-    "aliases": [],
+    "aliases": [
+      "user.roleAdd"
+    ],
     "disableInLoop": false,
     "expensive": true
   },
@@ -1708,7 +1775,9 @@
     "signature": "{user.removerole reason;role;member}",
     "longDescription": "Removes a role from a user.\n\n#### Arguments\n\n*   `reason`: The reason for the action that will be displayed in the Audit Log.\n*   `role`: The role to remove from the user.\n",
     "shortDescription": "Take a role from a user",
-    "aliases": [],
+    "aliases": [
+      "user.roleRemove"
+    ],
     "disableInLoop": false,
     "expensive": true
   },
@@ -1812,6 +1881,16 @@
     "signature": "{user.remainingXP;user?}",
     "longDescription": "Gets the amount of XP a user needs to level up to the next level.\n",
     "shortDescription": "Get the amount of xp the user needs to level up",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "userrankuser",
+    "name": "user.rank",
+    "url": "https://docs.atlas.bot/tags/user#userrankuser",
+    "signature": "{user.rank;user?}",
+    "shortDescription": "Get the rank of the user",
     "aliases": [],
     "disableInLoop": false,
     "expensive": false
