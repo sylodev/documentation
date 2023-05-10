@@ -148,17 +148,21 @@ If the responder is configured when the script finishes, it will be sent automat
 Set the responder to edit the given message. Atlas must have sent the message to edit it.
 Place after the new message content.
 
-## `{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex?}`
+## `{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex? disabled=false}`
 
 Add a button to the message.
 
-`label` is the button text.
-`handler` is the value of the component callback action to call when the button is clicked
-`state` is an optional payload that will be accessible in the component callback action
-`url` can be used to link to external resources
-`emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.
-`stateless` Whether this button should be forced to be a stateless interaction. Required if you don't want the button to expire.
-`style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.
+#### Arguments
+
+- `label` is the button text.
+- `handler` is the value of the component callback action to call when the button is clicked
+- `state` is an optional payload that will be accessible in the component callback action
+- `url` can be used to link to external resources
+- `emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.
+- `stateless` Whether this button should be forced to be a stateless interaction. Required if you don't want the button to expire.
+- `style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.
+- `disabled` can be set to `true` to disable the button.
+- `actionRowIndex` can be used to set the row the button is in. This is useful if you want to have multiple buttons in a row.
 
 If you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.
 
@@ -166,9 +170,23 @@ If you want a button to only have an emoji, here is a fun hack. Copy this empty 
 ‎
 ```
 
-## `{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex?;options}`
+## `{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex? type=StringSelect;options}`
 
-Create a new select menu with the given options. The options must be provided as an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure).
+Create a new select menu with the given options.
+
+#### Arguments
+
+- `handler` is the value of the component callback action to call when the menu is interacted with
+- `state` is an optional payload that will be accessible in the component callback action
+- `stateless` Whether this menu should be forced to be a stateless interaction. Required if you don't want the menu to expire.
+- `disabled` can be set to `true` to disable the menu.
+- `placeholder` is the text to show when no option is selected
+- `minValues` is the minimum number of options that must be selected
+- `maxValues` is the maximum number of options that can be selected
+- `type` can be `StringSelect`, `UserSelect`, `RoleSelect`, `MentionableSelect`, or `ChannelSelect`.
+- `actionRowIndex` can be used to set the row the menu is in. This is useful if you want to have multiple menus on a message.
+
+`options` is an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure), and is required for `StringSelect` menus.
 
 ```
 {=options;{{

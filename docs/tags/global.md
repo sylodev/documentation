@@ -21,14 +21,15 @@ And for this example, we'll assume the user ran the command as `/inspect input:e
 {option;user} // "", because the user didn't provide a user option
 ```
 
-## `{time format;time}`
+## `{time format to;time}`
 
 Formats time as a string. Is compatible with any of the `.createdAt` tags.
 
 #### Arguments
 
-- `time`: Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.
-- `format`: Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.
+- `time` Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.
+- `format` Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.
+- `to` The Luxon format to use. Incompatible with `format`. See [Luxon's documentation](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) for a list of all available formats.
 
 ```json
 {time}  // 1636084903
@@ -141,6 +142,8 @@ Holds up processing. This does not schedule execution for later, it pauses execu
 
 Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.
 
+Valid operators are `+`, `-`, `*`, `/`, `%`, `&`, `|`, and `^`
+Valid functions are `sqrt`, `log`, `sin`, `cos`, `tan`, `sign`, `round`, `floor`, `ceil`, and `abs`
 ## `{random length=1 return_array=false;haystack}`
 
 Gets a random item from a list. `length` is the number of items to return. When `length` is true, you can choose to return the random items in an array with `return_array`.
