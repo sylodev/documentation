@@ -57,7 +57,7 @@ Adds a reaction to a message.
 
 - `{emoji}`: The emoji to add as the reaction.
 
-## `{message.removeReaction;emoji;message}`
+## `{message.removeReaction;emoji;user;message}`
 
 Removes a reaction from a message.
 
