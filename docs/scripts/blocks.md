@@ -22,6 +22,6 @@ Syntax: `[#for;init;iterable] body [/for]`
 ```json
 {=array;{[one;two;three]}}
 [#for;{=item};{$array}]
-	{responder.embedField name="Item Value" value={$item}
+	{responder.embedField name="Item Value" value={$item}}
 [/for]
 ```
