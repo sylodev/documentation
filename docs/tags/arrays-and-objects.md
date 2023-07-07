@@ -132,3 +132,14 @@ Return an array with just the elements that pass a check.
 - `operator` the operator to filter by
 
 The available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `startswith`, `endswith`, `contains`, `includes`, `has` and `matches`.
+
+## `{splice;array;array...}`
+
+Combines two or more arrays into one.
+
+```json
+{=first_array;{[one;two;three]}}
+{=second_array;{[four;five;six]}}
+
+{splice;{$first_array};{$second_array}} // {[one;two;three;four;five;six]}
+```

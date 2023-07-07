@@ -12,12 +12,14 @@ Gets the ID of the ticket's channel, if one is in context.
 
 Close the ticket channel.
 
-## `{ticket.create reason user}`
+## `{ticket.create}`
 
 Open the ticket channel.
 
-`reason` set the reason for the ticket.
-`user` set the ticket author.
+#### Arguments
+`reason`: Set the reason for the ticket.
+`user`: Set the ticket author.
+`prefix`: Set the ticket prefix.
 
 ## `{ticket.prefix;channel;prefix}`
 

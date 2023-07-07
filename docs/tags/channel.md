@@ -98,3 +98,26 @@ Creates a new channel.
 > This tag can do serious damage if you are not extremely careful with validating inputs. {.is-warning}
 
 Deletes a channel.
+
+## `{channel.purge;channel}`
+Purge messages from a channel with various parameters.
+
+#### Arguments
+- `limit?` default: 100: The number of messages to purge, applied before filtering.
+- `channel?`: The channel to purge messages in.
+- `includePinned?` default: false: Whether to include pinned messages.
+- `newerThan?`: Messages that are newer than this time will be purged. Accepts a time value.
+- `olderThan?`: Messages that are older than this time will be purged. Accepts a time value.
+- `beforeMessage?`: Purge messages sent before this message.
+- `afterMessage?`: Purge messages sent after this message.
+- `including?`: Purge messages including this message. Can be a regex pattern.
+- `excluding?`: Purge messages excluding this message. Can be a regex pattern.
+- `author?`: Purge messages that were sent by this user.
+- `notAuthor?`: Purge messages that were not sent by this user.
+- `hasImage?`: Purge messages that do or do not contain an image.
+- `hasLink?`: Purge messages that do or do not contain a link.
+- `hasInvite?`: Purge messages that do or do not contain a server invite.
+- `hasAttachment?`: Purge messages that do or do not have an attachment.
+- `reason?`: The reason for deleting the channel.
+
+- `return_bool?` default: false: Whether to return true if messages were purged.

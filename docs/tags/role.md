@@ -134,3 +134,7 @@ Magenta: #E91E63</code></p>
 Delete a role.
 
 `reason` is why you are deleting this role.
+
+## `{role.icon;size;hash}`
+
+Gets the icon of the role.
