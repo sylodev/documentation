@@ -1,5 +1,164 @@
 [
   {
+    "id": "splitinputseparator",
+    "name": "split",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#splitinputseparator",
+    "signature": "{split;input;separator}",
+    "longDescription": "Splits `input` into an array at `separator`. `separator` can be an arbitrary string or regex pattern.\n\n```pella\n{split;one,two,three;,}          // {[one;two;three]}\r\n{split;woah party tricks;/ +/g}  // {[woah;party;tricks]}\r\n{split;one,two,three;/(,)/g}     // {[one;,;two;,;three]}, you can use groups to keep the separator in the output array.\n```\n",
+    "shortDescription": "Split a string into an array of strings.",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "joinarrayseparator",
+    "name": "join",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#joinarrayseparator",
+    "signature": "{join;array;separator}",
+    "longDescription": "Join the items of an array together with the given separator.\n\n```pella\n{=array;{[one;two;three]}}\r\n{join;{$array};,} // one,two,three\n```\n",
+    "shortDescription": "Join an array into a string",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "push-returnarrayvalue",
+    "name": "push",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#push-returnarrayvalue",
+    "signature": "{push return?;array;value}",
+    "longDescription": "Adds an item to the end of an array.\n\nThis will mutate the original array, which is why nothing is returned by default.\n\n```pella\n{=array;{[one]}}\r\n{push;{$array};two}  // no output\r\n{$array}             // {[one;two]}\r\n{push return;{$array};three}  // {[one;two;three]}\n```\n",
+    "shortDescription": "Add an item to an array",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "pop",
+    "name": "pop",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#pop",
+    "signature": "{pop}",
+    "longDescription": "Returns and deletes the last item of an array.\n\n```pella\n{=array;{[one;two;three]}}\r\n{pop;{$array}}  // three\r\n{$array}        // {[onw;two]}\n```\n",
+    "shortDescription": "Get the last item in an array",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "shift",
+    "name": "shift",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#shift",
+    "signature": "{shift}",
+    "longDescription": "Returns and deletes the first item of an array.\n\n```pella\n{=array;{[one;two;three]}}\r\n{shift;{$array}}  // one\r\n{$array}          // {[two;three]}\n```\n",
+    "shortDescription": "Get the first item in an array",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "unshift-returnarrayvalue",
+    "name": "unshift",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#unshift-returnarrayvalue",
+    "signature": "{unshift return?;array;value}",
+    "longDescription": "Adds an item to the front of an array. Essentially the same as `{push}` but the item is added to the beginning of the array.\n\n```pella\n{=array;{[three]}}\r\n{unshift;{$array};two}  // no output\r\n{$array}                // {[two;three]}\r\n{unshift return;{$array};one}  // {[one;two;three]}\n```\n",
+    "shortDescription": "Add an item to the beginning of an array",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "forinititerablebody",
+    "name": "for",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#forinititerablebody",
+    "signature": "{for;init;iterable;body}",
+    "longDescription": "Iterates over array items until `{break}` is encountered or it reaches the end of the array.\n\n```pella\n{=array;{[one;two;three]}}\r\n\r\n// regular format\r\n{for;{=item};{$array};{$item}}  // one two three\r\n\r\n// block format\r\n[#for;{=item};{$array}]\r\n  {$item}\r\n[/for]\n```\n",
+    "shortDescription": "Iterate over array items or loop however many times is necessary.",
+    "aliases": [
+      "#for"
+    ],
+    "disableInLoop": true,
+    "expensive": true
+  },
+  {
+    "id": "keysobject",
+    "name": "keys",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#keysobject",
+    "signature": "{keys;object}",
+    "longDescription": "Get the keys of an object. Useful when you want to iterate over the keys or values of an object. Only top-level keys are returned\n\n```pella\n{=object.key;value}\r\n{=object.nested.key;value}\r\n{keys;{$object}} // {[key;nested]}\n```\n",
+    "shortDescription": "Get the keys of an object",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "includesarrayitem",
+    "name": "includes",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#includesarrayitem",
+    "signature": "{includes;array;item}",
+    "longDescription": "Check whether an array includes an item.\n\n```pella\n{=array;{[one;two;three]}}\r\n{includes;{$array};two} // true\n```\n",
+    "shortDescription": "Check whether the target contains the value",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "sortarraykey",
+    "name": "sort",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#sortarraykey",
+    "signature": "{sort;array;key?}",
+    "longDescription": "Sort an array. Returns a new array and does not mutate the original.\n\n*   `array` the array to sort\n*   `key` the key to sort by if the array is an array of objects.\n",
+    "shortDescription": "Sort an array. Will not mutate the original array",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "slicetargetstartend",
+    "name": "slice",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#slicetargetstartend",
+    "signature": "{slice;target;start;end}",
+    "longDescription": "Get a slice of an array or string. If `end` is not specified, it is assumed to be the length of the target.\n\n```pella\n{=array;{[one;two;three]}}\r\n{slice;{$array};1} // {[two;three]}\r\n{slice;{$array};1;2} // {[two]}\n```\n",
+    "shortDescription": "Get a slice of an array or string",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "index-modearrayvalue",
+    "name": "index",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#index-modearrayvalue",
+    "signature": "{index mode?;array;value}",
+    "longDescription": "Return the index at which a given element can be found in the array. Defaults to the first instance.\n\n*   `mode?` an option mode for indexing the array. Can be `last` or `all`.\n*   `array` the array to index\n*   `value` the value to look for\n",
+    "shortDescription": "Return the index at which a given element can be found in the array",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "filterarrayvalueoperator",
+    "name": "filter",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#filterarrayvalueoperator",
+    "signature": "{filter;array;value;operator?}",
+    "longDescription": "Return an array with just the elements that pass a check.\n\n*   `array` the array to filter\n*   `value` the value to filter by\n*   `operator` the operator to filter by\n\nThe available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `startswith`, `endswith`, `contains`, `includes`, `has` and `matches`.\n",
+    "shortDescription": "Return an array with just the elements that pass a check.",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
+    "id": "splicearrayarray",
+    "name": "splice",
+    "url": "https://docs.atlas.bot/tags/arrays-and-objects#splicearrayarray",
+    "signature": "{splice;array;array...}",
+    "longDescription": "Combines two or more arrays into one.\n\n```pella\n{=first_array;{[one;two;three]}}\r\n{=second_array;{[four;five;six]}}\r\n\r\n{splice;{$first_array};{$second_array}} // {[one;two;three;four;five;six]}\n```\n",
+    "shortDescription": "Combine multiple arrays or strings together.",
+    "aliases": [
+      "concat",
+      "combine"
+    ],
+    "disableInLoop": false,
+    "expensive": false
+  },
+  {
     "id": "channelmentionchannel",
     "name": "channel.mention",
     "url": "https://docs.atlas.bot/tags/channel#channelmentionchannel",
@@ -165,6 +324,17 @@
     "signature": "{channel.delete;channel}",
     "longDescription": "> This tag can do serious damage if you are not extremely careful with validating inputs. {.is-warning}\n\nDeletes a channel.\n",
     "shortDescription": "Delete a channel",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": true
+  },
+  {
+    "id": "channelpurgechannel",
+    "name": "channel.purge",
+    "url": "https://docs.atlas.bot/tags/channel#channelpurgechannel",
+    "signature": "{channel.purge;channel}",
+    "longDescription": "Purge messages from a channel with various parameters.\n\n#### Arguments\n\n*   `limit?` default: 100: The number of messages to purge, applied before filtering.\n\n*   `channel?`: The channel to purge messages in.\n\n*   `includePinned?` default: false: Whether to include pinned messages.\n\n*   `newerThan?`: Messages that are newer than this time will be purged. Accepts a time value.\n\n*   `olderThan?`: Messages that are older than this time will be purged. Accepts a time value.\n\n*   `beforeMessage?`: Purge messages sent before this message.\n\n*   `afterMessage?`: Purge messages sent after this message.\n\n*   `including?`: Purge messages including this message. Can be a regex pattern.\n\n*   `excluding?`: Purge messages excluding this message. Can be a regex pattern.\n\n*   `author?`: Purge messages that were sent by this user.\n\n*   `notAuthor?`: Purge messages that were not sent by this user.\n\n*   `hasImage?`: Purge messages that do or do not contain an image.\n\n*   `hasLink?`: Purge messages that do or do not contain a link.\n\n*   `hasInvite?`: Purge messages that do or do not contain a server invite.\n\n*   `hasAttachment?`: Purge messages that do or do not have an attachment.\n\n*   `reason?`: The reason for deleting the channel.\n\n*   `return_bool?` default: false: Whether to return true if messages were purged.\n",
+    "shortDescription": "Purge messages from a channel with various parameters",
     "aliases": [],
     "disableInLoop": false,
     "expensive": true
@@ -398,61 +568,6 @@
     "expensive": true
   },
   {
-    "id": "splitinputseparator",
-    "name": "split",
-    "url": "https://docs.atlas.bot/tags/global#splitinputseparator",
-    "signature": "{split;input;separator}",
-    "longDescription": "Splits `input` into an array at `separator`. `separator` can be an arbitrary string or regex pattern.\n\n```pella\n{split;one,two,three;,}          // {[one;two;three]}\n{split;woah party tricks;/ +/g}  // {[woah;party;tricks]}\n{split;one,two,three;/(,)/g}     // {[one;,;two;,;three]}, you can use groups to keep the separator in the output array.\n```\n",
-    "shortDescription": "Split a string into an array of strings.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
-    "id": "push-returnarrayvalue",
-    "name": "push",
-    "url": "https://docs.atlas.bot/tags/global#push-returnarrayvalue",
-    "signature": "{push return?;array;value}",
-    "longDescription": "Adds an item to the end of an array.\n\nThis will mutate the original array, which is why nothing is returned by default.\n\n```pella\n{=array;{[one]}}\n{push;{$array};two}  // no output\n{$array}             // {[one;two]}\n{push return;{$array};three}  // {[one;two;three]}\n```\n",
-    "shortDescription": "Add an item to an array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
-    "id": "unshift-returnarrayvalue",
-    "name": "unshift",
-    "url": "https://docs.atlas.bot/tags/global#unshift-returnarrayvalue",
-    "signature": "{unshift return?;array;value}",
-    "longDescription": "Adds an item to the front of an array. Essentially the same as `{push}` but the item is added to the beginning of the array.\n\n```pella\n{=array;{[three]}}\n{unshift;{$array};two}  // no output\n{$array}                // {[two;three]}\n{unshift return;{$array};one}  // {[one;two;three]}\n```\n",
-    "shortDescription": "Add an item to the beginning of an array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
-    "id": "shift",
-    "name": "shift",
-    "url": "https://docs.atlas.bot/tags/global#shift",
-    "signature": "{shift}",
-    "longDescription": "Returns and deletes the first item of an array.\n\n```pella\n{=array;{[one;two;three]}}\n{shift;{$array}}  // one\n{$array}          // {[two;three]}\n```\n",
-    "shortDescription": "Get the first item in an array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
-    "id": "pop",
-    "name": "pop",
-    "url": "https://docs.atlas.bot/tags/global#pop",
-    "signature": "{pop}",
-    "longDescription": "Returns and deletes the last item of an array.\n\n```pella\n{=array;{[one;two;three]}}\n{pop;{$array}}  // three\n{$array}        // {[onw;two]}\n```\n",
-    "shortDescription": "Get the last item in an array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
     "id": "or-boolean",
     "name": "or",
     "url": "https://docs.atlas.bot/tags/global#or-boolean",
@@ -497,19 +612,6 @@
     ],
     "disableInLoop": false,
     "expensive": false
-  },
-  {
-    "id": "forinititerablebody",
-    "name": "for",
-    "url": "https://docs.atlas.bot/tags/global#forinititerablebody",
-    "signature": "{for;init;iterable;body}",
-    "longDescription": "Iterates over array items until `{break}` is encountered or it reaches the end of the array.\n\n```pella\n{=array;{[one;two;three]}}\n\n// regular format\n{for;{=item};{$array};{$item}}  // one two three\n\n// block format\n[#for;{=item};{$array}]\n  {$item}\n[/for]\n```\n",
-    "shortDescription": "Iterate over array items or loop however many times is necessary.",
-    "aliases": [
-      "#for"
-    ],
-    "disableInLoop": true,
-    "expensive": true
   },
   {
     "id": "break",
@@ -576,28 +678,6 @@
     "longDescription": "Used to void the output of its children.\n\n```pella\nHello {void;World} // \"Hello \"\n```\n"
   },
   {
-    "id": "keysobject",
-    "name": "keys",
-    "url": "https://docs.atlas.bot/tags/global#keysobject",
-    "signature": "{keys;object}",
-    "longDescription": "Get the keys of an object. Useful when you want to iterate over the keys or values of an object. Only top-level keys are returned\n\n```pella\n{=object.key;value}\n{=object.nested.key;value}\n{keys;{$object}} // {[key;nested]}\n```\n",
-    "shortDescription": "Get the keys of an object",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
-    "id": "joinarrayseparator",
-    "name": "join",
-    "url": "https://docs.atlas.bot/tags/global#joinarrayseparator",
-    "signature": "{join;array;separator}",
-    "longDescription": "Join the items of an array together with the given separator.\n\n```pella\n{=array;{[one;two;three]}}\n{join;{$array};,} // one,two,three\n```\n",
-    "shortDescription": "Join an array into a string",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
     "id": "randomintminmax",
     "name": "randomInt",
     "url": "https://docs.atlas.bot/tags/global#randomintminmax",
@@ -626,11 +706,7 @@
     "name": "slice",
     "url": "https://docs.atlas.bot/tags/global#slicetargetstartend",
     "signature": "{slice;target;start;end}",
-    "longDescription": "Get a slice of an array or string. If `end` is not specified, it is assumed to be the length of the target.\n\n```pella\n{=array;{[one;two;three]}}\n{slice;{$array};1} // {[two;three]}\n{slice;{$array};1;2} // {[two]}\n```\n",
-    "shortDescription": "Get a slice of an array or string",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "longDescription": "Get a slice of an array or string. If `end` is not specified, it is assumed to be the length of the target.\n\n```pella\n{=array;{[one;two;three]}}\n{slice;{$array};1} // {[two;three]}\n{slice;{$array};1;2} // {[two]}\n```\n"
   },
   {
     "id": "randomstringlengthalphabet",
@@ -639,17 +715,6 @@
     "signature": "{randomString;length;alphabet?}",
     "longDescription": "Generate a random string.\n\n*   `length` is the length of the string to generate\n*   `alphabet` is the alphabet to use. If not specified, it is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`\n",
     "shortDescription": "Generate a random string",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
-    "id": "includesarrayitem",
-    "name": "includes",
-    "url": "https://docs.atlas.bot/tags/global#includesarrayitem",
-    "signature": "{includes;array;item}",
-    "longDescription": "Check whether an array includes an item.\n\n```pella\n{=array;{[one;two;three]}}\n{includes;{$array};two} // true\n```\n",
-    "shortDescription": "Check whether the target contains the value",
     "aliases": [],
     "disableInLoop": false,
     "expensive": false
@@ -666,39 +731,6 @@
     ],
     "disableInLoop": false,
     "expensive": true
-  },
-  {
-    "id": "sortarraykey",
-    "name": "sort",
-    "url": "https://docs.atlas.bot/tags/global#sortarraykey",
-    "signature": "{sort;array;key?}",
-    "longDescription": "Sort an array. Returns a new array and does not mutate the original.\n\n*   `array` the array to sort\n*   `key` the key to sort by if the array is an array of objects.\n",
-    "shortDescription": "Sort an array. Will not mutate the original array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
-    "id": "index-modearrayvalue",
-    "name": "index",
-    "url": "https://docs.atlas.bot/tags/global#index-modearrayvalue",
-    "signature": "{index mode?;array;value}",
-    "longDescription": "Return the index at which a given element can be found in the array. Defaults to the first instance.\n\n*   `mode?` an option mode for indexing the array. Can be `last` or `all`.\n*   `array` the array to index\n*   `value` the value to look for\n",
-    "shortDescription": "Return the index at which a given element can be found in the array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
-  },
-  {
-    "id": "filterarrayvalueoperator",
-    "name": "filter",
-    "url": "https://docs.atlas.bot/tags/global#filterarrayvalueoperator",
-    "signature": "{filter;array;value;operator?}",
-    "longDescription": "Return an array with just the elements that pass a check.\n\n*   `array` the array to filter\n*   `value` the value to filter by\n*   `operator` the operator to filter by\n\nThe available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `startswith`, `endswith`, `contains`, `includes`, `has` and `matches`.\n",
-    "shortDescription": "Return an array with just the elements that pass a check.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
   },
   {
     "id": "messageidmessage",
@@ -766,7 +798,7 @@
     "shortDescription": "Unpin the message",
     "aliases": [],
     "disableInLoop": false,
-    "expensive": false
+    "expensive": true
   },
   {
     "id": "messagepublishmessage",
@@ -774,7 +806,7 @@
     "url": "https://docs.atlas.bot/tags/message#messagepublishmessage",
     "signature": "{message.publish;message}",
     "longDescription": "Publishes a message. Only works in news channels.\n",
-    "shortDescription": "Publish a message in a news channel",
+    "shortDescription": "Publish a message in an announcemnent channel",
     "aliases": [],
     "disableInLoop": false,
     "expensive": true
@@ -814,10 +846,10 @@
     "expensive": true
   },
   {
-    "id": "messageremovereactionemojimessage",
+    "id": "messageremovereactionemojiusermessage",
     "name": "message.removeReaction",
-    "url": "https://docs.atlas.bot/tags/message#messageremovereactionemojimessage",
-    "signature": "{message.removeReaction;emoji;message}",
+    "url": "https://docs.atlas.bot/tags/message#messageremovereactionemojiusermessage",
+    "signature": "{message.removeReaction;emoji;user;message}",
     "longDescription": "Removes a reaction from a message.\n\n#### Arguments\n\n*   `{emoji}`: The emoji to remove as the reaction.\n",
     "shortDescription": "Remove a reaction from the message",
     "aliases": [
@@ -1082,11 +1114,11 @@
     "expensive": true
   },
   {
-    "id": "ticketcreate-reason-user",
+    "id": "ticketcreate",
     "name": "ticket.create",
-    "url": "https://docs.atlas.bot/tags/plugins/ticket#ticketcreate-reason-user",
-    "signature": "{ticket.create reason user}",
-    "longDescription": "Open the ticket channel.\n\n`reason` set the reason for the ticket.\n`user` set the ticket author.\n",
+    "url": "https://docs.atlas.bot/tags/plugins/ticket#ticketcreate",
+    "signature": "{ticket.create}",
+    "longDescription": "Open the ticket channel.\n\n#### Arguments\n\n`reason`: Set the reason for the ticket.\n`user`: Set the ticket author.\n`prefix`: Set the ticket prefix.\n",
     "shortDescription": "Create a new ticket",
     "aliases": [],
     "disableInLoop": false,
@@ -1396,6 +1428,16 @@
     "aliases": [],
     "disableInLoop": false,
     "expensive": true
+  },
+  {
+    "id": "roleiconsizehash",
+    "name": "role.icon",
+    "url": "https://docs.atlas.bot/tags/role#roleiconsizehash",
+    "signature": "{role.icon;size;hash}",
+    "shortDescription": "Get the icon of the given role.",
+    "aliases": [],
+    "disableInLoop": false,
+    "expensive": false
   },
   {
     "id": "serverid",

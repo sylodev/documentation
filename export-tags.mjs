@@ -74,15 +74,15 @@ async function update(path) {
 
 const apiRoute = process.env.TAG_API_ROUTE ?? "https://atlas.bot/api/tags";
 const remoteTags = await fetch(apiRoute).then((response) => response.json());
-const localTags = [];
+const tagsFromFiles = [];
 for await (const file of rrdir(TAGS_MD_DIR)) {
   if (!file.path.endsWith(".md")) continue;
-  const fileTags = await update(file.path);
-  localTags.push(...fileTags);
+  const tagsFromFile = await update(file.path);
+  tagsFromFiles.push(...tagsFromFile);
 }
 
 for (const remoteTag of remoteTags) {
-  const localTag = localTags.find((localTag) => {
+  const localTag = tagsFromFiles.find((localTag) => {
     if (localTag.name.toLowerCase() === remoteTag.name.toLowerCase()) return true;
     const lowerRemoteAliases = remoteTag.aliases?.map((alias) => alias.toLowerCase());
     if (lowerRemoteAliases?.includes(localTag.name.toLowerCase())) return true;
@@ -103,4 +103,4 @@ for (const remoteTag of remoteTags) {
   Object.assign(localTag, remoteTag);
 }
 
-fs.writeFileSync("tags.json", JSON.stringify(localTags, null, 2));
+fs.writeFileSync("tags.json", JSON.stringify(tagsFromFiles, null, 2));
