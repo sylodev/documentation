@@ -36,7 +36,7 @@ module.exports = {
         "actions/commands",
         "actions/messages",
         "actions/scripts",
-        "actions/callbacks",
+        "actions/callback",
         "actions/menus",
         "actions/reactions",
         "actions/join-leave",
