@@ -98,10 +98,11 @@ Check whether an array includes an item.
 {includes;{$array};two} // true
 ```
 
-## `{sort;array;key?}`
+## `{sort reverse?;array;key?}`
 
 Sort an array. Returns a new array and does not mutate the original.
 
+- `reverse?` whether to reverse the array after sorting. Defaults to `false`.
 - `array` the array to sort
 - `key` the key to sort by if the array is an array of objects.
 

@@ -10,25 +10,25 @@ The roles plugin provides utilities for managing roles in your server.
 
 Join roles are roles given to people when they join. You can select up to two that will be given to new members when they join.
 
-## Reaction Roles
+## Auto Roles
 
-Reaction roles are roles given to people when they react to a message with a set reaction, click a button or select a role from a dropdown.
+Auto roles are roles given to people when they react to a message with a set reaction, click a button or select a role from a dropdown.
 
-### Reaction Groups
+### Role Groups
 
-Atlas groups reaction roles into reaction groups. A single reaction group corresponds to one or more messages in Discord. For managed reaction groups, they always correspond to a single message in Discord. The group content is the message content, which is disabled for unmanaged groups. Tags are supported in the reaction groups content.
+Atlas groups auto roles into role groups. A single role group corresponds to one or more messages in Discord. For managed role groups, they always correspond to a single message in Discord. The group content is the message content, which is disabled for unmanaged groups. Tags are supported in the role groups content.
 
-### Managed Reaction Groups
+### Managed Role Groups
 
-> Managed reaction groups are synced in the background. Changes to the content or list of roles may take up to a minute to be reflected in Discord. Removing a role will stop it being handed out immediately.
+> Managed role groups are synced in the background. Changes to the content or list of roles may take up to a minute to be reflected in Discord. Removing a role will stop it being handed out immediately.
 
-Managed reaction groups are automatically created by the bot and are updated when you update the reaction group.
+Managed role groups are automatically created by the bot and are updated when you update the role group.
 
-### Unmanaged Reaction Groups
+### Unmanaged Role Groups
 
-> Unmanaged reaction groups are only recommended if you are moving from another bot or have special needs. It is strongly recommended to let Atlas manage the message as it simplifies the process and means other administrators can easily update the message.
+> Unmanaged role groups are only recommended if you are moving from another bot or have special needs. It is strongly recommended to let Atlas manage the message as it simplifies the process and means other administrators can easily update the message.
 
-Unmanaged reaction groups are created by you. You must enter a message ID and select the channel the message is in, and Atlas will manage reactions on the message and give people roles when they react to the message.
+Unmanaged role groups are created by you. You must enter a message ID and select the channel the message is in, and Atlas will manage reactions on the message and give people roles when they react to the message.
 
 Because Atlas cannot update unmanaged reaction groups, the content for a group is ignored. This also restricts the group to using only emoji reactions, other group types like buttons or select menus require the bot to update the message.
 

@@ -4,7 +4,7 @@
 
 Prefixes let you organise tickets. Setting a ticket prefix will append that prefix to the channel name so you can easily see which tickets are in which state at a glance.
 
-`/ticket prefix:assigned` will set the ticket prefix to `assigned` and will update the tickets channel to `assigned-sylver-1058`.
+`/ticket prefix:assigned` will set the ticket prefix to `assigned` and will update the tickets channel to `assigned-sylver`.
 
 ## Archiving
 
