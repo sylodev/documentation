@@ -1,4 +1,4 @@
-## Component Callback
+# Component Callback
 
 This trigger fires when a component is clicked that was created with the same `handler` as the value of the component callback. [Click here to download an action that creates a button that calls this action type](https://cdn.atlas.bot/resources/Button_Callback_Demo.actionpack).
 

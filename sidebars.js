@@ -35,6 +35,7 @@ module.exports = {
       items: [
         "actions/commands",
         "actions/messages",
+        "actions/keywords",
         "actions/scripts",
         "actions/callback",
         "actions/menus",

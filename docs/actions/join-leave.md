@@ -1,3 +1,5 @@
+# Server Join/Leave
+
 ## Guild Member Add
 
 #### Parameters
