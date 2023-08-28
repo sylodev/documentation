@@ -89,7 +89,6 @@ module.exports = {
       type: "category",
       label: "Topics",
       items: [
-        "topics/action-limits",
         "topics/migrating-to-slash-commands",
         "topics/command-syncing",
         "topics/action-locking"],
