@@ -56,6 +56,8 @@ Returns true if the channel can accept messages.
 
 ## `{channel.edit name? topic? nsfw? archived? ratelimit? parent?;channel}`
 
+> This tag is part of the `Mutate Channel` expensive group.
+
 Updates a channel.
 
 #### Arguments
@@ -68,6 +70,8 @@ Updates a channel.
 - `parent`: The category to move the channel to.
 
 ## `{channel.startThread auto_archive_duration? ratelimit? invitable? is_private? return_id? channel?;name;message?}`
+
+> This tag is part of the `Mutate Channel` expensive group.
 
 Creates a new thread.
 
@@ -82,6 +86,8 @@ Creates a new thread.
 
 ## `{channel.create name type topic nsfw parent return_id;channel}`
 
+> This tag is part of the `Mutate Channel` expensive group.
+
 Creates a new channel.
 
 #### Arguments
@@ -95,11 +101,16 @@ Creates a new channel.
 
 ## `{channel.delete;channel}`
 
-> This tag can do serious damage if you are not extremely careful with validating inputs. {.is-warning}
+> This tag is part of the `Mutate Channel` expensive group.
+> This tag is marked `Dangerous` and must be enabled in Advanced Settings.
 
 Deletes a channel.
 
 ## `{channel.purge;channel}`
+
+> This tag is part of the `Mutate Message` expensive group.
+> This tag is marked `Dangerous` and must be enabled in Advanced Settings.
+
 Purge messages from a channel with various parameters.
 
 #### Arguments

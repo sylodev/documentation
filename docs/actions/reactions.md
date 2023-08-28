@@ -2,6 +2,8 @@
 
 ## Message Reaction Add
 
+> Maximum number of Message Reaction Add actions: 5 basic, 5 prime.
+
 #### Parameters
 
 - `{channel}`: The channel where the command was invoked.
@@ -12,6 +14,8 @@
 Fires when a reaction is added to a message. You must specify a single emoji to be checked.
 
 ## Message Reaction Remove
+
+> Maximum number of Message Reaction Remove actions: 5 basic, 5 prime.
 
 #### Parameters
 

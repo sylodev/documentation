@@ -89,6 +89,8 @@ Create a snippet of a string, truncating it if it is over the max length.
 
 ## `{settings;pluginCode;settingsKey}`
 
+> This tag is part of the `General` expensive group.
+
 Get a settings value from a plugin. This tag is intended mostly for internal use and as such there is no official list of all the settings keys available.
 
 #### Arguments
@@ -136,6 +138,8 @@ Replaces matches of `pattern` in `target` by `replacement`. [Regular expressions
 
 ## `{sleep;duration}`
 
+> This tag is part of the `Stall` expensive group.
+
 Holds up processing. This does not schedule execution for later, it pauses execution until the sleep duration is up. You should only use this in very specific cases and avoid it entirely if possible.
 
 ## `{math precision_fix=true;expr}`
@@ -156,6 +160,8 @@ Gets a random item from a list. `length` is the number of items to return. When 
 ```
 
 ## `{fetch;link}`
+
+> This tag is part of the `Stall` expensive group.
 
 Performs a HTTP request to a URL.
 
@@ -300,6 +306,8 @@ Generate a random string.
 - `alphabet` is the alphabet to use. If not specified, it is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`
 
 ## `{import;scriptId}`
+
+> This tag is part of the `Import` expensive group.
 
 Import a `script` action. View more information on the [imports](../scripts/imports.md) guide.
 

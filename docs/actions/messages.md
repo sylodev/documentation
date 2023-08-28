@@ -1,6 +1,7 @@
 # Message Create
 
-> Because this trigger is easy to abuse, there are extreme limits in place. {.is-danger}
+> Maximum number of Message Create actions: 2 basic, 10 prime.
+> Minimum cooldown: 60 seconds (basic), 20 seconds (prime).
 
 #### Parameters
 

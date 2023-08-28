@@ -1,5 +1,8 @@
 # Keyword
 
+> Maximum number of Keyword actions: 2 basic, 10 prime.
+> Minimum cooldown: 30 seconds (basic), 10 seconds (prime).
+
 #### Parameters
 
 - `{channel}`: The channel where the command was invoked.

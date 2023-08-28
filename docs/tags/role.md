@@ -46,6 +46,8 @@ Returns a boolean indicating whether the role is hoisted above other roles in th
 
 ## `{role.edit name color reason;role}`
 
+> This tag is part of the `Mutate Role` expensive group.
+
 Edit the role.
 
 `name` is the new role name
@@ -89,6 +91,8 @@ Magenta: #E91E63</code></p>
 
 ## `{role.create name color reason return_id;role}`
 
+> This tag is part of the `Mutate Role` expensive group.
+
 Create a new role.
 
 `name` is the name of the role
@@ -129,7 +133,8 @@ Magenta: #E91E63</code></p>
 
 ## `{role.delete reason;role}`
 
-> This tag can do serious damage. Make sure you are properly restricting access to any scripts using this tag. {.is-warning}
+> This tag is part of the `Mutate Role` expensive group.
+> This tag is marked `Dangerous` and must be enabled in Advanced Settings.
 
 Delete a role.
 

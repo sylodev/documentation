@@ -65,6 +65,8 @@ Adds an item to the front of an array. Essentially the same as `{push}` but the 
 
 ## `{for;init;iterable;body}`
 
+> This tag is part of the `General` expensive group.
+
 Iterates over array items until `{break}` is encountered or it reaches the end of the array.
 
 ```json

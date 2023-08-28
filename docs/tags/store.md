@@ -10,12 +10,18 @@ Tags used to keep values and data across invocations. `{perset}` and `{perget}` 
 
 ## `{store.set;key;value}`
 
+> This tag is part of the `Store` expensive group.
+
 Adds an item to the store. `value` can be an object, array, string, number, etc. `key` will be coerced to a string.
 
 ## `{store.get;key}`
 
+> This tag is part of the `Store` expensive group.
+
 Gets an item from the store.
 
 ## `{store.delete;key}`
+
+> This tag is part of the `Store` expensive group.
 
 Deletes an item from the store.

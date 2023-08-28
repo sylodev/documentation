@@ -15,6 +15,8 @@ Syntax: `[#if;condition] body [/if]`
 [/if]
 ```
 
+See also: [`{if}`](../tags/global.md#if)
+
 ## `[#for]`
 
 Syntax: `[#for;init;iterable] body [/for]`
@@ -25,3 +27,5 @@ Syntax: `[#for;init;iterable] body [/for]`
 	{responder.embedField name="Item Value" value={$item}}
 [/for]
 ```
+
+See also: [`{for}`](../tags/arrays-and-objects.md#forinititerablebody)

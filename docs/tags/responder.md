@@ -18,6 +18,8 @@ Appends text to the output message. If there is more text, it will be appended t
 
 ## `{responder.dm fallback=false;member}`
 
+> This tag is part of the `Create DM` expensive group.
+
 Set the responder to dm a user. This tag can be hit and miss if the user has their direct-messages closed.
 
 `{responder.dm;{user.id}}` will make the message direct-message the user in context.
@@ -134,6 +136,8 @@ This is the same as `{responder.text}`, with some extras;
 You should use this whenever sending error messages.
 
 ## `{responder.send return_id=false ignore_interaction=false}`
+
+> This tag is part of the `Create Message` expensive group.
 
 Send the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully.
 

@@ -1,5 +1,7 @@
 # Interval
 
+> Maximum number of Interval actions: 2 basic, 5 prime.
+
 Fires an action on a schedule. The schedule can follow multiple formats, including [cron](https://en.wikipedia.org/wiki/Cron)-like expressions and regular text input, such as `every minute` or `every hour on monday between 6am and 6pm`. If the input is invalid and cannot be parsed, you will not be able to save the action. All schedules are calculated in UTC.
 
 Runs must be at minimum a minute apart. If an action is scheduled to run every second, it will only be invoked every minute at most. Additionally, if an action is set to run every minute of 2022, once the year is over the action will be disabled and you will have to configure a new schedule.
