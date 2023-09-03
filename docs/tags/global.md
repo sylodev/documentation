@@ -29,7 +29,7 @@ Formats time as a string. Is compatible with any of the `.createdAt` tags.
 
 - `time` Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.
 - `format` Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.
-- `to` The Luxon format to use. Incompatible with `format`. See [Luxon's documentation](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) for a list of all available formats.
+- `to` The Luxon format to use. Incompatible with `format`. See [Luxon's documentation](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for a list of all available formats.
 
 ```json
 {time}  // 1636084903
