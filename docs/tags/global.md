@@ -43,12 +43,14 @@ Formats time as a string. Is compatible with any of the `.createdAt` tags.
 Changes the casing of a string.
 
 Accepted modes:
-`lower` for lowercase
-`upper` for uppercase
-`first` to capitalise the first letter
-`title` for "Title Case"
-`camel` for camelCase
-`constant` for CONSTANT_CASE
+
+- `lower` this is lower case
+- `upper` THIS IS UPPER CASE
+- `first` This is first case
+- `title` This Is Title Case
+- `camel` thisIsCamelCase
+- `constant` THIS_IS_CONSTANT_CASE
+- `mocking` tHiS iS mOcKiNg CaSe
 
 ## `{length;string_or_array}`
 
