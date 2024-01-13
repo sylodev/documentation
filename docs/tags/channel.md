@@ -106,6 +106,10 @@ Creates a new channel.
 
 Deletes a channel.
 
+## `{channel.position;channel}`
+
+Get the position of a channel.
+
 ## `{channel.purge;channel}`
 
 > This tag is part of the `Mutate Message` expensive group.
