@@ -152,7 +152,7 @@ If the responder is configured when the script finishes, it will be sent automat
 Set the responder to edit the given message. Atlas must have sent the message to edit it.
 Place after the new message content.
 
-## `{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex? disabled=false}`
+## `{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex? disabled=false userLock?}`
 
 Add a button to the message.
 
@@ -167,6 +167,7 @@ Add a button to the message.
 - `style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.
 - `disabled` can be set to `true` to disable the button.
 - `actionRowIndex` can be used to set the row the button is in. This is useful if you want to have multiple buttons in a row.
+- `userLock` lock this interaction the the defined user. 
 
 If you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.
 
@@ -174,7 +175,7 @@ If you want a button to only have an emoji, here is a fun hack. Copy this empty 
 ‎
 ```
 
-## `{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex? type=StringSelect;options}`
+## `{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex? type=StringSelect userLock?;options}`
 
 Create a new select menu with the given options.
 
@@ -189,6 +190,7 @@ Create a new select menu with the given options.
 - `maxValues` is the maximum number of options that can be selected
 - `type` can be `StringSelect`, `UserSelect`, `RoleSelect`, `MentionableSelect`, or `ChannelSelect`.
 - `actionRowIndex` can be used to set the row the menu is in. This is useful if you want to have multiple menus on a message.
+- `userLock` lock this interaction the the defined user. 
 
 `options` is an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure), and is required for `StringSelect` menus.
 
