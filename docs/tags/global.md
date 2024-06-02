@@ -315,3 +315,46 @@ Import a `script` action. View more information on the [imports](../scripts/impo
 {import;action/6c306503-adaf-48ae-b724-40b78d0edd28}
 {my_function} // "Hello World!"
 ```
+
+## `{encodeURIComponent;input}`
+
+Encodes text using [encodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
+
+## `{decodeURIComponent;input}`
+
+Encodes text using [decodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent).
+
+## `{encodeBase64;input}`
+
+Encodes text to [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
+
+## `{decodeBase64;input}`
+
+Decodes text from [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
+
+## `{range;startOrStop;stop?;step?}`
+
+Creates a range of numbers.
+
+- `startOrStop` The start of the range or the stop value if no 'start' is provided.
+- `stop` The end of the range.
+- `step` The step size.
+
+This tag generates an array of numbers starting from `startOrStop` up to (but not including) `stop`, with a step size of `step`. If `stop` is not provided, `startOrStop` is interpreted as the stop value and the start is set to 0. If `step` is not provided, the step size defaults to 1 if `start` is less than `stop`, and -1 if `start` is greater than `stop`.
+
+```
+{range;10;20;2} 
+```
+
+### Limitations
+
+- The maximum number of numbers in the range is 5000. 
+- `start` and `stop` must be valid numbers. 
+- `step` must be a non-zero number.
+
+## `{limits;tier?}`
+
+Gets the limits for the current server. These are things like the amount of actions you can have, which plugins you can use, etc.
+The output from this is not guaranteed to be stable, use at your own risk!
+
+- `tier` The tier to get the limits for. Defaults to the current server's tier.

@@ -6,9 +6,8 @@
     "signature": "{split;input;separator}",
     "longDescription": "Splits `input` into an array at `separator`. `separator` can be an arbitrary string or regex pattern.\n\n```pella\n{split;one,two,three;,}          // {[one;two;three]}\r\n{split;woah party tricks;/ +/g}  // {[woah;party;tricks]}\r\n{split;one,two,three;/(,)/g}     // {[one;,;two;,;three]}, you can use groups to keep the separator in the output array.\n```\n",
     "shortDescription": "Split a string into an array of strings.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "joinarrayseparator",
@@ -17,9 +16,8 @@
     "signature": "{join;array;separator}",
     "longDescription": "Join the items of an array together with the given separator.\n\n```pella\n{=array;{[one;two;three]}}\r\n{join;{$array};,} // one,two,three\n```\n",
     "shortDescription": "Join an array into a string",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "push-returnarrayvalue",
@@ -28,9 +26,8 @@
     "signature": "{push return?;array;value}",
     "longDescription": "Adds an item to the end of an array.\n\nThis will mutate the original array, which is why nothing is returned by default.\n\n```pella\n{=array;{[one]}}\r\n{push;{$array};two}  // no output\r\n{$array}             // {[one;two]}\r\n{push return;{$array};three}  // {[one;two;three]}\n```\n",
     "shortDescription": "Add an item to an array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "pop",
@@ -39,9 +36,8 @@
     "signature": "{pop}",
     "longDescription": "Returns and deletes the last item of an array.\n\n```pella\n{=array;{[one;two;three]}}\r\n{pop;{$array}}  // three\r\n{$array}        // {[onw;two]}\n```\n",
     "shortDescription": "Get the last item in an array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "shift",
@@ -50,9 +46,8 @@
     "signature": "{shift}",
     "longDescription": "Returns and deletes the first item of an array.\n\n```pella\n{=array;{[one;two;three]}}\r\n{shift;{$array}}  // one\r\n{$array}          // {[two;three]}\n```\n",
     "shortDescription": "Get the first item in an array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "unshift-returnarrayvalue",
@@ -61,9 +56,8 @@
     "signature": "{unshift return?;array;value}",
     "longDescription": "Adds an item to the front of an array. Essentially the same as `{push}` but the item is added to the beginning of the array.\n\n```pella\n{=array;{[three]}}\r\n{unshift;{$array};two}  // no output\r\n{$array}                // {[two;three]}\r\n{unshift return;{$array};one}  // {[one;two;three]}\n```\n",
     "shortDescription": "Add an item to the beginning of an array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "forinititerablebody",
@@ -75,8 +69,8 @@
     "aliases": [
       "#for"
     ],
-    "disableInLoop": true,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": true
   },
   {
     "id": "keysobject",
@@ -85,9 +79,8 @@
     "signature": "{keys;object}",
     "longDescription": "Get the keys of an object. Useful when you want to iterate over the keys or values of an object. Only top-level keys are returned\n\n```pella\n{=object.key;value}\r\n{=object.nested.key;value}\r\n{keys;{$object}} // {[key;nested]}\n```\n",
     "shortDescription": "Get the keys of an object",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "includesarrayitem",
@@ -96,9 +89,8 @@
     "signature": "{includes;array;item}",
     "longDescription": "Check whether an array includes an item.\n\n```pella\n{=array;{[one;two;three]}}\r\n{includes;{$array};two} // true\n```\n",
     "shortDescription": "Check whether the target contains the value",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "sortarraykey",
@@ -107,9 +99,8 @@
     "signature": "{sort;array;key?}",
     "longDescription": "Sort an array. Returns a new array and does not mutate the original.\n\n*   `array` the array to sort\n*   `key` the key to sort by if the array is an array of objects.\n",
     "shortDescription": "Sort an array. Will not mutate the original array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "slicetargetstartend",
@@ -118,9 +109,8 @@
     "signature": "{slice;target;start;end}",
     "longDescription": "Get a slice of an array or string. If `end` is not specified, it is assumed to be the length of the target.\n\n```pella\n{=array;{[one;two;three]}}\r\n{slice;{$array};1} // {[two;three]}\r\n{slice;{$array};1;2} // {[two]}\n```\n",
     "shortDescription": "Get a slice of an array or string",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "index-modearrayvalue",
@@ -129,9 +119,8 @@
     "signature": "{index mode?;array;value}",
     "longDescription": "Return the index at which a given element can be found in the array. Defaults to the first instance.\n\n*   `mode?` an option mode for indexing the array. Can be `last` or `all`.\n*   `array` the array to index\n*   `value` the value to look for\n",
     "shortDescription": "Return the index at which a given element can be found in the array",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "filterarrayvalueoperator",
@@ -140,9 +129,8 @@
     "signature": "{filter;array;value;operator?}",
     "longDescription": "Return an array with just the elements that pass a check.\n\n*   `array` the array to filter\n*   `value` the value to filter by\n*   `operator` the operator to filter by\n\nThe available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `startswith`, `endswith`, `contains`, `includes`, `has` and `matches`.\n",
     "shortDescription": "Return an array with just the elements that pass a check.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "splicearrayarray",
@@ -155,8 +143,8 @@
       "concat",
       "combine"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelmentionchannel",
@@ -168,8 +156,8 @@
     "aliases": [
       "channel"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelidchannel",
@@ -178,9 +166,8 @@
     "signature": "{channel.id;channel}",
     "longDescription": "Returns the ID of a channel.\n",
     "shortDescription": "Get the id of the channel",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channeltypechannel",
@@ -189,9 +176,8 @@
     "signature": "{channel.type;channel}",
     "longDescription": "Returns an integer for the [channel type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types).\n",
     "shortDescription": "Get the type of the channel. ",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelcreatedatchannel",
@@ -200,9 +186,8 @@
     "signature": "{channel.createdAt;channel}",
     "longDescription": "Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a channel that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).\n",
     "shortDescription": "Get the time that this channel was created at.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelnsfwchannel",
@@ -210,9 +195,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channelnsfwchannel",
     "signature": "{channel.nsfw;channel}",
     "shortDescription": "Check whether this channel contains explicit content.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelnamechannel",
@@ -221,9 +205,18 @@
     "signature": "{channel.name;channel}",
     "longDescription": "Returns the name of a channel.\n",
     "shortDescription": "Get the name of the channel",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "channelpositionchannel",
+    "name": "channel.position",
+    "url": "https://docs.atlas.bot/tags/channel#channelpositionchannel",
+    "signature": "{channel.position;channel}",
+    "longDescription": "Returns the position of the channel.\n\nDiscord sorts channels by their category, then their type, then their position. Two channels can have the same position and a channel at the bottom of the list can have a higher position than a channel at the top of the list, because of the category-first sorting.\n",
+    "shortDescription": "Get the position of a channel",
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channellastmessageidchannel",
@@ -232,16 +225,21 @@
     "signature": "{channel.lastMessageId;channel}",
     "longDescription": "Returns the ID of the last message sent in a channel.\n",
     "shortDescription": "Get the last message sent in a channel.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channeltopicchannel",
     "name": "channel.topic",
     "url": "https://docs.atlas.bot/tags/channel#channeltopicchannel",
     "signature": "{channel.topic;channel}",
-    "longDescription": "Returns a channel topic, also known as channel description.\n"
+    "longDescription": "Returns a channel topic, also known as channel description.\n",
+    "shortDescription": "Get the topic of a channel",
+    "aliases": [
+      "channel.description"
+    ],
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelparentid",
@@ -250,9 +248,8 @@
     "signature": "{channel.parentId}",
     "longDescription": "Get the parent ID of the channel. For regular channels this is the category ID. For threads this is the ID of the parent channel.\n\n```pella\n{channel.parentId} // \"\", a channel with no parent\n{channel.parentId} // \"532902705404837888\", a regular channel with a parent\n{channel.parentId} // \"532902728834351115\", a thread channel with a parent\n```\n",
     "shortDescription": "Get the parent of a channel.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelisthread",
@@ -260,9 +257,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channelisthread",
     "signature": "{channel.isThread}",
     "shortDescription": "Determine whether the channel is a thread",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelisvoice",
@@ -270,9 +266,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channelisvoice",
     "signature": "{channel.isVoice}",
     "shortDescription": "Determine whether the channel is a voice channel",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channelistextable",
@@ -280,9 +275,8 @@
     "url": "https://docs.atlas.bot/tags/channel#channelistextable",
     "signature": "{channel.isTextable}",
     "shortDescription": "Determine whether a channel can accept text messages",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "channeledit-name-topic-nsfw-archived-ratelimit-parentchannel",
@@ -291,9 +285,8 @@
     "signature": "{channel.edit name? topic? nsfw? archived? ratelimit? parent?;channel}",
     "longDescription": "Updates a channel.\n\n#### Arguments\n\n*   `name`: The new name of the channel.\n*   `topic`: The new topic of the channel.\n*   `nsfw`: Whether the channel is NSFW or not.\n*   `archived`: Whether this channel is archived; channel must be a thread.\n*   `ratelimit`: How often users can send messages in this channel, for example `1m`.\n*   `parent`: The category to move the channel to.\n",
     "shortDescription": "Edit the options for a channel",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "channelstartthread-auto_archive_duration-ratelimit-invitable-is_private-return_id-channelnamemessage",
@@ -302,9 +295,18 @@
     "signature": "{channel.startThread auto_archive_duration? ratelimit? invitable? is_private? return_id? channel?;name;message?}",
     "longDescription": "Creates a new thread.\n\n*   `name` the name of the thread.\n*   `message` the message the thread is created from.\n*   `auto_archive_duration` the time until threads are archived after inactivity. Can be `one_hour`, `one_day`, `three_days` or `one_week`.\n*   `ratelimit` how often users can send messages in the thread, for example `1m`.\n*   `invitable` whether non-moderators can add other non-moderators to the thread; only available on private threads.\n*   `is_private` whether the read is private, must not have a message to be private.\n*   `return_id` whether to return the ID of the created thread.\n*   `channel` the channel to create the thread on.\n",
     "shortDescription": "Create a new thread channel",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
+  },
+  {
+    "id": "channelgetpinschannel",
+    "name": "channel.getPins",
+    "url": "https://docs.atlas.bot/tags/channel#channelgetpinschannel",
+    "signature": "{channel.getPins;channel?}",
+    "longDescription": "Returns a list of pinned message IDs in a channel.\n\n*   `channel` The channel to get the pins from. If not provided, the context channel is used.\n",
+    "shortDescription": "Get the pins for a channel",
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "channelcreate-name-type-topic-nsfw-parent-return_idchannel",
@@ -313,9 +315,8 @@
     "signature": "{channel.create name type topic nsfw parent return_id;channel}",
     "longDescription": "Creates a new channel.\n\n#### Arguments\n\n*   `name`: The name of the channel.\n*   `type`: The [type](https://discord.com/developers/docs/resources/channel#channel-object-channel-types) of the channel. `guildtext`, `guild_text`, `GUILD_TEXT`, and `GuildText` are all valid and will all resolve to a guild text channel. IDs are also supported but the name is preferred.\n*   `topic`: The topic of the channel.\n*   `nsfw`: Whether the channel is NSFW or not.\n*   `parent`: The parent channel, if any.\n*   `return_id`: Whether to return the created channels ID or not.\n",
     "shortDescription": "Create a new channel",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "channeldeletechannel",
@@ -324,9 +325,8 @@
     "signature": "{channel.delete;channel}",
     "longDescription": "> This tag can do serious damage if you are not extremely careful with validating inputs. {.is-warning}\n\nDeletes a channel.\n",
     "shortDescription": "Delete a channel",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "channelpurgechannel",
@@ -335,9 +335,8 @@
     "signature": "{channel.purge;channel}",
     "longDescription": "Purge messages from a channel with various parameters.\n\n#### Arguments\n\n*   `limit?` default: 100: The number of messages to purge, applied before filtering.\n\n*   `channel?`: The channel to purge messages in.\n\n*   `includePinned?` default: false: Whether to include pinned messages.\n\n*   `newerThan?`: Messages that are newer than this time will be purged. Accepts a time value.\n\n*   `olderThan?`: Messages that are older than this time will be purged. Accepts a time value.\n\n*   `beforeMessage?`: Purge messages sent before this message.\n\n*   `afterMessage?`: Purge messages sent after this message.\n\n*   `including?`: Purge messages including this message. Can be a regex pattern.\n\n*   `excluding?`: Purge messages excluding this message. Can be a regex pattern.\n\n*   `author?`: Purge messages that were sent by this user.\n\n*   `notAuthor?`: Purge messages that were not sent by this user.\n\n*   `hasImage?`: Purge messages that do or do not contain an image.\n\n*   `hasLink?`: Purge messages that do or do not contain a link.\n\n*   `hasInvite?`: Purge messages that do or do not contain a server invite.\n\n*   `hasAttachment?`: Purge messages that do or do not have an attachment.\n\n*   `reason?`: The reason for deleting the channel.\n\n*   `return_bool?` default: false: Whether to return true if messages were purged.\n",
     "shortDescription": "Purge messages from a channel with various parameters",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "emojiidemoji",
@@ -346,9 +345,8 @@
     "signature": "{emoji.id;emoji}",
     "longDescription": "The ID of the emoji. For guild emojis, this is the emoji snowflake. For native emojis this is the native emoji character.\n",
     "shortDescription": "Gets the guild emoji ID or native emoji character",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "emojimarkdownemoji",
@@ -361,8 +359,8 @@
       "emoji",
       "emoji.char"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "emojinameemoji",
@@ -370,9 +368,8 @@
     "url": "https://docs.atlas.bot/tags/emoji#emojinameemoji",
     "signature": "{emoji.name;emoji}",
     "shortDescription": "Gets the name of an emoji",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "emojiurlemoji",
@@ -381,9 +378,8 @@
     "signature": "{emoji.url;emoji}",
     "longDescription": "The URL to the emoji. For guild emojis, this is the .gif or .png link. For native emojis, this is a .png link to the twemoji image.\n",
     "shortDescription": "Gets the url of an emoji",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "emojianimatedemoji",
@@ -392,9 +388,8 @@
     "signature": "{emoji.animated;emoji}",
     "longDescription": "Whether the emoji is animated. False for native emojis.\n",
     "shortDescription": "Gets whether an emoji is animated",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "emojicategoryemoji",
@@ -403,9 +398,8 @@
     "signature": "{emoji.category;emoji}",
     "longDescription": "Get the category of an emoji. For native emojis this matches the lowercase name of categories from the emoji picker in Discord, for example `people` or `objects`. For guild emojis this will be `guild`.\n",
     "shortDescription": "Gets the category of an emoji",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "emojialiasesemoji",
@@ -414,9 +408,8 @@
     "signature": "{emoji.aliases;emoji}",
     "longDescription": "Get the aliases for an emoji. Native emojis only.\n",
     "shortDescription": "Gets the aliases of an emoji",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "optionname",
@@ -425,9 +418,8 @@
     "signature": "{option;name}",
     "longDescription": "Get the value of a defined option.\n\n<img src=\"https://i.imgur.com/X6gT2Xc.png\" alt=\"Example of how to define options\" />\n\nFor this example, we'll assume the user ran the command as `/inspect input:example text user:@Sylver#1058`\n\n    {option;input} // \"example text\"\n    {option;user} // \"111372124383428608\"\n    {user.username;{option;user}} // \"Sylver\"\n\nAnd for this example, we'll assume the user ran the command as `/inspect input:example text`\n\n    {option;input} // \"example text\"\n    {option;user} // \"\", because the user didn't provide a user option\n",
     "shortDescription": "Get an interaction option",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "time-format-totime",
@@ -439,8 +431,8 @@
     "aliases": [
       "utils.time"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "casing-modeinput",
@@ -452,8 +444,8 @@
     "aliases": [
       "case"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "lengthstring_or_array",
@@ -462,9 +454,8 @@
     "signature": "{length;string_or_array}",
     "longDescription": "Returns the number of characters in a string and the number of elements in an array.\n\n```pella\n{length;pog}  // 3\n{length;{[one;two;three]}}  // 3\n```\n",
     "shortDescription": "Get the length of a string or array.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "issnowflake-lax-return_idtarget",
@@ -473,9 +464,8 @@
     "signature": "{isSnowflake lax return_id;target}",
     "longDescription": "Determines whether the target string is a snowflake.\n\n#### Arguments\n\n*   `lax`: Whether to accept snowflakes surrounded by characters or not.\n*   `return_id`: Whether to return a boolean or an ID. If the target is not a snowflake and `return_id` is set to true, the tag outputs nothing.\n\n```pella\n{isSnowflake;111372124383428608}  // true\n{isSnowflake;hello}               // false\n{isSnowflake;123098123}           // false\n{isSnowflake lax=true; hello 355876124779347968}             // true\n{isSnowflake lax=true return_id=true;<@111372124383428608>}  // 111372124383428608\n```\n",
     "shortDescription": "Determine whether the input string is a snowflake",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "snippet-maxlength100-suffix-extratarget",
@@ -484,9 +474,8 @@
     "signature": "{snippet maxLength=100 suffix=… extra;target}",
     "longDescription": "Create a snippet of a string, truncating it if it is over the max length.\n\n#### Arguments\n\n*   `maxLength`: The maximum length of the snippet.\n*   `suffix`: The suffix to add to the end of the snippet if it is truncated.\n*   `extra`: The extra text to add to the end of the snippet, regardless of whether its truncated.\n*   `target`: The string to create a snippet from.\n",
     "shortDescription": "Create a short snippet of a string",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "settingsplugincodesettingskey",
@@ -495,9 +484,8 @@
     "signature": "{settings;pluginCode;settingsKey}",
     "longDescription": "Get a settings value from a plugin. This tag is intended mostly for internal use and as such there is no official list of all the settings keys available.\n\n#### Arguments\n\n*   `pluginCode`: The code of the plugin to get settings of, for example `suggestions`.\n*   `settingsKey`: The settings key to get, for example `anonymousSuggestions` would check if the bot should make suggestions anonymous for the suggestions plugin.\n",
     "shortDescription": "Get the settings for a plugin",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "find-case_insensitivetrue-return_allfalsetargetpattern",
@@ -506,9 +494,8 @@
     "signature": "{find case_insensitive=true return_all=false;target;pattern}",
     "longDescription": "Finds `pattern` in `target` and returns the first match or all matches if specified. [Regular expressions](https://regexr.com/) are supported.\n\n#### Arguments\n\n*   `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.\n*   `return_all`: Whether to return an array of all matches or only the first one. Cannot be used without `/regex/g`.\n*   `target`: The string to search.\n*   `pattern`: The string or regex pattern to find.\n\n```pella\n{find;hello world;hello}     // hello\n{find;hello world;nothing}\n{find case_insensitive=false;hello world;HELLO}          // HELLO\n{find;hello world;/hello/i}  // hello\n{find return_all=true;hello hello hello world;/hello/ig} // {[hello;hello;hello]}\n```\n",
     "shortDescription": "Find a value in a string.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "replace-replace_alltrue-case_insensitivetruetargetpatternreplacement",
@@ -517,9 +504,8 @@
     "signature": "{replace replace_all=true case_insensitive=true;target;pattern;replacement}",
     "longDescription": "Replaces matches of `pattern` in `target` by `replacement`. [Regular expressions](https://regexr.com/) are supported.\n\n#### Arguments\n\n*   `case_insensitive`: Whether the search should ignore case or not. Is incompatible with regex; use the flag `i` instead.\n*   `replace_all`: Whether to replace all matches or only the first one. Is incompatible with regex; use the flag `g` instead.\n*   `target`: The string to search.\n*   `pattern`: The string or regex pattern to find.\n*   `replacement`: The string to put in place of the pattern.\n\n```pella\n{replace replace_all=false;hello hello;hell;hey}  // heyo hello\n{replace;hello hello;hell;hey}     // heyo heyo\n{replace;hello hello;/hell/;hey}   // heyo hello\n{replace;hello hello;/hell/g;hey}  // heyo heyo\n```\n",
     "shortDescription": "Find and replace a value in a string.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "sleepduration",
@@ -528,9 +514,8 @@
     "signature": "{sleep;duration}",
     "longDescription": "Holds up processing. This does not schedule execution for later, it pauses execution until the sleep duration is up. You should only use this in very specific cases and avoid it entirely if possible.\n",
     "shortDescription": "Temporarily hold up processing. Tags before it will run normally, tags after it will have to wait.",
-    "aliases": [],
-    "disableInLoop": true,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": true
   },
   {
     "id": "math-precision_fixtrueexpr",
@@ -539,9 +524,8 @@
     "signature": "{math precision_fix=true;expr}",
     "longDescription": "Evaluates math. `precision_fix` enables a hack that fixes floating point precision errors, but may cause issues in very specific circumstances. Realistically nothing you do with actions should require disabling `precision_fix`.\n\nValid operators are `+`, `-`, `*`, `/`, `%`, `&`, `|`, and `^`\nValid functions are `sqrt`, `log`, `sin`, `cos`, `tan`, `sign`, `round`, `floor`, `ceil`, and `abs`\n",
     "shortDescription": "Evaluate math expressions",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "random-length1-return_arrayfalsehaystack",
@@ -553,8 +537,8 @@
     "aliases": [
       "choose"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "fetchlink",
@@ -563,9 +547,8 @@
     "signature": "{fetch;link}",
     "longDescription": "Performs a HTTP request to a URL.\n\n`application/json` will be parsed as JSON.\n`application/xml`, `text/xml`, `application/rss+xml` and `application/atom+xml` will be parsed as XML.\n\n    {=data;{fetch;https://atlas.bot/api/status}}\\n{$data.body.ok}  // true\n",
     "shortDescription": "Fetch a URL and return the response data.",
-    "aliases": [],
-    "disableInLoop": true,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": true
   },
   {
     "id": "or-boolean",
@@ -574,9 +557,8 @@
     "signature": "{or boolean?;...}",
     "longDescription": "Gets the first parameter that is not empty or falsy. The `boolean` option can be used to return a boolean instead of the first valid value.\n\n```pella\n{or;;two}       // \"two\"\n{or;;}          // no output\n{or;false;two}  // \"two\"\n{or;one;two}    // \"one\", \"two\" is never evaluated\n{or boolean;one;two}  // true\n{or boolean;;}  // false\n```\n",
     "shortDescription": "Check if any parameters are truthy",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "and-boolean",
@@ -585,9 +567,8 @@
     "signature": "{and boolean?;...}",
     "longDescription": "Ensures all parameters are present, returning the last parameter if all are valid. The `boolean` option can be used to return a boolean instead of the last parameter if all are valid.\n\n```pella\n{and;;two}     // no output, \"two\" is never evaluated\n{and;one;two}  // \"one\", \"two\" is evaluated\n{and;;}        // no output\n{and boolean;one;two}  // true\n{and boolean;one;}     // false\n```\n",
     "shortDescription": "Check of all parameters are truthy",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "formatnumbernumber",
@@ -596,9 +577,11 @@
     "signature": "{formatNumber;number}",
     "longDescription": "Formats a number. [Formats using the context locale if possible](https://en.wikipedia.org/wiki/Decimal_separator) (for example, the guild language).\n\n```pella\n{formatNumber;1000.5} // 1,000.5\n{formatNumber;1000.5} // 1 000,5 for some other languages\n```\n",
     "shortDescription": "Format a number to the servers locale",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "aliases": [
+      "formatNum"
+    ],
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "if",
@@ -610,8 +593,8 @@
     "aliases": [
       "#if"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "break",
@@ -623,8 +606,8 @@
     "aliases": [
       "#break"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "throwmessage",
@@ -636,8 +619,8 @@
     "aliases": [
       "#throw"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "catchbodymessage",
@@ -649,8 +632,8 @@
     "aliases": [
       "#catch"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "repeatstrtimes",
@@ -659,9 +642,8 @@
     "signature": "{repeat;str;times}",
     "longDescription": "Repeats a string a given number of times.\n\n```pella\n{repeat;Hello;3} // HelloHelloHello\n```\n",
     "shortDescription": "Repeat a string a certain number of times.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "return",
@@ -684,9 +666,8 @@
     "signature": "{randomInt;min;max}",
     "longDescription": "Get a random number between `min` and `max`. If `max` is not specified, `min` is used as the maximum and `0` is used as the minimum.\n",
     "shortDescription": "Get a random integer between the given range.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "isurlinput",
@@ -698,8 +679,8 @@
     "aliases": [
       "utils.isUrl"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "slicetargetstartend",
@@ -715,9 +696,8 @@
     "signature": "{randomString;length;alphabet?}",
     "longDescription": "Generate a random string.\n\n*   `length` is the length of the string to generate\n*   `alphabet` is the alphabet to use. If not specified, it is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`\n",
     "shortDescription": "Generate a random string",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "importscriptid",
@@ -729,8 +709,68 @@
     "aliases": [
       "#import"
     ],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
+  },
+  {
+    "id": "encodeuricomponentinput",
+    "name": "encodeURIComponent",
+    "url": "https://docs.atlas.bot/tags/global#encodeuricomponentinput",
+    "signature": "{encodeURIComponent;input}",
+    "longDescription": "Encodes text using [encodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).\n",
+    "shortDescription": "Encode a URI component",
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "decodeuricomponentinput",
+    "name": "decodeURIComponent",
+    "url": "https://docs.atlas.bot/tags/global#decodeuricomponentinput",
+    "signature": "{decodeURIComponent;input}",
+    "longDescription": "Encodes text using [decodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent).\n",
+    "shortDescription": "Decode a URI component",
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "encodebase64input",
+    "name": "encodeBase64",
+    "url": "https://docs.atlas.bot/tags/global#encodebase64input",
+    "signature": "{encodeBase64;input}",
+    "longDescription": "Encodes text to [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).\n",
+    "shortDescription": "Encode a string to base64",
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "decodebase64input",
+    "name": "decodeBase64",
+    "url": "https://docs.atlas.bot/tags/global#decodebase64input",
+    "signature": "{decodeBase64;input}",
+    "longDescription": "Decodes text from [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).\n",
+    "shortDescription": "Decode a base64 string",
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "rangestartorstopstopstep",
+    "name": "range",
+    "url": "https://docs.atlas.bot/tags/global#rangestartorstopstopstep",
+    "signature": "{range;startOrStop;stop?;step?}",
+    "longDescription": "Creates a range of numbers.\n\n*   `startOrStop` The start of the range or the stop value if no 'start' is provided.\n*   `stop` The end of the range.\n*   `step` The step size.\n\nThis tag generates an array of numbers starting from `startOrStop` up to (but not including) `stop`, with a step size of `step`. If `stop` is not provided, `startOrStop` is interpreted as the stop value and the start is set to 0. If `step` is not provided, the step size defaults to 1 if `start` is less than `stop`, and -1 if `start` is greater than `stop`.\n\n    {range;10;20;2} \n\n### Limitations\n\n*   The maximum number of numbers in the range is 5000.\n*   `start` and `stop` must be valid numbers.\n*   `step` must be a non-zero number.\n",
+    "shortDescription": "Create a range of numbers",
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "limitstier",
+    "name": "limits",
+    "url": "https://docs.atlas.bot/tags/global#limitstier",
+    "signature": "{limits;tier?}",
+    "longDescription": "Gets the limits for the current server. These are things like the amount of actions you can have, which plugins you can use, etc.\nThe output from this is not guaranteed to be stable, use at your own risk!\n\n*   `tier` The tier to get the limits for. Defaults to the current server's tier.\n",
+    "shortDescription": "Get the prime limits",
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "messageidmessage",
@@ -739,9 +779,8 @@
     "signature": "{message.id;message}",
     "longDescription": "Returns the ID of a message.\n",
     "shortDescription": "Get the ID of the message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messagecontentmessage",
@@ -753,8 +792,8 @@
     "aliases": [
       "message"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messagedeletemessage",
@@ -765,8 +804,8 @@
     "aliases": [
       "delete"
     ],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "messagepinnedmessage",
@@ -774,9 +813,8 @@
     "url": "https://docs.atlas.bot/tags/message#messagepinnedmessage",
     "signature": "{message.pinned;message}",
     "shortDescription": "Check whether the message is pinned",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messagepin-reasonmessage",
@@ -785,9 +823,8 @@
     "signature": "{message.pin reason;message}",
     "longDescription": "Pins a message.\n\n#### Arguments\n\n*   `{reason}`: The reason for the action that will be displayed in the Audit Log.\n",
     "shortDescription": "Pin the message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "messageunpin-reasonmessage",
@@ -796,9 +833,8 @@
     "signature": "{message.unpin reason;message}",
     "longDescription": "Unpins a message.\n\n#### Arguments\n\n*   `{reason}`: The reason for the action that will be displayed in the Audit Log.\n",
     "shortDescription": "Unpin the message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "messagepublishmessage",
@@ -807,9 +843,8 @@
     "signature": "{message.publish;message}",
     "longDescription": "Publishes a message. Only works in news channels.\n",
     "shortDescription": "Publish a message in an announcemnent channel",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "messageembed-index0message",
@@ -818,9 +853,8 @@
     "signature": "{message.embed index=0;message}",
     "longDescription": "Get an embed from the message. The index is optional and will default to the first embed if its not provided.\n\n    {=embed;{message.embed}}\n    {$embed.title}\n",
     "shortDescription": "Get the embed of a message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messagereferenceidmessage",
@@ -828,9 +862,8 @@
     "url": "https://docs.atlas.bot/tags/message#messagereferenceidmessage",
     "signature": "{message.referenceId;message}",
     "shortDescription": "Get the ID of the message this message is referencing",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messageaddreactionemojimessage",
@@ -842,8 +875,8 @@
     "aliases": [
       "message.reactionAdd"
     ],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "messageremovereactionemojiusermessage",
@@ -855,8 +888,8 @@
     "aliases": [
       "message.reactionRemove"
     ],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "messageremovereactionsemojimessage",
@@ -868,8 +901,8 @@
     "aliases": [
       "message.reactionsRemove"
     ],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "messagelinkmessage",
@@ -881,8 +914,8 @@
     "aliases": [
       "message.shareLink"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messageauthoridmessage",
@@ -891,9 +924,8 @@
     "signature": "{message.authorId;message}",
     "longDescription": "Returns the ID of the author of a message.\n",
     "shortDescription": "Get the ID of the author of the message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messagechannelidmessage",
@@ -901,9 +933,8 @@
     "url": "https://docs.atlas.bot/tags/message#messagechannelidmessage",
     "signature": "{message.channelId;message}",
     "shortDescription": "Get the ID of the channel the message was sent in",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messagettsmessage",
@@ -919,9 +950,8 @@
     "signature": "{message.mentions;message}",
     "longDescription": "Get a list of mentions from a message. Returns an array of IDs that includes roles, channels and users.\n",
     "shortDescription": "Get the mentions of a message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messagereactions",
@@ -930,9 +960,8 @@
     "signature": "{message.reactions}",
     "longDescription": "Get a list of reactions from a message. Returns an array of objects. For example, this message\n\n<img src=\"https://i.imgur.com/wZiESQ2.png\" alt=\"A screenshot of a message with an :eggplant: and :fortnitedefaultdance: reaction.\" />\n\nWould result in this\n\n```pella\n[\n  {\n    \"count\": 1,\n    \"me\": false,\n    \"emoji\": {\n      \"id\": null,\n      \"animated\": false,\n      \"name\": \"🍆\"\n    }\n  },\n  {\n    \"count\": 1,\n    \"me\": false,\n    \"emoji\": {\n      \"id\": \"538224338269372438\",\n      \"animated\": true,\n      \"name\": null\n    }\n  }\n]\n```\n\n    {=reactions;{message.reactions}}\n    {$reactions.0.count} // 1\n    {$reactions.0.me} // false (whether the bot has reacted with this message)\n    {$reactions.0.emoji.id} // null\n    {$reactions.0.emoji.animated} // false\n    {$reactions.0.emoji.name} // 🍆\n\nSee [objects](../scripts/objects.md) for information on working with objects.\n",
     "shortDescription": "Returns an array of reactions for the message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messageattachments-singletrue-objectsfalsemessage",
@@ -944,8 +973,8 @@
     "aliases": [
       "message.attachment"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "messagecreatedatmessage",
@@ -954,9 +983,8 @@
     "signature": "{message.createdAt;message}",
     "longDescription": "Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a message that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).\n",
     "shortDescription": "Get the time at which the message was created",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestionauthorid",
@@ -967,8 +995,8 @@
     "aliases": [
       "suggestion.author"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestioncontent",
@@ -976,9 +1004,8 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestioncontent",
     "signature": "{suggestion.content}",
     "shortDescription": "Get the content of the context suggestion",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestiondeniedreason",
@@ -987,9 +1014,8 @@
     "signature": "{suggestion.deniedReason}",
     "longDescription": "Why the suggestion was denied. Takes the input from the text input component.\n",
     "shortDescription": "Get the denied reason of the context suggestion",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestionid",
@@ -998,9 +1024,8 @@
     "signature": "{suggestion.id}",
     "longDescription": "The unique ID of the suggestion. Globably incremented.\n",
     "shortDescription": "Get the ID of the context suggestion",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestionmessagelink",
@@ -1008,9 +1033,8 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionmessagelink",
     "signature": "{suggestion.messageLink}",
     "shortDescription": "Get a link to the suggestion message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestioncreatedat",
@@ -1018,9 +1042,8 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestioncreatedat",
     "signature": "{suggestion.createdAt}",
     "shortDescription": "Get the creation date of the context suggestion",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestionmessageid",
@@ -1032,8 +1055,8 @@
     "aliases": [
       "suggestion.message"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestionupdatedat",
@@ -1041,9 +1064,8 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionupdatedat",
     "signature": "{suggestion.updatedAt}",
     "shortDescription": "Get the creation date of the context suggestion",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestionstate",
@@ -1052,9 +1074,8 @@
     "signature": "{suggestion.state}",
     "longDescription": "The state of the suggestion.\n\n`Pending`\n`Approved`\n`Denied`\n",
     "shortDescription": "Get the state of the context suggestion",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestionkeywords",
@@ -1062,9 +1083,8 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionkeywords",
     "signature": "{suggestion.keywords}",
     "shortDescription": "Get a list of extracted keywords for the suggestion",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "suggestionlabels",
@@ -1072,9 +1092,8 @@
     "url": "https://docs.atlas.bot/tags/plugins/suggestion#suggestionlabels",
     "signature": "{suggestion.labels}",
     "shortDescription": "Get the labels of the context suggestion",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "ticketauthorchannel",
@@ -1086,8 +1105,8 @@
     "aliases": [
       "ticket.author"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "ticketchannel",
@@ -1099,8 +1118,8 @@
     "aliases": [
       "ticket.channel"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "ticketclosechannel",
@@ -1109,9 +1128,8 @@
     "signature": "{ticket.close;channel}",
     "longDescription": "Close the ticket channel.\n",
     "shortDescription": "Close a ticket",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "ticketcreate",
@@ -1120,9 +1138,8 @@
     "signature": "{ticket.create}",
     "longDescription": "Open the ticket channel.\n\n#### Arguments\n\n`reason`: Set the reason for the ticket.\n`user`: Set the ticket author.\n`prefix`: Set the ticket prefix.\n",
     "shortDescription": "Create a new ticket",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "ticketprefixchannelprefix",
@@ -1131,9 +1148,8 @@
     "signature": "{ticket.prefix;channel;prefix}",
     "longDescription": "Add a prefix to the beinging of the ticket channel's name. Leave `prefix` blank to return the current prefix.\n",
     "shortDescription": "Set or get a tickets prefix",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "ticketreason",
@@ -1142,9 +1158,8 @@
     "signature": "{ticket.reason}",
     "longDescription": "Gets the reason of the ticket, if one is in context.\n",
     "shortDescription": "Get the reason a ticket was created",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "respondertextmessage",
@@ -1153,9 +1168,8 @@
     "signature": "{responder.text;message}",
     "longDescription": "Appends text to the output message. If there is more text, it will be appended to the existing text.\n\n`{responder.text;Hello World}` will make the output message \"Hello World\"\n`{responder.text;Hello}{responder.text;World}` will make the output message \"Hello World\"\n`{responder.text;Hello}{responder.text;}` empty text will clear existing text.\n",
     "shortDescription": "Add text to the output message.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "responderdm-fallbackfalsemember",
@@ -1164,9 +1178,8 @@
     "signature": "{responder.dm fallback=false;member}",
     "longDescription": "Set the responder to dm a user. This tag can be hit and miss if the user has their direct-messages closed.\n\n`{responder.dm;{user.id}}` will make the message direct-message the user in context.\n`{responder.dm fallback=true;{user.id}}` will send a message to the user and will fall back to the context channel if the user has their direct-mesage closed.\n",
     "shortDescription": "Configure the output message to go to a specific user",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "responderembed",
@@ -1175,9 +1188,8 @@
     "signature": "{responder.embed}",
     "longDescription": "This tag is used to add embeds to the message. Calling it multiple times will add multiple embeds to the message, up to a maximum of 10.\n\n`{responder.embed title=\"Hello world\"}`\n`{responder.embed title=Test timestamp=\"5 hours ago\"}`\n\nEmbed Elements\n`author-image`\n`author-name`\n`author-url`\n`color`\n`description`\n`footer`\n`footer-icon`\n`image`\n`thumbnail`\n`timestamp`\n`title`\n`url`\n\nUse the [Embed Builder](https://staging.atlas.bot/tools/embed-builder) to quickly build an embed.\n\n<details>\n  <summary>Color Defaults</summary>\n  <p><code>Black: #000000\nDark Mode: #36393f\nWhite: #FFFFFF\nRed: #ED4245\nPink: #EB459E\nFuchsia: #EB459E\nPurple: #9C27B0\nBlurple: #5865F2\nBlurple Classic: #7289DA\nDeep Purple: #673AB7\nIndigo: #3F51B5\nBlue: #2196F3\nLight Blue: #03A9F4\nCyan: #00BCD4\nTeal: #009688\nGreen: #57F287\nLight Green: #8BC34A\nLime: #CDDC39\nYellow: #FEE75C\nAmber: #FFC107\nOrange: #FF9800\nDeep Orange: #FF5722\nBrown: #795548\nGrey: #9E9E9E\nBlue Grey: #607D8B\nRole Default: #4f545c\nMagenta: #E91E63</code></p>\n</details>\n",
     "shortDescription": "Attach an embed to the output message.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "responderembedfieldnamevalueinline",
@@ -1186,9 +1198,8 @@
     "signature": "{responder.embedField;name;value;inline}",
     "longDescription": "Add a field to the last created embed.\n\n    {responder.embed title=\"My Embed\" description=\"Fortnite or something idk\"}\n    {responder.embedField name=\"My Field\" value=\"very cool\" inline=true}\n    {responder.embedField name=\"Another One\" value=\"even cooler\" inline=true}\n",
     "shortDescription": "Add a field to an embed",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "responderchannelchannel",
@@ -1197,9 +1208,8 @@
     "signature": "{responder.channel;channel}",
     "longDescription": "Set the channel the message will be sent to. Setting a channel with a context interaction will have the responder ignore that interaction when sending a message. **The context interaction must still be replied to or it will be marked as failed**.\n\n```pella\n// Do some weird logging stuff to a separate channel that the user will never see\n{responder.channel;MY_LOG_CHANNEL}\n{responder.text;{user.mention} ran our command!}\n{responder.send} // Send the log message to the log channel\n\n// Now we reply to the slash command (context interaction). This is required,\n// not replying will have Discord mark the interaction as failed. Depending on a few factors,\n// if we don't reply Atlas will automatically send a \"The action did not output anything\" message\n// to stop it being marked as failed.\n{responder.text;Hi {user.mention}! This is a reply to the context interaction that is required for it not to fail}\n// No need for {responder.send} as it is automatically once the script finishes executing if its configured\n```\n",
     "shortDescription": "Configure the output channel for the responder content",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "responderreset",
@@ -1208,9 +1218,8 @@
     "signature": "{responder.reset}",
     "longDescription": "Reset any options already applied to the responder.\n\n```\n\n{responder.text;Hello}\n{responder.reset}\n{responder.text;Something bad happened!}\n\n```\n\nThis would output \"Something bad happened!\"\n",
     "shortDescription": "Reset the responder settings to its initial state",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "responderephemeral",
@@ -1218,9 +1227,8 @@
     "url": "https://docs.atlas.bot/tags/responder#responderephemeral",
     "signature": "{responder.ephemeral}",
     "shortDescription": "Interaction-only; Whether the output message should be only viewable by the user who created the interaction.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "respondererrormessage",
@@ -1228,9 +1236,8 @@
     "url": "https://docs.atlas.bot/tags/responder#respondererrormessage",
     "signature": "{responder.error;message}",
     "shortDescription": "The same as {responder.text} except it does some error-related things, like making embeds red and making the message ephemeral. You should use this whenever sending an error message.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "respondersend-return_idfalse-ignore_interactionfalse",
@@ -1239,9 +1246,8 @@
     "signature": "{responder.send return_id=false ignore_interaction=false}",
     "longDescription": "Send the message immediately. This will automatically call `{responder.reset}` if the message is sent successfully.\n\n`return_id` can be used to get the output message ID. **return\\_id does not work when replying to an interaction**. Discord does not give us message data when we send an interaction, however because the responder will assume you mean the context interaction, leaving out the ID should do effectively the same thing.\n\n`ignore_interaction` can be set to have the responder ignore the context interaction and reply with a regular message in the context channel. **The interaction still needs a reply or it will be marked as failed**, you should only use this to send off a separate message.\n\nIf the responder is configured when the script finishes, it will be sent automatically. This means you probably don't need `{responder.send}` unless you're sending multiple messages.\n",
     "shortDescription": "Send the configured responder message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "respondereditmessage",
@@ -1250,9 +1256,8 @@
     "signature": "{responder.edit;message}",
     "longDescription": "Set the responder to edit the given message. Atlas must have sent the message to edit it.\nPlace after the new message content.\n",
     "shortDescription": "Edit a message with the configured responder message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "responderbutton-label-handler-stateless-state-url-emoji-styleprimary-actionrowindex-disabledfalse",
@@ -1261,9 +1266,8 @@
     "signature": "{responder.button label handler? stateless? state? url? emoji? style=primary actionRowIndex? disabled=false}",
     "longDescription": "Add a button to the message.\n\n#### Arguments\n\n*   `label` is the button text.\n*   `handler` is the value of the component callback action to call when the button is clicked\n*   `state` is an optional payload that will be accessible in the component callback action\n*   `url` can be used to link to external resources\n*   `emoji` is the name of an emoji to add to the button. Can be a guild emoji or a native emoji.\n*   `stateless` Whether this button should be forced to be a stateless interaction. Required if you don't want the button to expire.\n*   `style` can change the [button style](https://discord.com/developers/docs/interactions/message-components#button-object-button-styles), which defaults to `Primary`. This will be ignored if `url` is present.\n*   `disabled` can be set to `true` to disable the button.\n*   `actionRowIndex` can be used to set the row the button is in. This is useful if you want to have multiple buttons in a row.\n\nIf you want a button to only have an emoji, here is a fun hack. Copy this empty space and paste it into the button label.\n\n    ‎\n",
     "shortDescription": "Add a button to the message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "responderselect-handler-statelessfalse-state-disabledfalse-placeholder-minvalues-maxvalues-actionrowindex-typestringselectoptions",
@@ -1272,9 +1276,8 @@
     "signature": "{responder.select handler stateless=false state? disabled=false placeholder? minValues? maxValues? actionRowIndex? type=StringSelect;options}",
     "longDescription": "Create a new select menu with the given options.\n\n#### Arguments\n\n*   `handler` is the value of the component callback action to call when the menu is interacted with\n*   `state` is an optional payload that will be accessible in the component callback action\n*   `stateless` Whether this menu should be forced to be a stateless interaction. Required if you don't want the menu to expire.\n*   `disabled` can be set to `true` to disable the menu.\n*   `placeholder` is the text to show when no option is selected\n*   `minValues` is the minimum number of options that must be selected\n*   `maxValues` is the maximum number of options that can be selected\n*   `type` can be `StringSelect`, `UserSelect`, `RoleSelect`, `MentionableSelect`, or `ChannelSelect`.\n*   `actionRowIndex` can be used to set the row the menu is in. This is useful if you want to have multiple menus on a message.\n\n`options` is an array of [select options](https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure), and is required for `StringSelect` menus.\n\n    {=options;{{\n      \"value\": [\n          {\n              \"label\": \"Option One\",\n              \"value\": \"1\"\n          },\n          {\n              \"label\": \"Option Two\",\n              \"value\": \"2\"\n          }\n      ]\n    }}}\n\n    {responder.select handler=my_callback placeholder=\"Select an option\";{$options.value}}\n",
     "shortDescription": "Add a select menu to the message",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "responderreferencemessage",
@@ -1283,9 +1286,18 @@
     "signature": "{responder.reference;message?}",
     "longDescription": "Set the responder to reference the given message. Call with no params, `{responder.reference}`, to stop the bot replying to the context message.\n",
     "shortDescription": "Reference a message or remove the existing reference",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "respondersendmodaltitlehandlerstatelesscomponentsstate",
+    "name": "responder.sendModal",
+    "url": "https://docs.atlas.bot/tags/responder#respondersendmodaltitlehandlerstatelesscomponentsstate",
+    "signature": "{responder.sendModal;title;handler;stateless?;components;state?}",
+    "longDescription": "Replies to an interaction with a modal.\n\n*   `title` The title of the modal.\n*   `handler` The name of the component callback handler to use for the modal.\n*   `stateless` Whether the custom id should be forced to stateless. Defaults to `false`.\n*   `components` The components to add to the modal.\n*   `state` The state to pass to the callback.\n\nThis tag will create a modal with the given title and components, and send it to the user who initiated the interaction. The modal will be associated with the provided handler, which will be called when the user submits the modal.\n\n**Example:**\n\n    {=data;{{\n      \"components\": [\n        {\n          \"type\": 1,\n          \"components\": [\n            {\n              \"type\": 4,\n              \"custom_id\": \"my_input\",\n              \"style\": \"short\",\n              \"label\": \"Your Name\",\n              \"required\": true\n            }\n          ]\n        }\n      ]\n    }}}\n\n    {responder.sendModal \n      title=\"Example Modal\" \n      handler=\"my_modal_handler\" \n      components={$data.components}\n    }\n\nThis tag will create a modal with the title \"Example Modal\" and a single input field labelled \"Your Name\". The handler action \"my\\_modal\\_handler\" will be called when the user submits the modal. The values will be available in the callback action as `{$fields}`.\n",
+    "shortDescription": "Reply to an interaction with a modal",
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "roleidrole",
@@ -1293,9 +1305,8 @@
     "url": "https://docs.atlas.bot/tags/role#roleidrole",
     "signature": "{role.id;role}",
     "shortDescription": "Get the id of the given role.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolenamerole",
@@ -1303,9 +1314,8 @@
     "url": "https://docs.atlas.bot/tags/role#rolenamerole",
     "signature": "{role.name;role}",
     "shortDescription": "Get the name of the given role.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolemention-allow_mentionrole",
@@ -1317,8 +1327,8 @@
     "aliases": [
       "role"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolepositionrole",
@@ -1326,9 +1336,8 @@
     "url": "https://docs.atlas.bot/tags/role#rolepositionrole",
     "signature": "{role.position;role}",
     "shortDescription": "Get the position of the given role.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolecolorrole",
@@ -1339,8 +1348,8 @@
     "aliases": [
       "role.color"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolemanagedrole",
@@ -1349,9 +1358,8 @@
     "signature": "{role.managed;role}",
     "longDescription": "Returns `true` for managed roles. ex: Server Boost and Bot roles.\n",
     "shortDescription": "Get whether the given role is managed.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolementionablerole",
@@ -1360,9 +1368,8 @@
     "signature": "{role.mentionable;role}",
     "longDescription": "Returns a boolean indicating whether the role can be mentioned.\n",
     "shortDescription": "Get whether the given role is mentionable.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolecreatedat",
@@ -1370,9 +1377,8 @@
     "url": "https://docs.atlas.bot/tags/role#rolecreatedat",
     "signature": "{role.createdAt}",
     "shortDescription": "Get the created at date of the given role.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolehaspermissionpermission_namerole",
@@ -1381,9 +1387,8 @@
     "signature": "{role.hasPermission;permission_name;role}",
     "longDescription": "Check whether the role has the specified permission.\n\n`{role.hasPermission;administrator}`\n",
     "shortDescription": "Check whether the role has the given permission",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "rolehoisted",
@@ -1392,9 +1397,8 @@
     "signature": "{role.hoisted}",
     "longDescription": "Returns a boolean indicating whether the role is hoisted above other roles in the member list.\n",
     "shortDescription": "Get whether the given role is hoisted.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "roleedit-name-color-reasonrole",
@@ -1403,9 +1407,8 @@
     "signature": "{role.edit name color reason;role}",
     "longDescription": "Edit the role.\n\n`name` is the new role name\n`color` is the new colour of the role\n`reason` is the reason for editing this role\n\n    {role.edit name=\"Very cool\" colour=teal}\n\n<details>\n  <summary>Color Defaults</summary>\n  <p><code>Black: #000000\nDark Mode: #36393f\nWhite: #FFFFFF\nRed: #ED4245\nPink: #EB459E\nFuchsia: #EB459E\nPurple: #9C27B0\nBlurple: #5865F2\nBlurple Classic: #7289DA\nDeep Purple: #673AB7\nIndigo: #3F51B5\nBlue: #2196F3\nLight Blue: #03A9F4\nCyan: #00BCD4\nTeal: #009688\nGreen: #57F287\nLight Green: #8BC34A\nLime: #CDDC39\nYellow: #FEE75C\nAmber: #FFC107\nOrange: #FF9800\nDeep Orange: #FF5722\nBrown: #795548\nGrey: #9E9E9E\nBlue Grey: #607D8B\nRole Default: #4f545c\nMagenta: #E91E63</code></p>\n</details>\n",
     "shortDescription": "Edit a roles settings",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "rolecreate-name-color-reason-return_idrole",
@@ -1414,9 +1417,8 @@
     "signature": "{role.create name color reason return_id;role}",
     "longDescription": "Create a new role.\n\n`name` is the name of the role\n`color` is the colour of the role\n`reason` is the reason for creating the role\n`return_id` is whether to return the created roles ID.\n\n<details>\n  <summary>Color Defaults</summary>\n  <p><code>Black: #000000\nDark Mode: #36393f\nWhite: #FFFFFF\nRed: #ED4245\nPink: #EB459E\nFuchsia: #EB459E\nPurple: #9C27B0\nBlurple: #5865F2\nBlurple Classic: #7289DA\nDeep Purple: #673AB7\nIndigo: #3F51B5\nBlue: #2196F3\nLight Blue: #03A9F4\nCyan: #00BCD4\nTeal: #009688\nGreen: #57F287\nLight Green: #8BC34A\nLime: #CDDC39\nYellow: #FEE75C\nAmber: #FFC107\nOrange: #FF9800\nDeep Orange: #FF5722\nBrown: #795548\nGrey: #9E9E9E\nBlue Grey: #607D8B\nRole Default: #4f545c\nMagenta: #E91E63</code></p>\n</details>\n",
     "shortDescription": "Create a guild role",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "roledelete-reasonrole",
@@ -1425,9 +1427,8 @@
     "signature": "{role.delete reason;role}",
     "longDescription": "> This tag can do serious damage. Make sure you are properly restricting access to any scripts using this tag. {.is-warning}\n\nDelete a role.\n\n`reason` is why you are deleting this role.\n",
     "shortDescription": "Delete a role",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "roleiconsizehash",
@@ -1435,9 +1436,8 @@
     "url": "https://docs.atlas.bot/tags/role#roleiconsizehash",
     "signature": "{role.icon;size;hash}",
     "shortDescription": "Get the icon of the given role.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "serverid",
@@ -1448,8 +1448,8 @@
     "aliases": [
       "guild.id"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "servername",
@@ -1460,8 +1460,8 @@
     "aliases": [
       "guild.name"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "servericonsizehash",
@@ -1476,8 +1476,8 @@
       "server.icon_url",
       "server.iconURL"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "serversplashsizehash",
@@ -1489,8 +1489,8 @@
     "aliases": [
       "guild.splash"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "serverbannersizesplash",
@@ -1508,8 +1508,8 @@
     "aliases": [
       "guild.channels"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "serverroles",
@@ -1520,8 +1520,8 @@
     "aliases": [
       "guild.roles"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "servershardid",
@@ -1533,8 +1533,8 @@
     "aliases": [
       "guild.shardId"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "serverownerid",
@@ -1546,8 +1546,8 @@
       "guild.ownerId",
       "server.owner_id"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "servermembercount",
@@ -1560,8 +1560,8 @@
       "guild.memberCount",
       "server.member_count"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "servercreatedat",
@@ -1573,8 +1573,8 @@
     "aliases": [
       "guild.createdAt"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "serverprefix",
@@ -1586,8 +1586,8 @@
     "aliases": [
       "guild.prefix"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "serversubscriptiontier",
@@ -1601,8 +1601,8 @@
       "server.primeTier",
       "guild.primeTier"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "serversubscriptionuser",
@@ -1616,8 +1616,23 @@
       "server.primeUser",
       "guild.primeUser"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "serverbotid",
+    "name": "server.botId",
+    "url": "https://docs.atlas.bot/tags/server#serverbotid",
+    "signature": "{server.botId}",
+    "longDescription": "Returns the ID of the bot.\nNormally this will always be the Id for Atlas, but when using custom bots this may return the ID of the custom bot.\n",
+    "shortDescription": "Get the id of the bot",
+    "aliases": [
+      "guild.botId",
+      "guild.applicationId",
+      "server.applicationId"
+    ],
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "storesetkeyvalue",
@@ -1626,9 +1641,8 @@
     "signature": "{store.set;key;value}",
     "longDescription": "Adds an item to the store. `value` can be an object, array, string, number, etc. `key` will be coerced to a string.\n",
     "shortDescription": "Store a persistent value by a key",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "storegetkey",
@@ -1636,9 +1650,8 @@
     "url": "https://docs.atlas.bot/tags/store#storegetkey",
     "signature": "{store.get;key}",
     "shortDescription": "Get a persistent value by a key",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "storedeletekey",
@@ -1646,9 +1659,8 @@
     "url": "https://docs.atlas.bot/tags/store#storedeletekey",
     "signature": "{store.delete;key}",
     "shortDescription": "Delete a persistent value by a key",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "usermentionuser",
@@ -1661,8 +1673,8 @@
       "user",
       "mention"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "useriduser",
@@ -1671,9 +1683,8 @@
     "signature": "{user.id;user}",
     "longDescription": "Returns the ID of a user.\n",
     "shortDescription": "Get the users id",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userusernameuser",
@@ -1685,8 +1696,8 @@
     "aliases": [
       "user.name"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userbotuser",
@@ -1695,9 +1706,8 @@
     "signature": "{user.bot;user}",
     "longDescription": "Returns a boolean whether a user is a bot account.\n",
     "shortDescription": "Check whether this user is a bot",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "usertaguser",
@@ -1709,8 +1719,8 @@
     "aliases": [
       "user.idname"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userdiscriminatoruser",
@@ -1719,9 +1729,8 @@
     "signature": "{user.discriminator;user}",
     "longDescription": "Returns the discriminator of a user, which is the four digits at the end of the username.\n",
     "shortDescription": "Get the users discriminator.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "useravataruser",
@@ -1737,8 +1746,8 @@
       "user.iconURL",
       "user.icon_url"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userrolesmember",
@@ -1747,9 +1756,8 @@
     "signature": "{user.roles;member}",
     "longDescription": "Returns an array of IDs for all the roles of a user.\n\n    {choose;{user.roles}}  // A random role the user has\n",
     "shortDescription": "Get an array of ids corresponding to roles the user has.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "usernicknamemember",
@@ -1758,9 +1766,8 @@
     "signature": "{user.nickname;member}",
     "longDescription": "Returns the display name of a user. This will be their nickname if they have one set and their username otherwise.\n",
     "shortDescription": "Get the users nickname. Returns the users username if they have no nickname.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userjoinedatmember",
@@ -1772,8 +1779,8 @@
     "aliases": [
       "user.joined_at"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "usercreatedatuser",
@@ -1782,9 +1789,8 @@
     "signature": "{user.createdAt;user}",
     "longDescription": "Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#description) for the creation date of a user's Discord account that can be used with [{time}](https://documentation.atlas.bot/en/scripts/tags/global#time-formattime).\n",
     "shortDescription": "Get the time the user created their account.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "useredit-nick-mute-deaf-channelmember",
@@ -1793,9 +1799,8 @@
     "signature": "{user.edit nick mute deaf channel;member}",
     "longDescription": "Edits a user.\n\n#### Arguments\n\n*   `nick`: The user's new nickname. Leave empty to clear.\n*   `mute`: Whether the user will be server muted in voice channels.\n*   `deaf`: Whether the user will be server deafened in voice channels.\n*   `channel`: The new channel to move the user to if they are in voice channel.\n",
     "shortDescription": "Edit the state or options for a user.",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "useraddrole-reasonrolemember",
@@ -1807,8 +1812,8 @@
     "aliases": [
       "user.roleAdd"
     ],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "userremoverole-reasonrolemember",
@@ -1820,8 +1825,8 @@
     "aliases": [
       "user.roleRemove"
     ],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "usercolourmember",
@@ -1833,8 +1838,8 @@
     "aliases": [
       "user.color"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userhaspermissionpermissionsmember",
@@ -1846,8 +1851,8 @@
     "aliases": [
       "user.hasPermissions"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userleveluser",
@@ -1856,9 +1861,8 @@
     "signature": "{user.level;user?}",
     "longDescription": "Gets the level of a user.\n\n*   `user` the user to get the level of. Defaults to the context user.\n",
     "shortDescription": "Get the users level",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userxpuserscoped",
@@ -1871,8 +1875,8 @@
       "user.levelXP",
       "user.totalXP"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "usersetxpxptargetaddfalsesyncfalse",
@@ -1881,9 +1885,8 @@
     "signature": "{user.setXP;xp;target?;add=false;sync=false}",
     "longDescription": "Sets the users XP to the given amount.\n\n*   `xp` the amount of XP to set.\n*   `target` the user to set the XP of. Defaults to the context user.\n*   `add` whether to add the XP to their existing total.\n*   `sync` whether to sync level rewards for the user.\n",
     "shortDescription": "Set the users XP amount",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "usersetlevelleveltargetaddfalsesyncfalse",
@@ -1892,9 +1895,8 @@
     "signature": "{user.setLevel;level;target?;add=false;sync=false}",
     "longDescription": "Sets the users level to the given amount.\n\n*   `level` the amount of levels to set.\n*   `target` the user to set the level of. Defaults to the context user.\n*   `add` whether to add the levels to their existing total.\n*   `sync` whether to sync level rewards for the user.\n",
     "shortDescription": "Set the users level",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": true
+    "expensive": true,
+    "disableInLoop": false
   },
   {
     "id": "usernextleveluser",
@@ -1902,9 +1904,8 @@
     "url": "https://docs.atlas.bot/tags/user#usernextleveluser",
     "signature": "{user.nextLevel;user?}",
     "shortDescription": "Get the next level the user will achieve",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "usernextlevelxpuser",
@@ -1912,9 +1913,8 @@
     "url": "https://docs.atlas.bot/tags/user#usernextlevelxpuser",
     "signature": "{user.nextLevelXP;user?}",
     "shortDescription": "Get the xp required for the user's next level",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userremainingxpuser",
@@ -1923,9 +1923,8 @@
     "signature": "{user.remainingXP;user?}",
     "longDescription": "Gets the amount of XP a user needs to level up to the next level.\n",
     "shortDescription": "Get the amount of xp the user needs to level up",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userrankuser",
@@ -1933,9 +1932,8 @@
     "url": "https://docs.atlas.bot/tags/user#userrankuser",
     "signature": "{user.rank;user?}",
     "shortDescription": "Get the rank of the user",
-    "aliases": [],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
   },
   {
     "id": "userreward-filterachieved-firsttrue-rawfalse",
@@ -1947,7 +1945,47 @@
     "aliases": [
       "user.rewards"
     ],
-    "disableInLoop": false,
-    "expensive": false
+    "expensive": false,
+    "disableInLoop": false
+  },
+  {
+    "id": "userkick-nodmfalse-returncaseidfalse-moderatortargetreason",
+    "name": "user.kick",
+    "url": "https://docs.atlas.bot/tags/user#userkick-nodmfalse-returncaseidfalse-moderatortargetreason",
+    "signature": "{user.kick noDM=false returnCaseId=false moderator?;target;reason}",
+    "longDescription": "Kicks a user from the server.\n\n*   `noDM` whether to send the user a DM about the kick. Defaults to `false`.\n*   `returnCaseId` whether to return the case ID of the kick. Defaults to `false`.\n*   `moderator` the moderator who is kicking the user. Defaults to the context user.\n*   `target` the user to kick.\n*   `reason` the reason for the kick.\n",
+    "shortDescription": "Kick a member from the server.",
+    "expensive": true,
+    "disableInLoop": false
+  },
+  {
+    "id": "userban-nodmfalse-purgedays-returncaseidfalse-moderatortargetdurationreason",
+    "name": "user.ban",
+    "url": "https://docs.atlas.bot/tags/user#userban-nodmfalse-purgedays-returncaseidfalse-moderatortargetdurationreason",
+    "signature": "{user.ban noDM=false purgeDays returnCaseId=false moderator?;target;duration;reason}",
+    "longDescription": "Bans a user from the server.\n\n*   `noDM` whether to send the user a DM about the ban. Defaults to `false`.\n*   `purgeDays` the number of days of messages to delete from the user. Does not purge by default.\n*   `returnCaseId` whether to return the case ID of the ban. Defaults to `false`.\n*   `moderator` the moderator who is banning the user. Defaults to the context user.\n*   `target` the user to ban.\n*   `duration` the duration of the ban in milliseconds. Defaults to a permanent ban.\n*   `reason` the reason for the ban.\n",
+    "shortDescription": "Ban a member from the server.",
+    "expensive": true,
+    "disableInLoop": false
+  },
+  {
+    "id": "userwarn-nodmfalse-returncaseidfalse-moderatortargetreasonduration",
+    "name": "user.warn",
+    "url": "https://docs.atlas.bot/tags/user#userwarn-nodmfalse-returncaseidfalse-moderatortargetreasonduration",
+    "signature": "{user.warn noDM=false returnCaseId=false moderator?;target;reason;duration}",
+    "longDescription": "Warns a user.\n\n*   `noDM` whether to send the user a DM about the warn. Defaults to `false`.\n*   `returnCaseId` whether to return the case ID of the warn. Defaults to `false`.\n*   `moderator` the moderator who is warning the user. Defaults to the context user.\n*   `target` the user to warn.\n*   `reason` the reason for the warn.\n*   `duration` the duration of the warn (ex `1d`), permanent by default.\n",
+    "shortDescription": "Add a warning to a user",
+    "expensive": true,
+    "disableInLoop": false
+  },
+  {
+    "id": "usercasecountmembertype",
+    "name": "user.caseCount",
+    "url": "https://docs.atlas.bot/tags/user#usercasecountmembertype",
+    "signature": "{user.caseCount;member?;type?}",
+    "longDescription": "Gets the amount of cases a user has.\n\n*   `member` the user to get the case count of, defaults to the context user.\n*   `type` the type of cases to count. One of `Mute`, `Unmute`, `Kick`, `Ban`, `Unban`, `Warning`.\n",
+    "shortDescription": "Get the amount of cases a user has",
+    "expensive": true,
+    "disableInLoop": false
   }
 ]

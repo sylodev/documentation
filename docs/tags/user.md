@@ -156,3 +156,43 @@ As an example, you could set your level-up notification to this
 ```
 
 Which would send a level-up message only if the user got a new role.
+
+## `{user.kick noDM=false returnCaseId=false moderator?;target;reason}`
+
+Kicks a user from the server.
+
+- `noDM` whether to send the user a DM about the kick. Defaults to `false`.
+- `returnCaseId` whether to return the case ID of the kick. Defaults to `false`.
+- `moderator` the moderator who is kicking the user. Defaults to the context user.
+- `target` the user to kick.
+- `reason` the reason for the kick.
+
+## `{user.ban noDM=false purgeDays returnCaseId=false moderator?;target;duration;reason}`
+
+Bans a user from the server.
+
+- `noDM` whether to send the user a DM about the ban. Defaults to `false`.
+- `purgeDays` the number of days of messages to delete from the user. Does not purge by default.
+- `returnCaseId` whether to return the case ID of the ban. Defaults to `false`.
+- `moderator` the moderator who is banning the user. Defaults to the context user.
+- `target` the user to ban.
+- `duration` the duration of the ban in milliseconds. Defaults to a permanent ban.
+- `reason` the reason for the ban.
+
+## `{user.warn noDM=false returnCaseId=false moderator?;target;reason;duration}`
+
+Warns a user.
+
+- `noDM` whether to send the user a DM about the warn. Defaults to `false`.
+- `returnCaseId` whether to return the case ID of the warn. Defaults to `false`.
+- `moderator` the moderator who is warning the user. Defaults to the context user.
+- `target` the user to warn.
+- `reason` the reason for the warn.
+- `duration` the duration of the warn (ex `1d`), permanent by default.
+
+## `{user.caseCount;member?;type?}`
+
+Gets the amount of cases a user has.
+
+- `member` the user to get the case count of, defaults to the context user.
+- `type` the type of cases to count. One of `Mute`, `Unmute`, `Kick`, `Ban`, `Unban`, `Warning`.

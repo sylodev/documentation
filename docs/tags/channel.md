@@ -24,6 +24,12 @@ Checks if a channel is marked as NSFW.
 
 Returns the name of a channel.
 
+## `{channel.position;channel}`
+
+Returns the position of the channel.
+
+Discord sorts channels by their category, then their type, then their position. Two channels can have the same position and a channel at the bottom of the list can have a higher position than a channel at the top of the list, because of the category-first sorting.
+
 ## `{channel.lastMessageId;channel}`
 
 Returns the ID of the last message sent in a channel.
@@ -79,6 +85,13 @@ Creates a new thread.
 - `is_private` whether the read is private, must not have a message to be private.
 - `return_id` whether to return the ID of the created thread.
 - `channel` the channel to create the thread on.
+
+## `{channel.getPins;channel?}`
+
+Returns a list of pinned message IDs in a channel.
+
+- `channel` The channel to get the pins from. If not provided, the context channel is used.
+
 
 ## `{channel.create name type topic nsfw parent return_id;channel}`
 

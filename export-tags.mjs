@@ -7,7 +7,7 @@ import { dirname, resolve } from "path";
 import rrdir from "rrdir";
 import { fetch } from "undici";
 
-const TAG_REGEX = /^\{(?<name>[A-z\.]{2,}).*}$/;
+const TAG_REGEX = /^\{(?<name>[A-z0-9\.]{2,}).*}$/;
 const TAGS_MD_DIR = resolve(dirname(import.meta.url.slice(7)), "docs/tags");
 
 /**

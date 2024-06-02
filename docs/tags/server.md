@@ -74,3 +74,8 @@ Returns the subscription tier level of the server.
 ## `{server.subscriptionUser}`
 
 Returns the ID of the user who added the subscription to the server.
+
+## `{server.botId}`
+
+Returns the ID of the bot.
+Normally this will always be the Id for Atlas, but when using custom bots this may return the ID of the custom bot.

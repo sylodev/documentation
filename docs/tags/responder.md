@@ -208,3 +208,44 @@ Create a new select menu with the given options.
 ## `{responder.reference;message?}`
 
 Set the responder to reference the given message. Call with no params, `{responder.reference}`, to stop the bot replying to the context message.
+
+## `{responder.sendModal;title;handler;stateless?;components;state?}`
+
+Replies to an interaction with a modal.
+
+- `title` The title of the modal.
+- `handler` The name of the component callback handler to use for the modal.
+- `stateless` Whether the custom id should be forced to stateless. Defaults to `false`.
+- `components` The components to add to the modal.
+- `state` The state to pass to the callback.
+
+This tag will create a modal with the given title and components, and send it to the user who initiated the interaction. The modal will be associated with the provided handler, which will be called when the user submits the modal.
+
+**Example:**
+
+```
+{=data;{{
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "type": 4,
+          "custom_id": "my_input",
+          "style": "short",
+          "label": "Your Name",
+          "required": true
+        }
+      ]
+    }
+  ]
+}}}
+
+{responder.sendModal 
+  title="Example Modal" 
+  handler="my_modal_handler" 
+  components={$data.components}
+}
+```
+
+This tag will create a modal with the title "Example Modal" and a single input field labelled "Your Name". The handler action "my_modal_handler" will be called when the user submits the modal. The values will be available in the callback action as `{$fields}`.
