@@ -50,6 +50,8 @@ Returns a [timestamp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 
 ## `{user.edit nick mute deaf channel;member}`
 
+> This tag is part of the `Mutate User` expensive group.
+
 Edits a user.
 
 #### Arguments
@@ -61,6 +63,9 @@ Edits a user.
 
 ## `{user.addrole reason;role;member}`
 
+> This tag is part of the `Mutate User` expensive group.
+> This tag is marked `Dangerous` and must be enabled in Advanced Settings.
+
 Gives a user a role.
 
 #### Arguments
@@ -69,6 +74,8 @@ Gives a user a role.
 - `role`: The role to add to the user.
 
 ## `{user.removerole reason;role;member}`
+
+> This tag is part of the `Mutate User` expensive group.
 
 Removes a role from a user.
 
@@ -101,6 +108,8 @@ Gets the level of a user.
 
 ## `{user.setXP;xp;target?;add=false;sync=false}`
 
+> This tag is part of the `Mutate User` expensive group.
+
 Sets the users XP to the given amount.
 
 - `xp` the amount of XP to set.
@@ -109,6 +118,8 @@ Sets the users XP to the given amount.
 - `sync` whether to sync level rewards for the user.
 
 ## `{user.setLevel;level;target?;add=false;sync=false}`
+
+> This tag is part of the `Mutate User` expensive group.
 
 Sets the users level to the given amount.
 

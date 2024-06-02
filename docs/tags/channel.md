@@ -62,6 +62,8 @@ Returns true if the channel can accept messages.
 
 ## `{channel.edit name? topic? nsfw? archived? ratelimit? parent?;channel}`
 
+> This tag is part of the `Mutate Channel` expensive group.
+
 Updates a channel.
 
 #### Arguments
@@ -74,6 +76,8 @@ Updates a channel.
 - `parent`: The category to move the channel to.
 
 ## `{channel.startThread auto_archive_duration? ratelimit? invitable? is_private? return_id? channel?;name;message?}`
+
+> This tag is part of the `Mutate Channel` expensive group.
 
 Creates a new thread.
 
@@ -95,6 +99,8 @@ Returns a list of pinned message IDs in a channel.
 
 ## `{channel.create name type topic nsfw parent return_id;channel}`
 
+> This tag is part of the `Mutate Channel` expensive group.
+
 Creates a new channel.
 
 #### Arguments
@@ -108,16 +114,25 @@ Creates a new channel.
 
 ## `{channel.delete;channel}`
 
-> This tag can do serious damage if you are not extremely careful with validating inputs. {.is-warning}
+> This tag is part of the `Mutate Channel` expensive group.
+> This tag is marked `Dangerous` and must be enabled in Advanced Settings.
 
 Deletes a channel.
 
-## `{channel.purge;channel}`
+## `{channel.position;channel}`
+
+Get the position of a channel.
+
+## `{channel.purge;limit?;channel?}`
+
+> This tag is part of the `Mutate Message` expensive group.
+> This tag is marked `Dangerous` and must be enabled in Advanced Settings.
+
 Purge messages from a channel with various parameters.
 
 #### Arguments
 - `limit?` default: 100: The number of messages to purge, applied before filtering.
-- `channel?`: The channel to purge messages in.
+- `channel?`: The channel to purge messages in, defaults to the context channel.
 - `includePinned?` default: false: Whether to include pinned messages.
 - `newerThan?`: Messages that are newer than this time will be purged. Accepts a time value.
 - `olderThan?`: Messages that are older than this time will be purged. Accepts a time value.

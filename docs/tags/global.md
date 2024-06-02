@@ -29,7 +29,7 @@ Formats time as a string. Is compatible with any of the `.createdAt` tags.
 
 - `time` Can be any time that the bot can parse. This includes millisecond timestamps `1644856250309`, unix timestamps `1644856250`, relative times `5 hours`, ISO timestamps `2022-02-14T16:31:26.725Z` and many others. Defaults to the current time.
 - `format` Can be a [timestamp style](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) - names or descriptions both work. If no style is provided, unix timestamp is returned. This should only be used when outputting time to users as it returns the time formatted with Discord's timestamp markdown.
-- `to` The Luxon format to use. Incompatible with `format`. See [Luxon's documentation](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) for a list of all available formats.
+- `to` The Luxon format to use. Incompatible with `format`. See [Luxon's documentation](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for a list of all available formats.
 
 ```json
 {time}  // 1636084903
@@ -43,12 +43,14 @@ Formats time as a string. Is compatible with any of the `.createdAt` tags.
 Changes the casing of a string.
 
 Accepted modes:
-`lower` for lowercase
-`upper` for uppercase
-`first` to capitalise the first letter
-`title` for "Title Case"
-`camel` for camelCase
-`constant` for CONSTANT_CASE
+
+- `lower` this is lower case
+- `upper` THIS IS UPPER CASE
+- `first` This is first case
+- `title` This Is Title Case
+- `camel` thisIsCamelCase
+- `constant` THIS_IS_CONSTANT_CASE
+- `mocking` tHiS iS mOcKiNg CaSe
 
 ## `{length;string_or_array}`
 
@@ -88,6 +90,8 @@ Create a snippet of a string, truncating it if it is over the max length.
 - `target`: The string to create a snippet from.
 
 ## `{settings;pluginCode;settingsKey}`
+
+> This tag is part of the `General` expensive group.
 
 Get a settings value from a plugin. This tag is intended mostly for internal use and as such there is no official list of all the settings keys available.
 
@@ -136,6 +140,8 @@ Replaces matches of `pattern` in `target` by `replacement`. [Regular expressions
 
 ## `{sleep;duration}`
 
+> This tag is part of the `Stall` expensive group.
+
 Holds up processing. This does not schedule execution for later, it pauses execution until the sleep duration is up. You should only use this in very specific cases and avoid it entirely if possible.
 
 ## `{math precision_fix=true;expr}`
@@ -156,6 +162,8 @@ Gets a random item from a list. `length` is the number of items to return. When 
 ```
 
 ## `{fetch;link}`
+
+> This tag is part of the `Stall` expensive group.
 
 Performs a HTTP request to a URL.
 
@@ -300,6 +308,8 @@ Generate a random string.
 - `alphabet` is the alphabet to use. If not specified, it is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`
 
 ## `{import;scriptId}`
+
+> This tag is part of the `Import` expensive group.
 
 Import a `script` action. View more information on the [imports](../scripts/imports.md) guide.
 

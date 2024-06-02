@@ -32,7 +32,21 @@ module.exports = {
     {
       type: "category",
       label: "Actions",
-      items: ["actions/triggers", "actions/locking"],
+      items: [
+        "actions/commands",
+        "actions/messages",
+        "actions/keywords",
+        "actions/intervals",
+        "actions/scripts",
+        "actions/callback",
+        "actions/menus",
+        "actions/reactions",
+        "actions/join-leave",
+        "actions/roles",
+        "actions/voice",
+        "actions/boosts",
+        "actions/webhooks",
+      ],
     },
     {
       type: "category",
@@ -75,7 +89,11 @@ module.exports = {
     {
       type: "category",
       label: "Topics",
-      items: ["topics/migrating-to-slash-commands", "topics/command-syncing"],
+      items: [
+        "topics/limits",
+        "topics/migrating-to-slash-commands",
+        "topics/command-syncing",
+        "topics/action-locking"],
     },
   ],
 };

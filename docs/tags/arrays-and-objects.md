@@ -65,6 +65,8 @@ Adds an item to the front of an array. Essentially the same as `{push}` but the 
 
 ## `{for;init;iterable;body}`
 
+> This tag is part of the `General` expensive group.
+
 Iterates over array items until `{break}` is encountered or it reaches the end of the array.
 
 ```json
@@ -98,10 +100,11 @@ Check whether an array includes an item.
 {includes;{$array};two} // true
 ```
 
-## `{sort;array;key?}`
+## `{sort reverse?;array;key?}`
 
 Sort an array. Returns a new array and does not mutate the original.
 
+- `reverse?` whether to reverse the array after sorting. Defaults to `false`.
 - `array` the array to sort
 - `key` the key to sort by if the array is an array of objects.
 
@@ -123,13 +126,14 @@ Return the index at which a given element can be found in the array. Defaults to
 - `array` the array to index
 - `value` the value to look for
   
-## `{filter;array;value;operator?}`
+## `{filter;array;value;operator?;key?}`
 
 Return an array with just the elements that pass a check.
 
 - `array` the array to filter
 - `value` the value to filter by
 - `operator` the operator to filter by
+- `key` the key to filter by if the array is an array of objects.
 
 The available operators are `==`, `===`, `!=`, `!==`, `>`, `>=`, `<`, `<=`, `startswith`, `endswith`, `contains`, `includes`, `has` and `matches`.
 

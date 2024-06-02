@@ -10,6 +10,9 @@ Returns a string with the content of a message.
 
 ## `{message.delete;message}`
 
+> This tag is part of the `Mutate Message` expensive group.
+> This tag is marked `Dangerous`.
+
 Deletes a message.
 
 ## `{message.pinned;message}`
@@ -17,6 +20,8 @@ Deletes a message.
 Checks if a message is pinned.
 
 ## `{message.pin reason;message}`
+
+> This tag is part of the `Mutate Message` expensive group.
 
 Pins a message.
 
@@ -26,6 +31,8 @@ Pins a message.
 
 ## `{message.unpin reason;message}`
 
+> This tag is part of the `Mutate Message` expensive group.
+
 Unpins a message.
 
 #### Arguments
@@ -33,6 +40,8 @@ Unpins a message.
 - `{reason}`: The reason for the action that will be displayed in the Audit Log.
 
 ## `{message.publish;message}`
+
+> This tag is part of the `Mutate Message` expensive group.
 
 Publishes a message. Only works in news channels.
 
@@ -51,6 +60,8 @@ The ID of the message this message is replying to.
 
 ## `{message.addReaction;emoji;message}`
 
+> This tag is part of the `Mutate Reaction` expensive group.
+
 Adds a reaction to a message.
 
 #### Arguments
@@ -59,6 +70,8 @@ Adds a reaction to a message.
 
 ## `{message.removeReaction;emoji;user;message}`
 
+> This tag is part of the `Mutate Reaction` expensive group.
+
 Removes a reaction from a message.
 
 #### Arguments
@@ -66,6 +79,8 @@ Removes a reaction from a message.
 - `{emoji}`: The emoji to remove as the reaction.
 
 ## `{message.removeReactions;emoji;message}`
+
+> This tag is part of the `Mutate Reaction` expensive group.
 
 Removes all reactions, optionally for a specific emoji.
 
