@@ -110,7 +110,7 @@ Deletes a channel.
 
 Get the position of a channel.
 
-## `{channel.purge;channel}`
+## `{channel.purge;limit?;channel?}`
 
 > This tag is part of the `Mutate Message` expensive group.
 > This tag is marked `Dangerous` and must be enabled in Advanced Settings.
@@ -119,7 +119,7 @@ Purge messages from a channel with various parameters.
 
 #### Arguments
 - `limit?` default: 100: The number of messages to purge, applied before filtering.
-- `channel?`: The channel to purge messages in.
+- `channel?`: The channel to purge messages in, defaults to the context channel.
 - `includePinned?` default: false: Whether to include pinned messages.
 - `newerThan?`: Messages that are newer than this time will be purged. Accepts a time value.
 - `olderThan?`: Messages that are older than this time will be purged. Accepts a time value.
