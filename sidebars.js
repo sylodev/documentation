@@ -84,6 +84,7 @@ module.exports = {
         "tags/server",
         "tags/store",
         "tags/user",
+        "tags/action"
       ],
     },
     {

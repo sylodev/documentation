@@ -313,6 +313,8 @@ Generate a random string.
 
 Import a `script` action. View more information on the [imports](../scripts/imports.md) guide.
 
+- `scriptId` Can be either the ID of the script or the name of the script.
+
 ```json
 // In the script
 [#function;my_function]
