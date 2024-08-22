@@ -171,7 +171,7 @@ Performs a HTTP request to a URL.
 `application/xml`, `text/xml`, `application/rss+xml` and `application/atom+xml` will be parsed as XML.
 
 ```
-{=data;{fetch;https://atlas.bot/api/status}}\n{$data.body.ok}  // true
+{=data;{fetch;https://atlas.bot/api/status}}\n{$data.ok}  // true
 ```
 
 ## `{or boolean?;...}`
