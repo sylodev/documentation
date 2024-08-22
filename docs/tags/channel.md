@@ -71,6 +71,7 @@ Updates a channel.
 - `name`: The new name of the channel.
 - `topic`: The new topic of the channel.
 - `nsfw`: Whether the channel is NSFW or not.
+- `archived`: Whether this channel is archived/closed; channel must be a thread.
 - `locked`: Whether this channel is locked; channel must be a thread.
 - `ratelimit`: How often users can send messages in this channel, for example `1m`.
 - `parent`: The category to move the channel to.
