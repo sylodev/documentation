@@ -1,6 +1,6 @@
 # Command Tags
 
-> There are future plans to deprecate command tags and instead have each command register its own tag. {.is-warning}
+> There are future plans to deprecate command tags and instead have each command register its own tag.
 
 Command tags let you harness the power of built-in commands through tags. Every command as a corresponding command tag.
 

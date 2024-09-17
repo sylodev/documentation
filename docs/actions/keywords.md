@@ -1,7 +1,8 @@
 # Keyword
 
-> Maximum number of Keyword actions: 2 basic, 10 prime.
-> Minimum cooldown: 30 seconds (basic), 10 seconds (prime).
+> Maximum number of Keyword actions: 2 basic, 10 prime.  
+> Minimum cooldown: 30 seconds (basic), 10 seconds (prime).  
+> Default cooldown is per user.
 
 #### Parameters
 

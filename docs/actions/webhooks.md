@@ -1,6 +1,7 @@
 # Webhook
 
-> Minimum cooldown: 60 seconds (basic), 10 seconds (prime).
+> Minimum cooldown: 60 seconds (basic), 10 seconds (prime).  
+> Default cooldown is per user.
 
 Actions using this trigger will fire when a HTTP request is sent to the specified URL. To prevent loops, action locking is enforced for webhook actions and `{#fetch}` can only call webhooks from other servers.
 

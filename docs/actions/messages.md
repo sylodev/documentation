@@ -1,7 +1,8 @@
 # Message Create
 
 > Maximum number of Message Create actions: 2 basic, 10 prime.
-> Minimum cooldown: 60 seconds (basic), 20 seconds (prime).
+> Minimum cooldown: 60 seconds (basic), 20 seconds (prime).  
+> Default cooldown is per user.
 
 #### Parameters
 

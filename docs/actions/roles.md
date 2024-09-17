@@ -1,6 +1,6 @@
 # Role Add/Remove
 
-> This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work. {.is-warning}
+> This trigger relies on caching which may cause some events to be missed. Avoid using this trigger for crucial work.
 
 ## Guild Member Role Add
 

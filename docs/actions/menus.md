@@ -1,6 +1,6 @@
 # Context Menu
 
-> It may take a couple minutes for changes to this trigger to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time. {.is-info}
+> It may take a couple minutes for changes to this trigger to show in Discord. Changing the trigger involves syncing those changes with Discord, which can take time.
 
 #### Parameters
 
