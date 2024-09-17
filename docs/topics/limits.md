@@ -27,6 +27,7 @@
 | Interval Triggers            | 2                      | 2                      | 10                     |
 | Webhook Cooldown             | 60 seconds             | 30 seconds             | 20 seconds             |
 
+> Cooldowns are per user per action.
 
 ## Expensive Tag Invocations
 

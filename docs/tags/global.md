@@ -370,3 +370,11 @@ Gets the limits for the current server. These are things like the amount of acti
 The output from this is not guaranteed to be stable, use at your own risk!
 
 - `tier` The tier to get the limits for. Defaults to the current server's tier.
+
+## `{clone;value}`
+Creates a deep copy of the value. This is useful when you want to modify an object without changing the original.
+
+```json
+{=object;{a: 1, b: 2}}
+{=clone;{clone;{$object}}} // {a: 1, b: 2}
+```

@@ -255,3 +255,9 @@ This tag will create a modal with the given title and components, and send it to
 ```
 
 This tag will create a modal with the title "Example Modal" and a single input field labelled "Your Name". The handler action "my_modal_handler" will be called when the user submits the modal. The values will be available in the callback action as `{$fields}`.
+
+## `{responder.deferReply;ephemeral?}`
+
+Defer the reply to an interaction. This is useful if you need to do some processing before sending a reply.
+
+- `ephemeral` Whether the reply should be ephemeral. Defaults to `false`.
